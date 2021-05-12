@@ -1,0 +1,550 @@
+# Git commands
+
+Git initial setup :
+
+`git config --global user.name "Dhaval Desai"`
+`git config --global user.email ossdhaval@github.com`
+`git config --list`
+
+
+Git command for finding details of which remote repo you are currently working with :
+
+git remote -v
+or
+git remote show origin
+ 
+
+Adding a remote :
+
+git remote add origin https://github.com/ossdhaval/angular-getting-started.git
+
+Command to change the url pointed by 'origin' :
+
+git remote set-url origin https://github.com/ossdhaval/gsg-giftrecommender-service.git
+
+Command to rename remote repo
+git remote rename origin jans-home
+
+Command to get help on any git command :
+
+git help pull
+
+or to see usage of a git command :
+
+git add -h
+
+clone existing repo :
+git clone https://github.com/libgit2/libgit2
+
+Deleting files from your workspace that are commited or pushed :
+git rm <filename>
+
+Deleting directory ( and files inside them ) from your workspace that are commited or pushed :
+git rm <dirname> -r
+
+Note : difference between removing files directly from file system Vs 'git rm' :
+If you remove file directly, it becomes an untracked change in 'git status' which then you
+have to do a 'git add'. While 'git rm' will do these two steps in one go. You'll see that 
+after 'git rm' the deletions are already staged for next commit.
+
+Moving files and directories :
+git considers a movement as renaming. So, if you move a file using simple 'mv' command
+then it becomes a untracked changed that you have to add to the staging area. If you do 
+it using 'git mv' then it'll move the file and stage it as well for next commit.
+
+to move a file from sub-directory to current dir :
+git mv gsg-event-service/pom.xml .
+
+To move a directory ( and all file in it ) from a subdirectory to current dir :
+git mv  gsg-event-service/src .
+
+To avoid entering username and password everytime when you do git push :
+git remote set-url origin https://ossdhaval:open\$5github@github.com/ossdhaval/gsg-shared-kernel.git
+note that the '\' before $ is because $ is considered as special character and hence needed an escape character.
+
+
+
+get current commit history of your local active branch ( HEAD points to local active branch )
+git log HEAD
+Note : HEAD is case-sensitive
+
+get current commit history of your remote branch ( origin usually points to branch that is your current remote  )
+git log origin 
+ 
+to see what code actually changed use 'patch' option. And to limit commits use '<number>' option
+git log --patch
+
+to limit commits use '<number>' option
+git log -8
+
+ To see status of all files with short representation of status :
+git status --short
+
+
+To add all untracked and modified tracked files and folders recursively in git staging area ( ready for next commit )
+git add -A
+( 'git add' will just do it for files in current directory and not recursively )
+
+
+To remove a file after adding it to tracked changes using 'git add'
+git reset <file_name>
+
+Branch information :
+
+There are two useful command to understand current branches and their status more :
+git log --oneline --decorate --all
+and 
+git remote show origin
+
+First command shows which all branches you have in local, at which commit they are pointing to, and which one is your current working directory branch ( pointed to by HEAD ). 
+dhaval@thinkpad:~/IdeaProjects/Janssen/home$ git log --oneline --decorate --all
+a81b684 (origin/main, origin/HEAD) Update Gemfile
+1c345e4 Merge branch 'main' of https://github.com/ossdhaval/mysite
+37009fd Update Gemfile
+37210da (HEAD -> gh-pages) Update _config.yml to fix the description
+9839c2a Update _config.yml
+ec2ca67 Set theme jekyll-theme-cayman
+647f71c (origin/gh-pages) Update index.md
+75894c8 Update index.md
+b25aef9 Update RELEASE_NOTES.md
+51bed95 Update index.md
+931132e Create RELEASE_NOTES.md
+
+
+
+Second command tells you about remote repository. And what is current state with respect to local branches.
+:~/IdeaProjects/Janssen/home$ git remote show origin
+* remote origin
+  Fetch URL: https://ossdhaval:open$5github@github.com/ossdhaval/mysite.git
+  Push  URL: https://ossdhaval:open$5github@github.com/ossdhaval/mysite.git
+  HEAD branch: main
+  Remote branches:
+    gh-pages                            tracked
+    main                                tracked
+    refs/remotes/origin/viagluu-patch-1 stale (use 'git remote prune' to remove)
+  Local branch configured for 'git pull':
+    main merges with remote main
+  Local refs configured for 'git push':
+    gh-pages pushes to gh-pages (local out of date)
+    main     pushes to main     (local out of date)
+dhaval@thinkpad:~/IdeaProjects/Janssen/home$ 
+
+
+Branch (i.e tracking branch) :
+
+Most of the local branches that get created during clone are tracking branches. Which means they are tracking a remote branch. You can see which local tracking branch is tracking which remote branch, you can do it with 
+git branch -vv 
+
+
+
+Avoiding to use .gitignore for your custom file :
+
+In a large project, everyone shares the same gitignore file which is commited and maintained in repository just like any other common code file. I you want to add few custom ignores to this file, it'll affect everyone. To avoid this, use below :
+
+https://medium.com/@dave_lunny/exclude-files-from-git-without-committing-changes-to-gitignore-986fa712e78d
+
+
+My co-worker pointed me to the .git/info/exclude file which, much like a .gitignore file, allows you to ignore files from being staged. This keeps things nice and clean, and the best part is that you don’t commit anything in the .git/ directory, so it’s like your own personal .gitignore that no one else can see or touch!
+
+gitignore general guidlines :
+
+Setting up a .gitignore file for your new repository before you get going is generally a good idea so you don’t accidentally commit files that you really don’t want in your Git repository
+
+In the simple case, a repository might have a single .gitignore file in its root directory, which applies recursively to the entire repository. However, it is also possible to have additional .gitignore files in subdirectories. The rules in these nested .gitignore files apply only to the files under the directory where they are located.
+
+GitHub maintains a fairly comprehensive list of good .gitignore file examples for dozens of projects and languages at https://github.com/github/gitignore if you want a starting point for your project.
+
+some useful patterns :
+
+# ignore all .a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in any directory named build
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory and any of its subdirectories
+doc/**/*.pdf
+
+How to see what changes have you made to files and are not staged or staged but are not commited :
+
+git diff
+
+To see what you’ve changed but not yet staged, type git diff with no other arguments
+
+If you want to see what you’ve staged that will go into your next commit, you can use git diff --staged. This command compares your staged changes to your last commit
+
+ 
+ 
+To push your changes to remote repo :
+git push remote-name branch-name
+example: git push origin master
+this will ask for github username and password. 
+
+Guidlines for git commit messages from PRO-git:
+
+The last thing to keep in mind is the commit message. Getting in the habit of creating quality
+commit messages makes using and collaborating with Git a lot easier. As a general rule, your
+129messages should start with a single line that’s no more than about 50 characters and that describes
+the changeset concisely, followed by a blank line, followed by a more detailed explanation. The Git
+project requires that the more detailed explanation include your motivation for the change and
+contrast its implementation with previous behavior — this is a good guideline to follow. Write your
+commit message in the imperative: "Fix bug" and not "Fixed bug" or "Fixes bug."
+
+How to troubleshoot : 'Your branch and 'origin/master' have diverged' problem.
+
+this is because the your branch has commits that are not built on top of commits currently available in same branch on origin(remote).  i.e : master branch in your local repo vs master branch in remote repo.
+
+head(master)    : commit1, commit2, commit3, commit5
+origin(master)  : commit1, commit2, commit3, commit4
+It may be because while you were working on code changes for commit5 in your local repo and committed to local repo, the remote branch moved on due to somebody else pushed changes in it. 
+At this point, if you do a 'git status', you get above message.
+
+dhaval@dhaval-Lenovo-U41-70:~/code/eclipse-workspace/gsg-event-service$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Now there are two solutions : rebase or merge.
+Since merge creates a non-linear history, rebase is preferred by many.
+rebase essentially brings in commit5 from remote into your local repo and then puts back commit4 on top of that. To use this option :
+git pull --rebase
+
+
+See the https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches/2452610
+
+How to remove files from 'Changes not staged for commit' category of git status :
+git checkout <file>
+
+git checkout essentially overwrites your local modified file by latest copy from local branch.
+
+
+how do you know if you have committed changes in your local branch but not pushed to remote :
+Run git status.  Message would say that 'your local is ahead of remote by x number of commits'
+
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+This means you have one commit that you have not pushed. 
+
+To see what is going to get committed in next push :
+git log --stat
+
+This will give you history of commits. From this history, you can see one commit that are marked with (head->master), and then few commits down the line, you'll see a commit marked with (origin/master, origin/HEAD). 
+In the next push, your commit marked with (head->master) and all the commits till and not including (origin/master, origin/HEAD) will be pushed. 
+
+
+Different file states in git :
+
+
+Unstaged : untracked files + modified tracked files
+git add
+Staged : files that are ready to go in next commit
+git commit
+Committed files to local branch
+git log --stat
+Pushed to remote repo
+git log --stat
+
+Git file moving through various states :
+
+when you create a new file, it is untracked :
+
+
+
+
+
+
+
+now make this a tracked file :
+
+
+
+
+
+
+
+Now to change it back to untracked :
+
+
+
+
+
+
+
+To untrack everything which is there in staging area :
+
+git reset
+
+
+How to remove files from 'Changes not staged for commit' category of git status :
+git restore <file>
+or
+git checkout <file>
+git checkout essentially overwrites your local modified file by latest copy from local branch.
+
+
+add to the staging area :
+
+
+
+
+
+
+
+
+
+
+modified of the already updated file, just for the completeness of the example :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+to move back to previous state :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now commit these files to local git branch :
+
+
+
+
+
+
+
+
+
+see your commit in local branch log :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now roll back commit which still in local brach and not pushed to shared repo :
+git reset --soft HEAD~ 
+( --mixed will undo the commit + it'll unstage the changes from staging area,  but will leave changes in the working copy as is.
+--hard will undo the commit, unstage the changes and update the working copy with what is in the local branch)
+
+
+
+
+
+
+
+
+
+
+
+
+x`
+
+
+
+
+
+Now push commit to remote repo 
+
+
+
+First commit them back in :
+
+
+
+
+
+
+see Git log to confirm what is going to get pushed :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now push to remote :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+check the git log of remote repo to see that the commit has been made :
+
+
+
+
+
+
+
+Now undo commit from remote repo :
+(ref: https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6)
+
+first check if you are on the right branch by running git status. Then 
+git reset a81b684513aa2d3faa2cced70460797cc8397528 --hard
+
+(here commit number is the commit which you want to point to going foward. i.e all the commits after
+this one will be removed from github, also from insights>network )
+
+and then run :
+git push origin main -f
+
+This can also be done using revert :
+git revert a81b684513aa2d3faa2cced70460797cc8397528
+this will not rewrite the history unlike reset above
+
+
+
+storing your changes in a separate branch :
+
+Suppose you are working on branch B1. You have made changes to certain files. You now think that these changes are not required for now and you want to store these changes as a separate branch and come back to B1 and start working on that. For example : I was working on a project where first I tried to integrate with RDBMS using JPA. All these changes were pushed to B1. Then I started to make changes on my local to integrate with DynamoDB instead of RDBMS. But that didn't go well. So, Now I wanted to go back to last commited changes on B1 without loosing my DynamoDB changes. So I decided that I'll create a new branch and store DynamoDB changes on a that branch. And then again switch back to B1 and continue working on RDBMS. Below is the sequence of commands that helped.
+
+git branch NoSQL
+git checkout NoSQL
+
+now you'll see that master, NoSQL and origin/master are on the same commit using 'git log'
+
+commit 009ed95a6d83e5b899b5c864a8b84bf72cbb4740 (HEAD -> NoSQL, origin/master, master)
+
+git status
+
+git add .
+
+git commit -m 'Initial attempt at sing DynamoDB'
+
+git push origin NoSQL
+
+git checkout master
+
+In case you have made direct changes in your code from github ( or someone else has committed changes in the branch ) and you want to make your local branch updated with those changes then :
+git checkout
+Your branch is behind 'origin/dhaval-development' by 40 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+git pull
+Username for 'https://github.com': ossdhaval
+Password for 'https://ossdhaval@github.com': 
+Updating 17e6c35..579473e
+Fast-forward
+ Jenkinsfile  | 24 ++++++++++++++++++++++++
+ package.json |  9 +++------
+ 2 files changed, 27 insertions(+), 6 deletions(-)
+ create mode 100644 Jenkinsfile
+
+
+Using git fetch and merge instead of pull:
+
+While the git fetch command will fetch all the changes on the server that you don’t have yet, it will
+not modify your working directory at all. It will simply get the data for you and let you merge it
+yourself. However, there is a command called git pull which is essentially a git fetch immediately
+followed by a git merge in most cases.
+
+Generally it’s better to simply use the fetch and merge commands explicitly as the magic of git pull
+can often be confusing.
+
+
+Workflow for Contributing to an opensource project :
+
+create a fork
+
+clone that fork in your local machine
+
+then make sure you have this setup so that your fork is updated: 
+https://gist.github.com/CristinaSolana/1885435 or
+https://stefanbauer.me/articles/how-to-keep-your-git-fork-up-to-date
