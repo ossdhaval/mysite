@@ -135,7 +135,35 @@ Branch (i.e tracking branch) :
 Most of the local branches that get created during clone are tracking branches. Which means they are tracking a remote branch. You can see which local tracking branch is tracking which remote branch, you can do it with 
 git branch -vv 
 
+### create branch locally and push it to github
+`git checkout -b 'feature-1'` - Create and switch to new branch
+`git push --set-upstream origin feature-1` - this will create a new branch on remote 'origin' and set that new branch as upstream
+branch for local branch.
 
+```
+dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ git checkout -b 'feature-1'
+Switched to a new branch 'feature-1'
+dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ git status
+On branch feature-1
+nothing to commit, working tree clean
+dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ git push origin
+fatal: The current branch feature-1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature-1
+
+dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ git push --set-upstream origin feature-1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'feature-1' on GitHub by visiting:
+remote:      https://github.com/ossdhaval/git-action-check/pull/new/feature-1
+remote: 
+To https://github.com/ossdhaval/git-action-check.git
+ * [new branch]      feature-1 -> feature-1
+Branch 'feature-1' set up to track remote branch 'feature-1' from 'origin'.
+dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ 
+
+```
 
 Avoiding to use .gitignore for your custom file :
 
