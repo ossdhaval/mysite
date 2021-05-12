@@ -1,26 +1,26 @@
 # Git commands
 
-Git initial setup :
+### Git initial setup :
 
 `git config --global user.name "Dhaval Desai"`
 `git config --global user.email ossdhaval@github.com`
 `git config --list`
 
 
-Git command for finding details of which remote repo you are currently working with :
+### Git command for finding details of which remote repo you are currently working with :
 
-git remote -v
+`git remote -v`
 or
-git remote show origin
+`git remote show origin`
  
 
-Adding a remote :
+### Adding a remote :
 
-git remote add origin https://github.com/ossdhaval/angular-getting-started.git
+`git remote add origin https://github.com/ossdhaval/angular-getting-started.git`
 
-Command to change the url pointed by 'origin' :
+### Command to change the url pointed by 'origin' :
 
-git remote set-url origin https://github.com/ossdhaval/gsg-giftrecommender-service.git
+`git remote set-url origin https://github.com/ossdhaval/gsg-giftrecommender-service.git`
 
 Command to rename remote repo
 git remote rename origin jans-home
