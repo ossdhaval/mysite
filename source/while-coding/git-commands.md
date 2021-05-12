@@ -3,7 +3,9 @@
 *Git initial setup* :
 
 `git config --global user.name "Dhaval Desai"`
+
 `git config --global user.email ossdhaval@github.com`
+
 `git config --list`
 
 
