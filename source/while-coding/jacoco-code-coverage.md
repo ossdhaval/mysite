@@ -1,4 +1,8 @@
-# JaCoCo aggregare report
+# Integrating JaCoCo 
+
+
+
+## Aggregare report
 
 **Add aggregate code coverage report to your multimodule**
 
@@ -16,3 +20,18 @@ But I couldn't implement it at the end due to many issues that I faced.
 Finally I left the effort.
 
 Overall, I felt that with Jacoco, generating aggregate report for multimodule maven project is difficult. Specially, if your project has modules with `war` packaging.
+
+
+## Troubleshooting
+
+*Message:* Not generating jacoco repot due to :
+
+`Skipping JaCoCo execution due to missing execution data file.`
+
+Helpful links:
+
+https://stackoverflow.com/questions/18107375/getting-skipping-jacoco-execution-due-to-missing-execution-data-file-upon-exec
+
+http://www.ffbit.com/blog/2014/05/21/skipping-jacoco-execution-due-to-missing-execution-data-file/
+
+[official latest JaCoCo plug-in maven config](https://www.eclemma.org/jacoco/trunk/doc/examples/build/pom.xml)
