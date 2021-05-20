@@ -30,7 +30,7 @@ Overall, I felt that with Jacoco, generating aggregate report for multimodule ma
 
 Helpful links:
 
-https://stackoverflow.com/questions/18107375/getting-skipping-jacoco-execution-due-to-missing-execution-data-file-upon-exec
+https://stackoverflow.com/a/36305148/2331225
 
 http://www.ffbit.com/blog/2014/05/21/skipping-jacoco-execution-due-to-missing-execution-data-file/
 
