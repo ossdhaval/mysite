@@ -1,34 +1,39 @@
-rimary uses :
+# Maven Notes
 
 
-As build tool
-compile
-run tests
-build jars
-build wars and ears
-deploy to server
-As project management tool
-dependency management
+### Primary uses :
 
-difference between maven and ant :
+#### As build tool
+
+- compile
+- run tests
+- build jars
+- build wars and ears
+- deploy to server
+
+#### As project management tool
+- dependency management
+
+
+### difference between maven and ant :
 
 Ant uses many configurations ( for example specifying in which folder your code is ) while maven use 'convention over configuration' and so reduces configuration. For example, when you run 'mvn compile' it assumes that code is under src/main/java.
 
-Maven conventions:
+#### Maven conventions:
 
-Java source code is available at {base-dir}/src/main/java
+- Java source code is available at {base-dir}/src/main/java
 
-Test cases are available at {base-dir}/src/test/java
+- Test cases are available at {base-dir}/src/test/java
 
-The type of the artifact produced is a JAR file
+- The type of the artifact produced is a JAR file
 
-Compiled class files are copied to {base-dir}/target/classes
+- Compiled class files are copied to {base-dir}/target/classes
 
-The final artifact is copied to {base-dir}/target
+- The final artifact is copied to {base-dir}/target
 
-http://repo.maven.apache.org/maven2, is used as the repository URL.
+- http://repo.maven.apache.org/maven2, is used as the repository URL.
 
-Maven lifecycle phases and plugin goals :
+### Maven lifecycle phases and plugin goals :
 
 We usually ask maven ( via mvn ) command to run either of two things : a lifecycle phase or a plugin goal.
 eg. 'mvn install' is a asking maven to run install phase. 'mvn archetype:generate' is asking maven to run generate goal within archetype plugin.
@@ -49,7 +54,7 @@ In all, based on packaging, maven will determine hierarchy and goals attached to
 For further reference :
 http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Built-in_Lifecycle_Bindings
 
-simplest parent POM :
+### Simplest parent POM :
 
 take pom of a quickstart project and create a copy of it.
 Give a group ID. This ID will be same across all modules unless they specify thier own.
@@ -63,36 +68,48 @@ Note :
 when you want to create a simple spring project, use below dependency :
 
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+
+```
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-context</artifactId>
     <version>4.3.10.RELEASE</version>
 </dependency>
+```
 
 
+### Scopes :
 
-Scopes :
+There are total six scopes : 
+- compile 
+- test
+- run
+- provided
+- system 
+- and one more.
 
-There are total six scopes : compile, test, run, provided, system and one more.
-'compile' scope is default. Also, anything dependency in compile scope is available in test and run as well. So, if you declare a dependency without specifying scope, that jar becomes part of the deployable bundle. So, if there is anything like servlet api etc, it is very imp that you mention explicitely that it is in 'provided' scope, otherwise your deployeble would be very heavy. Similarly, you should mention 'test' scope for junit dependencies.
+'compile' scope is default. 
+
+Also, anything dependency in compile scope is available in test and run as well. So, if you declare a dependency without specifying scope, that jar becomes part of the deployable bundle. So, if there is anything like servlet api etc, it is very imp that you mention explicitely that it is in 'provided' scope, otherwise your deployeble would be very heavy. Similarly, you should mention 'test' scope for junit dependencies.
 
 a good reference : https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html
 
-Making projects dependent on each other :
+### Making projects dependent on each other :
 
 common utilities projects like 'shared-kernel' etc which are bundled as jar are often dependency for others. To access util projects in other projects, add following to maven of dependent project :
 
+```
 <dependency>
   <groupId>com.gsg.kernel</groupId>
   <artifactId>gsg-shared-kernel</artifactId>
   <version>1.0-SNAPSHOT</version>
 </dependency>
-
+```
 Don't forget to mention version tag for this.
 Also, since by default scope is compile, this jar will be bundled with your project as dependency all the way to deployment.
 
 
-Note on Packaging :
+### Note on Packaging :
 
 “POM” as value to <packaging> like
 <packaging>pom</packaging>
@@ -105,57 +122,60 @@ When no packaging is declared, Maven assumes the artifact is the default: jar
 The current core packaging values are: pom, jar, maven-plugin, ejb, war, ear, rar, par
 
 
-Note on important maven concepts :
+### Note on important maven concepts :
 
 
 1)      Dependency
 2)      Inheritance
 3)      Aggregation
 
-2) Inheritance :
+#### 2. Inheritance :
 
 Elements in the POM that are merged are the following:
-dependencies
-developers and contributors
-plugin lists (including reports)
-plugin executions with matching ids
-plugin configuration
-resources
+- dependencies
+- developers and contributors
+- plugin lists (including reports)
+- plugin executions with matching ids
+- plugin configuration
+- resources
 inheritance is when you specify <parent> element in your child pom. Primary use of inheritance is to keep common configuration in a central POM which can be used by multiple projects. Super pom is an example of that. 
 In inheritance, parent is not aware of its children. ie: if parent is built then build for child projects will not be triggered automatically.
 
-3) Aggregation
+#### 3. Aggregation
 
 aggregation is when you define <module> in top-level POM. Here the purpose is to club together those projects which need to be built together. Here, inheritance of plugins and dependencies ( and other elements ) will not happen but if you build the aggregated POM then the projects mentioned as modules will be triggered for build as well.
 
 useful reference : https://stackoverflow.com/questions/17482320/maven-module-inheritance-vs-aggregation )
 
+*Note* : 
 
-           Note : when you want to see what all dependencies your app has, you generally open POM file in eclipse and go to 'dependency Hierarchy' tab. But here, you can't see dependencies pulled by parent POM. But this is visible in 'effective POM' tab.
+when you want to see what all dependencies your app has, you generally open POM file in eclipse and go to 'dependency Hierarchy' tab. But here, you can't see dependencies pulled by parent POM. But this is visible in 'effective POM' tab.
 'Dependency Hierarchy' only shows things defined in current POM as 'dependency'
 
-Maven versioning :
+### Maven versioning :
 
 http://kylelieber.com/2012/06/maven-versioning-strategy/
 
 
 
 
-Maven commandline options / switches
+### Maven commandline options / switches
 
 Source : https://books.sonatype.com/mvnref-book/reference/running-sect-options.html
 
--e, --errors
-Produce execution error messages
--X, --debug
-Produce execution debug output
--q, --quiet
-Quiet output - only show errors
+-e, --errors: Produce execution error messages
+
+-X, --debug: Produce execution debug output
+
+-q, --quiet: Quiet output - only show errors
+
 The -q option only prints a message to the output if there is an error or a problem.
+
 The -X option will print an overwhelming amount of debugging log messages to the output. This option is primarily used by Maven developers and by Maven plugin developers to diagnose problems with Maven code during development. This -X option is also very useful if you are attempting to diagnose a difficult problem with a dependency or a classpath.
+
 The -e option will come in handy if you are a Maven developer, or if you need to diagnose an error in a Maven plugin. If you are reporting an unexpected problem with Maven or a Maven plugin, you will want to pass both the -X and -e options to your Maven process.
 
-mvn dependency:resolve
+`mvn dependency:resolve`
     resolve(or download) dependencies as per pom.xml
 
 To activate one or more build profiles from the command line, use the following option:
@@ -163,13 +183,13 @@ To activate one or more build profiles from the command line, use the following 
 Comma-delimited list of profiles to activate
 
 To define a property use the following option on the command line:
--D, --define <arg>
-Defines a system property
+
+-D, --define <arg>: Defines a system property
 
 
--h, --help
-Display help information
-               Mvn -h
+-h, --help: Display help information
+
+`mvn -h`
 
 
 The following options control how Maven reacts to a build failure in the middle of a multi-module project build:
@@ -185,10 +205,11 @@ The -fn and -fae options are useful options for multi-module builds that are run
 Source : https://books.sonatype.com/mvnref-book/reference/_using_advanced_reactor_options.html
 
 
-How to find where your .m2 and settings.xmls are which are being used by maven from commandline :
+### How to find where your .m2 and settings.xmls are which are being used by maven from commandline :
 
 just fire 'mvn -X' command. This will trigger a build which will probably fail, but it'll also print all the information on console like below :
 
+```
 dhaval@dhaval-Lenovo-U41-70:~/code/ij-projects/java8/Java 8 certification$ mvn -X
 Apache Maven 3.6.3
 Maven home: /usr/share/maven
@@ -205,22 +226,24 @@ OS name: "linux", version: "5.4.0-47-generic", arch: "amd64", family: "unix"
 [DEBUG] Using local repository at /home/dhaval/.m2/repository
 [DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /home/dhaval/.m2/repository
 
+```
+
 so you'll see all the important info in this.
 
 
 
 
-command to skip tests
+### command to skip tests
 
-mvn install -DskipTests
+`mvn install -DskipTests`
 
 Starting with the Maven 2.1 release, there are new Maven command line options which allow you to manipulate the way that Maven will build multimodule projects. These new options are:
--rf, --resume-from
-Resume reactor from specified project
--pl, --projects
-Build specified reactor projects instead of all projects
--am, --also-make
-If project list is specified, also build projects required by the list
--amd, --also-make-dependents
-If project list is specified, also build projects that depend on projects on the list
+
+-rf, --resume-from: Resume reactor from specified project
+
+-pl, --projects: Build specified reactor projects instead of all projects
+
+-am, --also-make: If project list is specified, also build projects required by the list
+
+-amd, --also-make-dependents: If project list is specified, also build projects that depend on projects on the list
 
