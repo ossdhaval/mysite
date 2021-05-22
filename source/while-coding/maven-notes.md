@@ -247,3 +247,37 @@ Starting with the Maven 2.1 release, there are new Maven command line options wh
 
 -amd, --also-make-dependents: If project list is specified, also build projects that depend on projects on the list
 
+### Plugin-management vs plugins
+
+In pom.xml, you may see plugin definitions at two places.
+1. Under 
+```
+<build>
+    <pluginManagement>
+	    <plugins>
+```
+
+2. Under 
+```
+<build>
+	<plugins>
+```
+
+it is important to understand the difference when `<plugins>` appear under `<pluginManagement>`, and when
+same tag appears without `<pluginManagement>`.
+
+`<plugins>` mentioned under `<pluginManagement>` tag, are just definition. They provide a central place
+to define plugin version, plugin configuration etc in an multi-module project where there are 
+multiple pom.xml files in different modules. All of them can not use same plugin configuration as defined
+in `<pluginManagement>` in parent or super pom. When you define plugin under `<pluginManagement>`, you 
+are actually not activating it. It is just a common definition.
+
+To activate plugins, you have to define same plugins in `<plugins>` tag outside of `<pluginManagement>`.
+You can do this either in same same pom where `<pluginManagement>` is defined, or in individual module
+pom files. But now, you don't have to define version or any other configuration for those plugins which 
+are already defined in the `<pluginManagement>`. Just mention `group` and `artifactId` and maven will 
+pickup rest of the details from `<pluginManagement>`. Remember, when you are mentioning `<executions>`, 
+you have to do it in `<plugins>` outside of `<pluginManagement>`
+
+It is a classic mistake to put plugin information in `<pluginManagement>` and expect it to start working.
+I made this mistake when integrating JaCoCo in a multimodule project.
