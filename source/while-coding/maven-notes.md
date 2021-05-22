@@ -247,7 +247,7 @@ Starting with the Maven 2.1 release, there are new Maven command line options wh
 
 -amd, --also-make-dependents: If project list is specified, also build projects that depend on projects on the list
 
-### Plugin-management vs plugins
+### Plugin-management vs plugins (references : [SO](https://stackoverflow.com/questions/10483180/what-is-pluginmanagement-in-mavens-pom-xml))
 
 In pom.xml, you may see plugin definitions at two places.
 1. Under 
