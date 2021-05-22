@@ -251,6 +251,7 @@ Starting with the Maven 2.1 release, there are new Maven command line options wh
 
 In pom.xml, you may see plugin definitions at two places.
 1. Under 
+
 ```
 <build>
     <pluginManagement>
@@ -258,6 +259,7 @@ In pom.xml, you may see plugin definitions at two places.
 ```
 
 2. Under 
+
 ```
 <build>
 	<plugins>
