@@ -1,6 +1,30 @@
-# Integrating JaCoCo 
+# Integration with JaCoCo and SonarCloud
+
+High-level steps :
+1. Integrate JaCoCo
+2. Onboard to SonarCloud
+3. Integrate with SonarCloud
+4. Integrate with CI using Github Actions
+
+#### 1. Integrate JaCoCo
+
+This is easy as you just have to add following plug-in in your project POM (parent pom in multimodule project) under `<pluginManagement>`.
+
+```
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.8.7</version>
+				</plugin>
+```
+
+That is it.
+
+#### 2. Onboard to SonarCloud
 
 
+
+### Troubleshooting:
 
 ## Aggregare report
 
