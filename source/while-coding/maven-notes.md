@@ -193,12 +193,14 @@ To define a property use the following option on the command line:
 
 
 The following options control how Maven reacts to a build failure in the middle of a multi-module project build:
--fae, --fail-at-end
+	
+`-fae`, `--fail-at-end` : 
 Only fail the build afterwards; allow all non-impacted builds to continue
--ff, --fail-fast
-Stop at first failure in reactorized builds
--fn, --fail-never
-NEVER fail the build, regardless of project result
+
+`-ff`, `--fail-fast` : Stop at first failure in reactorized builds
+	
+`-fn`, `--fail-never` : NEVER fail the build, regardless of project result
+	
 The -fn and -fae options are useful options for multi-module builds that are running within a continuous integration tool like Hudson. The -ff option is very useful for developers running interactive builds who want to have rapid feedback during the development cycle.
 
 
@@ -207,7 +209,7 @@ Source : https://books.sonatype.com/mvnref-book/reference/_using_advanced_reacto
 
 ### How to find where your .m2 and settings.xmls are which are being used by maven from commandline :
 
-just fire 'mvn -X' command. This will trigger a build which will probably fail, but it'll also print all the information on console like below :
+just fire `mvn -X` command. This will trigger a build which will probably fail, but it'll also print all the information on console like below :
 
 ```
 dhaval@dhaval-Lenovo-U41-70:~/code/ij-projects/java8/Java 8 certification$ mvn -X
