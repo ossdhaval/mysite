@@ -191,7 +191,10 @@ To define a property use the following option on the command line:
 
 `mvn -h`
 
-
+#### Multimodule projects:
+	
+##### failures
+	
 The following options control how Maven reacts to a build failure in the middle of a multi-module project build:
 	
 `-fae`, `--fail-at-end` : 
@@ -202,6 +205,14 @@ Only fail the build afterwards; allow all non-impacted builds to continue
 `-fn`, `--fail-never` : NEVER fail the build, regardless of project result
 	
 The -fn and -fae options are useful options for multi-module builds that are running within a continuous integration tool like Hudson. The -ff option is very useful for developers running interactive builds who want to have rapid feedback during the development cycle.
+
+if you want to skip certain modules from getting build, then use `-pl` option.
+
+`mvn clean -fae -X -pl \!module1,\!module2 jacoco:prepare-agent test install jacoco:report`
+
+Or you can set profile to only build other modules.
+
+
 
 
 Source : https://books.sonatype.com/mvnref-book/reference/_using_advanced_reactor_options.html
@@ -285,3 +296,41 @@ you have to do it in `<plugins>` outside of `<pluginManagement>`
 
 It is a classic mistake to put plugin information in `<pluginManagement>` and expect it to start working.
 I made this mistake when integrating JaCoCo in a multimodule project.
+		
+#### Maven profiles:
+        
+reference : https://maven.apache.org/guides/introduction/introduction-to-profiles.html
+        
+- Profiles override or add configuration in effective POM at build time
+- You can activate profiles automatically by setting certain env variable or by presence of certain file or many other ways.
+- From commandline you can use option `-p` like below:
+```mvn groupId:artifactId:goal -P profile-1,profile-2```
+
+        
+        
+Profiles specified in the POM can modify the following POM elements:
+
+```
+<repositories>
+<pluginRepositories>
+<dependencies>
+<plugins>
+<properties> (not actually available in the main POM, but used behind the scenes)
+<modules>
+<reports>
+<reporting>
+<dependencyManagement>
+<distributionManagement>```
+    
+a subset of the <build> element, which consists of:
+
+```
+<defaultGoal>
+<resources>
+<testResources>
+<directory>
+<finalName>
+<filters>
+<pluginManagement>
+<plugins>```
+		
