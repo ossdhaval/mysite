@@ -320,7 +320,8 @@ Profiles specified in the POM can modify the following POM elements:
 <reports>
 <reporting>
 <dependencyManagement>
-<distributionManagement>```
+<distributionManagement>
+```
     
 a subset of the <build> element, which consists of:
 
@@ -332,5 +333,6 @@ a subset of the <build> element, which consists of:
 <finalName>
 <filters>
 <pluginManagement>
-<plugins>```
+<plugins>
+```
 		
