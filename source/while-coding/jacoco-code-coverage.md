@@ -22,6 +22,17 @@ That is it.
 
 #### 2. Onboard to SonarCloud
 
+1. login to SonarCloud
+2. go to `+` sign on top right which says 'add new project or organizationyour profile
+3. click organizations
+4. get organisations from Github
+5. Install SonarCloud app
+   Either give permission to see all repos or only select repos.
+6. Now you'll see projects under your organization and click 'analyze'
+7. Now you'll be taken to project configuration page on SonarCloud
+8. click on 'with github actions'
+   - step 1 is to create github secret as directed on page ( remember the 'settings' tab is on your github project page and not        under your profile )
+   - In the next step, sonarcloud will tell you what changes you need to make in your POM file and in you github repo ( like            adding workflow yml in your .github folder). Be careful when you are making these changes as you might need to change few          things as per your project needs. This is the last step. If you do these changes and execute your workflow in github, this        page will automatically refresh and it'll show you code analysis. Note : for coverage, this assumes that you have integration      with JaCoCo and JaCoCo is generating coverage reports already which SonarCloud will directly use.
 
 
 ### Troubleshooting:
