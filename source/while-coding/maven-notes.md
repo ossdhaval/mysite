@@ -336,3 +336,14 @@ a subset of the `<build>` element, which consists of:
 <plugins>
 ```
 		
+### Troubleshooting:
+
+#### deactivating certain modules using profiles:
+Ideally, as per above, if you put `<modules>` tag in a profile and mention list of `<module>` under it, then this should override the modules listed under `<project>` in same pom. But this doesn't happen. Why I don't know. I faced it and also see [here'](https://stackoverflow.com/questions/13381179/using-profiles-to-control-which-maven-modules-are-built). `Actual maven behaviour seems to be that that one profile can override modules on if they are defined in another profile.` So the solution is that you remove modules from POM's `<project>` and create a profile that loads by default that lists superset of modules, then you also should have another profile that lists subset of modules that you want to run. Now, when you run `mvn` by mentioning name of profile with subset, the default profile will not load. Hence only subset mentioned in your profile will be taken into account.
+  
+Another maven behaviour which is documented but not very much known is that default profile mentioned in POM xml using `<activeByDefault>true</activeByDefault>` will only be activated if there are no other profiles getting activated at the time of build. So, it is either the default profile or other profiles that get active. Most multimodule projects run with multiple profiles active at a time, hence default profiles are not very useful in multimodule projects. And due to this behaviour, the above solution of deactivating cetain modules using profiles also not usable.
+  
+Finally, I have to deactivate modules using reactor commandline argument `-pl` like below:
+  
+`mvn clean -fae -X -pl \!module1,\!module2 jacoco:prepare-agent test install jacoco:report`
+  
