@@ -138,14 +138,35 @@ Most of the local branches that get created during clone are tracking branches. 
 ```
 git branch -vv 
 ```
+
+ 
+### local branches, remote tracked branches, branches on remote server
+ 
+ In git, code can reside on your local machine or some remote server. Both local machine and remote can have branches that other one don't know about. Branch that is in local machine is called 'local branch', branch that is in remote server is called 'remote branch'. Git also maintains remote-tracking branches on your local machines for every remote that you have. This is essentially download of all the branches and code that was on remote server when you connected with it last time using `fetch` (or `pull`).
+ 
+Now, you can link-up your local branch to a remote tracking branch for ease of use. If you do, git automatically knows which remote branch a local branch pushes to or fetches from. If you want to see which of your local branches are linked to which remote-tracking branches, you can use
+ 
+ ```
+ git branch -vv
+ ```
+ 
+ #### About local branches:
+ - you can create a simple local branch that doesn't link to any remote tracker using `git branch <name>`
+ - Start using this branch by switching to it: `git switch <name>`
+ - Remember, even if your local branch is not tracking a remote tracking branch, you can still use it to work with any remote branch. It is just that you have to mention which remote and which branch of that remote should be used for that operation everytime. I recommend this manual approach as it makes it clear where your code is going and coming.
+ - To make local branch track a remote branch: `git branch -u <remote>/<branch> <local-branch>`
  
  
-### create branch locally and push it to github
+ 
+### create branch localy and push it to github
+ 
 `git checkout -b 'feature-1'` - Create and switch to new branch
+ 
 `git push --set-upstream origin feature-1` - this will create a new branch on remote 'origin' and set that new branch as upstream
 branch for local branch.
 
 ```
+ 
 dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ git checkout -b 'feature-1'
 Switched to a new branch 'feature-1'
 dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ git status
@@ -167,9 +188,12 @@ To https://github.com/ossdhaval/git-action-check.git
  * [new branch]      feature-1 -> feature-1
 Branch 'feature-1' set up to track remote branch 'feature-1' from 'origin'.
 dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ 
-
+ 
 ```
 
+`git push origin main` what this command actually is this `git origin master:master`. Which means take my *master* branch and push it to *origin*'s master branch. Using this you can also push changes in your master branch to some other branch on remote.
+ 
+ 
 #### How to know which branches can be deleted?
  
 The useful --merged and --no-merged options can filter this list to branches that you have or have not yet merged into the branch you’re currently on. To see which branches are already merged into the branch you’re on, you can run git branch --merged:
@@ -583,9 +607,13 @@ Fast-forward
  create mode 100644 Jenkinsfile
 
 
-Using git fetch and merge instead of pull:
-
-While the git fetch command will fetch all the changes on the server that you don’t have yet, it will
+`git fetch <remote>` brings all data about that remote to your local machine, including references of new branches that are created on remote server by others.
+ 
+`git fetch <remote> <branch>` brings data from remote only about a particular branch.
+ 
+### Using git fetch and merge instead of pull:
+ 
+While the `git fetch <remote>` command will fetch all the changes on the server that you don’t have yet, it will
 not modify your working directory at all. It will simply get the data for you and let you merge it
 yourself. However, there is a command called git pull which is essentially a git fetch immediately
 followed by a git merge in most cases.
@@ -605,6 +633,7 @@ Switched to a new branch 'serverfix'
 ```
 
 This gives you a local branch that you can work on that starts where origin/serverfix is.
+
 
 
 #### Workflow for Contributing to an opensource project :
