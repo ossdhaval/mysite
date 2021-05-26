@@ -135,8 +135,11 @@ dhaval@thinkpad:~/IdeaProjects/Janssen/home$
 Branch (i.e tracking branch) :
 
 Most of the local branches that get created during clone are tracking branches. Which means they are tracking a remote branch. You can see which local tracking branch is tracking which remote branch, you can do it with 
+```
 git branch -vv 
-
+```
+ 
+ 
 ### create branch locally and push it to github
 `git checkout -b 'feature-1'` - Create and switch to new branch
 `git push --set-upstream origin feature-1` - this will create a new branch on remote 'origin' and set that new branch as upstream
@@ -167,6 +170,28 @@ dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$
 
 ```
 
+#### How to know which branches can be deleted?
+ 
+The useful --merged and --no-merged options can filter this list to branches that you have or have not yet merged into the branch you’re currently on. To see which branches are already merged into the branch you’re on, you can run git branch --merged:
+
+```
+$ git branch --merged
+  iss53
+* master
+```
+
+Because you already merged in iss53 earlier, you see it in your list. Branches on this list without the * in front of them are generally fine to delete with git branch -d; you’ve already incorporated their work into another branch, so you’re not going to lose anything.
+
+ Likewise, to see branches that has unmerged changes:
+ 
+```
+git branch --no-merged
+```
+
+ 
+ 
+
+ 
 Avoiding to use .gitignore for your custom file :
 
 In a large project, everyone shares the same gitignore file which is commited and maintained in repository just like any other common code file. I you want to add few custom ignores to this file, it'll affect everyone. To avoid this, use below :
@@ -567,9 +592,22 @@ followed by a git merge in most cases.
 
 Generally it’s better to simply use the fetch and merge commands explicitly as the magic of git pull
 can often be confusing.
+ 
+Secondly, Suppose there is a branch called `serverfix` on remote server that you don't have.
+It’s also important to note that when you do a fetch that brings down new remote-tracking branches, you don’t automatically have local, editable copies of them. In other words, in this case, you don’t have a new serverfix branch — you have only an origin/serverfix pointer that you can’t modify.
+
+To merge this work into your current working branch, you can run git merge origin/serverfix. If you want your own serverfix branch that you can work on, you can base it off your remote-tracking branch:
+
+```
+$ git checkout -b serverfix origin/serverfix
+Branch serverfix set up to track remote branch serverfix from origin.
+Switched to a new branch 'serverfix'
+```
+
+This gives you a local branch that you can work on that starts where origin/serverfix is.
 
 
-Workflow for Contributing to an opensource project :
+#### Workflow for Contributing to an opensource project :
 
 create a fork
 
