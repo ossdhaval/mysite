@@ -63,6 +63,28 @@ Overall, I felt that with Jacoco, generating aggregate report for multimodule ma
 
 `Skipping JaCoCo execution due to missing execution data file.`
 
+In my case it was due to Surefire plugin was defining <argLine> property within the <configuration> tag of plugin definition.
+Solution as described [here](https://github.com/jacoco/jacoco/issues/964) is to move this property outside of surefire plugin
+definition and declare as POM property. Something like below:
+
+Put this as pom property, outside of plugin.
+```
+<argLine>-your -argline -parameters</argLine>	
+
+```
+	
+This is how surefire configuration should look like
+```
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-surefire-plugin</artifactId>
+	<version>2.19.1</version>
+	<configuration>
+		<argLine>@{argLine}</argLine>
+	</configuration>
+	
+```
+
 Helpful links:
 
 https://stackoverflow.com/a/36305148/2331225
