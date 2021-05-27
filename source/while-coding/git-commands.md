@@ -645,3 +645,20 @@ clone that fork in your local machine
 then make sure you have this setup so that your fork is updated: 
 https://gist.github.com/CristinaSolana/1885435 or
 https://stefanbauer.me/articles/how-to-keep-your-git-fork-up-to-date
+
+#### To view files in some other branch without switching from your branch
+ 
+Syntax:
+ 
+```
+git show branch-name:relative-path-of-file
+```
+
+Example:
+
+```
+git show pull-request-decoration:.github/workflows/build-with-coverage.yml
+
+```
+ 
+ 
