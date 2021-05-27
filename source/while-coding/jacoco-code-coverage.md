@@ -59,7 +59,7 @@ Overall, I felt that with Jacoco, generating aggregate report for multimodule ma
 
 ## Troubleshooting
 
-*Message:* Not generating jacoco repot due to :
+### *Message:* Not generating jacoco repot due to :
 
 `Skipping JaCoCo execution due to missing execution data file.`
 
@@ -92,3 +92,33 @@ https://stackoverflow.com/a/36305148/2331225
 http://www.ffbit.com/blog/2014/05/21/skipping-jacoco-execution-due-to-missing-execution-data-file/
 
 [official latest JaCoCo plug-in maven config](https://www.eclemma.org/jacoco/trunk/doc/examples/build/pom.xml)
+	
+
+### Message: can't have 2 modules with the following key
+
+when you are integrating a multimodule project with sonarcloud it'll ask you to put below properties in your POM
+
+```
+<properties>
+	<sonar.projectKey>someprojectkey</sonar.projectKey>
+	<sonar.organization>someorg</sonar.organization>
+	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
+
+```
+	
+but when you run this, sonar will complain with error as follows:
+	
+```
+Error:  Failed to execute goal org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar (default-cli) on project someproject: Project 'someprojectkey' can't have 2 modules with the following key: someprojectkey -> [Help 1]
+	
+```
+	
+solution to this is to add a module key as below along with three properties suggested by sonarcloud:
+	
+```
+<sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
+	
+```
+
+
