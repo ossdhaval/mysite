@@ -661,4 +661,12 @@ git show pull-request-decoration:.github/workflows/build-with-coverage.yml
 
 ```
  
+#### To store credentials for 18 hours:
+
+```
+
+git config --global credential.helper "cache --timeout 64800"
+
+```
+
  
