@@ -10,6 +10,8 @@ https://stackoverflow.com/questions/58139406/only-run-job-on-specific-branch-wit
 
 ### Action that can build multiple dependent projects
 
+Here current repository needs BOM project, which is a separate project, to be built first.
+
 ```
 
 jobs:
