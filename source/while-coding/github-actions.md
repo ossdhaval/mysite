@@ -8,6 +8,14 @@ https://app.pluralsight.com/library/courses/github-actions-getting-started/table
 
 https://stackoverflow.com/questions/58139406/only-run-job-on-specific-branch-with-github-actions
 
+### Options for yml tags of a github workflow:
+
+https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+### Checkout action documentation:
+
+https://github.com/actions/checkout
+
 ### Action that can build multiple dependent projects
 
 Here current repository needs BOM project, which is a separate project, to be built first.
