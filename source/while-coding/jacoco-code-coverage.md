@@ -122,3 +122,10 @@ solution to this is to add a module key as below along with three properties sug
 ```
 
 
+### Sonarcloud analysis types:
+	There are two types of analysis supported. Automated and CI based.
+	When you add a new project, sonar will analyse the code and decide whether it should do automatic analysis or not based on these [limitations](https://sonarcloud.io/documentation/analysis/automatic-analysis/). If sonarcloud finds it ok to do automatic analysis then it'll go ahead and perform it. You'll directly see code quality dashboard. 
+	If automatic anaysis is not found suitable, then sonar will ask you to configure CI analysis where you have to make changes in you project to add configurations as suggested by sonar during project onboarding process. 
+	Both of these analysis [can't be active together](https://community.sonarsource.com/t/sonarcloud-task-fails-because-of-ci-analysis-and-auto-analysis-running/22937). If you want CI based analysis, you have to turn off automatic one. (project->administration->analysis types)
+	I suggest CI analysis over automatic as it is easy to setup and gives more control on when a scan should run. For example, automatic analysis only runs on push on master or merge on master. But with CI based scan, you can ask it run for every push on every branch.
+	
