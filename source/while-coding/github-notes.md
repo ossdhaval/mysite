@@ -14,6 +14,9 @@
 - Now, set GPG key in your local git client
   - `git config --global user.signingkey <your key>`
 - Now we need to add same key to your github account
-  - github->profile->settings->SSH and GPG keys->New GPG key
+  - get public key block
+    - `gpg --armor --export <your key>`
+    - copy the entire text that got printed on your screen, starting from first '-' to last '-'
+  - now go to github->profile->settings->SSH and GPG keys->New GPG key. Paste public key block that you copied in step above.
 - after this whenever you want to sign a commit add `-S` flag
   - `git commit -S -m your commit message` 
