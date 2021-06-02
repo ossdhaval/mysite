@@ -20,3 +20,6 @@
   - now go to github->profile->settings->SSH and GPG keys->New GPG key. Paste public key block that you copied in step above.
 - after this whenever you want to sign a commit add `-S` flag
   - `git commit -S -m your commit message` 
+
+
+Above steps were derived from links given [here](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
