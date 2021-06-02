@@ -136,7 +136,7 @@ I suggest CI analysis over automatic as it is easy to setup and gives more contr
 
 ### Sonar tokens
 
-When you configure CI based analysis, sonar will ask you to add a security token 'SONAR_TOKEN' in your github. Remember that you don't need a separate token for each repo of your org. You can use one token for all the repo by creating an github security token at org level instead of repo level. 
+When you configure CI based analysis, sonar will ask you to add a security token 'SONAR_TOKEN' in your github. Remember that you [don't need a separate token](https://community.sonarsource.com/t/organization-token/11312) for each repo of your org. You can use one token for all the repo by creating an github security token at org level instead of repo level. 
 - SonarCloud: go to your profile->security->generate a new token with any name. Name here doesn't matter, just copy the token value.
 - github: go to you organization landing page->security->create a new org token with name 'SONAR_TOKEN' with value as you copied above.
 - this github token will be used in the github action workflow yml that you will create.
