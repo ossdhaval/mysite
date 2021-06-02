@@ -133,3 +133,13 @@ Both of these analysis [can't be active together](https://community.sonarsource.
 	
 I suggest CI analysis over automatic as it is easy to setup and gives more control on when a scan should run. For example, automatic analysis only runs on push on master or merge on master. But with CI based scan, you can ask it run for every push on every branch.
 	
+
+### Sonar tokens
+
+When you configure CI based analysis, sonar will ask you to add a security token 'SONAR_TOKEN' in your github. Remember that you don't need a separate token for each repo of your org. You can use one token for all the repo by creating an github security token at org level instead of repo level. 
+- SonarCloud: go to your profile->security->generate a new token with any name. Name here doesn't matter, just copy the token value.
+- github: go to you organization landing page->security->create a new org token with name 'SONAR_TOKEN' with value as you copied above.
+- this github token will be used in the github action workflow yml that you will create.
+	
+
+	
