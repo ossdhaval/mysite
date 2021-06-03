@@ -54,3 +54,7 @@ jobs:
 
 
 ```
+
+### Contexts and expressions available to workflow: 
+
+https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context
