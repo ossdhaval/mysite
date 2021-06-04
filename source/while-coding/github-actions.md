@@ -58,3 +58,9 @@ jobs:
 ### Contexts and expressions available to workflow: 
 
 https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context
+
+
+### github action contexts vs Runner variables:
+https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#determining-when-to-use-contexts
+
+basically, in your workflow code, the part apart from 'run:' is executed by Github action and code under 'run:' is executed by runner. You have contexts like `github.repository` in the part which is executed by github action, while runner doesn't have context but it has many environment variables, like `$GITHUB_REF`
