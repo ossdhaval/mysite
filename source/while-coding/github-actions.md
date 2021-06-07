@@ -64,3 +64,22 @@ https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-g
 https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#determining-when-to-use-contexts
 
 basically, in your workflow code, the part apart from 'run:' is executed by Github action and code under 'run:' is executed by runner. You have [contexts](https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#contexts) like `github.repository` in the part which is executed by github action, while runner doesn't have context but it has many [environment variables](https://docs.github.com/en/actions/reference/environment-variables#default-environment-variables), like `$GITHUB_REF`
+
+
+### how to print all values in any context.
+
+```
+- name: Dump github context
+  shell: bash
+  env:
+   GITHUB_CONTEXT: ${{ toJson(github) }}
+  run:   echo "$GITHUB_CONTEXT"
+```
+
+### print all the environment variables:
+
+```
+      - name: Get env variables
+        run: 
+          echo ${ENV}
+```
