@@ -669,4 +669,15 @@ git config --global credential.helper "cache --timeout 64800"
 
 ```
 
+#### add description to your commit using command line.
+
+ When you fire `git commit` without a `-m`, git will open an editor within terminal. You can put your commit title and description in there. 
+ - `git commit` ( or you can continue to use other flags as well like `git commit -S -a` )
+ - opens an editor
+ - put your commit title after first few commented lines.
+ - leave a line blank and then put your description
+ - `ctrl+o`
+ - enter
+ - `ctrl+x
+ 
  
