@@ -83,3 +83,10 @@ basically, in your workflow code, the part apart from 'run:' is executed by Gith
         run: 
           echo ${ENV}
 ```
+
+### convert context value to lowercase:
+https://github.community/t/additional-function-s-lowercase-uppercase/140632
+
+### setting a variable in one action and using it in another:
+https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
+
