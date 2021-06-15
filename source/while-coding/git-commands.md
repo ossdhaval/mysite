@@ -99,7 +99,9 @@ and
 git remote show origin
 
 First command shows which all branches you have in local, at which commit they are pointing to, and which one is your current working directory branch ( pointed to by HEAD ). 
-dhaval@thinkpad:~/IdeaProjects/Janssen/home$ git log --oneline --decorate --all
+ 
+`dhaval@thinkpad:~/IdeaProjects/Janssen/home$ git log --oneline --decorate --all`
+```
 a81b684 (origin/main, origin/HEAD) Update Gemfile
 1c345e4 Merge branch 'main' of https://github.com/ossdhaval/mysite
 37009fd Update Gemfile
@@ -111,11 +113,13 @@ ec2ca67 Set theme jekyll-theme-cayman
 b25aef9 Update RELEASE_NOTES.md
 51bed95 Update index.md
 931132e Create RELEASE_NOTES.md
-
+```
 
 
 Second command tells you about remote repository. And what is current state with respect to local branches.
-:~/IdeaProjects/Janssen/home$ git remote show origin
+ 
+`:~/IdeaProjects/Janssen/home$ git remote show origin`
+ ```
 * remote origin
   Fetch URL: https://ossdhaval:open$5github@github.com/ossdhaval/mysite.git
   Push  URL: https://ossdhaval:open$5github@github.com/ossdhaval/mysite.git
@@ -130,7 +134,7 @@ Second command tells you about remote repository. And what is current state with
     gh-pages pushes to gh-pages (local out of date)
     main     pushes to main     (local out of date)
 dhaval@thinkpad:~/IdeaProjects/Janssen/home$ 
-
+```
 
 Branch (i.e tracking branch) :
 
