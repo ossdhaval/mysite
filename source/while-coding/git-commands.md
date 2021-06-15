@@ -684,4 +684,14 @@ git config --global credential.helper "cache --timeout 64800"
  - enter
  - `ctrl+x
  
+#### resolving git merge conflicts:
  
+If you are trying to pull some changes and merge conflicts happen then you have two choices:
+ 1) use commandline to merge using `git merge -t vimdiff`. This will open vimdiff on the terminal and show merge conflicts that you have merge. But this is little
+ difficult as it is difficult to navigate commandline.
+ 2) use Intellij's merge conflict tool. To use it:
+  - Press `shift+shift` and then search for 'conflict'. You should see a tool in `git` category.
+  - open this tool and then using it you should be easily able to merge. It shows three files.
+    - Left: is your local changes
+    - Right: is incoming changes
+    - Center: is will be the final outcome. This is what you have to edit.
