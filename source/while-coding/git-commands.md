@@ -695,3 +695,5 @@ If you are trying to pull some changes and merge conflicts happen then you have 
     - Left: is your local changes
     - Right: is incoming changes
     - Center: is will be the final outcome. This is what you have to edit.
+  - Once completed, click apply to apply the changes. 
+  - now if you go and fire `git status` then you'll see that your local copy has been modified. You can commit that.
