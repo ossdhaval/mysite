@@ -219,10 +219,14 @@ git branch --no-merged
 #### How to completely remove local branch and remote-tracking branch and start fresh from remote branch:
  
  In case you have messy code in your local branch that you have committed but not pushed to remote. You want to get rid of this code and start afresh from remote branch. For this you have to 
- 1) Delete local branch: `git branch -D file-sync-22-master-1623760119`
- 2) Delete local remote-tracking branch: `git branch -dr origin/file-sync-22-master-1623760119`
- 3) Get remote branch in local tracker branch again: `git pull`
- 4) Create new local branch from newly created local remote-tracking branch: `git checkout -b file-sync-22-master-1623760119 origin/file-sync-22-master-1623760119`
+ 1) Delete local branch: `git branch -D file-sync-22-master-1623760119`. Check using `git branch -vv`
+ 2) Delete local remote-tracking branch: `git branch -dr origin/file-sync-22-master-1623760119`. Check using `git remote show <remote-name>`
+ 3) Get remote branch in local tracker branch again: `git pull`. Check using `git remote show <remote-name>`
+ 4) Create new local branch from newly created local remote-tracking branch: `git checkout -b file-sync-22-master-1623760119 origin/file-sync-22-master-1623760119`. Check using `git branch -vv`.
+ 
+ `ref:` https://stackoverflow.com/a/23961231/2331225
+ 
+ 
  
 
  
