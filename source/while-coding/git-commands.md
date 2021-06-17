@@ -156,6 +156,7 @@ Now, you can link-up your local branch to a remote tracking branch for ease of u
  
  #### About local branches:
  - you can create a simple local branch that doesn't link to any remote tracker using `git branch <name>`
+   - Remember that changes in the current branch that you haven't committed yet will also be part of new branch
  - Start using this branch by switching to it: `git switch <name>`
  - Remember, even if your local branch is not tracking a remote tracking branch, you can still use it to work with any remote branch. It is just that you have to mention which remote and which branch of that remote should be used for that operation everytime. I recommend this manual approach as it makes it clear where your code is going and coming.
  - To make local branch track a remote branch: `git branch -u <remote>/<branch> <local-branch>`
