@@ -675,6 +675,16 @@ better. For that,
 to see all the parameters being passed
 /opt/dist/scripts/oxauth status
 
+----------
+getting 
+
+`10:41:56.874 [TestNG-tests-4] ERROR io.jans.as.client.RegisterClient - PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target`
+
+After installing fresh GCP janssen installation and then running jans-auth-server tests against it from same GCP machine.
+
+Fix: couldn't find a root-cause but it only started working when I unintalled and reinstalled Janssen. Plus, when I was reinstalling via ssh session, GCP logged me in as `dhaval@test` while earlier it was with machine name `dhaval@21stJan`. Either the reinstallation or change in the login could have solved it. My guess is reinstall solved it.
+
+
 
 =============
 enable linux GUI on GCP vm
