@@ -905,5 +905,5 @@ dhaval@test:~$
 
 - `systemctl status jans-auth.service`: To know status of Janssen auth server service
 - `systemctl restart jans-auth`: Restart Janssen auth service
-- `systemctl list-units --all jans*`: To know status of all Janssen services
+- `systemctl list-units --all "jans*"`: To know status of all Janssen services
 - `mvn -Dcfg=test.jans.gluu.org -Dmaven.test.skip=false -Ddevelopment-build=false -Dcvss-score=9 -Dfindbugs.skip=true -Ddependency.check=false clean compile install javadoc:javadoc findbugs:findbugs site`: maven build command for jans-auth-server
