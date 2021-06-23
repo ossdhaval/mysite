@@ -22,8 +22,10 @@
 
   - Access token is created by authorization server, given to client to access resources on resource server.
   - Access token is opaque to client.
-  - Authorization server creates an access token. It also specifies a life time duration for token when creating it. A background process on authorization server keeps on checking tokens and expires them as their lifetime ends.
-  - Janssen supports one token type which is bearer token as described in this [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750)
+  - Authorization server creates an access token. It also specifies a life time duration for token when 
+    creating it. A background process on authorization server keeps on checking tokens and expires them as their lifetime ends.
+  - Janssen supports one token type which is bearer token as 
+    described in this [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750)
 
 ### Refresh token
 
@@ -33,4 +35,7 @@
   
 ### HTTP redirection:
 
-  - This specification makes extensive use of HTTP redirections, in which the client or the authorization server directs the resource owner's user-agent to another destination.  While the examples in this specification show the use of the HTTP 302 status code, any other method available via the user-agent to accomplish this redirection is allowed and is considered to be an implementation detail.
+  - This specification makes extensive use of HTTP redirections, in which the client or the 
+    authorization server directs the resource owner's user-agent to another destination. While the 
+    examples in this specification show the use of the HTTP 302 status code, any other method available via the 
+    user-agent to accomplish this redirection is allowed and is considered to be an implementation detail.
