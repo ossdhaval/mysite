@@ -1,3 +1,6 @@
+## OAuth 2.0 ([RFC6749](https://datatracker.ietf.org/doc/html/rfc6749))
+
+
 ### Grant types:
 1) Authorization code
   - Uses an authorization server
@@ -11,12 +14,14 @@
   - benefit: more efficient than `authorization code` grant type as there are less roundtrips
   - downside: less secure as access code is shared with user-agent
 3) Password credentials
-  - resource owner gives user-id/password credentials to client application once and client app uses these credentials to get a long-lived access token
+  - resource owner gives user-id/password credentials to client application once and client app uses these 
+    credentials to get a long-lived access token
   - client doesn't store resource owner credentials once it has an access token or refresh token
   - benefit: simplified workflown when dealing with a trusted client
   - downside: very insecure as client gets the credentials
 4) Client credentials
-  - client acts on its own to access resources from resource server which are owned by client itself. i.e. when client is the resource owner
+  - client acts on its own to access resources from resource server which are owned by client 
+    itself. i.e. when client is the resource owner
   
 ### access token
 
@@ -39,3 +44,11 @@
     authorization server directs the resource owner's user-agent to another destination. While the 
     examples in this specification show the use of the HTTP 302 status code, any other method available via the 
     user-agent to accomplish this redirection is allowed and is considered to be an implementation detail.
+
+
+
+## OAuth 2.0 Rich Authorization Requests ([draft RFC](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rar))
+
+   Interpretation of the value of the "type" parameter, and the object
+   elements that the "type" parameter allows, is under the control of
+   the AS.
