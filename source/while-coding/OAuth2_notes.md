@@ -52,3 +52,9 @@
    Interpretation of the value of the "type" parameter, and the object
    elements that the "type" parameter allows, is under the control of
    the AS.
+
+change areas:
+
+- Authorization requests as specified in [RFC6749],
+- Device Authorization Request as specified in [RFC8628],
+- Backchannel Authentication Requests as defined in [OpenID.CIBA].
