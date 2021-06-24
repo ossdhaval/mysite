@@ -917,3 +917,5 @@ dhaval@test:~$
 - `systemctl restart jans-auth`: Restart Janssen auth service
 - `systemctl list-units --all "jans*"`: To know status of all Janssen services
 - `mvn -Dcfg=test.jans.gluu.org -Dmaven.test.skip=false -Ddevelopment-build=false -Dcvss-score=9 -Dfindbugs.skip=true -Ddependency.check=false clean compile install javadoc:javadoc findbugs:findbugs site`: maven build command for jans-auth-server
+- file that holds JVM parameters and other environment variable: `vim /etc/default/jans-auth`. Similarly, there are files for fido2, SCIM etc in same folder.
+- `sudo journalctl -u [service_name]` will show you logs of systemctl. Not very useful but thats where it all starts. e.g `sudo journalctl -u jans-auth.service`
