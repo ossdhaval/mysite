@@ -684,6 +684,11 @@ After installing fresh GCP janssen installation and then running jans-auth-serve
 
 Fix: couldn't find a root-cause but it only started working when I unintalled and reinstalled Janssen. Plus, when I was reinstalling via ssh session, GCP logged me in as `dhaval@test` while earlier it was with machine name `dhaval@21stJan`. Either the reinstallation or change in the login could have solved it. My guess is reinstall solved it.
 
+----------
+getting `package sun.security.x509 does not exist` when trying to run few Janssen test cases from Intellij like `RegistrationRestWebServiceHttpTest.requestClientAssociate1`
+
+Fix: disable `Use --release option` from Java compiler settings in Intellij. [Reference](https://stackoverflow.com/questions/40448203/intellij-says-the-package-does-not-exist-but-i-can-access-the-package)
+
 
 
 =============
@@ -910,6 +915,30 @@ CLI available to manage Jannsen Server:
 dhaval@test:~$ 
 
 ```
+
+#### setup remote debugging
+
+##### changes required on Janssen server
+
+- Open service config file
+
+  `vim /etc/default/jans-auth`
+
+- add line below at the end of `JAVA_OPTIONS`
+
+  `-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=6005`
+
+- then restart services
+
+  `systemctl status jans-auth.service`
+
+##### changes required in the machine where your workspace is:
+
+- setup port forwarding
+  
+  `ssh -L 6001:localhost:6001 dhaval@test.dd.jans.io`
+
+
 
 ### Imp Janssen commands
 
