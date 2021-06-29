@@ -943,17 +943,28 @@ dhaval@test:~$
 
 - add line below at the end of `JAVA_OPTIONS`
 
-  `-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=6005`
+  `-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=6001`
 
 - then restart services
 
-  `systemctl status jans-auth.service`
+  `systemctl restart jans-auth.service`
+  
+- (only if you are using GCP instance as jans server) add port to firewall:
+  - search for firewall on dashboard search
+  - edit the firewall called `default-allow-ssh`, and add port `6001`. Save settings.
+  - not sure but you may want to restart your instance once for firewall settings to take effect.
 
 ##### changes required in the machine where your workspace is:
 
 - setup port forwarding
   
   `ssh -L 6001:localhost:6001 dhaval@test.dd.jans.io`
+  
+  this command will open an ssl connection with jans server. Keep the window open.
+  
+- In IntellijIdea, 
+  - `shift+shift` -> search for `edit configuration` -> click on `+` -> `remote jvm debugging` -> then give below values
+  - `host:` remote host IP or name as in `hosts` file, `port:` 6001, `use module:` give the module which is being debugged on server. 
 
 
 ### Imp Janssen commands
