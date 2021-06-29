@@ -690,6 +690,18 @@ getting `package sun.security.x509 does not exist` when trying to run few Jansse
 Fix: disable `Use --release option` from Java compiler settings in Intellij. [Reference](https://stackoverflow.com/questions/40448203/intellij-says-the-package-does-not-exist-but-i-can-access-the-package)
 
 ---------
+`problem:`
+
+Remote debugger was not able to connect to jans server on GCP. This was due to 
+jans-auth service was not able to start and was getting stuck at below log message in jans-auth.log.
+
+```
+2021-06-29 06:20:08,601 INFO  [main] [jans.as.server.model.config.ConfigurationFactory] (ConfigurationFactory.java:395) - Loading configuration from 'ldap' DB...
+```
+
+`solution:` GCP instance restart worked. root cause was that ldap services were not available even though it showed `running` in systemctl command status.
+
+
 
 
 
