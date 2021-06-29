@@ -689,6 +689,8 @@ getting `package sun.security.x509 does not exist` when trying to run few Jansse
 
 Fix: disable `Use --release option` from Java compiler settings in Intellij. [Reference](https://stackoverflow.com/questions/40448203/intellij-says-the-package-does-not-exist-but-i-can-access-the-package)
 
+---------
+
 
 
 =============
@@ -710,9 +712,13 @@ called oxauth in Gluu.
 LDAP/opendj/dsconfig commands :
 
 to see all the existing indexes on backend 'userRoot':
-/opt/opendj/bin/dsconfig list-backend-indexes --backend-name userRoot
+
+`/opt/opendj/bin/dsconfig list-backend-indexes --backend-name userRoot`
+
 this will ask few question to connect with Opendj. following are the responses 
 if you are running server on localhost:
+
+```
 
 root@test:/install/community-edition-setup# /opt/opendj/bin/dsconfig list-backend-indexes --backend-name userRoot
 
@@ -721,11 +727,11 @@ root@test:/install/community-edition-setup# /opt/opendj/bin/dsconfig list-backen
 
 Directory server hostname or IP address [localhost]: 
 
-Directory server administration port number [4444]: 
+Directory server administration port number [4444]: 1636
 
 Administrator user bind DN [cn=Directory Manager]: 
 
-Password for user 'cn=Directory Manager': 
+Password for user 'cn=Directory Manager': <password that you entered during installation of Janssen>
 
 
 
@@ -735,9 +741,8 @@ aci                         : presence            : 4000              : -       
 authzCode                   : equality            : 4000              : -                              : false
 chlng                       : equality            : 4000              : -                              : false
 
+```
 
-Note : if it doesn't work with port 4444, try 1636. Also, the password is same as 
-LDAP admin password that you setup at the time of gluu server installation.
 reference and more commands : 
 https://backstage.forgerock.com/docs/ds/5/configref/
 
