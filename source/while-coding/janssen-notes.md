@@ -977,4 +977,4 @@ dhaval@test:~$
 - file that holds JVM parameters and other environment variable: `vim /etc/default/jans-auth`. Similarly, there are files for fido2, SCIM etc in same folder.
 - `sudo journalctl -u [service_name]` will show you logs of systemctl. Not very useful but thats where it all starts. e.g `sudo journalctl -u jans-auth.service`
 - Janssen config files are stored under `/etc/jans/conf/`. For example, `jans-ldap.properties`
-
+- Janssen code: generating javadoc for janssen modules : `dhaval@thinkpad:~/IdeaProjects/Janssen/jans-auth-server$ mvn javadoc:javadoc`. After this, you can find javadoc in target folder. eg `file:///home/dhaval/IdeaProjects/Janssen/jans-auth-server/model/target/site/apidocs/io/jans/as/model/configuration/Configuration.html`
