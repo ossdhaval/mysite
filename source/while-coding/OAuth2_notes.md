@@ -58,3 +58,9 @@ change areas:
 - Authorization requests as specified in [RFC6749],
 - Device Authorization Request as specified in [RFC8628],
 - Backchannel Authentication Requests as defined in [OpenID.CIBA].
+
+### Shortforms:
+
+`RP`: Relying Party (client)
+`OP`: OpenID provider
+
