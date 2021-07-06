@@ -979,3 +979,8 @@ dhaval@test:~$
 - Janssen config files are stored under `/etc/jans/conf/`. For example, `jans-ldap.properties`
 - Janssen code: generating javadoc for janssen modules : `dhaval@thinkpad:~/IdeaProjects/Janssen/jans-auth-server$ mvn javadoc:javadoc`. After this, you can find javadoc in target folder. eg `file:///home/dhaval/IdeaProjects/Janssen/jans-auth-server/model/target/site/apidocs/io/jans/as/model/configuration/Configuration.html`
 - List of endpoints for janssen after installation: `https://github.com/JanssenProject/jans-setup/blob/master/templates/jans-auth/jans-auth-config.json`
+
+### Similar to janssen/Gluu:
+
+1) [Curity](https://curity.io/): they also have a community edition like Gluu.
+2) [Authlete](https://www.authlete.com/): They don't have a community edition but they have a strong team.
