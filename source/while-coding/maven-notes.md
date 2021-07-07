@@ -249,6 +249,10 @@ so you'll see all the important info in this.
 ### command to skip tests
 
 `mvn install -DskipTests`
+	
+### command to run one particular test:
+	
+`mvn -Dcfg=test.dd.jans.io -Dtest=AccessTokenAsJwtHttpTest#accessTokenAsJwt -DfailIfNoTests=false -Dcvss-score=9 -Dfindbugs.skip=true -Ddependency.check=false clean test
 
 Starting with the Maven 2.1 release, there are new Maven command line options which allow you to manipulate the way that Maven will build multimodule projects. These new options are:
 
