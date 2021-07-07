@@ -966,6 +966,558 @@ dhaval@test:~$
   - `shift+shift` -> search for `edit configuration` -> click on `+` -> `remote jvm debugging` -> then give below values
   - `host:` remote host IP or name as in `hosts` file, `port:` 6001, `use module:` give the module which is being debugged on server. 
 
+### Request and responses to imp jans config endpoints
+
+```
+OpenID Connect Configuration
+-------------------------------------------------------
+REQUEST:
+-------------------------------------------------------
+GET /.well-known/openid-configuration HTTP/1.1 HTTP/1.1
+Host: test.dd.jans.io
+
+-------------------------------------------------------
+RESPONSE:
+-------------------------------------------------------
+HTTP/1.1 200
+Connection: Keep-Alive
+Content-Length: 7774
+Content-Type: application/json
+Date: Wed, 07 Jul 2021 08:26:48 GMT
+Keep-Alive: timeout=5, max=100
+Server: Apache/2.4.41 (Ubuntu)
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+
+{
+   "request_parameter_supported":true,
+   "token_revocation_endpoint":"https://test.dd.jans.io/jans-auth/restv1/revoke",
+   "introspection_endpoint":"https://test.dd.jans.io/jans-auth/restv1/introspection",
+   "claims_parameter_supported":true,
+   "issuer":"https://test.dd.jans.io",
+   "userinfo_encryption_enc_values_supported":[
+      "RSA1_5",
+      "RSA-OAEP",
+      "A128KW",
+      "A256KW"
+   ],
+   "id_token_encryption_enc_values_supported":[
+      "A128CBC+HS256",
+      "A256CBC+HS512",
+      "A128GCM",
+      "A256GCM"
+   ],
+   "authorization_endpoint":"https://test.dd.jans.io/jans-auth/restv1/authorize",
+   "service_documentation":"http://jans.org/docs",
+   "id_generation_endpoint":"https://test.dd.jans.io/jans-auth/restv1/id",
+   "claims_supported":[
+      "street_address",
+      "country",
+      "zoneinfo",
+      "birthdate",
+      "role",
+      "gender",
+      "formatted",
+      "user_name",
+      "work_phone",
+      "phone_mobile_number",
+      "preferred_username",
+      "locale",
+      "inum",
+      "jansIdTknSignedRespAlg",
+      "jansRedirectURI",
+      "updated_at",
+      "nickname",
+      "member_of",
+      "org_name",
+      "email",
+      "website",
+      "email_verified",
+      "jansAppType",
+      "profile",
+      "locality",
+      "phone_number_verified",
+      "jansScope",
+      "given_name",
+      "middle_name",
+      "picture",
+      "name",
+      "phone_number",
+      "postal_code",
+      "region",
+      "family_name"
+   ],
+   "scope_to_claims_mapping":[
+      {
+         "openid":[
+            
+         ]
+      },
+      {
+         "profile":[
+            "name",
+            "family_name",
+            "given_name",
+            "middle_name",
+            "nickname",
+            "preferred_username",
+            "profile",
+            "picture",
+            "website",
+            "gender",
+            "birthdate",
+            "zoneinfo",
+            "locale",
+            "updated_at"
+         ]
+      },
+      {
+         "permission":[
+            "role"
+         ]
+      },
+      {
+         "^/user/.+$":[
+            
+         ]
+      },
+      {
+         "http://photoz.example.com/dev/scopes/view":[
+            
+         ]
+      },
+      {
+         "https://jans.io/scim/fido2.read":[
+            
+         ]
+      },
+      {
+         "http://photoz.example.com/dev/scopes/all":[
+            
+         ]
+      },
+      {
+         "modify":[
+            
+         ]
+      },
+      {
+         "https://jans.io/scim/all-resources.search":[
+            
+         ]
+      },
+      {
+         "https://jans.io/scim/groups.write":[
+            
+         ]
+      },
+      {
+         "uma_protection":[
+            
+         ]
+      },
+      {
+         "work_phone":[
+            "work_phone"
+         ]
+      },
+      {
+         "https://jans.io/scim/users.write":[
+            
+         ]
+      },
+      {
+         "https://jans.io/oauth/config/database/sql.write":[
+            
+         ]
+      },
+      {
+         "phone":[
+            "phone_number_verified",
+            "phone_number"
+         ]
+      },
+      {
+         "address":[
+            "formatted",
+            "postal_code",
+            "street_address",
+            "locality",
+            "country",
+            "region"
+         ]
+      },
+      {
+         "test":[
+            "member_of"
+         ]
+      },
+      {
+         "https://jans.io/oauth/config/database/sql.delete":[
+            
+         ]
+      },
+      {
+         "mobile_phone":[
+            "phone_mobile_number"
+         ]
+      },
+      {
+         "revoke_session":[
+            
+         ]
+      },
+      {
+         "user_name":[
+            "user_name"
+         ]
+      },
+      {
+         "email":[
+            "email_verified",
+            "email"
+         ]
+      },
+      {
+         "https://jans.io/scim/bulk":[
+            
+         ]
+      },
+      {
+         "https://jans.io/oauth/config/database/sql.readonly":[
+            
+         ]
+      },
+      {
+         "clientinfo":[
+            "name",
+            "inum",
+            "jansScope",
+            "jansAppType",
+            "jansIdTknSignedRespAlg",
+            "jansRedirectURI"
+         ]
+      },
+      {
+         "https://jans.io/scim/fido2.write":[
+            
+         ]
+      },
+      {
+         "org_name":[
+            "org_name"
+         ]
+      },
+      {
+         "oxd":[
+            
+         ]
+      },
+      {
+         "https://jans.io/scim/users.read":[
+            
+         ]
+      },
+      {
+         "https://jans.io/scim/groups.read":[
+            
+         ]
+      },
+      {
+         "https://jans.io/scim/fido.read":[
+            
+         ]
+      },
+      {
+         "offline_access":[
+            
+         ]
+      },
+      {
+         "https://jans.io/scim/fido.write":[
+            
+         ]
+      }
+   ],
+   "op_policy_uri":"http://www.jans.io/doku.php?id=jans:policy",
+   "token_endpoint_auth_methods_supported":[
+      "client_secret_basic",
+      "client_secret_post",
+      "client_secret_jwt",
+      "private_key_jwt",
+      "tls_client_auth",
+      "self_signed_tls_client_auth",
+      "none"
+   ],
+   "tls_client_certificate_bound_access_tokens":true,
+   "response_modes_supported":[
+      "fragment",
+      "query",
+      "form_post"
+   ],
+   "backchannel_logout_session_supported":true,
+   "token_endpoint":"https://test.dd.jans.io/jans-auth/restv1/token",
+   "backchannel_authentication_request_signing_alg_values_supported":[
+      "RS256",
+      "RS384",
+      "RS512",
+      "ES256",
+      "ES384",
+      "ES512",
+      "PS256",
+      "PS384",
+      "PS512"
+   ],
+   "response_types_supported":[
+      "token id_token",
+      "token",
+      "code id_token",
+      "code",
+      "token code",
+      "token code id_token",
+      "id_token"
+   ],
+   "backchannel_token_delivery_modes_supported":[
+      "poll",
+      "ping",
+      "push"
+   ],
+   "request_uri_parameter_supported":true,
+   "backchannel_user_code_parameter_supported":true,
+   "grant_types_supported":[
+      "authorization_code",
+      "implicit",
+      "urn:openid:params:grant-type:ciba",
+      "client_credentials",
+      "urn:ietf:params:oauth:grant-type:uma-ticket",
+      "password",
+      "urn:ietf:params:oauth:grant-type:device_code",
+      "refresh_token"
+   ],
+   "ui_locales_supported":[
+      "en",
+      "bg",
+      "de",
+      "es",
+      "fr",
+      "it",
+      "ru",
+      "tr"
+   ],
+   "userinfo_endpoint":"https://test.dd.jans.io/jans-auth/restv1/userinfo",
+   "op_tos_uri":"http://www.jans.io/doku.php?id=jans:tos",
+   "auth_level_mapping":{
+      "20":[
+         "basic_lock"
+      ],
+      "10":[
+         "basic"
+      ]
+   },
+   "require_request_uri_registration":false,
+   "id_token_encryption_alg_values_supported":[
+      "RSA1_5",
+      "RSA-OAEP",
+      "A128KW",
+      "A256KW"
+   ],
+   "frontchannel_logout_session_supported":true,
+   "claims_locales_supported":[
+      "en"
+   ],
+   "clientinfo_endpoint":"https://test.dd.jans.io/jans-auth/restv1/clientinfo",
+   "request_object_signing_alg_values_supported":[
+      "none",
+      "HS256",
+      "HS384",
+      "HS512",
+      "RS256",
+      "RS384",
+      "RS512",
+      "ES256",
+      "ES384",
+      "ES512",
+      "PS256",
+      "PS384",
+      "PS512"
+   ],
+   "request_object_encryption_alg_values_supported":[
+      "RSA1_5",
+      "RSA-OAEP",
+      "A128KW",
+      "A256KW"
+   ],
+   "session_revocation_endpoint":"https://test.dd.jans.io/jans-auth/restv1/revoke_session",
+   "check_session_iframe":"https://test.dd.jans.io/jans-auth/opiframe.htm",
+   "scopes_supported":[
+      "^/user/.+$",
+      "https://jans.io/scim/all-resources.search",
+      "user_name",
+      "clientinfo",
+      "https://jans.io/scim/fido2.write",
+      "work_phone",
+      "https://jans.io/scim/users.write",
+      "https://jans.io/scim/fido.read",
+      "revoke_session",
+      "https://jans.io/scim/fido.write",
+      "mobile_phone",
+      "https://jans.io/oauth/config/database/sql.readonly",
+      "offline_access",
+      "oxd",
+      "org_name",
+      "email",
+      "https://jans.io/scim/fido2.read",
+      "address",
+      "test",
+      "openid",
+      "profile",
+      "uma_protection",
+      "http://photoz.example.com/dev/scopes/view",
+      "permission",
+      "http://photoz.example.com/dev/scopes/all",
+      "https://jans.io/scim/groups.read",
+      "https://jans.io/scim/bulk",
+      "modify",
+      "https://jans.io/scim/users.read",
+      "phone",
+      "https://jans.io/oauth/config/database/sql.write",
+      "https://jans.io/scim/groups.write",
+      "https://jans.io/oauth/config/database/sql.delete"
+   ],
+   "backchannel_logout_supported":true,
+   "acr_values_supported":[
+      "basic_lock",
+      "basic"
+   ],
+   "request_object_encryption_enc_values_supported":[
+      "A128CBC+HS256",
+      "A256CBC+HS512",
+      "A128GCM",
+      "A256GCM"
+   ],
+   "device_authorization_endpoint":"https://test.dd.jans.io/jans-auth/restv1/device_authorization",
+   "display_values_supported":[
+      "page",
+      "popup"
+   ],
+   "userinfo_signing_alg_values_supported":[
+      "none",
+      "HS256",
+      "HS384",
+      "HS512",
+      "RS256",
+      "RS384",
+      "RS512",
+      "ES256",
+      "ES384",
+      "ES512",
+      "PS256",
+      "PS384",
+      "PS512"
+   ],
+   "claim_types_supported":[
+      "normal"
+   ],
+   "userinfo_encryption_alg_values_supported":[
+      "RSA1_5",
+      "RSA-OAEP",
+      "A128KW",
+      "A256KW"
+   ],
+   "end_session_endpoint":"https://test.dd.jans.io/jans-auth/restv1/end_session",
+   "revocation_endpoint":"https://test.dd.jans.io/jans-auth/restv1/revoke",
+   "backchannel_authentication_endpoint":"https://test.dd.jans.io/jans-auth/restv1/bc-authorize",
+   "token_endpoint_auth_signing_alg_values_supported":[
+      "HS256",
+      "HS384",
+      "HS512",
+      "RS256",
+      "RS384",
+      "RS512",
+      "ES256",
+      "ES384",
+      "ES512",
+      "PS256",
+      "PS384",
+      "PS512"
+   ],
+   "frontchannel_logout_supported":true,
+   "jwks_uri":"https://test.dd.jans.io/jans-auth/restv1/jwks",
+   "subject_types_supported":[
+      "public",
+      "pairwise"
+   ],
+   "id_token_signing_alg_values_supported":[
+      "none",
+      "HS256",
+      "HS384",
+      "HS512",
+      "RS256",
+      "RS384",
+      "RS512",
+      "ES256",
+      "ES384",
+      "ES512",
+      "PS256",
+      "PS384",
+      "PS512"
+   ],
+   "registration_endpoint":"https://test.dd.jans.io/jans-auth/restv1/register",
+   "id_token_token_binding_cnf_values_supported":[
+      "tbh"
+   ]
+}
+```
+
+fido config
+-----------
+request:
+`https://test.dd.jans.io/.well-known/fido2-configuration`
+
+Response:
+```
+{
+   "version":"1.1",
+   "issuer":"https://test.dd.jans.io",
+   "attestation":{
+      "base_path":"https://test.dd.jans.io/fido2/restv1/attestation",
+      "options_enpoint":"https://test.dd.jans.io/fido2/restv1/attestation/options",
+      "result_enpoint":"https://test.dd.jans.io/fido2/restv1/attestation/result"
+   },
+   "assertion":{
+      "base_path":"https://test.dd.jans.io/fido2/restv1/assertion",
+      "options_enpoint":"https://test.dd.jans.io/fido2/restv1/assertion/options",
+      "result_enpoint":"https://test.dd.jans.io/fido2/restv1/assertion/result"
+   }
+}
+```
+SCIM config
+-----------
+
+Request:
+`https://test.dd.jans.io/.well-known/scim-configuration`
+
+Response:
+```
+[
+   {
+      "version":"2.0",
+      "authorization_supported":[
+         "oauth2"
+      ],
+      "user_endpoint":"https://test.dd.jans.io/jans-scim/restv1/v2/Users",
+      "group_endpoint":"https://test.dd.jans.io/jans-scim/restv1/v2/Groups",
+      "fido_devices_endpoint":"https://test.dd.jans.io/jans-scim/restv1/v2/FidoDevices",
+      "fido2_devices_endpoint":"https://test.dd.jans.io/jans-scim/restv1/v2/Fido2Devices",
+      "bulk_endpoint":"https://test.dd.jans.io/jans-scim/restv1/v2/Bulk",
+      "service_provider_endpoint":"https://test.dd.jans.io/jans-scim/restv1/v2/ServiceProviderConfig",
+      "resource_types_endpoint":"https://test.dd.jans.io/jans-scim/restv1/v2/ResourceTypes",
+      "schemas_endpoint":"https://test.dd.jans.io/jans-scim/restv1/v2/Schemas"
+   }
+]
+```
+
 
 ### Imp Janssen commands
 
