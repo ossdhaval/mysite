@@ -1518,6 +1518,113 @@ Response:
 ]
 ```
 
+### client registration flow
+
+You can understand client registration flow by running below test case in `AccessTokenAsJwtHttpTest` class . It has output as given below:
+
+```
+
+
+#######################################################
+TEST: accessTokenAsJwt
+#######################################################
+-------------------------------------------------------
+REQUEST:
+-------------------------------------------------------
+POST /jans-auth/restv1/register HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Host: test.dd.jans.io
+
+{
+  "access_token_as_jwt" : "true",
+  "application_type" : "web",
+  "scope" : "openid profile address email phone user_name",
+  "redirect_uris" : [ "https://test.dd.jans.io/jans-auth-rp/home.htm" ],
+  "access_token_signing_alg" : "RS512",
+  "client_name" : "access token as JWT test",
+  "additional_audience" : [ ],
+  "response_types" : [ "code", "id_token", "token" ]
+}
+
+-------------------------------------------------------
+RESPONSE:
+-------------------------------------------------------
+HTTP/1.1 201
+Cache-Control: no-store
+Connection: Keep-Alive
+Content-Length: 1492
+Content-Type: application/json
+Date: Wed, 07 Jul 2021 08:26:48 GMT
+Keep-Alive: timeout=5, max=100
+Pragma: no-cache
+Server: Apache/2.4.41 (Ubuntu)
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+
+{
+    "allow_spontaneous_scopes": false,
+    "application_type": "web",
+    "rpt_as_jwt": false,
+    "registration_client_uri": "https://test.dd.jans.io/jans-auth/restv1/register?client_id=2bc0674b-48ce-4221-a19e-fa9fe7f1dc96",
+    "tls_client_auth_subject_dn": "",
+    "registration_access_token": "237faef9-f3c2-44b6-95fa-71951fcc5d65",
+    "client_id": "2bc0674b-48ce-4221-a19e-fa9fe7f1dc96",
+    "token_endpoint_auth_method": "client_secret_basic",
+    "scope": "user_name email openid profile phone address",
+    "run_introspection_script_before_access_token_as_jwt_creation_and_include_claims": false,
+    "client_secret": "3c1fd4a6-ac97-4dde-beb4-2ceba46d0842",
+    "client_id_issued_at": 1625646408,
+    "backchannel_logout_uri": [],
+    "backchannel_logout_session_required": false,
+    "client_name": "access token as JWT test",
+    "spontaneous_scopes": [],
+    "id_token_signed_response_alg": "RS256",
+    "access_token_as_jwt": true,
+    "grant_types": [
+        "authorization_code",
+        "implicit",
+        "refresh_token"
+    ],
+    "subject_type": "pairwise",
+    "keep_client_authorization_after_expiration": false,
+    "redirect_uris": ["https://test.dd.jans.io/jans-auth-rp/home.htm"],
+    "additional_audience": [],
+    "frontchannel_logout_session_required": false,
+    "client_secret_expires_at": 1625732808,
+    "require_auth_time": false,
+    "access_token_signing_alg": "RS512",
+    "response_types": [
+        "token",
+        "code",
+        "id_token"
+    ]
+}
+
+authenticateResourceOwnerAndGrantAccess: authorizationRequestUrl:https://test.dd.jans.io/jans-auth/restv1/authorize?response_type=code+id_token+token&client_id=2bc0674b-48ce-4221-a19e-fa9fe7f1dc96&scope=openid+profile+address+email+phone+user_name&redirect_uri=https%3A%2F%2Ftest.dd.jans.io%2Fjans-auth-rp%2Fhome.htm&state=214646be-513a-49b5-8344-4a8f77f42955&nonce=940ae5e7-7049-4f90-8699-4d552f5a0bba
+authenticateResourceOwnerAndGrantAccess: sessionState:0ff4dccc6cc5f61d8f1c8be65572bfad2257b02677d139af63b6724042a89917.9a9c384f-736f-4364-a833-40319fac7fd9
+authenticateResourceOwnerAndGrantAccess: sessionId:0af7e5fa-9ee6-4048-a87e-c9c3fc768d0e
+-------------------------------------------------------
+REQUEST:
+-------------------------------------------------------
+https://test.dd.jans.io/jans-auth/restv1/authorize?response_type=code+id_token+token&client_id=2bc0674b-48ce-4221-a19e-fa9fe7f1dc96&scope=openid+profile+address+email+phone+user_name&redirect_uri=https%3A%2F%2Ftest.dd.jans.io%2Fjans-auth-rp%2Fhome.htm&state=214646be-513a-49b5-8344-4a8f77f42955&nonce=940ae5e7-7049-4f90-8699-4d552f5a0bba
+
+-------------------------------------------------------
+RESPONSE:
+-------------------------------------------------------
+HTTP/1.1 302 Found
+Location: https://test.dd.jans.io/jans-auth-rp/home.htm#access_token=eyJraWQiOiI1N2E3ZGQ3ZS1lMDIxLTQ1MzAtODhjNS1iZTc1NGYzNjA4Mzlfc2lnX3JzNTEyIiwidHlwIjoiSldUIiwiYWxnIjoiUlM1MTIifQ.eyJhdWQiOiIyYmMwNjc0Yi00OGNlLTQyMjEtYTE5ZS1mYTlmZTdmMWRjOTYiLCJzdWIiOiI3TXNMTEVrdDVWcWJVM3NISlF3cVE0MzVuUFJid3FBUjJwUWx2dDllZHJvIiwieDV0I1MyNTYiOiIiLCJjb2RlIjoiMmQ5NTk0NTctODA0OC00NDAxLTg4OGMtMTAzOGEzYjc1Yzg4Iiwic2NvcGUiOlsiYWRkcmVzcyIsInBob25lIiwib3BlbmlkIiwidXNlcl9uYW1lIiwicHJvZmlsZSIsImVtYWlsIl0sImlzcyI6Imh0dHBzOi8vdGVzdC5kZC5qYW5zLmlvIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImV4cCI6MTYyNTY0NjcxMiwiaWF0IjoxNjI1NjQ2NDEyLCJjbGllbnRfaWQiOiIyYmMwNjc0Yi00OGNlLTQyMjEtYTE5ZS1mYTlmZTdmMWRjOTYiLCJ1c2VybmFtZSI6IkphbnMgQXV0aCBUZXN0IFVzZXIifQ.JUHmEG6JtlBpIb8fo09Z_5mcC_SXnW1bslWyl15UBADyBwUpX-IjDtRt-mLjyJ9egVU8TQzYv2zONyvaaaU7BP4YLZ6EyQaSu37u5-MLpuIq8YscruQyd1PYnq5u4uWp5r5rUaZaMetca1bfw5fj13cyK6vr1Ls0_cObSbFaYFrJU2LweJnvYQxR_rl84DU69GMY8AxDuLTcHC9xBvm4mjts8KShRLobL1NtJY4X9tJt33kC_xMe__BvEEMqtJcczoDKI9Qs9DKDu4fha60O6S90WfLuxTMFa9RJgmsm0i9qlA_AuSVhIj5aSpFOM-6qUBiBccBaGAjiSW0SHhJO0g&code=515d2baf-5e92-41d2-b6c2-114fcb9eb8b9&scope=address+phone+openid+user_name+profile+email&id_token=eyJraWQiOiI2MGE5MzQzOC03MTA4LTQ3YjctOWY1OC0wNTIxMGJlNDlhMjdfc2lnX3JzMjU2IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJhdF9oYXNoIjoic2lKMzNTUWJyZlhXVWFNRGNIZDI3QSIsInN1YiI6IjdNc0xMRWt0NVZxYlUzc0hKUXdxUTQzNW5QUmJ3cUFSMnBRbHZ0OWVkcm8iLCJjb2RlIjoiMzc1ZjBjMjktNTc1Ni00MzAzLTg3OTYtYTI5YWM0NzQ5Y2QwIiwiYW1yIjpbIjEwIl0sImlzcyI6Imh0dHBzOi8vdGVzdC5kZC5qYW5zLmlvIiwibm9uY2UiOiI5NDBhZTVlNy03MDQ5LTRmOTAtODY5OS00ZDU1MmY1YTBiYmEiLCJzaWQiOiI0MDA3NTBkZC1mOGUwLTRhMjUtYTZiNy0wZGI5ZmQ2N2QwN2MiLCJveE9wZW5JRENvbm5lY3RWZXJzaW9uIjoib3BlbmlkY29ubmVjdC0xLjAiLCJhdWQiOiIyYmMwNjc0Yi00OGNlLTQyMjEtYTE5ZS1mYTlmZTdmMWRjOTYiLCJhY3IiOiJiYXNpYyIsImNfaGFzaCI6InJTSUtWWDJESDIzVlAycGJUTWRDc2ciLCJzX2hhc2giOiJ1ZHc0aGRwX1FDZjZyOFE2bFM3RlJ3IiwiYXV0aF90aW1lIjoxNjI1NjQ2NDExLCJleHAiOjE2MjU2NTAwMTIsImdyYW50IjoiYXV0aG9yaXphdGlvbl9jb2RlIiwiaWF0IjoxNjI1NjQ2NDEyfQ.t9QARzZTqWvkp3QvHaD5N75sk9DAxCd9zmud2kwdg8pJ0srnI0CPKJR_69Iq5eYJsQ-bmDkfTvR4j-PdN7bZ0sAi0fwG7qqwrQpcFHRV8KV2rMpmyhajuWFbFiGY1gLz4eX1UvfaXv-YNUekEMpC4j-qWiSJyVy0tDRXFdeff5eW4M_yeqeLe-kBn1GATzYIahAUpRmdjs5blichQxAcaser2iGeDAkEnaKFYFI8UCjmZ_ICXNTS6mk5m65L3RkiDm7cDh5dbQz5b8inOwe2nPkt-BKHIOKlvpijdQlDyMBA16pjQHWNb15DK6zyZruEKSbvudiwj3PE8mNr8kW92w&session_id=0af7e5fa-9ee6-4048-a87e-c9c3fc768d0e&state=214646be-513a-49b5-8344-4a8f77f42955&token_type=Bearer&session_state=0ff4dccc6cc5f61d8f1c8be65572bfad2257b02677d139af63b6724042a89917.9a9c384f-736f-4364-a833-40319fac7fd9&expires_in=299&sid=400750dd-f8e0-4a25-a6b7-0db9fd67d07c
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.701 sec - in io.jans.as.client.ws.rs.AccessTokenAsJwtHttpTest
+
+```
+
+### code improvement areas
+
+- [this code](https://github.com/JanssenProject/jans-auth-server/blob/dc30f735a9197c9ae3d882b709a24ecc0aac77d0/client/src/main/java/io/jans/as/client/RegisterClient.java#L89) has if condition that executes code based on http method of the request. Check if this can be avoided by having rest apis like what spring-boot has where methods in controller are called based on http request method and `if` check is not required.
+- 
+
 
 ### Imp Janssen commands
 
