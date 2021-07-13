@@ -1620,6 +1620,12 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.701 sec - in i
 
 ```
 
+### Steps involved in DB setup during janssen installation:
+
+For persistence types like MySQL, Janssen installer translates `.ldif` files to sql queries and executes them against db. Code flow for the same is given below. This is can only run be run on Linux as it Linux specific paths.
+setup.py -> rdbmInstaller.start_installation() -> base.py.start_installation()  -> self.install() -> rdbm.py.install() -> create tables, import LDIF files and create indexes.
+
+
 ### code improvement areas
 
 - [this code](https://github.com/JanssenProject/jans-auth-server/blob/dc30f735a9197c9ae3d882b709a24ecc0aac77d0/client/src/main/java/io/jans/as/client/RegisterClient.java#L89) has if condition that executes code based on http method of the request. Check if this can be avoided by having rest apis like what spring-boot has where methods in controller are called based on http request method and `if` check is not required.
