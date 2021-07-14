@@ -1619,11 +1619,19 @@ Location: https://test.dd.jans.io/jans-auth-rp/home.htm#access_token=eyJraWQiOiI
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.701 sec - in io.jans.as.client.ws.rs.AccessTokenAsJwtHttpTest
 
 ```
+-----------------------------------------------------------
+
+- list of all possible arguments to install.py is at `jans-setup` repo under `setup_app\utils\arg_parser.py`
+
+-----------------------------
+
 
 ### Steps involved in DB setup during janssen installation:
 
 For persistence types like MySQL, Janssen installer translates `.ldif` files to sql queries and executes them against db. Code flow for the same is given below. This is can only run be run on Linux as it Linux specific paths.
 setup.py -> rdbmInstaller.start_installation() -> base.py.start_installation()  -> self.install() -> rdbm.py.install() -> create tables, import LDIF files and create indexes.
+
+
 
 
 ### code improvement areas
