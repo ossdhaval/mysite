@@ -1632,6 +1632,20 @@ For persistence types like MySQL, Janssen installer translates `.ldif` files to 
 setup.py -> rdbmInstaller.start_installation() -> base.py.start_installation()  -> self.install() -> rdbm.py.install() -> create tables, import LDIF files and create indexes.
 
 
+### Mapping of LDAP (ldif) files loaded into MySQL tables 
+
+ldif files in the code base are at https://github.com/JanssenProject/jans-setup/tree/master/templates
+base.ldif -> only one entry in table jansOrganization with `o=jans`. Not sure where rest of the data from file goes.
+attribute.ldif -> jansAttr (70 records)
+configuration.ldif -> not sure in which table is this added
+scripts.ldif -> jansCustomScr (37 records)
+jans-auth/people.ldif -> jansPerson (1 record)
+jans-auth/groups.ldif -> jansGrp (1 record)
+jans-auth/configuration.ldif, jans-config-api/config.ldif, jans-fido2/fido2.ldif, jans-scim/configuration.ldif -> jansAppConf
+templates/scopes.ldif, jans-config-api/scopes.ldif, jans-scim/scopes.ldif -> jansScope
+jans-auth/clients.ldif, jans-config-api/clients.ldif, jans-scim/clients.ldif -> jansClnt
+
+
 
 
 ### code improvement areas
