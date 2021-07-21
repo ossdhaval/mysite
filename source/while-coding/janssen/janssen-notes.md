@@ -1654,7 +1654,59 @@ setup.py -> rdbmInstaller.start_installation() -> base.py.start_installation()  
 - jans-auth/clients.ldif, jans-config-api/clients.ldif, jans-scim/clients.ldif -> jansClnt
 
 
+### janssen ssl configuration:
 
+Janssen uses apache 2 as web frontend and SSL configuration happens at the point. Not on Jetty. From the `/opt/jans/jans-setup/logs/setup.log` ... 
+
+apache gets installed:
+
+```
+Setting up apache2 (2.4.41-4ubuntu3.3) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enablin
+
+```
+
+enabling ssl and other modules
+```
+08:52:46 07/14/21 Running: a2enmod ssl headers proxy proxy_http proxy_ajp
+08:52:46 07/14/21 Considering dependency setenvif for ssl:
+Module setenvif already enabled
+Considering dependency mime for ssl:
+Module mime already enabled
+Considering dependency socache_shmcb for ssl:
+Enabling module socache_shmcb.
+Enabling module ssl.
+See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
+
+```
+
+generating certificates:
+```
+08:56:30 07/14/21 Generating Certificate for httpd
+08:56:30 07/14/21 Running: /usr/bin/openssl genrsa -des3 -out /etc/certs/httpd.key.orig -passout pass:lsloW9ul0au1 2048
+08:56:30 07/14/21 Running: /usr/bin/openssl rsa -in /etc/certs/httpd.key.orig -passin pass:lsloW9ul0au1 -out /etc/certs/httpd.key
+08:56:30 07/14/21 Running: /usr/bin/openssl req -new -key /etc/certs/httpd.key -out /etc/certs/httpd.csr -subj /C=in/ST=gj/L=ah/O=gluu org/CN=testmysql.dd.jans.io/emailAddress=dhaval@gluu.org
+08:56:30 07/14/21 Running: /usr/bin/openssl x509 -req -days 365 -in /etc/certs/httpd.csr -signkey /etc/certs/httpd.key -out /etc/certs/httpd.crt
+08:56:30 07/14/21 Running: /bin/chown jetty:jetty /etc/certs/httpd.key.orig
+08:56:30 07/14/21 Running: /bin/chmod 700 /etc/certs/httpd.key.orig
+08:56:30 07/14/21 Running: /bin/chown jetty:jetty /etc/certs/httpd.key
+08:56:30 07/14/21 Running: /bin/chmod 700 /etc/certs/httpd.key
+08:56:30 07/14/21 Running: /opt/jre/bin/keytool -import -trustcacerts -alias testmysql.dd.jans.io_httpd -file /etc/certs/httpd.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+08:56:31 07/14/21 Running: /usr/bin/systemctl enable apache2
+08:56:32 07/14/21 Run: /usr/bin/systemctl enable apache2 with result code: 0
+08:56:32 07/14/21 Running: /usr/bin/systemctl start apache2
+08:56:32 07/14/21 Run: /usr/bin/systemctl start apache2 with result code: 0
+```
+
+Other port related apache config is at [httpd_2.4.conf](https://github.com/JanssenProject/jans-setup/blob/master/templates/apache/httpd_2.4.conf) and HTTP redirection is configured in [https_jans.conf](https://github.com/JanssenProject/jans-setup/blob/master/templates/apache/https_jans.conf) file.
 
 ### code improvement areas
 
