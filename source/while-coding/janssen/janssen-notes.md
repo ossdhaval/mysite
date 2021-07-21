@@ -1626,6 +1626,14 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.701 sec - in i
 -----------------------------
 
 
+### command to setup janssen with mysql as backend:
+you need to have mysql setup with user as mentioned below as pre-req.
+
+```
+sudo python3 install.py --args="-c -local-rdbm=mysql -rdbm-user=jans -rdbm-password=jans -rdbm-db=jans-db"
+
+```
+
 ### Steps involved in DB setup during janssen installation:
 
 For persistence types like MySQL, Janssen installer translates `.ldif` files to sql queries and executes them against db. Code flow for the same is given below. This is can only run be run on Linux as it Linux specific paths.
