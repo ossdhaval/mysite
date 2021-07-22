@@ -1635,7 +1635,66 @@ sudo python3 install.py --args="-local-rdbm=mysql"
 
 ```
 
+it gets you the questionnair like below:
 
+```
+Do you acknowledge that use of the Janssen Server is under the Apache-2.0 license? [N|y] : y
+Enter IP Address [10.160.0.4] : 
+Enter hostname [temp-jans-mysql-14jul.asia-south1-a.c.conductive-coil-317212.internal] : temp.dd.jans.io
+Enter your city or locality : ahm
+Enter your state or province two letter code : gj
+Enter two letter Country Code : in
+Enter Organization Name : gluu.org
+Enter email address for support at your organization : dhaval@gluu.org
+Enter maximum RAM for applications in MB [13260] : 
+Chose Backend Type:
+  1 Local OpenDj
+  2 Remote OpenDj
+  3 Remote Couchbase
+  4 Local MySQL
+  5 Remote MySQL
+  6 Cloud Spanner
+Selection [1]: 4
+Enter Password for Admin User [yG2v{[1c4bMj] : simplepass
+Install Jans Auth Config Api? [Yes] : 
+Install Scim Server? [Yes] : 
+Install Fido2 Server? [Yes] : 
+Install Eleven Server? [No] : 
+Checking Properties
+
+hostname                                          temp.dd.jans.io
+orgName                                                  gluu.org
+os                                                         ubuntu
+city                                                          ahm
+state                                                          gj
+countryCode                                                    in
+Applications max ram (MB)                                   13260
+Backends                                                    mysql
+Java Type                                                     jre
+Install Apache 2 web server                                  True
+Install Auth Server                                          True
+Install Jans Auth Config Api                                 True
+Install Fido2 Server                                         True
+Install Scim Server                                          True
+Install Eleven Server                                       False
+
+Proceed with these values [Y|n] y
+✓ jans             Calculating application memory
+✓ jre              Installing Jre
+✓ jetty            Installing Jetty
+✓ jython           Installing Jython
+✓ rdbm-server      Importing ldif files to mysql
+✓ apache2          Configuring apache2
+✓ jans-auth        Generating OAuth openid keys
+✓ jans-config-api  Installing Jans-Config-Api
+✓ jans-fido2       Installing Jans-Fido2
+✓ jans-scim        Installing Jans-Scim
+✓ jans-cli         Installing Jans Cli
+⣻ post-setup       Starting Jans Auth
+
+
+```
+After installation, you can find rdbm(DB) password and other default input used by jans setup in `/opt/jans/jans-setup/setup.properties.last`
 
 ### Steps involved in DB setup during janssen installation:
 
