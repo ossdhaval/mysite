@@ -1996,6 +1996,12 @@ You should be able to run test cases successfully.
   - `host:` remote host IP or name as in `hosts` file, `port:` 6001, `use module:` give the module which is being debugged on server. 
 
 
+#### taking mysql data dump from janssen installation
+- go to /opt/jans/jans-setup/logs/setup.log
+- search for `CREATE DATABASE`. this will show you the line where it has created a new database in mysql. Copy name of this db.
+- now on command line, `sudo mysqldump -u root  {nameOfDB} > mysql_dump.sql`
+- take this file to the pc where you want to import the data
+- 
 
 
 ### code improvement areas
