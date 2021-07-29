@@ -50,14 +50,14 @@ Once you have created key-pair and signed certificate (self or CA), you need to 
 
 ##### server:
 
-create keypair
-create self signed cert
-add these to your server keystore
-give cert to client app
+- create keypair
+- create self signed cert
+- add these to your server keystore
+- give cert to client app
 
 ##### client
 
-export root, intermediate and publickey cert on your machine
-now import these certs ( root first, the intermediate and then public key) in trust store. 
-load ( or point your application ) to this truststore.
-then make call to server
+- export root, intermediate and publickey cert on your machine
+- now import these certs ( root first, the intermediate and then public key) in trust store. 
+- load ( or point your application ) to this truststore.
+- then make call to server
