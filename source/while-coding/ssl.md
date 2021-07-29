@@ -13,7 +13,7 @@ http://stackoverflow.com/questions/991758/how-to-get-an-openssl-pem-file-from-ke
 openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
 ----------------------------------------
-One-way and two-way ssl
+## One-way and two-way ssl
 --------------------------------------
 ref:https://www.youtube.com/watch?v=ohn89zOcf4M
 
@@ -21,4 +21,43 @@ ref:https://www.youtube.com/watch?v=ohn89zOcf4M
 - two-way ssl is when both party want to know and ensure the identity of other party. This is usually when two applications talk to each other. For example, when applications use middle ware like Tibco etc
 
 
+## Generating keypair -> CSR -> cert
 
+- **Keypair** : First of all, you create a key-pair, which is a single file that holds your private and public key
+  - if you want you can extract public key from this key-pair file to circulate to other parties
+- **CSR** : From key pair, you generate *Certificate Signing Request* in a `.csr` file. This file is sent to certificate authority to request a sign. When you are creating CSR, it'll ask for your details like org name, location data, common name etc. Here, common name is most important input which should be the domain for which you are requesting a signed certificate.
+- **Signed certificate** : Using details in CSR, and after due diligence, CA will send back a signed certificate. Or you can create your own self signed certificate. Usually with `.cer` extension. **REMEMBER**: CA only certifies your public key in form of certificate. Private key will never leave your machine. so a certificate is in short, is your public key with signature of a CA.
+
+## Certificate storage:
+
+#### Keystore vs Truststore
+
+Keystore holds private key and certified public key, while truststore hold only certified public keys. In one way SSL, server will have the keystore while client will have the truststore. If certified public key of server exists in trust store of client then client can trust server's identity. 
+
+
+Once you have created key-pair and signed certificate (self or CA), you need to import them into Keystore. 
+
+
+#### Keystore
+
+
+
+#### Truststore
+
+
+
+## Steps in applying certs in a client-server Jetty app
+
+##### server:
+
+create keypair
+create self signed cert
+add these to your server keystore
+give cert to client app
+
+##### client
+
+export root, intermediate and publickey cert on your machine
+now import these certs ( root first, the intermediate and then public key) in trust store. 
+load ( or point your application ) to this truststore.
+then make call to server
