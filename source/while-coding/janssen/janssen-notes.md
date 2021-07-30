@@ -2013,6 +2013,10 @@ You should be able to run test cases successfully.
 ### misc notes :
 
 - while trying to setup local workspace, i tried running jans-auth-server.war on Jetty 10.0 but it failed to start due to sax exception in parcing jetty-env.xml. It worked fine when I tried on jetty 9 (jetty-distribution-9.4.31.v20200723.tar.gz) as downloaded from one of the installed janssen server instance from location (/opt/dist/app/jetty-distribution-9.4.31.v20200723.tar.gz).
+- when you are running tests via maven on command line, and there are failure, and you want to see which tests are failing then 
+ - push output in a file `mvn -Dcfg=test.local.jans.io -fae -Dcvss-score=9 -Dfindbugs.skip=true -Ddependency.check=false clean compile test &> ~/temp/log_server_WithAddingServerCertInJreCAcerts.4.log`
+ - then grep `grep -nR ' FAILURE' ~/temp/log_server_WithAddingServerCertInJreCAcerts.4.log`
+ - first line is summary and last line can be ignored.
 
 ### Imp Janssen commands
 
