@@ -23,3 +23,13 @@
 
 
 Above steps were derived from links given [here](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
+
+### issues vs PRs
+  
+  #### Issues
+  - Used for raising bug or feature requests or tracking large development work
+  - Focus is around requesting, planning and tracking tasks and work
+
+  #### PRs
+  - Used for tracking, discussing code changes 
+  - Focus is on code and not planning or tracking work
