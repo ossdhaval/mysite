@@ -33,3 +33,14 @@ Above steps were derived from links given [here](https://docs.github.com/en/gith
   #### PRs
   - Used for tracking, discussing code changes 
   - Focus is on code and not planning or tracking work
+
+### Linking issues and PRs
+
+##### linking issues with issues
+- do it with `issue mentions` or creating issues from `task lists`
+##### issues with PRS
+- in issue : do it with `linked PR` section on the right
+- in PR : you can link issue by using key words like `closes`
+- In both you can refer to an issue using number afte #
+##### PRs with PRs
+
