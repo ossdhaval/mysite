@@ -89,3 +89,11 @@ reference [here](https://docs.github.com/en/communities/using-templates-to-encou
   - Labels
   - default branch name
 - this can be done from organization settings -> repository defaults
+
+
+### Security
+
+- have SECURITY.md in .github repository at org level, like [this](https://github.com/falcosecurity/.github/blob/master/SECURITY.md)
+- enable security advisory in github, like [this](https://github.com/falcosecurity/.github/security)
+- Enable Dependabot scanning
+- read process around [security vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/about-github-security-advisories)
