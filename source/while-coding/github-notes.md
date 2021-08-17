@@ -98,3 +98,10 @@ reference [here](https://docs.github.com/en/communities/using-templates-to-encou
 - Enable Dependabot scanning
 - read process around [security vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/about-github-security-advisories)
 - [Best practices](https://docs.github.com/en/code-security/security-advisories/about-coordinated-disclosure-of-security-vulnerabilities)
+
+
+### Labelling :
+
+- [good artice](https://seantrane.com/posts/logical-colorful-github-labels-18230/#:~:text=Issue%2FPR%20labels%20should%20only,intuitive%20at%2Da%2Dglance.)
+- [good discussion about maintaining labels](https://github.com/kubernetes/community/issues/2032)
+
