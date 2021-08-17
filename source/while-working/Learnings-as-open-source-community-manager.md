@@ -30,3 +30,8 @@ https://kubernetes.slack.com/archives/CMWH3EH32/p1617024285139200
 
 quick and informative : https://www.youtube.com/watch?v=b1pyh2XCyrg
 
+Large open-source projects that are actively managed and can be looked at as reference:
+[spring](https://github.com/spring-projects)
+[kubernetes](https://github.com/kubernetes/kubernetes)
+[falco](https://github.com/falcosecurity/falco)
+
