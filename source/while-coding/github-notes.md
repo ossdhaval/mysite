@@ -97,3 +97,4 @@ reference [here](https://docs.github.com/en/communities/using-templates-to-encou
 - enable security advisory in github, like [this](https://github.com/falcosecurity/.github/security)
 - Enable Dependabot scanning
 - read process around [security vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/about-github-security-advisories)
+- [Best practices](https://docs.github.com/en/code-security/security-advisories/about-coordinated-disclosure-of-security-vulnerabilities)
