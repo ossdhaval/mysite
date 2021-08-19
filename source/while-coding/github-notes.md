@@ -78,7 +78,7 @@ reference [here](https://docs.github.com/en/communities/using-templates-to-encou
 
 ### code owners
 - you can define code owners by creating `CODEOWNERS` file in target branch.
-- code owners are specific to branch and hence you have have different code owners per branch
+- code owners are specific to branch and hence you can have different code owners per branch
 - There are two things that code owners file can help with 
   1) when you raise a pull request, the code owners as defined in base branch will get review requests
   2) when you have turned on branch protection for that branch from `settings` of repo, you can require approval from code owner of that branch for all PRs before merging.
