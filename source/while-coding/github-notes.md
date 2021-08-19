@@ -106,3 +106,11 @@ reference [here](https://docs.github.com/en/communities/using-templates-to-encou
 - [good discussion about maintaining labels](https://github.com/kubernetes/community/issues/2032)
 - check this [labeler](https://github.com/actions/labeler)
 
+
+### github api:
+
+you can get programatic access to github data using rest api. For example, to get all repositories in JanssenProject org:
+
+```
+curl  https://api.github.com/orgs/JanssenProject/repos
+```
