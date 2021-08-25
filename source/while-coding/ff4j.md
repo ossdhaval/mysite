@@ -6,3 +6,11 @@
 
 
 - FF4J works using strategies.You can create your own strategies too.
+
+
+## trying out jdbc sample
+
+- sample we are trying out is `https://github.com/ff4j/ff4j-samples/tree/master/webapp-jetty/ff4j-sample-simplejdbc`
+- Notable changes:
+  - change the Jersey class name in `web.xml` 
+    - from ` <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>` to `<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>`
