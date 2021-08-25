@@ -14,3 +14,5 @@
 - Notable changes:
   - change the Jersey class name in `web.xml` 
     - from ` <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>` to `<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>`
+    - got error `UnsatisfiedLinkError: Can't load library: /usr/lib/jvm/java-11-openjdk-amd64/lib/libawt_xawt.so` : 
+      - this was resolved when I set JAVA_HOME to amazon corretto instead of `/usr/lib/jvm/java-11-openjdk-amd64`
