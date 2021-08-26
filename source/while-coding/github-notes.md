@@ -1,3 +1,5 @@
+# Github notes
+
 ### setting up github commit signature verification:
 - First check that your email id is verified:
   - go to github->user settings->emails->see if it mentions 'unverified' below your email id
