@@ -16,3 +16,11 @@
     - from ` <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>` to `<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>`
     - got error `UnsatisfiedLinkError: Can't load library: /usr/lib/jvm/java-11-openjdk-amd64/lib/libawt_xawt.so` : 
       - this was resolved when I set JAVA_HOME to amazon corretto instead of `/usr/lib/jvm/java-11-openjdk-amd64`
+
+
+
+## API:
+- http://localhost:8080/api/ff4j/store
+- http://localhost:8080/api/ff4j/store/features/feature_X
+- http://localhost:8080/api/ff4j/store/features/feature_X/disable (you need to use post: `curl -X POST --trace-ascii ./temp/debugdump.txt http://localhost:8080/api/ff4j/store/features/feature_X/enable`
+- 
