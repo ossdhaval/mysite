@@ -1,4 +1,8 @@
-## About documentation :
+# As community manager
+
+My learnings"
+
+### About documentation :
 
 There could be three kinds of documentation:
 1) Introduction and marketing material
@@ -11,7 +15,7 @@ All of above documentation can also be assisted with video tutorials, FAQs etc
 
 
 
-## Reference material
+### Reference material
 
 #### books
 - https://www.amazon.com/Art-Community-Building-New-Participation-ebook-dp-B008224FMC/dp/B008224FMC/ref=mt_other?_encoding=UTF8&me=&qid= 
@@ -46,7 +50,7 @@ Large open-source projects that are actively managed and can be looked at as ref
 
 
 
-Regular house holding checks :
+### Regular house holding checks :
 
 - stale branches across repos
 - (for sometime)Track PR merges and see if they had met quality criteria and let code owner and developer know
