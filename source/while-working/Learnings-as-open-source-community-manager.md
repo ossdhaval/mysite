@@ -51,4 +51,5 @@ Regular house holding checks :
 - stale branches across repos
 - (for sometime)Track PR merges and see if they had met quality criteria and let code owner and developer know
 - issue triage
+- are all the automation successfully running? For example, github actions can fail silently. You have to periodically check their logs to ensure that there are no errors. For instance, one of my github action script was referring to a module in the build command. Later this module was removed from the project and github action script started failing, but nobody knew until a person spotted it.
 
