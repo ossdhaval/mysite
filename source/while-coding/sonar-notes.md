@@ -1,4 +1,17 @@
-# Integration with JaCoCo and SonarCloud
+# Sonar notes
+
+## sonarcloud terms:
+- Issues: have 3 types
+	- vulnerabilities: A point in your code that's open to attack. `SECURITY`
+	- Bugs: A coding error that will break your code and needs to be fixed immediately. Impacts `RELIABILITY`.
+	- code smells: A maintainability issue that makes your code confusing and difficult to maintain `MAINTAINABILITY`
+- security hotspots: Normal issues are definitely problems (barring the odd false-positive) but Security Hotspots need a human to decide. Security Hotspot is a security-sensitive piece of code. I.e. it's a place where things could go wrong. Your particular use of that code might be a problem, or it might not. You won't know until you look.
+
+
+
+
+
+## Integration with JaCoCo and SonarCloud
 
 High-level steps :
 1. Integrate JaCoCo
@@ -57,7 +70,6 @@ Finally I left the effort.
 Overall, I felt that with Jacoco, generating aggregate report for multimodule maven project is difficult. Specially, if your project has modules with `war` packaging.
 
 
-## Troubleshooting
 
 ### *Message:* Not generating jacoco repot due to :
 
