@@ -56,4 +56,5 @@ Large open-source projects that are actively managed and can be looked at as ref
 - (for sometime)Track PR merges and see if they had met quality criteria and let code owner and developer know
 - issue triage
 - are all the automation successfully running? For example, github actions can fail silently. You have to periodically check their logs to ensure that there are no errors. For instance, one of my github action script was referring to a module in the build command. Later this module was removed from the project and github action script started failing, but nobody knew until a person spotted it. Note: I found out that I was not paying attention to my emails. Github sends email with subject similar to `[JanssenProject/jans-auth-server] Run failed: Code quality check - feature-flags-using-ff4j (276ae10)` in case there is a failure in the action run .
-
+- check automated non-dependabot PRs to be merged on Non-CN repos
+- check github notifications 
