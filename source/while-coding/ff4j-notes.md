@@ -16,7 +16,9 @@ https://martinfowler.com/articles/feature-toggles.html
   - Permissioning Toggles: These flags are used to change the features or product experience that certain users receive. For example we may have a set of "premium" features which we only toggle on for our paying customers. Or perhaps we have a set of "alpha" features which are only available to internal users and another set of "beta" features which are only available to internal users plus beta users.
     - can be very long lived ( multi-year) in cases where we are controlling premium features for paid customers
     - effect is very dynamic as each user request may be treated differently
-    - 
+ 
+- Manage different toggles differently:
+  - These differences should be embraced, and different toggles managed in different ways, even if all the various toggles might be controlled using the same technical machinery. Initially we might have placed that section behind a Release Toggle while it was under development. We might then have moved it to being behind an Experiment Toggle to validate that it was helping drive revenue. Finally we might move it behind an Ops Toggle so that we can turn it off when we're under extreme load. If we've followed the earlier advice around de-coupling decision logic from Toggle Points then these differences in toggle category should have had no impact on the Toggle Point code at all. However from a feature flag management perspective these transitions absolutely should have an impact. As part of transitioning from Release Toggle to an Experiment Toggle the way the toggle is configured will change, and likely move to a different area - perhaps into an Admin UI rather than a yaml file in source control. Product folks will likely now manage the configuration rather than developers. Likewise, the transition from Experiment Toggle to Ops Toggle will mean another change in how the toggle is configured, where that configuration lives, and who manages the configuration.
 
 ## about ff4j
 
