@@ -20,6 +20,10 @@ https://martinfowler.com/articles/feature-toggles.html
 - Manage different toggles differently:
   - These differences should be embraced, and different toggles managed in different ways, even if all the various toggles might be controlled using the same technical machinery. Initially we might have placed that section behind a Release Toggle while it was under development. We might then have moved it to being behind an Experiment Toggle to validate that it was helping drive revenue. Finally we might move it behind an Ops Toggle so that we can turn it off when we're under extreme load. If we've followed the earlier advice around de-coupling decision logic from Toggle Points then these differences in toggle category should have had no impact on the Toggle Point code at all. However from a feature flag management perspective these transitions absolutely should have an impact. As part of transitioning from Release Toggle to an Experiment Toggle the way the toggle is configured will change, and likely move to a different area - perhaps into an Admin UI rather than a yaml file in source control. Product folks will likely now manage the configuration rather than developers. Likewise, the transition from Experiment Toggle to Ops Toggle will mean another change in how the toggle is configured, where that configuration lives, and who manages the configuration.
 
+Other good links:
+- https://dzone.com/articles/feature-toggles-are-one-worst
+- https://www.abhishek-tiwari.com/decoupling-deployment-and-release-feature-toggles/
+
 ## about ff4j
 
 - **feature store**: For distributed architecture, `feature store` works as central repo for all feature toggles which all the microservices can refer.
@@ -30,7 +34,7 @@ https://martinfowler.com/articles/feature-toggles.html
 - FF4J works using strategies.You can create your own strategies too.
 
 
-## trying out jdbc sample
+### trying out jdbc sample
 
 - sample we are trying out is `https://github.com/ff4j/ff4j-samples/tree/master/webapp-jetty/ff4j-sample-simplejdbc`
 - Notable changes:
@@ -41,8 +45,12 @@ https://martinfowler.com/articles/feature-toggles.html
 
 
 
-## API:
+### API:
 - http://localhost:8080/api/ff4j/store
 - http://localhost:8080/api/ff4j/store/features/feature_X
 - http://localhost:8080/api/ff4j/store/features/feature_X/disable (you need to use post: `curl -X POST --trace-ascii ./temp/debugdump.txt http://localhost:8080/api/ff4j/store/features/feature_X/enable`
 - 
+
+### IMP links
+- Javadocs: https://javadoc.io/doc/org.ff4j/ff4j-core/latest/org/ff4j/core/package-summary.html
+- couchbase support PR: https://github.com/ff4j/ff4j/issues/265
