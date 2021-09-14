@@ -26,6 +26,8 @@ Other good links:
 
 ## about ff4j
 
+### features
+
 - **feature store**: For distributed architecture, `feature store` works as central repo for all feature toggles which all the microservices can refer.
 - **permission based feature toggles**: 
 - **conditional feature toggles**:
@@ -33,6 +35,13 @@ Other good links:
 
 - FF4J works using strategies.You can create your own strategies too.
 
+### code and design
+
+- two main classes `WebAPIController` and `*Provider`
+  - `provider` has single overridden method `getFF4j` which provides `FF4J` object.
+    - `FF4J` object has *xml* where features details are given, datasource connection details, propertystore, featurestore and eventstore instances with datasource given as argument.
+  - `WebAPIController` has single method `getWebApiConfiguration` that returns `apiconfig` object. This method takes creates a provider and gets `FF4J` object and gives it to instance of `ApiConfig` class. It also sets various properties of `ApiConfig` like audit, port, authentication and authorization etc
+    - 
 
 ### trying out jdbc sample
 
