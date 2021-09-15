@@ -69,7 +69,7 @@ Other good links:
 ## Notes on integration with Janssen
 
 ### couchbase integration
-- couchbase provider stores data in key,value format. Look [here](). And so it Jans-ORM. See [here](https://github.com/JanssenProject/jans-orm/blob/73c2d6b1f9a4c2cb1afae2a52e6cb9f6a6980e2a/couchbase/src/main/java/io/jans/orm/couchbase/operation/impl/CouchbaseOperationServiceImpl.java#L192)
+- couchbase provider stores data in key,value format. Look [here](https://github.com/ff4j/ff4j/blob/5268781cab5797644624e270146ecda9f104c892/ff4j-store-couchbase/src/main/java/org/ff4j/couchbase/mapper/FeatureCouchbaseMapper.java#L62). And so it Jans-ORM. See [here](https://github.com/JanssenProject/jans-orm/blob/73c2d6b1f9a4c2cb1afae2a52e6cb9f6a6980e2a/couchbase/src/main/java/io/jans/orm/couchbase/operation/impl/CouchbaseOperationServiceImpl.java#L192)
 - Both ff4j and orm are working in same way:
   - ff4j: featurestore uses couchbase connection to get feature bucket and then convert feature object into a document using mapper. Then stores the document in the bucket.
   - ORM : CouchbaseOperationServiceImpl uses connection provider to get bucket and then stores the Json object with the key in that bucket.
