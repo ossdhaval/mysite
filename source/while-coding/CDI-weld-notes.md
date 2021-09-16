@@ -178,6 +178,43 @@ public class Shop {
   @Produces @Catalog List<Product> products = ....;
 }
 ```
+### Injection points
+
+Injection can occur via three different mechanisms.
+
+- Bean constructor parameter injection
+  ```
+  public class Checkout {
+   private final ShoppingCart cart;
+   @Inject
+   public Checkout(ShoppingCart cart) {
+     this.cart = cart;
+   }
+  }
+ 
+  ```
+- Initializer method parameter injection
+
+ ```
+ public class Checkout {
+  private ShoppingCart cart;
+  @Inject
+  void setShoppingCart(ShoppingCart cart) {
+    this.cart = cart;
+  }
+ }
+ ```
+ 
+- direct field injection
+
+ ```
+ public class Checkout {
+  private @Inject ShoppingCart cart;
+ }
+ 
+ ```
+  Getter and setter methods are not required for field injection to work
+
 
 ## Good resources:
 - https://docs.jboss.org/cdi/learn/userguide/CDI-user-guide.pdf
