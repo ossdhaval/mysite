@@ -195,25 +195,39 @@ Injection can occur via three different mechanisms.
   ```
 - Initializer method parameter injection
 
- ```
- public class Checkout {
-  private ShoppingCart cart;
-  @Inject
-  void setShoppingCart(ShoppingCart cart) {
-    this.cart = cart;
+  ```
+  public class Checkout {
+   private ShoppingCart cart;
+   @Inject
+   void setShoppingCart(ShoppingCart cart) {
+     this.cart = cart;
+   }
   }
- }
- ```
+  ```
  
 - direct field injection
 
- ```
- public class Checkout {
-  private @Inject ShoppingCart cart;
- }
- 
- ```
+  ```
+  public class Checkout {
+   private @Inject ShoppingCart cart;
+  }
+
+  ```
   Getter and setter methods are not required for field injection to work
+
+
+Dependency injection always occurs when the bean instance is first instantiated by the container.
+Simplifying just a little, things happen in this order:
+• First, the container calls the bean constructor (the default constructor or the one annotated
+@Inject), to obtain an instance of the bean.
+• Next, the container initializes the values of all injected fields of the bean.
+• Next, the container calls all initializer methods of bean (the call order is not portable, don’t rely
+on it).
+• Finally, the @PostConstruct method, if any, is called.
+
+
+Typesafe resolution is performed at system initialization time, which means that the container will inform the developer immediately if a
+bean’s dependencies cannot be satisfied.
 
 
 ## Good resources:
