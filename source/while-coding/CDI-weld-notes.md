@@ -138,10 +138,46 @@ itself describes the bean and the container invokes the method to obtain an inst
 when no instance exists in the specified context. A producer method lets the application take full
 control of the bean instantiation process.
 
+A producer method is declared by annotating a method of a bean class with the @Produces
+annotation.
 
+```
+import javax.enterprise.inject.Produces;
+@ApplicationScoped
+public class RandomNumberGenerator {
+  private java.util.Random random = new java.util.Random(System.currentTimeMillis());
+  @Produces @Named @Random int getRandomNumber() {
+     return random.nextInt(100);
+ }
+}
 
+```
 
+We can’t write a bean class that is itself a random number. But we can certainly write a method
+that returns a random number. By making the method a producer method, we allow the return
+value of the method—in this case an `Integer`—to be injected. We can even specify a qualifier—in
+this case @Random, a scope—which in this case defaults to @Dependent, and an EL name—which in this
+case defaults to randomNumber according to the JavaBeans property name convention. Now we can
+get a random number anywhere:
 
+```
+@Inject @Random int randomNumber;
+```
+Notice the name of the member above. It is not the name of the bean class, but it is EL name of the `@Produces` variable.
+
+#### Producer fields
+
+A producer field is a simpler alternative to a producer method. A producer field is declared by
+annotating a field of a bean class with the @Produces annotation—the same annotation used for
+producer methods.
+
+```
+import javax.enterprise.inject.Produces;
+public class Shop {
+  @Produces PaymentProcessor paymentProcessor = ....;
+  @Produces @Catalog List<Product> products = ....;
+}
+```
 
 ## Good resources:
 - https://docs.jboss.org/cdi/learn/userguide/CDI-user-guide.pdf
