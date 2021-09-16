@@ -3,6 +3,24 @@
 - With very few exceptions, almost every concrete Java class that has a constructor with no
 parameters (or a constructor designated with the annotation @Inject) is a bean.
 
+A managed bean is a Java class. You can explicitly declare a managed bean by annotating the
+bean class @ManagedBean, but in CDI you don’t need to. According to the specification, the CDI
+container treats any class that satisfies the following conditions as a managed bean:
+
+- It is not a non-static inner class.
+- It is a concrete class, or is annotated @Decorator.
+- It is not annotated with an EJB component-defining annotation or declared as an EJB bean class
+in ejb-jar.xml.
+- It does not implement javax.enterprise.inject.spi.Extension.
+- It has an appropriate constructor—either:
+ - the class has a constructor with no parameters, or
+ - the class declares a constructor annotated @Inject.
+
+Bean types for a managed bean contains the bean class, every superclass
+and all interfaces it implements directly or indirectly.
+
+If a managed bean has a public field, it must have the default scope @Dependent
+
 - @Inject may be applied to a constructor or method of a bean, and tells the container to call that constructor
 or method when instantiating the bean. The container will inject other beans into the parameters of
 the constructor or method.
@@ -53,6 +71,76 @@ Use it during injection:
 @Inject @CreditCard PaymentProcessor paymentProcessor
 
 ```
+
+#### Scopes
+
+Each scope is represented by an annotation type.
+ 
+Keep in mind that once a bean is bound to a context, it remains in that context
+until the context is destroyed. There is no way to manually remove a bean from a
+context. If you don’t want the bean to sit in the session indefinitely, consider
+using another scope with a shorted lifespan, such as the request or conversation
+scope.
+
+If a scope is not explicitly specified, then the bean belongs to a special scope called the dependent
+pseudo-scope. Beans with this scope live to serve the object into which they were injected, which
+means their lifecycle is bound to the lifecycle of that object.
+
+
+#### EL name
+
+If you want to reference a bean in non-Java code that supports Unified EL expressions, for example,
+in a JSP or JSF page, you must assign the bean an EL name.
+The EL name is specified using the `@Named` annotation
+
+```
+public @SessionScoped @Named("cart")
+class ShoppingCart implements Serializable { ... }
+```
+
+Now we can easily use the bean in any JSF or JSP page:
+
+```
+<h:dataTable value="#{cart.lineItems}" var="item">
+  ...
+</h:dataTable>
+
+```
+We can let CDI choose a name for us by leaving off the value of the @Named annotation. The name defaults to the unqualified class name, decapitalized; in this case, `shoppingCart`.
+
+#### Denoting implementation alternatives:
+
+sometimes we have an interface (or other bean type) whose
+implementation varies depending upon the deployment environment. For example, we may want
+to use a mock implementation in a testing environment. An alternative may be declared by
+annotating the bean class with the `@Alternative` annotation.
+
+```
+public @Alternative
+class MockPaymentProcessor extends PaymentProcessorImpl { ... }
+```
+
+We can choose between alternatives at
+deployment time by selecting an alternative in the CDI deployment descriptor META-INF/beans.xml of
+the jar or Java EE module that uses it. Different modules can specify that they use different
+alternatives.
+
+#### producer methods:
+
+Not everything that needs to be injected can be boiled down to a bean class instantiated by the
+container using new. There are plenty of cases where we need additional control. What if we need to
+decide at runtime which implementation of a type to instantiate and inject? What if we need to
+inject an object that is obtained by querying a service or transactional resource, for example by
+executing a JPA query?
+
+A producer method is a method that acts as a source of bean instances. The method declaration
+itself describes the bean and the container invokes the method to obtain an instance of the bean
+when no instance exists in the specified context. A producer method lets the application take full
+control of the bean instantiation process.
+
+
+
+
 
 
 ## Good resources:
