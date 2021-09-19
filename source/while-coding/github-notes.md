@@ -116,3 +116,27 @@ you can get programatic access to github data using rest api. For example, to ge
 ```
 curl  https://api.github.com/orgs/JanssenProject/repos
 ```
+
+
+### using github rest api
+
+all APIs are listed https://docs.github.com/en/rest/reference
+
+you can access public data without authenticating. For example:
+
+```
+curl https://api.github.com/users/ossdhaval
+```
+
+but to access some information plus to make changes to github data you have to authenticate.
+
+
+#### authentication
+
+Your regular ssh key will not work. You have to get an OAuth key or [generate a personal token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+
+Then you can fire command using curl
+
+```
+curl -u ossdhaval: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 -H "Accept: application/vnd.github.zzzax-preview+json" https://api.github.com/repos/ossdhaval/gitcheck/branches/main/protection/required_signatures
+```
