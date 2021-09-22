@@ -140,3 +140,8 @@ Then you can fire command using curl
 ```
 curl -u ossdhaval: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 -H "Accept: application/vnd.github.zzzax-preview+json" https://api.github.com/repos/ossdhaval/gitcheck/branches/main/protection/required_signatures
 ```
+
+### Useful Tools 
+- for analysing github data of your org and multiple repos: https://livablesoftware.com/tools-mine-analyze-github-git-software-data/
+- Agile project management on github: https://www.zenhub.com/
+
