@@ -148,3 +148,7 @@ curl -u ossdhaval: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 -H "Accept: applicati
 ### github repository permission levels
 https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/repository-permission-levels-for-an-organization
 
+### github change log (audit log)
+you can see all the changes that happend to all the entites in your organisation in github using audit logs. You need to be organization `owner` to
+be able to see this.
+https://docs.github.com/en/organizations/keeping-your-organization-secure/reviewing-the-audit-log-for-your-organization#accessing-the-audit-log
