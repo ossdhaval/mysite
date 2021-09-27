@@ -94,3 +94,10 @@ https://github.community/t/additional-function-s-lowercase-uppercase/140632
 ### setting a variable in one action and using it in another:
 https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
 
+
+### Misc
+
+- Actions can be looked at from two different places:
+  - from `actions` tab under repository's main screen.
+  - go to PR->checks
+- PR checks may have more checks than directly triggered by workflows in `action` tab. For example, when `code quality check` workflow get triggered for a PR, at the end of it, sonar cloud also pushes a check in the PR->checks section that summarizes result of the scan. So, in `action` section you'll just see `code quality check` workflow, but in PR->checks you'll see `sonarcloud` check as well. 
