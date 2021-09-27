@@ -160,3 +160,6 @@ https://docs.github.com/en/organizations/keeping-your-organization-secure/review
   - at this time, when you turn on this protection, only statuses that were run in last week will be available for selection in the search box. so if there is an active status check but corresponding workflow did not run during last week then that status check will not be available for selection
   - name of the status check is the name of the job within workflow or externally injected status
 - only jobs from those workflow will be appear in search selection box which get triggered on [pull-request] event
+
+a good link for troubleshooting: 
+https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/troubleshooting-required-status-checks
