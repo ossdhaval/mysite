@@ -152,3 +152,11 @@ https://docs.github.com/en/organizations/managing-access-to-your-organizations-r
 you can see all the changes that happend to all the entites in your organisation in github using audit logs. You need to be organization `owner` to
 be able to see this.
 https://docs.github.com/en/organizations/keeping-your-organization-secure/reviewing-the-audit-log-for-your-organization#accessing-the-audit-log
+
+
+### branch protections
+
+- `Require status checks to pass before merging`
+  - at this time, when you turn on this protection, only statuses that were run in last week will be available for selection in the search box. so if there is an active status check but corresponding workflow did not run during last week then that status check will not be available for selection
+  - name of the status check is the name of the job within workflow or externally injected status
+- only jobs from those workflow will be appear in search selection box which get triggered on [pull-request] event
