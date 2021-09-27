@@ -145,3 +145,6 @@ curl -u ossdhaval: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 -H "Accept: applicati
 - for analysing github data of your org and multiple repos: https://livablesoftware.com/tools-mine-analyze-github-git-software-data/
 - Agile project management on github: https://www.zenhub.com/
 
+### github repository permission levels
+https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/repository-permission-levels-for-an-organization
+
