@@ -124,6 +124,8 @@ Till version 3, github had rest apis but from version 4 they have moved to Graph
 
 #### using version 4 (graphQL api)
 Reference : https://docs.github.com/en/graphql
+public schema: https://docs.github.com/en/graphql/overview/public-schema
+how to use without explorer: https://docs.github.com/en/graphql/guides/forming-calls-with-graphql
 how to use : https://docs.github.com/en/graphql/guides/using-the-explorer
 explorer url: https://docs.github.com/en/graphql/overview/explorer
 
