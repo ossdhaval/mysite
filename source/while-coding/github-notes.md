@@ -120,6 +120,16 @@ curl  https://api.github.com/orgs/JanssenProject/repos
 
 ### using github rest api
 
+Till version 3, github had rest apis but from version 4 they have moved to GraphQL. 
+
+#### using version 4 (graphQL api)
+Reference : https://docs.github.com/en/graphql
+how to use : https://docs.github.com/en/graphql/guides/using-the-explorer
+explorer url: https://docs.github.com/en/graphql/overview/explorer
+
+
+#### using rest API
+
 all APIs are listed https://docs.github.com/en/rest/reference
 
 you can access public data without authenticating. For example:
@@ -131,7 +141,7 @@ curl https://api.github.com/users/ossdhaval
 but to access some information plus to make changes to github data you have to authenticate.
 
 
-#### authentication
+##### authentication
 
 Your regular ssh key will not work. You have to get an OAuth key or [generate a personal token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
