@@ -163,3 +163,10 @@ https://docs.github.com/en/organizations/keeping-your-organization-secure/review
 
 a good link for troubleshooting: 
 https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/troubleshooting-required-status-checks
+
+### useful shortcuts
+
+- `e`	Open source code file in the Edit file tab
+- `ctrl+s` write commit message
+
+[full list](https://docs.github.com/en/get-started/using-github/keyboard-shortcuts#about-keyboard-shortcuts)
