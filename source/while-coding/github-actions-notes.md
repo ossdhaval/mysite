@@ -16,6 +16,9 @@ https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
 https://github.com/actions/checkout
 
+### insightful article on `pull_request` action trigger
+https://frontside.com/blog/2020-05-26-github-actions-pull_request/
+
 ### Action that can build multiple dependent projects
 
 Here current repository needs BOM project, which is a separate project, to be built first.
