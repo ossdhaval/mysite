@@ -708,3 +708,20 @@ If you are trying to pull some changes and merge conflicts happen then you have 
     - Center: is will be the final outcome. This is what you have to edit.
   - Once completed, click apply to apply the changes. 
   - now if you go and fire `git status` then you'll see that your local copy has been modified. You can commit that.
+
+ ### cherry picking:
+ 
+A cherry-pick in Git is like a rebase for a single commit. It takes the patch that was introduced in a commit
+and tries to reapply it on the branch you’re currently on. This is useful if you have a number of
+commits on a topic branch and you want to integrate only one of them, or if you only have one
+commit on a topic branch and you’d prefer to cherry-pick it rather than run rebase.
+ 
+```
+ $ git cherry-pick e43a6
+Finished one cherry-pick.
+[master]: created a0a41a9: "More friendly message when locking the index fails."
+3 files changed, 17 insertions(+), 3 deletions(-)
+```
+ 
+ Now you can remove your topic branch and drop the commits you didn’t want to pull in.
+ 
