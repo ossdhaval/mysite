@@ -10,4 +10,5 @@
 
 - jans-auth-server `AppInitializer` class loads all the services required by jans-server, like persistence manager.
   - `AppInitializer` uses methods in `ApplicationFactory` to read properties stored in files and create objects like `PersistenceEntryManagerFactory` using `PersistanceFactoryService` which is injected in `ApplicationFactory`
-  - 
+- To see which entity classes are mapped to which tables, search for `@ObjectClass` in jans-auth-server project. You'll find `@ObjectClass(tablename)`.
+  - there are many `model` packages in AS but only few (~23) are persistence related. Others (like `CodeVerifier` under `io.jans.as.model.authorize` package) are not related to persistance rather they are like POJOs.
