@@ -2,6 +2,7 @@
 
 ### Reference:
 - Could not find updated tutorial for OpenJDK 17 about annotations. Java tutorials for most subjects are still pointing to JDK 8. So, link below may be old but basics would be the same.
+
 https://docs.oracle.com/javase/tutorial/java/annotations/index.html
 
 ### What is annotation and what are different usecases:
