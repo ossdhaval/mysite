@@ -95,4 +95,4 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
     - first login to container as root using `lxc exec my-ubuntu-container bash`
     - then install apache server `sudo apt install apache2`
     - check if apache service is running `service apache2 status`
-    - now go to your local machine, open browser and try to hit the IP of the container `10.229.38.143`
+    - now go to your local machine, open browser and try to hit the IP of the container `10.229.38.143`. You should be able to access default apache page
