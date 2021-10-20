@@ -96,3 +96,7 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
     - then install apache server `sudo apt install apache2`
     - check if apache service is running `service apache2 status`
     - now go to your local machine, open browser and try to hit the IP of the container `10.229.38.143`. You should be able to access default apache page
+
+7) if you want to create a shared folder between local computer and container
+    - from local machine run `sudo lxc config device add my-ubuntu-container shared_dir disk path=/var/www/localhost/htdocs source="/home/nevyan/web_dev"`
+    - above command will map content of local directory `/home/nevyan/web_dev` to `/var/www/localhost/htdocs` directory within the container
