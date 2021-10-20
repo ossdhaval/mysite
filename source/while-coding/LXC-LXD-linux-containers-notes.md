@@ -90,7 +90,9 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
         inet6 fe80::216:3eff:fe09:dc5c/64 scope link 
            valid_lft forever preferred_lft forever
     ```
-    from this, you have to pick up `10.229.38.143` ip.
-
-
-
+    from this, you have to pick up `10.229.38.143` ip. Now from local PC you can run `sudo ssh dev@10.229.38.143` to login to container.
+6) Now, to install a web server on container and access that web page from local machine 
+    - first login to container as root using `lxc exec my-ubuntu-container bash`
+    - then install apache server `sudo apt install apache2`
+    - check if apache service is running `service apache2 status`
+    - now go to your local machine, open browser and try to hit the IP of the container `10.229.38.143`
