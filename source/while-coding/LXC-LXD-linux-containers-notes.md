@@ -102,6 +102,9 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
     - above command will map content of local directory `/home/nevyan/web_dev` to `/var/www/localhost/htdocs` directory within the container
 
 Note: 
+
     1) in my case IP address when run `lxc ls` from local machine and address from running `ip a` from within container are same
+    
     2) This ip address stayed static even after stopping and starting container as well as local machine.
+    
     3) there seems to be two versions of commands for lxc. Like `lxc stop` and `lxc-stop`. In my case only first version worked. Not second. But it seems like second version is latest as this page is using https://linuxcontainers.org/lxc/getting-started/
