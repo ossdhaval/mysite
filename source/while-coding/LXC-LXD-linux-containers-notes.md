@@ -4,19 +4,26 @@
 - https://www.youtube.com/watch?v=kXBsghAug2c
 - https://discuss.linuxcontainers.org/t/solved-static-ip-address-to-lxc-container/7704
 
+## what is LxC and LxD
+LxC (LinuX Container)
+LxD (Lx Deamon)
+
+For long version read [this](https://linuxcontainers.org/) and for differences read [this](https://discuss.linuxcontainers.org/t/comparing-lxd-vs-lxc/24)
+
+In short:
+LxC is core containerization which is used by LxD(which is newer and makes LxC containerization more user friendly). LxD uses LxC underneath. Recommendation for all new users is to use LxD unless there is a special need of using LxC directly.
+For commandline, when you install LxC and LxD, you'll find two sets of commands like `lxc start` and also `lxc-start`. Remember that `lxc start` is LxD command and `lxc-start` is an LxC command. Try to stick to first version so you continue to use LxD.
+
 ## Installing
 
 On Ubuntu:
 
 `sudo apt-get install lxd`
 
-`sudo apt-get install lxc`
-
 Now check status :
 
 `systemctl status snap.lxd.daemon`
 
-`systemctl status lxc`
 
 Start LXD:
 
