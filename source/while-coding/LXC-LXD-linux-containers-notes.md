@@ -79,8 +79,8 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
 3) to get into container shell `lxc exec my-ubuntu-container bash`
 4) to see the files in container `cd ..` and then `ls`
 5) now to be able to connect to container directly via ssh (and not via `lxc` command), we need to install ssh server on container using `sudo apt install openssh-server`
-6) create a new user `add user dev`
-7) restart sshd service `service restart sshd`
+6) create a new user `adduser dev`
+7) restart sshd service `service sshd restart`
 8) Now to connect to container from other PC using ssh and the newly created user you have to use: `sudo ssh dev@<ip>`. This ip is internal IP of the container. If can be found by logging into container using lxc command and then firing `ip a`. Output will be something like this
     ```
     root@my-ubuntu-container:~# ip a
@@ -133,3 +133,7 @@ lxc publish my-container --alias my-new-image
 You can even turn a past container snapshot into a new image:
 
 `lxc publish my-container/some-snapshot --alias some-image`
+
+Now you can see this image in the list of available images:
+
+`lxc image list`
