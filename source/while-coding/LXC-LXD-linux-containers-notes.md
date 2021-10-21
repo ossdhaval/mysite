@@ -30,6 +30,7 @@ Start LXD:
 
 `systemctl start snap.lxd.daemon`
 
+
 Add your user:
 
 If you want to run your lxc command without using `sudo` everytime, you should
@@ -116,3 +117,19 @@ Note:
     2) This ip address stayed static even after stopping and starting container as well as local machine.
     
 
+### creating a reusable image from container
+
+The easiest way by far to build an image with LXD is to just turn a container into an image.
+
+This can be done with:
+
+```
+lxc launch ubuntu:14.04 my-container
+lxc exec my-container bash
+<do whatever change you want>
+lxc publish my-container --alias my-new-image
+```
+
+You can even turn a past container snapshot into a new image:
+
+`lxc publish my-container/some-snapshot --alias some-image`
