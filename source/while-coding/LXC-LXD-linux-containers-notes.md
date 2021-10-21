@@ -137,3 +137,7 @@ You can even turn a past container snapshot into a new image:
 Now you can see this image in the list of available images:
 
 `lxc image list`
+
+you can create new containers from this image:
+
+`lxc launch image-name container-name`
