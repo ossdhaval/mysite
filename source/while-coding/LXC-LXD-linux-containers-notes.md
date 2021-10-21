@@ -110,6 +110,9 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
     - from local machine run `sudo lxc config device add my-ubuntu-container shared_dir disk path=/var/www/localhost/htdocs source="/home/nevyan/web_dev"`
     - above command will map content of local directory `/home/nevyan/web_dev` to `/var/www/localhost/htdocs` directory within the container
 
+11) you can delete this container
+    `lxc delete my-ubuntu-container`
+
 Note: 
 
     1) in my case IP address when run `lxc ls` from local machine and address from running `ip a` from within container are same
