@@ -3,6 +3,7 @@
 ### References
 - https://www.youtube.com/watch?v=kXBsghAug2c
 - https://discuss.linuxcontainers.org/t/solved-static-ip-address-to-lxc-container/7704
+- lxc commands: https://linuxcontainers.org/lxd/getting-started-cli/#instance-management
 
 ## what is LxC and LxD
 LxC (LinuX Container)
@@ -12,7 +13,7 @@ For long version read [this](https://linuxcontainers.org/) and for differences r
 
 In short:
 LxC is core containerization which is used by LxD(which is newer and makes LxC containerization more user friendly). LxD uses LxC underneath. Recommendation for all new users is to use LxD unless there is a special need of using LxC directly.
-For commandline, when you install LxC and LxD, you'll find two sets of commands like `lxc start` and also `lxc-start`. Remember that `lxc start` is LxD command and `lxc-start` is an LxC command. Try to stick to first version so you continue to use LxD.
+For commandline, there is a confusion caused by name of lxd client, which is called `lxc`. This gets confused with `lxc` containers. You'll find two sets of commands like `lxc start` and also `lxc-start`. Remember that `lxc start` is LxD command and `lxc-start` is an LxC command. Try to stick to first version so you continue to use LxD.
 
 ## Installing
 
@@ -114,4 +115,4 @@ Note:
     
     2) This ip address stayed static even after stopping and starting container as well as local machine.
     
-    3) there seems to be two versions of commands for lxc. Like `lxc stop` and `lxc-stop`. In my case only first version worked. Not second. But it seems like second version is latest as this page is using https://linuxcontainers.org/lxc/getting-started/
+
