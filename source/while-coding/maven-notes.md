@@ -361,3 +361,14 @@ Finally, I have to deactivate modules using reactor commandline argument `-pl` l
 #### Error: `Could not resolve dependencies for project` due to `Blocked mirror for repositories`: 
 
 	I got this when I was trying to run maven build using github actions.
+
+## Releasing artifacts on maven central:
+	
+Reference: 
+https://itnext.io/publishing-artifact-to-maven-central-b160634e5268
+
+Nice article to understand why we can't change artifact (apart from snapshot) once it is released on maven central 
+  https://central.sonatype.org/faq/can-i-change-a-component/
+  
+
+  
