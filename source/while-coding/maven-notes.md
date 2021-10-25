@@ -220,6 +220,7 @@ Source : https://books.sonatype.com/mvnref-book/reference/_using_advanced_reacto
 
 ### How to find where your .m2 and settings.xmls are which are being used by maven from commandline :
 
+Remember that settings.xml does not get created by default.
 just fire `mvn -X` command. This will trigger a build which will probably fail, but it'll also print all the information on console like below :
 
 ```
