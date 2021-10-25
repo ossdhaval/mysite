@@ -23,6 +23,11 @@
 - after this whenever you want to sign a commit add `-S` flag
   - `git commit -S -m your commit message` 
 
+- Troubleshooting:
+  - Many times people face this error while trying to push to github.
+  `commits must have valid signatures` 
+  this error is saying that you are trying push commits that are unsigned. Many times people confuse it with commits that are already there in github. To solve this you have to find the unsinged commit and sign it. To see all commits with its signing information run `git log --show-signature`.
+
 
 Above steps were derived from links given [here](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
 
