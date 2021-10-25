@@ -366,10 +366,17 @@ Finally, I have to deactivate modules using reactor commandline argument `-pl` l
 ## Releasing artifacts on maven central:
 	
 Reference: 
-https://itnext.io/publishing-artifact-to-maven-central-b160634e5268
-
-Nice article to understand why we can't change artifact (apart from snapshot) once it is released on maven central 
+- https://itnext.io/publishing-artifact-to-maven-central-b160634e5268
+- for dealing with gpg keys: https://central.sonatype.org/publish/requirements/gpg/
+- Nice article to understand why we can't change artifact (apart from snapshot) once it is released on maven central 
   https://central.sonatype.org/faq/can-i-change-a-component/
+
+Notes:
   
+  - follow steps in [this](https://itnext.io/publishing-artifact-to-maven-central-b160634e5268) link
+  - Few important notes
+    - Steps to prove your domain will be new
+    - in real life scenario, you'll have to change entries in settings.xml of jenkins. Or may be find out other way of providing same information. Like giving details to a maven plugin in pom.xml of the project which reads particular details from environment variables.
+	
 
   
