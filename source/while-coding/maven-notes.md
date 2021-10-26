@@ -378,5 +378,141 @@ Notes:
     - Steps to prove your domain will be new
     - in real life scenario, you'll have to change entries in settings.xml of jenkins. Or may be find out other way of providing same information. Like giving details to a maven plugin in pom.xml of the project which reads particular details from environment variables.
 	
+### High level summary of steps:
+- pom.xml: change group id to `io.github.ossdhaval`
+- Sonatype jira:
+ - open an account on `https://issues.sonatype.org/`. Log in name and password that you create here will be used to authenticate while uploading artifacts
+ - then open an new issue similar to [this](https://issues.sonatype.org/browse/OSSRH-74390)
+ - here, as an org, you need to prove that `io.github.ossdhaval` is owned by you. For this, they asked to create a temporary repo. For org like janssen, may be same will apply. Or may be some other way. `Need to check`.
+- ~/.m2/settings.xml:
+ - ```
+<settings xmlns="http://maven.apache.org/settings/1.0.0">
+    <servers>
+        <server>
+            <id>ossrh</id>
+            <!-- Your sonatype username -->
+            <username>dhavaltdesai</username>
+            <!-- Your sonatype password -->
+            <password>open$5Sonatype</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>ossrh</id>
+            <properties>
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.passphrase>tomy</gpg.passphrase>
+            </properties>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>ossrh</activeProfile>
+    </activeProfiles>
+</settings>
+```
+ - Here, when doing this from Jenkins, we need to find out how to pass passphrase and login creds using environment variables. There are some pointers in [this](https://itnext.io/publishing-artifact-to-maven-central-b160634e5268) article.
 
-  
+- pom.xml
+  make these changes:
+	```
+	--- a/pom.xml
++++ b/pom.xml
+@@ -4,7 +4,7 @@
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+ 
+-  <groupId>com.gsg.kernel</groupId>
++  <groupId>io.github.ossdhaval</groupId>
+   <artifactId>gsg-shared-kernel</artifactId>
+   <version>1.0-SNAPSHOT</version>
+   <packaging>jar</packaging>
+@@ -40,11 +40,11 @@
+   <distributionManagement>
+     <snapshotRepository>
+       <id>ossrh</id>
+-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
++      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+     </snapshotRepository>
+     <repository>
+       <id>ossrh</id>
+-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
++      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+     </repository>
+   </distributionManagement>
+
+	 
+@@ -110,4 +110,70 @@
+       </plugins>
+     </pluginManagement>
+   </build>
++
++  <profiles>
++    <profile>
++      <id>release</id>
++      <build>
++        <plugins>
++          <plugin>
++            <groupId>org.apache.maven.plugins</groupId>
++            <artifactId>maven-javadoc-plugin</artifactId>
++            <version>3.0.0</version>
++            <executions>
++              <execution>
++                <id>attach-javadocs</id>
++                <goals>
++                  <goal>jar</goal>
++                </goals>
++              </execution>
++            </executions>
++          </plugin>
++          <plugin>
++            <groupId>org.apache.maven.plugins</groupId>
++            <artifactId>maven-source-plugin</artifactId>
++            <version>3.0.1</version>
+	+            <executions>
++              <execution>
++                <id>attach-sources</id>
++                <goals>
++                  <goal>jar</goal>
++                </goals>
++              </execution>
++            </executions>
++          </plugin>
++          <plugin>
++            <groupId>org.apache.maven.plugins</groupId>
++            <artifactId>maven-gpg-plugin</artifactId>
++            <version>1.6</version>
++            <executions>
++              <execution>
++                <id>sign-artifacts</id>
++                <phase>verify</phase>
++                <goals>
++                  <goal>sign</goal>
++                </goals>
++                <configuration>
++                  <keyname>0x2D78228A</keyname>
++                  <passphraseServerId>0x2D78228A</passphraseServerId>
++                </configuration>
++              </execution>
++            </executions>
++  </plugin>
++          <plugin>
++            <groupId>org.sonatype.plugins</groupId>
++            <artifactId>nexus-staging-maven-plugin</artifactId>
++            <version>1.6.8</version>
++            <extensions>true</extensions>
++            <configuration>
++              <serverId>ossrh</serverId>
++              <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
++              <autoReleaseAfterClose>true</autoReleaseAfterClose>
++            </configuration>
++          </plugin>
++        </plugins>
++      </build>
++    </profile>
++  </profiles>
+
+```
+
+- Once this is done, run these three commands as explained in `release` section of [this](https://itnext.io/publishing-artifact-to-maven-central-b160634e5268)
+
+
