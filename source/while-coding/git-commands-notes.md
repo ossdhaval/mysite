@@ -67,17 +67,17 @@ note that the '\' before $ is because $ is considered as special character and h
 
 
 get current commit history of your local active branch ( HEAD points to local active branch )
-git log HEAD
+`git log HEAD`
 Note : HEAD is case-sensitive
 
 get current commit history of your remote branch ( origin usually points to branch that is your current remote  )
-git log origin 
+`git log origin`
  
-to see what code actually changed use 'patch' option. And to limit commits use '<number>' option
-git log --patch
+to see what code actually changed use 'patch' option. 
+`git log --patch`
 
-to limit commits use '<number>' option
-git log -8
+to limit commits use option
+`git log -8`
 
  To see status of all files with short representation of status :
 git status --short
@@ -92,6 +92,9 @@ To remove a file after adding it to tracked changes using 'git add'
 git reset <file_name>
 
 Branch information :
+ 
+ Remember: HEAD is a pointer to a branch, and a branch is a pointer to a commit.
+ So when you say `git commit`, git first looks at where the HEAD is pointing, and then it'll move that branch pointer to point to new commit. 
 
 There are two useful command to understand current branches and their status more :
 git log --oneline --decorate --all
