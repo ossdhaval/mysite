@@ -144,3 +144,10 @@ Now you can see this image in the list of available images:
 you can create new containers from this image:
 
 `lxc launch image-name container-name`
+
+### important commands:
+
+- `lxc start <cntr-name>`
+- `lxc stop <cntr-name>`
+- `lxc config device add <cntr-name> myport443 proxy listen=tcp:0.0.0.0:443 connect=tcp:127.0.0.1:443`
+- `lxc config device add <cntr-name> myport1636 proxy listen=tcp:0.0.0.0:1636 connect=tcp:127.0.0.1:1636`
