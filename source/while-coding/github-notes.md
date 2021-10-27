@@ -27,7 +27,19 @@
   - Many times people face this error while trying to push to github.
   `commits must have valid signatures` 
   this error is saying that you are trying push commits that are unsigned. Many times people confuse it with commits that are already there in github. To solve this you have to find the unsinged commit and sign it. To see all commits with its signing information run `git log --show-signature`.
+  - when you run `git log --show-signature`, you'll see that there are lot of red warnings which are like this.
+      ```
+      gpg: Signature made Monday 25 October 2021 10:10:36 PM IST
+      gpg:                using RSA key 4AEE18F83AFDEB23
+      gpg: Can't check signature: No public key
+      Merge: 2880250f3 f5ec22d37
+      Author: YuriyZ <yzabrovarniy@gmail.com>
+      Date:   Mon Oct 25 19:40:36 2021 +0300
 
+      ```
+      it says `signature made` but no public key available. This is will be the case with commits signed by other members of your team. Because you don't have their public key stored with you. To do so, run `curl https://github.com/ossdhaval.gpg | gpg -import` to download key for user `ossdhaval`.
+      
+      
 
 Above steps were derived from links given [here](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
 
