@@ -74,3 +74,10 @@ Other good links:
   - ff4j: featurestore uses couchbase connection to get feature bucket and then convert feature object into a document using mapper. Then stores the document in the bucket.
   - ORM : CouchbaseOperationServiceImpl uses connection provider to get bucket and then stores the Json object with the key in that bucket.
 
+
+
+Design:
+- application
+- provider
+- ff4j core
+- ORM
