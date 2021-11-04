@@ -145,6 +145,24 @@ you can create new containers from this image:
 
 `lxc launch image-name container-name`
 
+### creating lxc with ip mapping
+    
+    ```
+    snap install lxd
+    snap refresh
+    lxd init # Default settings looks good. I only specifid dir storage method to access container filesystem /var/snap/lxd/common/lxd/storage-pools/default/containers/ubuntu20/rootfs/
+    lxc launch images:ubuntu/20.04/amd64 ubuntu20
+    lxc config device add ubuntu20 myport443 proxy listen=tcp:0.0.0.0:443 connect=tcp:127.0.0.1:443
+    lxc config device add ubuntu20 myport1636 proxy listen=tcp:0.0.0.0:1636 connect=tcp:127.0.0.1:1636
+    lxc config set ubuntu20 limits.memory 4GB
+    ```
+    
+    to login
+    
+    `lxc exec ubuntu20 -- sudo --user root --login`
+    or 
+    `lxc exec ubuntu20 -- /bin/bash`
+
 ### important commands:
 
 - `lxc start <cntr-name>`
