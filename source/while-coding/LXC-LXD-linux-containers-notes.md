@@ -6,12 +6,13 @@
 - lxc commands: https://linuxcontainers.org/lxd/getting-started-cli/#instance-management
 
 ## what is LxC and LxD
-LxC (LinuX Container)
-LxD (Lx Deamon)
+- LxC (LinuX Container)
+- LxD (Lx Deamon)
 
 For long version read [this](https://linuxcontainers.org/) and for differences read [this](https://discuss.linuxcontainers.org/t/comparing-lxd-vs-lxc/24)
 
 In short:
+
 LxC is core containerization which is used by LxD(which is newer and makes LxC containerization more user friendly). LxD uses LxC underneath. Recommendation for all new users is to use LxD unless there is a special need of using LxC directly.
 For commandline, there is a confusion caused by name of lxd client, which is called `lxc`. This gets confused with `lxc` containers. You'll find two sets of commands like `lxc start` and also `lxc-start`. Remember that `lxc start` is LxD command and `lxc-start` is an LxC command. Try to stick to first version so you continue to use LxD.
 
@@ -19,16 +20,22 @@ For commandline, there is a confusion caused by name of lxd client, which is cal
 
 On Ubuntu:
 
-`sudo apt-get install lxd`
+```
+sudo apt-get install lxd
+```
 
 Now check status :
 
-`systemctl status snap.lxd.daemon`
+```
+systemctl status snap.lxd.daemon
+```
 
 
 Start LXD:
 
-`systemctl start snap.lxd.daemon`
+```
+systemctl start snap.lxd.daemon
+```
 
 
 Add your user:
@@ -36,23 +43,28 @@ Add your user:
 If you want to run your lxc command without using `sudo` everytime, you should
 have your user name in lxd group. To check:
 
-`getent group lxd`
+```
+getent group lxd
+```
 
 output:
 
-`lxd:x:131:dhaval`
+```
+lxd:x:131:dhaval
+```
 
 here `dhaval` is my username, that is already made part of lxd group at the installation time.
 In case your user is not part of the group then you can add it using 
 
-`sudo gpasswd -a dhaval lxd`
+```
+sudo gpasswd -a dhaval lxd
+```
 
 preferrably, logout and log back in so that changes can take effect.
 
 ## Initialize lxd
 
 ```
-
 dhaval@thinkpad:~/IdeaProjects/Janssen$ lxd init
 Would you like to use LXD clustering? (yes/no) [default=no]: 
 Do you want to configure a new storage pool? (yes/no) [default=yes]: 
@@ -67,7 +79,6 @@ Would you like the LXD server to be available over the network? (yes/no) [defaul
 Would you like stale cached images to be updated automatically? (yes/no) [default=yes]     
 Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: 
 dhaval@thinkpad:~/IdeaProjects/Janssen$ 
-
 ```
 
 ### Steps to create and setup an lxc container
