@@ -10,17 +10,35 @@
   select user from mysql.user;
   ```
 
-Get list of all available schemas (DBs)
+- Get list of all available schemas (DBs)
 
   ```
   SHOW DATABASES;
   ```
 
-get list of all all available tables in current schema.
+- get list of all all available tables in current schema.
 
   ```
   show tables;
   ```
+
+- get information about table:
+
+```
+describe <tablename>
+```
+
+- Inserting text with double quotes and new lines.
+
+To do this, you have to surround value by single quotes.
+
+```
+update jsontest set json2 = '{"keys" : [ {
+    "descr" : "Signature Key: RSA RSASSA-PKCS1-v1_5 using SHA-256",
+    "kty" : "RSA",
+  }]}'
+    where json1 = "json";
+```
 
 ## Troubleshooting
 
