@@ -181,3 +181,4 @@ or
 - `lxc stop <cntr-name>`
 - `lxc config device add <cntr-name> myport443 proxy listen=tcp:0.0.0.0:443 connect=tcp:127.0.0.1:443`
 - `lxc config device add <cntr-name> myport1636 proxy listen=tcp:0.0.0.0:1636 connect=tcp:127.0.0.1:1636`
+- `lxc config device list <cntr-name>` to know list of devices configured for a container (like shared disk, proxy etc) 
