@@ -167,6 +167,7 @@ lxc config device add ubuntu20 myport443 proxy listen=tcp:0.0.0.0:443 connect=tc
 lxc config device add ubuntu20 myport1636 proxy listen=tcp:0.0.0.0:1636 connect=tcp:127.0.0.1:1636
 lxc config set ubuntu20 limits.memory 4GB
 ```
+(understanding of `proxy` is [here](https://blog.simos.info/how-to-use-the-lxd-proxy-device-to-map-ports-between-the-host-and-the-containers/))
 
 to login
 
