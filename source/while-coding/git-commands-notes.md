@@ -728,3 +728,8 @@ Finished one cherry-pick.
  
  Now you can remove your topic branch and drop the commits you didn’t want to pull in.
  
+### Reset a branch to be same as remote branch
+ 
+ ```
+ git reset --hard origin/<branch-name>
+ ```
