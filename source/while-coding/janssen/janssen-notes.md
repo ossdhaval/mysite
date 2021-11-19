@@ -2018,6 +2018,7 @@ You should be able to run test cases successfully.
 - then grep `grep -nR ' FAILURE' ~/temp/log_server_WithAddingServerCertInJreCAcerts.4.log`
 - first line is summary and last line can be ignored.
 - janssen default labels are [here](https://github.com/organizations/JanssenProject/settings/repository-defaults)
+- In `codeql` and `code quality check` janssen github actions, there is a basic difference. While both try to build the project, `CodeQL` builds all dependency projects first and then lastly build current project (see jans-fido). Where `code quality check` directly builds current project. So, `codeql` project uses freshly built dependency artifacts, while `code quality check` downloads everything form maven repo. So if there is a code change that is in master but not reached maven yet, then build might get impact of same.
 
 
 
@@ -2040,3 +2041,4 @@ You should be able to run test cases successfully.
 
 1) [Curity](https://curity.io/): they also have a community edition like Gluu.
 2) [Authlete](https://www.authlete.com/): They don't have a community edition but they have a strong team.
+
