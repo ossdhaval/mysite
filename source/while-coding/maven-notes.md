@@ -346,6 +346,7 @@ a subset of the `<build>` element, which consists of:
   There are two commands.
   1) Using `-U` option ( eg. `mvn -U clean install' ). This will force all the snapshot dependencies to be reloaded from respective maven repos.
   2) Using `dependency:purge-local-repository` option (eg. `mvn dependency:purge-local-repository compile install` ). This is similar to deleting .m2 and reloading everything including release dependencies
+more details [here](https://maven.apache.org/plugins/maven-dependency-plugin/index.html)
 	
 		
 ### Troubleshooting:
