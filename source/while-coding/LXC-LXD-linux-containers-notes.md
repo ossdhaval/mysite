@@ -175,6 +175,21 @@ to login
 or 
 `lxc exec ubuntu20 -- /bin/bash`
 
+### how to transfer files from LxD container to host
+
+this can be done via scp, steps to setup:
+1) setup ssh on host
+```
+sudo apt install openssh-server
+```
+2) this will open port 22, you can check this by 
+```
+sudo ss -tulwn | grep LISTEN
+```
+3) now you can send file from container
+```
+scp gluudb-dump.sql dhaval@192.168.1.19:/home/dhaval/
+```
 
 ### important commands:
 
