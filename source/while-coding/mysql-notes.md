@@ -40,6 +40,17 @@ update jsontest set json2 = '{"keys" : [ {
     where json1 = "json";
 ```
 
+- import data dump sql file
+```
+sudo mysql -u root -p jansdb < /root/jansdb_withtestdata_dump_15_nov_2021.sql
+```
+
+- create a data dump of a schema
+
+```
+mysqldump -u root -p gluudb > ~/gluudb-dump.sql
+```
+
 ## Troubleshooting
 
 when trying to connect with MySQL instance on local host from mysql workbench, I faced error as below:
