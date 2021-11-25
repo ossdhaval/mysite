@@ -28,3 +28,19 @@ org.eclipse.jetty.LEVEL=DEBUG
 
 Log file will be created at `$JETTY_BASE/logs/`
 
+### How Jetty configuration properties work
+
+Every module has xml and corresponding one or more ini files. Mapping is given at home/modules/http.mod
+base/start.d/http.ini -> home/etc/jetty-http.xml
+
+users will change values in ini files to configure module properties
+
+if you look at xmls, they are like bean configurations for various jetty classes. Like spring beans. Jetty actually uses an IoC container to inject these beans created using these xmls.
+
+You can also give property values in jetty start.jar command line argument also if you don't want to modify ini file.
+
+like
+
+```
+java -jar start.jar jetty.http.port=8080
+```
