@@ -701,7 +701,12 @@ jans-auth service was not able to start and was getting stuck at below log messa
 
 `solution:` GCP instance restart worked. root cause was that ldap services were not available even though it showed `running` in systemctl command status.
 
+---------
+getting Duplicate fragment name ERROR Jetty Maven Plugin for resteasy library.
+encountered this while trying to run jans-auth-server/server using jetty:run-war for first time. I had to change POM file of server project as suggested below.
+solved by: https://stackoverflow.com/questions/5802096/duplicate-fragment-name-error-jetty-maven-plugin
 
+-------------
 
 
 
