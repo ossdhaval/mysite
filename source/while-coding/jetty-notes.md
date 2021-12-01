@@ -44,3 +44,14 @@ like
 ```
 java -jar start.jar jetty.http.port=8080
 ```
+
+### Jetty default configuration files can be downloaded from 
+- jetty.xml: https://github.com/eclipse/jetty.project/blob/jetty-9.4.x/jetty-server/src/main/config/etc/jetty.xml
+- jetty-http.xml: https://github.com/eclipse/jetty.project/blob/jetty-9.4.x/jetty-server/src/main/config/etc/jetty-http.xml
+- jetty-ssl.xml: https://github.com/eclipse/jetty.project/blob/jetty-9.4.x/jetty-server/src/main/config/etc/jetty-ssl.xml 
+- jetty-ssl-context.xml: https://github.com/eclipse/jetty.project/blob/jetty-9.4.x/jetty-server/src/main/config/etc/jetty-ssl-context.xml
+- jetty-https.xml: https://github.com/eclipse/jetty.project/blob/jetty-9.4.x/jetty-server/src/main/config/etc/jetty-https.xml
+
+### Jetty SSL self signed certificate can be downloaded from 
+- https://github.com/eclipse/jetty.project/blob/jetty-9.4.x/jetty-server/src/main/config/modules/ssl/keystore
+- default password is `storepwd`
