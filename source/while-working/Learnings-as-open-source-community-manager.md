@@ -99,3 +99,10 @@ These are metrics and parameters developed by Linux foundation:
 - [CHAOSS](https://chaoss.community/) project: to define how healthy your community is. They also have tools that will give you analytics on top of your OSS repo data.
 
 
+### issue triage
+good article: https://medium.com/@clarkbw/github-issue-triage-and-transparency-be35acd8e85d
+
+issue triaging needs correct set of labels in place: Look at this for reference. https://github.com/falcosecurity/falco/labels?page=1&sort=name-asc
+
+
+
