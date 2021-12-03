@@ -106,3 +106,21 @@ issue triaging needs correct set of labels in place: Look at this for reference.
 
 
 
+## Tech writing notes:
+(From: https://developers.google.com/tech-writing)
+
+
+- Prefer full term over acronym. Benefit of short forms and acronyms is they reduce length of text, but make understanding difficult as user has to translate everytime. So use acronyms when you know a lengthy term is going to be used many times in text. This rule doesn't apply to popular acronyn like HTML.
+- If you are referring to a term which reader may not be aware of then give a link to explaination of that term or define yourself.
+- Prefer to use noun itself instead of pronoun(it, them, they, this, that etc)  as pronoun may lead to confusion. Use it only if it is situated very close to the noun in the sentence.
+- The vast majority of sentences in technical writing should be in active voice. Good sentences in technical documentation identify who is doing what to whom.
+  - Prefer active voice to passive voice
+    - Use the active voice most of the time. Use the passive voice sparingly. Active voice provides the following advantages:
+    - Most readers mentally convert passive voice to active voice. Why subject your readers to extra processing time? By sticking to active voice, readers can skip the preprocessor stage and go straight to compilation.
+    - Passive voice obfuscates your ideas, turning sentences on their head. Passive voice reports action indirectly.
+    - Some passive voice sentences omit an actor altogether, which forces the reader to guess the actor's identity.
+    - Active voice is generally shorter than passive voice.
+  - remember: Be bold—be active.
+- Write clear sentences
+  - Choose strong verbs
+
