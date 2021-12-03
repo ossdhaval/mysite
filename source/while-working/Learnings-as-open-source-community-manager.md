@@ -13,7 +13,7 @@ There could be three kinds of documentation:
 
 All of above documentation can also be assisted with video tutorials, FAQs etc
 
-
+Google technical writting style: https://developers.google.com/tech-writing
 
 ### Reference material
 
