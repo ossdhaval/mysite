@@ -124,10 +124,10 @@ Labels:
     - good first issue
     - help wanted
    
-    - status/
-    - priority/
-    - milestone/
-    - release/
+    - status/backlog,WIP,test,completed
+    - priority/high, medium, low
+    - milestone/m1, m2
+    - release/1.0, 1.1
 
 - github milestones are usually used to represent sprints    
     
