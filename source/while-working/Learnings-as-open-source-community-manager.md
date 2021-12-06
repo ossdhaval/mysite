@@ -129,7 +129,7 @@ Labels:
     - milestone/
     - release/
 
-    
+- github milestones are usually used to represent sprints    
     
        
 
