@@ -97,6 +97,7 @@ I recently rolled out branch protections on all the Jans repos. Here I am noting
 These are metrics and parameters developed by Linux foundation:
 - [CII best practice badge](https://bestpractices.coreinfrastructure.org/en): To ensure that project is following OSS best practices. For health and stregth of engineering process in an OSS project.
 - [CHAOSS](https://chaoss.community/) project: to define how healthy your community is. They also have tools that will give you analytics on top of your OSS repo data.
+- Good OSS tool for Github repo analytics: https://devstats.cncf.io/. Kubernetes is using this tool. Kubernetes dashboard: https://k8s.devstats.cncf.io/d/12/dashboards?orgId=1&refresh=15m
 
 
 ### issue triage
@@ -104,7 +105,33 @@ good article: https://medium.com/@clarkbw/github-issue-triage-and-transparency-b
 
 issue triaging needs correct set of labels in place: Look at this for reference. https://github.com/falcosecurity/falco/labels?page=1&sort=name-asc
 
+Triage process as Kubernates: https://www.kubernetes.dev/docs/guide/issue-triage/
 
+How to run bug triage:
+- triage PRs first, then Issues
+- For every issue/PR we want to decide on what is the next action and who is going to take that action. Like status is `require-more-analysis` assign `owner` also who will do that analysis 
+
+Labels:
+
+  - Release planning and tracking:
+    - triage/needs-information, duplicate, will-not-fix    
+    - triaged (used to flag that PR/Issue has been discussed and )
+    - kind/bug, enhancement, feature, support
+    - size/xs, s, m, l, xl, xxl
+    - business-value/high, medium, low
+    - module/<technical modules>, release-notes, documentation
+    - distribution/CN, 
+    - good first issue
+    - help wanted
+   
+    - status/
+    - priority/
+    - milestone/
+    - release/
+
+    
+    
+       
 
 ## Tech writing notes:
 (From: https://developers.google.com/tech-writing)
