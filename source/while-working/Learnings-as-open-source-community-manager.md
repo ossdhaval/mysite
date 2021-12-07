@@ -115,8 +115,9 @@ How to run bug triage:
 Labels:
 
   - Triage:
-    - triage/needs-information, duplicate, will-not-fix    
-    - triaged (used to flag that PR/Issue has been discussed and )
+    - needs-triage
+    - needs-information    
+    - triaged(used to flag that PR/Issue has been discussed and it is ready to enter active development), triaged/duplicate, triaged/will-not-fix 
     - kind/bug, enhancement, feature, support
     - size/xs, s, m, l, xl, xxl
     - value/high, medium, low
