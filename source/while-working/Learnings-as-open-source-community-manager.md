@@ -41,6 +41,7 @@ https://kubernetes.slack.com/archives/CMWH3EH32/p1617024285139200
 Large open-source projects that are actively managed and can be looked at as reference:
 [spring](https://github.com/spring-projects)
 [kubernetes](https://github.com/kubernetes/kubernetes)
+[Angular](https://github.com/angular/angular)
 [falco](https://github.com/falcosecurity/falco)
 
 #### Articles and sites:
@@ -113,21 +114,20 @@ How to run bug triage:
 
 Labels:
 
-  - Release planning and tracking:
+  - Triage:
     - triage/needs-information, duplicate, will-not-fix    
     - triaged (used to flag that PR/Issue has been discussed and )
     - kind/bug, enhancement, feature, support
     - size/xs, s, m, l, xl, xxl
-    - business-value/high, medium, low
-    - module/<technical modules>, release-notes, documentation
-    - distribution/CN, 
+    - value/high, medium, low
+    - area/<modules like jans-fido2>, release-notes, documentation
     - good first issue
-    - help wanted
-   
+
+  - Tracking:
     - status/backlog,WIP,test,completed
     - priority/high, medium, low
-    - milestone/m1, m2
-    - release/1.0, 1.1
+    - help wanted
+
 
 - github milestones are usually used to represent sprints    
     
