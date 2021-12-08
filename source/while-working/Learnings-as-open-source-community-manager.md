@@ -47,7 +47,7 @@ Large open-source projects that are actively managed and can be looked at as ref
 #### Articles and sites:
 - https://opensource.guide/best-practices/
 - https://18f.github.io/open-source-program/pages/maintainer_guidelines/
-
+- guidelines for labels : https://seantrane.com/posts/logical-colorful-github-labels-18230/
 
 
 
