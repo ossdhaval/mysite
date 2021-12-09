@@ -5,6 +5,8 @@ Basically, TLS has superseded SSL. So, the `s` in `https` stands for TLS. But pe
 
 Are SSL and TLS certificates different? No, they are the same X.509 digital certificates.
 
+default port for TLS is 443. Browser knows that so when you request URl using `HTTPS` and don't specify port, the browser sends it to 443 by default. 
+
 
 http://times.usefulinc.com/2008/06/18-cert-maint
 
