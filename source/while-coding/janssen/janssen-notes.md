@@ -2056,5 +2056,5 @@ Run janssen test suite using intellij IDE:
 - and then select `suite`, give path to `testng.xml` and give `VM parameters` as required.
 - save and run
 
-![image](/images/testng-intellij.xcf)
+![image](/images/testng-intellij.png)
 
