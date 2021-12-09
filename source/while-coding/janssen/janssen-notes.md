@@ -2019,9 +2019,9 @@ You should be able to run test cases successfully.
 
 - while trying to setup local workspace, i tried running jans-auth-server.war on Jetty 10.0 but it failed to start due to sax exception in parcing jetty-env.xml. It worked fine when I tried on jetty 9 (jetty-distribution-9.4.31.v20200723.tar.gz) as downloaded from one of the installed janssen server instance from location (/opt/dist/app/jetty-distribution-9.4.31.v20200723.tar.gz).
 - when you are running tests via maven on command line, and there are failure, and you want to see which tests are failing then 
-- push output in a file `mvn -Dcfg=test.local.jans.io -fae -Dcvss-score=9 -Dfindbugs.skip=true -Ddependency.check=false clean compile test &> ~/temp/log_server_WithAddingServerCertInJreCAcerts.4.log`
-- then grep `grep -nR ' FAILURE' ~/temp/log_server_WithAddingServerCertInJreCAcerts.4.log`
-- first line is summary and last line can be ignored.
+  - push output in a file `mvn -Dcfg=test.local.jans.io -fae -Dcvss-score=9 -Dfindbugs.skip=true -Ddependency.check=false clean compile test &> ~/temp/log_server_WithAddingServerCertInJreCAcerts.4.log`
+  - then grep `grep -nR ' FAILURE' ~/temp/log_server_WithAddingServerCertInJreCAcerts.4.log`
+  - first line is summary and last line can be ignored.
 - janssen default labels are [here](https://github.com/organizations/JanssenProject/settings/repository-defaults)
 - In `codeql` and `code quality check` janssen github actions, there is a basic difference. While both try to build the project, `CodeQL` builds all dependency projects first and then lastly build current project (see jans-fido). Where `code quality check` directly builds current project. So, `codeql` project uses freshly built dependency artifacts, while `code quality check` downloads everything form maven repo. So if there is a code change that is in master but not reached maven yet, then build might get impact of same.
 
@@ -2046,4 +2046,15 @@ You should be able to run test cases successfully.
 
 1) [Curity](https://curity.io/): they also have a community edition like Gluu.
 2) [Authlete](https://www.authlete.com/): They don't have a community edition but they have a strong team.
+
+
+Run janssen test suite using intellij IDE:
+
+- go to `run/configuration'
+- click on `+` on top left corner to add new configuration
+- select `testng`
+- and then select `suite`, give path to `testng.xml` and give `VM parameters` as required.
+- save and run
+
+![image](https://github.com/ossdhaval/mysite/blob/main/images/testng-intellij.xcf)
 
