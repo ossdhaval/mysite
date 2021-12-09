@@ -2053,8 +2053,13 @@ Run janssen test suite using intellij IDE:
 - go to `run/configuration'
 - click on `+` on top left corner to add new configuration
 - select `testng`
-- and then select `suite`, give path to `testng.xml` and give `VM parameters` as required.
+- and then select `suite`, give path to `testng.xml`. Remove existing `-ea` vm param and give `VM parameters` as required. 
 - save and run
 
 ![image](/images/testng-intellij.png)
 
+This should bring up `run` tool window at the bottom of IDE and on left of that window you should be able to see status of each test as they get executed. Remember:
+- green tick is pass
+- grey `no go` symbole is `ignored` test
+- amber `cross` is failed test
+- red `cross` is error while executing test
