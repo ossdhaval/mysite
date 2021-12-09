@@ -2063,3 +2063,5 @@ This should bring up `run` tool window at the bottom of IDE and on left of that 
 - grey `no go` symbole is `ignored` test
 - amber `cross` is failed test
 - red `cross` is error while executing test
+
+![image](/images/testng-intellij-2.png)
