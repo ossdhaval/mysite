@@ -1,3 +1,11 @@
+Origins of SSL and TLS:
+http://tim.dierks.org/2014/05/security-standards-and-name-changes-in.html
+
+Basically, TLS has superseded SSL. So, the `s` in `https` stands for TLS. But people use SSL/TLS interchangeably because TLS is like SSL 3.1. A minor update on SSL 3.0. And changed name.
+
+Are SSL and TLS certificates different? No, they are the same X.509 digital certificates.
+
+
 http://times.usefulinc.com/2008/06/18-cert-maint
 
 http://times.usefulinc.com/2008/06/20-secure-ldap
