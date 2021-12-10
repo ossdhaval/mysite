@@ -2053,7 +2053,7 @@ Run janssen test suite using intellij IDE:
 - go to `run/configuration'
 - click on `+` on top left corner to add new configuration
 - select `testng`
-- and then select `suite`, give path to `testng.xml`. Remove existing `-ea` vm param and give `VM parameters` as required. 
+- and then select `suite`, give path to `testng.xml`. Remove existing `-ea` vm param and give `VM options` as required. Note: At times you'l see that `vm options`  are not being effective. To fix this, put same params in `test runner params`.
 - save and run
 
 ![image](/images/testng-intellij.png)
@@ -2065,3 +2065,11 @@ This should bring up `run` tool window at the bottom of IDE and on left of that 
 - red `cross` is error while executing test
 
 ![image](/images/testng-intellij-2.png)
+
+
+### Code of your project build on Jenkins:
+For a particular build, if you want to check code on which the build happend, 
+```
+go to build -> workspace
+```
+You can see the exact code on which the build happend and artifacts that build generated just like your local workspace. For example, you can download test reports etc from here.
