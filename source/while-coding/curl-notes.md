@@ -37,3 +37,10 @@ curl https://localhost:4444
 ```
 curl --data-urlencode "name=I am Daniel" http://www.example.com
 ```
+
+##### curl with ignore self-signed certificates
+use `-k`
+
+```
+curl -X POST -k https://127.0.0.1:443/.well-known/openid-configuration
+```
