@@ -2024,6 +2024,12 @@ You should be able to run test cases successfully.
   - first line is summary and last line can be ignored.
 - janssen default labels are [here](https://github.com/organizations/JanssenProject/settings/repository-defaults)
 - In `codeql` and `code quality check` janssen github actions, there is a basic difference. While both try to build the project, `CodeQL` builds all dependency projects first and then lastly build current project (see jans-fido). Where `code quality check` directly builds current project. So, `codeql` project uses freshly built dependency artifacts, while `code quality check` downloads everything form maven repo. So if there is a code change that is in master but not reached maven yet, then build might get impact of same.
+- when you install jans using install.py on lxc, then you can access endpoints from host machine browser using
+  ```
+  https://<ip-of-lxc-instance>/.well-known/openid-configuration
+  ```
+  no need to open any port like 443 or 8443.
+
 
 
 
@@ -2048,7 +2054,7 @@ You should be able to run test cases successfully.
 2) [Authlete](https://www.authlete.com/): They don't have a community edition but they have a strong team.
 
 
-Run janssen test suite using intellij IDE:
+### Run janssen test suite using intellij IDE:
 
 - go to `run/configuration'
 - click on `+` on top left corner to add new configuration
@@ -2073,3 +2079,5 @@ For a particular build, if you want to check code on which the build happend,
 go to build -> workspace
 ```
 You can see the exact code on which the build happend and artifacts that build generated just like your local workspace. For example, you can download test reports etc from here.
+
+
