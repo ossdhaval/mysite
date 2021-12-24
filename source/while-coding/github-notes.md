@@ -199,3 +199,20 @@ https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-
 - `ctrl+s` write commit message
 
 [full list](https://docs.github.com/en/get-started/using-github/keyboard-shortcuts#about-keyboard-shortcuts)
+
+
+### How to split a big PR into smaller PRs
+
+- there is no direct way of doing this as Github only allows one PR per branch. To solve this problem, you have to move changes into separate branch and create a PR from there.
+- So if you have a branch `big-branch` from master with three changes `c1`, `c2` and `c3` and a PR has been created on top of that then you have to follow two step process
+  - Create new branch from parent of `big-branch` and call it `b1`. We want to move change `c1` to `b1` 
+  - and then remove `c1` from `big-branch`
+
+##### move `c1` to `b1`
+
+- Create a branch `c1` from `main`. `main` is parent of `big-branch`.
+- switch to `b1`
+- Now cherry pick commit/commits related to `c1`
+
+##### remove `c1` from `big-branch`
+- 
