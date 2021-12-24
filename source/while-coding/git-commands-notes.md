@@ -726,6 +726,23 @@ Finished one cherry-pick.
 3 files changed, 17 insertions(+), 3 deletions(-)
 ```
  
+ Or cherry pick a range of commits. Notice the `^` character at the end of first commit. This is to indicate to git to include that commit as well in cherry pick:
+ 
+ ```
+ git cherry-pick dc99f87656a952f3548c320c6459278876f9f7b7^..6967cfc4751c87579c563ba9cbb3721116b72be0
+ ```
+ if your cherry pick gets a merge conflict, it'll show message as below
+ 
+```
+Auto-merging CONTRIBUTING.md
+CONFLICT (content): Merge conflict in CONTRIBUTING.md
+error: could not apply 2e158b7... docs: update triage section details
+hint: after resolving the conflicts, mark the corrected paths
+hint: with 'git add <paths>' or 'git rm <paths>'
+hint: and commit the result with 'git commit'
+```
+You can edit conflicted file and resolve the conflict, run `git add` to add that file and then `git commit` to commit that file. But, cherry pick would stop when it finds a conflict and doesn't pick rest of the commits in the range. So, you have to again start cherry pick from where it left. But first you have to stop the previous cherry pick by `git cherry-pick --quit` and then git another cherry pick command with remaining commits as range.
+ 
  Now you can remove your topic branch and drop the commits you didn’t want to pull in.
  
 ### Reset a branch to be same as remote branch
