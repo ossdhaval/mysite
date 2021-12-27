@@ -10,6 +10,13 @@
   select user from mysql.user;
   ```
 
+- drop a user
+
+  ```
+  sudo mydql (to log in as super user)
+  drop user gluu@localhost;
+  ```
+
 - Get list of all available schemas (DBs)
 
   ```
