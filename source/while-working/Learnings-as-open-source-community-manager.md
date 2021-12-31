@@ -152,3 +152,18 @@ Labels:
 - Write clear sentences
   - Choose strong verbs
 
+
+
+## setup meetings and calendar app
+
+- problem is that everyone uses a different calendar. Google, outlook, iOS etc. 
+- in Janssen google calendar is generally acceptable to all. So I have created a separate calendar for Janssen in my google account and create event in that
+   calendar. then I share link of that `event` on Rocket chat. Problem with this approach is that when you reschedule, everyone's calendar doesn't get updated automatically. I have to send the link again and people have to save the event again. Same for cancellation, You have to verbally cancel the meeting over chat but invites would stay in everyone's calendar.
+- Then I started to check how other major open source project do this and I found 
+  - Linux foundation : https://events.linuxfoundation.org/lfx-mentorship-showcase/program/schedule/
+  - Kubernetes: https://www.kubernetes.dev/resources/calendar/
+- most of them give google calendar and may be few others. But there is no unified way of doing this. They also have [this](https://www.kubernetes.dev/events/community-meeting/) kind of instructions for user to 
+- then I read about `iCal` a.k.a `.ics` format. This is a neutral format which also allows people to respond to the meetings. May be this is the best way to use do this task.
+
+
+
