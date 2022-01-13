@@ -20,7 +20,7 @@ Create a new repo which will be you Monorepo
 - enable checks (like signed commit, convensional commit and other branch protection)
 - give write permissions to the team members who will need it to push branches for PR move
 
-Move each repo as subfolder of monorepo
+Move each repo as [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) of monorepo
 - transfer issues manually and relabel them with appropriate `comp-` label
 - moving PRs
   - don't move closed PRs. They say in the old repo which will be archived. And commits have been already merged so commits will move.
