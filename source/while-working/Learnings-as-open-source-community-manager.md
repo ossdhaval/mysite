@@ -167,5 +167,9 @@ Labels:
 - most of them give google calendar and may be few others. But there is no unified way of doing this. They also have [this](https://www.kubernetes.dev/events/community-meeting/) kind of instructions for user to 
 - then I read about `iCal` a.k.a `.ics` format. This is a neutral format which also allows people to respond to the meetings. May be this is the best way to use do this task.
 
+## how to organize teams in an open source project
 
+https://docs.github.com/en/organizations
+
+- github by default has one distinction: org member and contributor
 
