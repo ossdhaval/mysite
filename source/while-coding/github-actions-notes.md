@@ -1,25 +1,29 @@
 # Github Actions
 
+### References
 
-Reference :
+#### course :
 https://app.pluralsight.com/library/courses/github-actions-getting-started/table-of-contents
 
-### How to run a workflow for all branches but run an action on a specific branch
+#### How to run a workflow for all branches but run an action on a specific branch
 
 https://stackoverflow.com/questions/58139406/only-run-job-on-specific-branch-with-github-actions
 
-### Options for yml tags of a github workflow:
+#### Options for yml tags of a github workflow:
 
 https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
-### Checkout action documentation:
+#### Checkout action documentation:
 
 https://github.com/actions/checkout
 
-### insightful article on `pull_request` action trigger
+#### insightful article on `pull_request` action trigger
 https://frontside.com/blog/2020-05-26-github-actions-pull_request/
 
-### Action that can build multiple dependent projects
+#### list of workflow trigger events
+https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
+
+#### Action that can build multiple dependent projects
 
 Here current repository needs BOM project, which is a separate project, to be built first.
 
@@ -58,12 +62,12 @@ jobs:
 
 ```
 
-### Contexts and expressions available to workflow: 
+#### Contexts and expressions available to workflow: 
 
 https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context
 
 
-### github action contexts vs Runner variables:
+#### github action contexts vs Runner variables:
 https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#determining-when-to-use-contexts
 
 basically, in your workflow code, the part apart from 'run:' is executed by Github action and code under 'run:' is executed by runner. You have [contexts](https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#contexts) like `github.repository` in the part which is executed by github action, while runner doesn't have context but it has many [environment variables](https://docs.github.com/en/actions/reference/environment-variables#default-environment-variables), like `$GITHUB_REF`
