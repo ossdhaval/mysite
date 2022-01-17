@@ -216,3 +216,10 @@ https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-
 
 ##### remove `c1` from `big-branch`
 - 
+
+### Ways to interact with Github
+  - [UI](https://github.com/)
+  - [REST API (V2)](https://docs.github.com/en/rest)
+  - [GraphQL API (V3)](https://docs.github.com/en/graphql)
+  - [Github CLI](https://cli.github.com/)
+  - [Github libraries](https://docs.github.com/en/rest/overview/libraries)
