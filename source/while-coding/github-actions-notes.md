@@ -108,3 +108,8 @@ https://docs.github.com/en/actions/reference/workflow-commands-for-github-action
   - from `actions` tab under repository's main screen.
   - go to PR->checks
 - PR checks may have more checks than directly triggered by workflows in `action` tab. For example, when `code quality check` workflow get triggered for a PR, at the end of it, sonar cloud also pushes a check in the PR->checks section that summarizes result of the scan. So, in `action` section you'll just see `code quality check` workflow, but in PR->checks you'll see `sonarcloud` check as well. 
+- By default, GitHub will maximize the number of jobs run in parallel depending on the available runners on GitHub-hosted virtual machines.
+- Each step runs in its own process in the runner environment and has access to the workspace and filesystem. Because steps run in their own process, changes to environment variables are not preserved between steps. GitHub provides built-in steps to set up and complete a job. [Reference](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobs)
+- Commands run using non-login shells by default. You can choose a different shell and customize the shell used to run commands. For more information, see jobs.<job_id>.steps[*].shell. Each run keyword represents a new process and shell in the runner environment. When you provide multi-line commands, each line runs in the same shell
+- Strategy matrix is at job level and not at step level
+- 
