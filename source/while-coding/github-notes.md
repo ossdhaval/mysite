@@ -223,3 +223,6 @@ https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-
   - [GraphQL API (V3)](https://docs.github.com/en/graphql)
   - [Github CLI](https://cli.github.com/)
   - [Github libraries](https://docs.github.com/en/rest/overview/libraries)
+
+### Efficient and power user tips
+- Give comments quickly with [saved responses](https://docs.github.com/en/github/writing-on-github/working-with-saved-replies/about-saved-replies)
