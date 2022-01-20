@@ -101,6 +101,7 @@ These are metrics and parameters developed by Linux foundation:
 - [CII best practice badge](https://bestpractices.coreinfrastructure.org/en): To ensure that project is following OSS best practices. For health and stregth of engineering process in an OSS project.
 - [CHAOSS](https://chaoss.community/) project: to define how healthy your community is. They also have tools that will give you analytics on top of your OSS repo data.
 - Good OSS tool for Github repo analytics: https://devstats.cncf.io/. Kubernetes is using this tool. Kubernetes dashboard: https://k8s.devstats.cncf.io/d/12/dashboards?orgId=1&refresh=15m
+- open decision framework: https://opensource.com/open-organization/resources/open-decision-framework
 
 
 ### issue triage
