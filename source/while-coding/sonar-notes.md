@@ -155,3 +155,17 @@ When you configure CI based analysis, sonar will ask you to add a security token
 	
 
 	
+### excluding files from duplication check from sonar cloud:
+
+Next option is to exclude one of these files from duplication check by adding
+
+```
+<sonarcube.cpd.exclusions>
+  your file paths
+</sonarcube.cpd.exclusions>
+```
+	
+in pom.xml
+	
+link : https://docs.sonarqube.org/latest/project-administration/narrowing-the-focus/
+
