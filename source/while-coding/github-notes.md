@@ -226,3 +226,9 @@ https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-
 
 ### Efficient and power user tips
 - Give comments quickly with [saved responses](https://docs.github.com/en/github/writing-on-github/working-with-saved-replies/about-saved-replies)
+
+
+### questions or missing features:
+- how to know which all PRs are containing changes for a particular file? At times what happens is that same file is being changed in multiple PRs that leads to merge conflicts later on.
+- sometimes it happens that after looking at file content you want to know who change this piece of text? there should be a way to find commit and PR that changed that part in file
+- We need codeowner groups. So that review can be requested from a group and if anyone from that group gives approval, that should be sufficient (configurable).
