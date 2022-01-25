@@ -5,3 +5,8 @@
 - curl -fsSL https://get.docker.com -o get-docker.sh
 - sudo sh get-docker.sh
 - sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher:latest
+- sudo docker logs 61fe18146714eac8a0200ca0a1057a96da4ed70702d4299caf9dc206f5a15768  2>&1 | grep "Bootstrap Password:"
+- access `https://192.168.223.128`
+- for the first time, you just need to enter password. Use the bootstrap password that you got from step above
+- It'll ask for resetting password. Reset it (open$5rancher)
+- next you'll be taken to rancher dashboard where you'll see one active cluster
