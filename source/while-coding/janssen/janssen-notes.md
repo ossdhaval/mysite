@@ -2090,3 +2090,7 @@ go to build -> workspace
 You can see the exact code on which the build happend and artifacts that build generated just like your local workspace. For example, you can download test reports etc from here.
 
 
+## Usecases
+
+### References:
+- good short video on oauth2 flow. Can be used for Janssen tutorial as well. https://www.youtube.com/watch?v=CPbvxxslDTU
