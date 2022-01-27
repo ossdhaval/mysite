@@ -713,11 +713,20 @@ solved by: https://stackoverflow.com/questions/5802096/duplicate-fragment-name-e
 =============
 enable linux GUI on GCP vm
 ================
-I tried with these steps
-https://medium.com/@jhsperc/gce-ubuntu-desktop-18-04-anydesk-42a21cf8821c#:~:text=Make%20sure%20you%20setup%20a,you%20are%20to%20your%20desktop.
-but failed at the end when I was trying to connect via anydesk with error
-"remote display server is not supported ( eg wayland )"
+Use steps as mentioned here : https://github.com/eerolat/setup-google-linux
 
+in short, while creating linux VM : 
+under `management` -> automation -> startup script text area. Paste the line below:
+`   wget https://github.com/eerolat/setup-google-linux/raw/master/install.sh
+   sh install.sh -u myusername mypassword`
+
+Here use and password can be anything. Same you have to use when connecting via RDP client from your local machine like remmina.
+
+for example:
+`wget https://github.com/eerolat/setup-google-linux/raw/master/install.sh
+   sh install.sh -u dhaval work`
+
+Remember, only try to connect via UI after sometime of starting the vm. Like 10 mins. 
 
 =============================
 general notes :
