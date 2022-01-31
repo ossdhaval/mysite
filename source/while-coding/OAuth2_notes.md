@@ -64,3 +64,35 @@ change areas:
 `RP`: Relying Party (client)
 `OP`: OpenID provider
 
+
+Notes from : https://www.udemy.com/course/enterprise-oauth-for-developers
+----
+
+#### Usecases:
+1. Introduction
+  - Websites asking you to login using facebook/google login
+  - email clients like outlook on your windows desktop that wants to aggregate emails from gmail, yahoo, etc
+  - TV that gives you a code to enter into a mobile app in order to log into tv app
+  - sites that aggregate hotel data and in order to show you cheapest rentals
+  - finance apps taht show your finances at one place
+
+2. Security basics (Authentication and Authorization)
+  - Service provider: This is the target application that is being protected. Authorization is responsibility of service provider
+  - Identity provider: takes care of authentication. Like active directory, LDAP etc
+  - service provider and identity provider could be in different data-centers. Like in enterprise app deployed in public cloud where user authentication is performed by on-prem cloud application of security reasons.
+
+6.
+  - Sending username-password to service provider is not good practice rather it should be sent directly to Identity provider
+
+7. SAML
+  - SAML addresses two issues
+    - LDAP has to be in the same data-center
+    - User has to enter credentials manually
+  - SAML flow depends on browser redirects, so only browser based users can be authenticated
+  - SAML uses xml to send data in request and response
+  - SAML uses encrypted tokens so SAML identity provider and application Service provider need to have each others certificates in order to decrypt tokens
+
+9. Enterprise problem usecases
+  - Securing the REST APIs. One way is to send SAML token in every request but this is not feasible as token is too large plus the REST API will have to store SAML metadata.
+  - Plus, when a process (lick cron job) is calling REST API, how can cron job get a SAML token?
+  - SAML is great for implementing SSO in enterprise, but it can't hadle rest APIs authentication in an enterprise. 
