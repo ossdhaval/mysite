@@ -96,3 +96,17 @@ Notes from : https://www.udemy.com/course/enterprise-oauth-for-developers
   - Securing the REST APIs. One way is to send SAML token in every request but this is not feasible as token is too large plus the REST API will have to store SAML metadata.
   - Plus, when a process (lick cron job) is calling REST API, how can cron job get a SAML token?
   - SAML is great for implementing SSO in enterprise, but it can't hadle rest APIs authentication in an enterprise. 
+
+15. Client registration
+  - client registration is first step that any app has to perform in order to integrate an oauth flow
+  - In this process, client registers with oauth authorization server by furnishing various details and most importantly redirect urls. Details required for registration can change from oauth provider to provider. Like, okta might have different ask from authO.
+  - in response to registration, the client app gets two things client id and client secret. 
+  - This ID and secret are required to be sent to authorization server by client everytime client send resource owner's request for authorization 
+
+16. Tokens
+  - Tokens are of two types: Opaque and Structured
+    - Opaque tokens are a randomly generated alpha-numeric string. It can be utilised by authorization server as access token. It is opaque as it doesn't contain any information about token itself. Like expiry time, who is the subject, scopes for which it was authorized etc. When client sends request to (by putting token in `Authorization: bearer <token>` request header) resource server to access resources with a opaque token, the resource server has to call authorization server to get details about token. This adds to performance problems. 
+    - Structured token: This is second type of token that can be used as access token by autho server. This token, has jwt format and describes itself. On decoding it, resource server can get all the information like expiry, scopes etc. without needing to go to autho server. This token is signed by autho server using it's private key and resource server can varify this using public key. This token is also sent to resource server by client by putting token in `Authorization: bearer <token>` request header
+    
+16,17. Token
+  - 
