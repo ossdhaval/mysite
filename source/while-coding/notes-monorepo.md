@@ -46,3 +46,6 @@ Move each repo as [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodule
     - use convensional commits
     - link new PR to old PR
     - Apply appropriate component label `comp-`
+
+- Useful points when working with Monorepo
+  - Sparse checkouts: https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/
