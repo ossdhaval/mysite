@@ -750,3 +750,15 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  ```
  git reset --hard origin/<branch-name>
  ```
+
+ ### using sparse checkout to just check out one directory from monorepo
+ 
+```
+4581  02/02/22 11:24:08 mkdir jans-evelen
+4582  02/02/22 11:24:15 cd jans-evelen/
+4583  02/02/22 11:24:20 git init
+4584  02/02/22 11:24:37 git sparse-checkout init --cone
+4585  02/02/22 11:25:05 git sparse-checkout set jans-eleven
+4586  02/02/22 11:25:25 git remote add origin git@github.com:JanssenProject/jans.git
+4587  02/02/22 11:26:08 git pull origin main
+```
