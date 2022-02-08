@@ -14,7 +14,7 @@ https://github.com/JanssenProject/jans-setup
 
 cd ~
 
-dhaval@dhaval-Lenovo-U41-70:~$ curl https://raw.githubusercontent.com/JanssenProject/jans-setup/master/install.py > install.py
+dhaval@dhaval-Lenovo-U41-70:~$ curl https://raw.githubusercontent.com/JanssenProject/jans/main/jans-linux-setup/install.py > install.py
 
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 
@@ -341,7 +341,7 @@ lxc exec ubuntu20 -- sudo --user root --login
 
 apt install curl
 
-curl https://raw.githubusercontent.com/JanssenProject/jans-setup/master/install.py > install.py
+curl https://raw.githubusercontent.com/JanssenProject/jans/main/jans-linux-setup/install.py > install.py
 
 python3 install.py
 after this, following questionnaire will come uup:
@@ -839,7 +839,7 @@ swagger : https://gluu.org/swagger-ui/?url=https://raw.githubusercontent.com/Jan
 ### Installing Janssen on a machine with static IP ( in my case GCP with static IP )
 
 1) `cd ~`
-2) `wget https://raw.githubusercontent.com/JanssenProject/jans-setup/master/install.py > install.py`
+2) `wget https://raw.githubusercontent.com/JanssenProject/jans/main/jans-linux-setup/install.py > install.py`
 3) `sudo python3 install.py.1"` or if you want to load test data too then `sudo python3 install.py.1 --args="-t"`
 
 Sample output:
@@ -1644,7 +1644,7 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.701 sec - in i
 On a blank machine, commands below will install MySQL and complete the setup.
 
 ```
-wget https://raw.githubusercontent.com/JanssenProject/jans-setup/master/install.py > install.py
+wget https://raw.githubusercontent.com/JanssenProject/jans/main/jans-linux-setup/install.py > install.py
 sudo python3 install.py --args="-local-rdbm=mysql"
 
 ```
@@ -1862,7 +1862,7 @@ Janssen installation involves running two commands. During installation, setup w
 
 First command to run is as below. It'll download required installation script.
 
-`wget https://raw.githubusercontent.com/JanssenProject/jans-setup/master/install.py`
+`wget https://raw.githubusercontent.com/JanssenProject/jans/main/jans-linux-setup/install.py`
 
 Once you have the script, you can start installation. You can either start installation with or without test data loading along with it. Test data load will help you to run unit tests when you are writing code. You can also choose to load it later when needed.
 
