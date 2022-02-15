@@ -2043,7 +2043,7 @@ You should be able to run test cases successfully.
 
 
 ### Imp Janssen commands
-
+- `systemctl list-units --type=service --state=running` find all running services [reference](https://www.codegrepper.com/code-examples/shell/how+to+check+if+port+80+is+binded+to+apache+ubuntu)
 - `systemctl status jans-auth.service`: To know status of Janssen auth server service
 - `systemctl restart jans-auth`: Restart Janssen auth service
 - `systemctl list-units --all "jans*"`: To know status of all Janssen services
