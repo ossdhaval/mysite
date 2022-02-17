@@ -10,3 +10,7 @@ only enabled modules as per ssl links.
 no changes in the certificates.
 no changes in the port configurations
 added `ServerName test.local.rp.io` in `/etc/apache2/sites-available/default-ssl.conf`
+
+
+How to configure virtual host:
+https://docs.oracle.com/en/operating-systems/oracle-linux/6/admin/ol_virthosts.html#:~:text=The%20Apache%20HTTP%20server%20supports,content%20and%20to%20behave%20differently.
