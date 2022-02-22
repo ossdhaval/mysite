@@ -110,3 +110,19 @@ Notes from : https://www.udemy.com/course/enterprise-oauth-for-developers
     
 16,17. Token
   - 
+
+
+## Dynamic Client Registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) notes:
+
+Registration requests send a set of desired client metadata values to the authorization
+   server.  The resulting registration responses return a client
+   identifier to use at the authorization server and the client metadata
+   values registered for the client.
+   
+other references
+- https://github.com/zmartzone/mod_auth_openidc/blob/master/auth_openidc.conf
+- https://curity.io/resources/learn/openid-connect-understanding-dcr/
+- https://curity.io/resources/learn/using-dynamic-client-registration/
+- https://www.youtube.com/watch?v=AsCL8kMU1iY
+- https://www.youtube.com/watch?v=WnI32e4eEuY
+- https://connect2id.com/products/server/docs/api/client-registration#initial-access
