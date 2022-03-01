@@ -2061,6 +2061,8 @@ You should be able to run test cases successfully.
 
 1) [Curity](https://curity.io/): they also have a community edition like Gluu.
 2) [Authlete](https://www.authlete.com/): They don't have a community edition but they have a strong team.
+3) [ory](https://github.com/ory/kratos)
+4) [keycloak](https://github.com/keycloak/keycloak)
 
 
 ### Run janssen test suite using intellij IDE:
