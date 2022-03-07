@@ -236,3 +236,7 @@ https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-
 
 ### search for issues or PR excluding certain words
 - `is:pr is:open NOT chore NOT Snyk` will give you all open PRs which doesn't have word `chore` or `Snyk`
+
+### emoji list
+https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#emoji-cheat-sheet
+just type `:` followed by a search character in github issues, PRs, comments etc and any .md file and github will show a list of emojis
