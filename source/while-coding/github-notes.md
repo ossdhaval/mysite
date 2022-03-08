@@ -240,3 +240,6 @@ https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-
 ### emoji list
 https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#emoji-cheat-sheet
 just type `:` followed by a search character in github issues, PRs, comments etc and any .md file and github will show a list of emojis
+
+### list of shields that you can use in your readme or other files on github
+https://shields.io/
