@@ -71,3 +71,11 @@ Once you have created key-pair and signed certificate (self or CA), you need to 
 - now import these certs ( root first, the intermediate and then public key) in trust store. 
 - load ( or point your application ) to this truststore.
 - then make call to server
+
+
+### IMP commands to work with java keystore or truststore
+
+#### see what is in the keystore
+```
+keytool -list -keystore keystore.test.local.jans.io.jks
+```
