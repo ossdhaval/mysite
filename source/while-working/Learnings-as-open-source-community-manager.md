@@ -174,3 +174,5 @@ https://docs.github.com/en/organizations
 
 - github by default has one distinction: org member and contributor
 
+### create diagrams and flowcharts
+https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams
