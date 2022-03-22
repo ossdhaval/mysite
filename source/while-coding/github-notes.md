@@ -243,3 +243,8 @@ just type `:` followed by a search character in github issues, PRs, comments etc
 
 ### list of shields that you can use in your readme or other files on github
 https://shields.io/
+
+### Github recommendations around file sizes, repo sizes 
+https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
+
+I couldn't find any guidelines online so I took a screenshot and saved it as png to check the size. It came out to be 400kb. So I recommended 1MB max size and png as format.
