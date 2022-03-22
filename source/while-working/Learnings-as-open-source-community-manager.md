@@ -176,3 +176,31 @@ https://docs.github.com/en/organizations
 
 ### create diagrams and flowcharts
 https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams
+
+### approaches to documentation
+There are two places where documentation of a project can live.
+- Wiki
+- in repo like `docs`
+
+Preferred one is in the repo and not wiki. As there are many advantages:
+- it is versioned
+- you can integrate it with automation (e.g. trigger a GH action when someone commits in `docs` repo)
+- Can become part of release notes
+- Developers can submit relevant documentation changes along with code changes in the same PR. Reviewer can see complete set of changes and review it.
+
+Wiki can be used to hold temporary documentation. For example, documenting a workaround for a problem that is going to be fixed very soon. It is kind of notepad for project. 
+
+### storing images in your GH repo for documentation
+- There has to be guidelines around storing images in GH repo to support documentation, because images can be huge in size and can increse size of your repo dramatically. You should also specify image types allowed.
+- There are two ways of storing images:
+  - along with the consuming items. for example, images consumed by `docs` can be stored within that directory/repo
+  - In case of polyrepo, have a separate repo at org level or in case of monorepo, store images in the same repo but in a separate top level folder, for example `media-assets`. 
+  
+  Second approach is better because we will need to keep the size of assets in check. And there is no systematic check for that. So, if the media assets are spread across the repo, it is hard to see what is the total size of media assets. If the all the media assets (images, gifs, mp4 videos etc) are in one place then it is easy to watch the size as well as do the clean up.
+  Also, we can have GH actions triggered whenever anything is checked into this separate folder/repo. This action can check the size and type of asset being uploaded. It can fail and stop the merge if the asset is not conforming with recommendations.
+
+
+### branding guidelines
+have something like : https://github.com/falcosecurity/falco/tree/master/brand
+
+
