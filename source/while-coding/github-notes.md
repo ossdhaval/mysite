@@ -248,3 +248,17 @@ https://shields.io/
 https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
 
 I couldn't find any guidelines online so I took a screenshot and saved it as png to check the size. It came out to be 400kb. So I recommended 1MB max size and png as format.
+
+
+### how to create an internal pull request from a PR from a fork
+- This was required when we had a limitation from sonarcloud integration where sonarcloud analysis will not trigger on a PR coming from a fork
+- Basic flow is
+  - `xyzuser` has forked your repo `forkthis`
+  - `xyzuser` has pushed code into `main` branch of his fork.
+  - `xyzuser` has created PR on `main` branch of your `forkthis`
+  - once you have received a PR from a fork, you create another branch from `main` of `forkthis`
+  - you create a branch from target branch of the PR (i.e: main of forkthis)
+  - then you pull the changes from base branch of the PR (i.e xyzuser/forkedrepo and main branch)
+  - Now your branch has all the changes from `xyzuser` and you can create another PR which will be an internal PR based on a branch instead of a fork
+
+reference: https://gist.github.com/Chaser324/ce0505fbed06b947d962#manually-merging-a-pull-request
