@@ -204,3 +204,10 @@ Wiki can be used to hold temporary documentation. For example, documenting a wor
 have something like : https://github.com/falcosecurity/falco/tree/master/brand
 
 
+### test plans and other project management documents
+Question is: what is the approach that OSS project take towards storing project management documents (like test-plan document, or may be an mpp)? I think, most of the time they try to convert documents like test plan in to markdown and maintain it in github. If it has to be in word/pdf of any other format, I think project use google drive etc. But need to find out more.
+
+### OSS projects, writting test cases for manual tests
+How to do this when using github? I think Jira (Atlassian) lets you create testcases like issues, but in Github there is nothing similar. So we have to document all the test cases in files and store somewhere.
+
+
