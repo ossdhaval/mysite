@@ -262,3 +262,46 @@ I couldn't find any guidelines online so I took a screenshot and saved it as png
   - Now your branch has all the changes from `xyzuser` and you can create another PR which will be an internal PR based on a branch instead of a fork
 
 reference: https://gist.github.com/Chaser324/ce0505fbed06b947d962#manually-merging-a-pull-request
+
+
+### PR merge commits
+When you raise a PR, Github create a new commit behind the scene to see how merged code will look like. So, you can checkout PR in two versions:
+- unmerged version of code, represented by head: `refs/pull/<number>/head`
+- Code merged with target branch, represented by merge: `refs/pull/<number>/merge`
+when you are looking at diff in github for a PR, you are looking at diff of how it'll look after merging your branch with base branch.
+
+Plus, github action `checkout` action by default checks out merge commit and runs actions on that. So, when actions run, they are running on code from your branch plus code from base branch. See the GH action log below. Second last line is sayting that it has checked out a commit which is merge of two commits, one from current branch and another from base branch:
+
+```
+Run actions/checkout@v3
+Syncing repository: JanssenProject/jans
+Getting Git version info
+Deleting the contents of '/home/runner/work/jans/jans'
+Initializing the repository
+Disabling automatic garbage collection
+Setting up auth
+Fetching the repository
+Determining the checkout info
+Checking out the ref
+  /usr/bin/git checkout --progress --force refs/remotes/pull/1123/merge
+  Note: switching to 'refs/remotes/pull/1123/merge'.
+  
+  You are in 'detached HEAD' state. You can look around, make experimental
+  changes and commit them, and you can discard any commits you make in this
+  state without impacting any branches by switching back to a branch.
+  
+  If you want to create a new branch to retain commits you create, you may
+  do so (now or later) by using -c with the switch command. Example:
+  
+    git switch -c <new-branch-name>
+  
+  Or undo this operation with:
+  
+    git switch -
+  
+  Turn off this advice by setting config variable advice.detachedHead to false
+  
+  HEAD is now at bf42446c2 Merge 4ed88dd504315988fc8114535068d7db8e57043d into 41b6fa185505d3a6a1b5423a6f6df38337a14168
+/usr/bin/git log -1 --format='%H'
+'bf42446c2ea150faaabcb4037eb1e625a4b4016d'
+```
