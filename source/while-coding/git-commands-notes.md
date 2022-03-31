@@ -745,6 +745,8 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  
  Now you can remove your topic branch and drop the commits you didn’t want to pull in.
  
+ > Note: when you cherry-pick a commit, git essentially generates a new commit. And if the original commit had a signature (using -S), then new commit **will not** have that signature. If you want to add signature to new commit as well, use `-S` with cherry-pick as well.
+ 
 ### Reset a branch to be same as remote branch
  
  ```
