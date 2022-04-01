@@ -764,3 +764,18 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
 4586  02/02/22 11:25:25 git remote add origin git@github.com:JanssenProject/jans.git
 4587  02/02/22 11:26:08 git pull origin main
 ```
+
+ ### how to sign commits that you have already pushed to Github
+ Reference: https://stackoverflow.com/questions/13043357/git-sign-off-previous-commits
+ 
+ Remember that commit number will change when you do this. So, you'll have to force push to github.
+ 
+ `git rebase --signoff -S HEAD~3` : this will add PGP sign and `signed-off by` message to last three commits
+ `git rebase --signoff -S <SHA>` : this is for one particular commit 
+ 
+ after this do `git push --force-with-lease` to push out changes. But one thing that I noticed is that in the PR I could still see previous unsigned commits. I expected those commits to be overwritten.
+ 
+ 
+ ### why to avoid force push 
+ https://blog.developer.atlassian.com/force-with-lease/
+ 
