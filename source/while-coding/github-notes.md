@@ -257,8 +257,15 @@ I couldn't find any guidelines online so I took a screenshot and saved it as png
   - `xyzuser` has pushed code into `main` branch of his fork.
   - `xyzuser` has created PR on `main` branch of your `forkthis`
   - once you have received a PR from a fork, you create another branch from `main` of `forkthis`
-  - you create a branch from target branch of the PR (i.e: main of forkthis)
-  - then you pull the changes from base branch of the PR (i.e xyzuser/forkedrepo and main branch)
+    ```
+    git switch main
+    git branch review-external-pr
+    git switch review-external-pr
+    ```
+  - then you pull the changes from feature branch of the PR (i.e xyzuser/forkedrepo and my-fix branch)
+    ```
+    git pull git@github.com:xyzuser/forkedrepo.git my-fix
+    ```
   - Now your branch has all the changes from `xyzuser` and you can create another PR which will be an internal PR based on a branch instead of a fork
 
 reference: https://gist.github.com/Chaser324/ce0505fbed06b947d962#manually-merging-a-pull-request
