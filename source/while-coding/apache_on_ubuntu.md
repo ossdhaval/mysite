@@ -5,6 +5,18 @@ basics: https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-
 
 ssl : https://www.arubacloud.com/tutorial/how-to-enable-https-protocol-with-apache-2-on-ubuntu-20-04.aspx
 
+### Install Apache
+Run following commands to install Apache server.
+```
+sudo apt-get update
+sudo apt-get install apache2
+```
+
+Run following command to see the Apache services are active
+```
+sudo systemctl status apache2.service
+```
+
 enable sso:
 - only enabled modules as per ssl links.
 - no changes in the certificates.
