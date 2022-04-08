@@ -3,7 +3,6 @@
 ### Good reference
 basics: https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04#:~:text=They%20are%20all%20located%20in,Apache%20does%20on%20your%20system.
 
-ssl : https://www.arubacloud.com/tutorial/how-to-enable-https-protocol-with-apache-2-on-ubuntu-20-04.aspx
 
 ### Install Apache
 Run following commands to install Apache server.
@@ -17,12 +16,14 @@ Run following command to see the Apache services are active
 sudo systemctl status apache2.service
 ```
 
-enable sso:
-- only enabled modules as per ssl links.
+Enable sso:
+From the link: https://www.arubacloud.com/tutorial/how-to-enable-https-protocol-with-apache-2-on-ubuntu-20-04.aspx
+- Perform step `Configuring the Apache SSL parameters` section
+- Enabled modules as per `How to configure Apache` section 
 - no changes in the certificates.
 - no changes in the port configurations
 - added `ServerName test.local.rp.io` in `/etc/apache2/sites-available/default-ssl.conf`
-- also executed `Configure Your Firewall` section of [this](https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04#:~:text=They%20are%20all%20located%20in,Apache%20does%20on%20your%20system.)
+- Firewall on Ubuntu was inactive by default so did not have to configure it. But if you have an active firewall then execute `Configure Your Firewall` section of [this](https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04#:~:text=They%20are%20all%20located%20in,Apache%20does%20on%20your%20system.)
 
 
 How to configure virtual host:
