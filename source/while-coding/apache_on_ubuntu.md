@@ -27,3 +27,7 @@ enable sso:
 
 How to configure virtual host:
 https://docs.oracle.com/en/operating-systems/oracle-linux/6/admin/ol_virthosts.html#:~:text=The%20Apache%20HTTP%20server%20supports,content%20and%20to%20behave%20differently.
+
+### Useful commands
+- `apache2ctl -M` to see which all module are active
+- 
