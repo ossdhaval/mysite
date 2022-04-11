@@ -126,3 +126,8 @@ other references
 - https://www.youtube.com/watch?v=AsCL8kMU1iY
 - https://www.youtube.com/watch?v=WnI32e4eEuY
 - https://connect2id.com/products/server/docs/api/client-registration#initial-access
+
+### about client registration in OAuth and OIDC
+- `client` registration is done by different partys
+  - `client` is a third party which wants to resources in RP. So, this client has to register with OP
+  - In OIDC, `client` is `relying party`(which may be a reverse proxy that is trying secure the RS)
