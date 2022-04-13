@@ -119,13 +119,14 @@ Registration requests send a set of desired client metadata values to the author
    identifier to use at the authorization server and the client metadata
    values registered for the client.
    
-other references
+## other references
 - https://github.com/zmartzone/mod_auth_openidc/blob/master/auth_openidc.conf
 - https://curity.io/resources/learn/openid-connect-understanding-dcr/
 - https://curity.io/resources/learn/using-dynamic-client-registration/
 - https://www.youtube.com/watch?v=AsCL8kMU1iY
 - https://www.youtube.com/watch?v=WnI32e4eEuY
 - https://connect2id.com/products/server/docs/api/client-registration#initial-access
+- Very good link to understand issueing of tokens https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
 
 ### about client registration in OAuth and OIDC
 - `client` registration is done by different partys
