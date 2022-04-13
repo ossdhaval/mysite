@@ -152,13 +152,6 @@ OpenID Connect is `authentication` layer on top of OAuth 2. Why 'on top of'? tha
 
 OIDC has three flows:
 
-- response_type : `code`, `token`, `id_token` and any combination of these three for example `code id_token` or all three `code id_token token`
-- grant_type : `authorization_code`, `refresh_token`, OIDC has removed `ropc`, `client_credentials` scopes. 
-- scope : `openid` (this acts like a signal for auth server that this request is OIDC request and all other things like scopes and grant types should be processed with reference to OIDC. Without this scope, the request is treated as OAuth2 request), `profile`, `email`, `phone`, `address`
-- token : `access_token`, `refresh_token`, `id_token`(JWT)
-- identifiers from resource_owners(users) : can get it through `id_token`
-- resource enpoints : /userinfo
-
 
 OIDC adds more scopes:
 - `openid`: requests `id token` from auth server. ID token is just a JSON token which contains basic information about user
@@ -172,7 +165,13 @@ OIDC adds `id token`
 
 
 ### OpenID Connect data sheet
--
+
+- response_type : `code`, `token`, `id_token` and any combination of these three for example `code id_token` or all three `code id_token token`. Note: as `implicite flow` is discouraged, try not to use any flow that involves `token` response type in authorization request.
+- grant_type : `authorization_code`, `refresh_token`, OIDC has removed `ropc`, `client_credentials` scopes. 
+- scope : `openid` (this acts like a signal for auth server that this request is OIDC request and all other things like scopes and grant types should be processed with reference to OIDC. Without this scope, the request is treated as OAuth2 request), `profile`, `email`, `phone`, `address`
+- token : `access_token`, `refresh_token`, `id_token`(JWT)
+- identifiers from resource_owners(users) : can get it through `id_token`
+- resource enpoints : /userinfo
 
 Reference:
 - very good understanding of OIDC with respect to OAuth: https://www.youtube.com/watch?v=VI3G4Quzsb8
