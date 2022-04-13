@@ -1,7 +1,12 @@
+# OAuth 2.0 and OpenID Connect
+
 ## OAuth 2.0 ([RFC6749](https://datatracker.ietf.org/doc/html/rfc6749))
 
 
 ### Grant types:
+
+What is `Grant` in `grant type` : Basically, these are different ways of getting Granted an access token. All grant types has only one aim: to get access token. Because of different types of clients (confidential(backend) vs Public(SPA, mobile phone and desktop based native apps)) have different capabilities of protecting access tokens, there are different grant types.
+
 1) Authorization code
   - Uses an authorization server
   - benefit: protects access code by not sharing it with user agent and uses authorization code to do that
@@ -112,6 +117,14 @@ Notes from : https://www.udemy.com/course/enterprise-oauth-for-developers
   - 
 
 
+### OAuth quick data sheet (
+- response_type : `code`, `token`
+- grant_type : `authorization_code`, `refresh_token`, `ropc`, `client_credentials`
+- scope : no specific values
+- token : `access_token`, `refresh_token`
+- No identifiers from resource_owners(users)
+- No resource enpoints
+
 ## Dynamic Client Registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) notes:
 
 Registration requests send a set of desired client metadata values to the authorization
@@ -132,3 +145,34 @@ Registration requests send a set of desired client metadata values to the author
 - `client` registration is done by different partys
   - `client` is a third party which wants to resources in RP. So, this client has to register with OP
   - In OIDC, `client` is `relying party`(which may be a reverse proxy that is trying secure the RS)
+
+## OpenID Connect (OIDC)
+
+OpenID Connect is `authentication` layer on top of OAuth 2. Why 'on top of'? that is because OIDC adds one more token and few scopes within Oauth flows.
+
+OIDC has three flows:
+
+- response_type : `code`, `token`, `id_token` and any combination of these three for example `code id_token` or all three `code id_token token`
+- grant_type : `authorization_code`, `refresh_token`, OIDC has removed `ropc`, `client_credentials` scopes. 
+- scope : `openid` (this acts like a signal for auth server that this request is OIDC request and all other things like scopes and grant types should be processed with reference to OIDC. Without this scope, the request is treated as OAuth2 request), `profile`, `email`, `phone`, `address`
+- token : `access_token`, `refresh_token`, `id_token`(JWT)
+- identifiers from resource_owners(users) : can get it through `id_token`
+- resource enpoints : /userinfo
+
+
+OIDC adds more scopes:
+- `openid`: requests `id token` from auth server. ID token is just a JSON token which contains basic information about user
+- `email`: requests auth server to add email information to `id token`
+- 
+
+OIDC adds `id token`
+- ID token is just a JSON token which contains basic information about user
+- so if you have mentioned `openid` scope, then in auth-code flow, when you request access token from auth server using auth-code, auth server will send you id token along with access token.
+- 
+
+
+### OpenID Connect data sheet
+-
+
+Reference:
+- very good understanding of OIDC with respect to OAuth: https://www.youtube.com/watch?v=VI3G4Quzsb8
