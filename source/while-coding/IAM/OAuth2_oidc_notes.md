@@ -1,6 +1,13 @@
 # OAuth 2.0 and OpenID Connect
 
-## OAuth 2.0 ([RFC6749](https://datatracker.ietf.org/doc/html/rfc6749))
+
+- [OAuth 2](#oauth-2)
+- [OpenID connect](#openid-connect)
+- [all flows](#all-flows)
+
+## OAuth 2 
+
+([RFC6749](https://datatracker.ietf.org/doc/html/rfc6749))
 
 
 ### Grant types:
@@ -146,7 +153,7 @@ Registration requests send a set of desired client metadata values to the author
   - `client` is a third party which wants to resources in RP. So, this client has to register with OP
   - In OIDC, `client` is `relying party`(which may be a reverse proxy that is trying secure the RS)
 
-## OpenID Connect (OIDC)
+## OpenID Connect
 
 OpenID Connect is `authentication` layer on top of OAuth 2. Why 'on top of'? that is because OIDC adds one more token and few scopes within Oauth flows.
 
@@ -175,3 +182,42 @@ OIDC adds `id token`
 
 Reference:
 - very good understanding of OIDC with respect to OAuth: https://www.youtube.com/watch?v=VI3G4Quzsb8
+
+
+
+
+
+
+
+
+# All flows
+
+### Device authorization Grant
+
+https://datatracker.ietf.org/doc/html/rfc8628
+
+      +----------+                                +----------------+
+      |          |>---(A)-- Client Identifier --->|                |
+      |          |                                |                |
+      |          |<---(B)-- Device Code,      ---<|                |
+      |          |          User Code,            |                |
+      |  Device  |          & Verification URI    |                |
+      |  Client  |                                |                |
+      |          |  [polling]                     |                |
+      |          |>---(E)-- Device Code       --->|                |
+      |          |          & Client Identifier   |                |
+      |          |                                |  Authorization |
+      |          |<---(F)-- Access Token      ---<|     Server     |
+      +----------+   (& Optional Refresh Token)   |                |
+            v                                     |                |
+            :                                     |                |
+           (C) User Code & Verification URI       |                |
+            :                                     |                |
+            v                                     |                |
+      +----------+                                |                |
+      | End User |                                |                |
+      |    at    |<---(D)-- End user reviews  --->|                |
+      |  Browser |          authorization request |                |
+      +----------+                                +----------------+
+
+                    Figure 1: Device Authorization Flow
