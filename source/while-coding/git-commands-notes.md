@@ -779,3 +779,6 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  ### why to avoid force push 
  https://blog.developer.atlassian.com/force-with-lease/
  
+### git revert
+ 
+### git clean 
