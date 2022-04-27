@@ -32,4 +32,9 @@ https://docs.oracle.com/en/operating-systems/oracle-linux/6/admin/ol_virthosts.h
 
 ### Useful commands
 - `apache2ctl -M` to see which all module are active
-- 
+
+### logging
+- apache logs can be found at `/var/log/apache2`
+- useful logging links
+  - https://httpd.apache.org/docs/2.4/logs.html
+  - https://stackoverflow.com/questions/20386073/apache-httpd-request-response-logging
