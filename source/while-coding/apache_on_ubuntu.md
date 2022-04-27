@@ -2,6 +2,7 @@
 
 ### Good reference
 basics: https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04#:~:text=They%20are%20all%20located%20in,Apache%20does%20on%20your%20system.
+Configuration file details: https://httpd.apache.org/docs/2.4/sections.html
 
 
 ### Install Apache
