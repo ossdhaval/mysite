@@ -36,6 +36,10 @@ https://docs.oracle.com/en/operating-systems/oracle-linux/6/admin/ol_virthosts.h
 ### logging
 - apache logs can be found at `/var/log/apache2`
   - Under this you'll find files like `access.log` and `error.log`. As name suggests access log will log every request and response ([more](https://www.sumologic.com/blog/apache-access-log/#:~:text=What%20are%20Apache%20Access%20Logs,processed%20by%20the%20Apache%20server.)), while error will give you errors.
+- You can configure logging level under apache configuration file `sudo vim /etc/apache2/apache2.conf`. After this restart apache2 using `systemctl restart apache2`.
+- `error.log` file is misnamed by apache because it doesn't just pring errors. It follows the leve set in `LogLevel` directive. For example `LogLevel info` will print all the info. By default it is set to warn.
+- If log level is warn then it'll not print problems like 404. You have to set level to info for that. 
+- You can set log level for just one module also, like `LogLevel warn core:info`. This will print info level for `core` module but keep `warn` for all other. 
 - useful logging links
   - https://httpd.apache.org/docs/2.4/logs.html
   - https://stackoverflow.com/questions/20386073/apache-httpd-request-response-logging
