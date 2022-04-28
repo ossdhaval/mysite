@@ -35,6 +35,7 @@ https://docs.oracle.com/en/operating-systems/oracle-linux/6/admin/ol_virthosts.h
 
 ### logging
 - apache logs can be found at `/var/log/apache2`
+  - Under this you'll find files like `access.log` and `error.log`. As name suggests access log will log every request and response ([more](https://www.sumologic.com/blog/apache-access-log/#:~:text=What%20are%20Apache%20Access%20Logs,processed%20by%20the%20Apache%20server.)), while error will give you errors.
 - useful logging links
   - https://httpd.apache.org/docs/2.4/logs.html
   - https://stackoverflow.com/questions/20386073/apache-httpd-request-response-logging
