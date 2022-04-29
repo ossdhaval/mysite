@@ -2092,6 +2092,34 @@ go to build -> workspace
 You can see the exact code on which the build happend and artifacts that build generated just like your local workspace. For example, you can download test reports etc from here.
 
 
+### how to change log level on an installed janssen server
+
+Changing the log level involves changing JSON config stored in Persistence. If you are using mysql as persistence, you have to change JSON value stored in 
+
+```
+SELECT jansConfDyn FROM jansdb.jansAppConf where doc_id = "jans-auth";
+```
+
+In above JSON value, you have to change value for entry `loggingLevel` to `TRACE`.
+
+after this restart jans auth service using
+
+```
+sudo systemctl restart jans-auth.service
+```
+
+Once you do this, you'll see that logs at below location has started logging the debug and trace logs:
+
+```
+/opt/jans/jetty/jans-auth/jans-auth.log
+/opt/jans/jetty/jans-auth/jans-auth_persistence.log
+```
+
+Also, gluu documentation has this way of changing log level without changing persistence. But I couldn't do it for Jans :
+
+https://gluu.org/docs/gluu-server/4.3/operation/logs/#log-levels
+
+See the section `Changing Log Levels using log4j2.xml`
 ## Usecases
 
 ### References:
