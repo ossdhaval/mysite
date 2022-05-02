@@ -753,7 +753,7 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  git reset --hard origin/<branch-name>
  ```
 
- ### using sparse checkout to just check out one directory from monorepo
+### using sparse checkout to just check out one directory from monorepo
  
 ```
 4581  02/02/22 11:24:08 mkdir jans-evelen
@@ -765,7 +765,7 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
 4587  02/02/22 11:26:08 git pull origin main
 ```
 
- ### how to sign commits that you have already pushed to Github
+### how to sign commits that you have already pushed to Github
  Reference: https://stackoverflow.com/questions/13043357/git-sign-off-previous-commits
  
  Remember that commit number will change when you do this. So, you'll have to force push to github.
@@ -782,3 +782,11 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
 ### git revert
  
 ### git clean 
+
+### rewriting a commit message
+ 
+ Commit message is part of commit itself, so when you change the message, the commit sha changes. It is like you are creating new commit and replacing old one. 
+ 
+ - if commit has not been pushed: `git commit --amend`
+ - If commit has been pushed to remote(GH): Since old commit has already been pushed, you'll have to force push new commit which is a bad practise. So, in this case, you better create a new branch and new PR with good commit. Close the old PR without merging.
+ Reference: https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message
