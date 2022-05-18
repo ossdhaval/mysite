@@ -2111,8 +2111,8 @@ sudo systemctl restart jans-auth.service
 Once you do this, you'll see that logs at below location has started logging the debug and trace logs:
 
 ```
-/opt/jans/jetty/jans-auth/jans-auth.log
-/opt/jans/jetty/jans-auth/jans-auth_persistence.log
+/opt/jans/jetty/jans-auth/logs/jans-auth.log
+/opt/jans/jetty/jans-auth/logs/jans-auth_persistence.log
 ```
 
 Also, gluu documentation has this way of changing log level without changing persistence. But I couldn't do it for Jans :
