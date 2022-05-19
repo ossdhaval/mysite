@@ -190,7 +190,13 @@ To define a property use the following option on the command line:
 -h, --help: Display help information
 
 `mvn -h`
+	
+-f to run mvn from a different directory than where the pom file is located
 
+```
+mvn -f jans-auth-server/pom.xml compile
+```
+	
 #### Multimodule projects:
 	
 ##### failures
