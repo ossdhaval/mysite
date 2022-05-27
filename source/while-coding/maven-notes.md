@@ -192,6 +192,8 @@ To define a property use the following option on the command line:
 `mvn -h`
 	
 -f to run mvn from a different directory than where the pom file is located
+	
+-o  don't download dependencies everytime and just use the local repo(.m2). 
 
 ```
 mvn -f jans-auth-server/pom.xml compile
@@ -523,3 +525,16 @@ Notes:
 - Once this is done, run these three commands as explained in `release` section of [this](https://itnext.io/publishing-artifact-to-maven-central-b160634e5268)
 
 
+### how to list only the direct dependencies and exclude transitive dependencies 
+	
+	```
+	mvn dependency:list -DexcludeTransitive=true
+	```
+	
+	For more such options [here](https://maven.apache.org/plugins/maven-dependency-plugin/list-mojo.html#dependency-list)
+	
+	similarly, list dependencies excluding the compile scope
+	
+	```
+	mvn dependency:list -DexcludeTransitive=true -o -DexcludeScope=compile
+	```
