@@ -538,3 +538,9 @@ Notes:
 	```
 	mvn dependency:list -DexcludeTransitive=true -o -DexcludeScope=compile
 	```
+
+	finding all the test dependencies of a multimodule maven project
+	
+	```
+	 find . -name pom.xml -exec mvn -f {} dependency:list -DexcludeTransitive=true -o -DexcludeScope=compile \; >> ~/temp/test-deps.txt
+	```
