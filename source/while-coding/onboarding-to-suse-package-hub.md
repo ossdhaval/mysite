@@ -39,3 +39,7 @@ This means that package `prometheus-simpleclient-java-common` in repository `Fac
 `zypper lr -u` to list all the repo
 `zypper rr <repo_alias>` to delete repo
 
+### links:
+
+spec file guidelines: https://en.opensuse.org/openSUSE:Specfile_guidelines
+
