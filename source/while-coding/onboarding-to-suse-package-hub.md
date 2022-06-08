@@ -44,3 +44,5 @@ This means that package `prometheus-simpleclient-java-common` in repository `Fac
 spec file guidelines: https://en.opensuse.org/openSUSE:Specfile_guidelines
 
 packaging java: https://en.opensuse.org/openSUSE:Packaging_Java
+
+About packaging: https://fedora-java.github.io/howto/latest/
