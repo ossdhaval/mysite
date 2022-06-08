@@ -181,7 +181,9 @@ OIDC adds `id token`
 - resource enpoints : /userinfo
 
 Reference:
-- very good understanding of OIDC with respect to OAuth: https://www.youtube.com/watch?v=VI3G4Quzsb8
+- very good understanding of OIDC with respect to OAuth: 
+
+  https://www.youtube.com/watch?v=VI3G4Quzsb8
 
 
 
