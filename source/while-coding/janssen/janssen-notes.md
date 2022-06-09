@@ -2054,7 +2054,7 @@ You should be able to run test cases successfully.
 - Janssen config files are stored under `/etc/jans/conf/`. For example, `jans-ldap.properties`
 - Janssen code: generating javadoc for janssen modules : `dhaval@thinkpad:~/IdeaProjects/Janssen/jans-auth-server$ mvn javadoc:javadoc`. After this, you can find javadoc in target folder. eg `file:///home/dhaval/IdeaProjects/Janssen/jans-auth-server/model/target/site/apidocs/io/jans/as/model/configuration/Configuration.html`
 - List of endpoints for janssen after installation: `https://github.com/JanssenProject/jans-setup/blob/master/templates/jans-auth/jans-auth-config.json`
-- for any jans setup, file that contains all the installation options as well as parameters with which jans gets installed are in `/opt/jans/jans-setup/setup.properties.last`
+- for any jans setup, file that contains all the installation options as well as parameters with which jans gets installed are in `/opt/jans/jans-setup/setup.properties.last`. This file also has password for default jans user, which is `admin`
 
 
 ### Similar to janssen/Gluu:
