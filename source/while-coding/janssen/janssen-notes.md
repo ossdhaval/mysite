@@ -2115,6 +2115,12 @@ Once you do this, you'll see that logs at below location has started logging the
 /opt/jans/jetty/jans-auth/logs/jans-auth_persistence.log
 ```
 
+If you have changed the log level to trace, you can see incoming requests and processing of the same in jans-auth.log like below:
+
+```
+2022-06-11 00:24:18,789 TRACE [qtp902478634-21] 020b807c-b8f7-4d53-9394-40c09acd7136 [io.jans.as.server.auth.AuthenticationFilter] (AuthenticationFilter.java:158) - Get request to: 'https://janssen.op.io/jans-auth/restv1/userinfo'
+```
+
 Also, gluu documentation has this way of changing log level without changing persistence. But I couldn't do it for Jans :
 
 https://gluu.org/docs/gluu-server/4.3/operation/logs/#log-levels
