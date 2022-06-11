@@ -139,6 +139,8 @@ Registration requests send a set of desired client metadata values to the author
    identifier to use at the authorization server and the client metadata
    values registered for the client.
    
+   There are two separate SPECs for dynamic client registration. One from [OAuth](https://datatracker.ietf.org/doc/html/rfc7591) and another from [openid connect](https://openid.net/specs/openid-connect-registration-1_0.html). Both must be complimenting  each other somehow.
+   
 ## other references
 - https://github.com/zmartzone/mod_auth_openidc/blob/master/auth_openidc.conf
 - https://curity.io/resources/learn/openid-connect-understanding-dcr/
