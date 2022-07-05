@@ -790,3 +790,9 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  - if commit has not been pushed: `git commit --amend`
  - If commit has been pushed to remote(GH): Since old commit has already been pushed, you'll have to force push new commit which is a bad practise. So, in this case, you better create a new branch and new PR with good commit. Close the old PR without merging.
  Reference: https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message
+ 
+ ### remove all the untracked files from repo
+ 
+ ```
+ git clean -f
+ ```
