@@ -796,3 +796,9 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  ```
  git clean -f
  ```
+ 
+ ### check commit signatures 
+ 
+ ```
+ git log --show-signature
+ ```
