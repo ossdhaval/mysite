@@ -12,5 +12,6 @@ error is about vmmon and vmnet modules when you try to start vmware on ubuntu. S
 To see vm scree in full screen resolution, you need vmware tools installed on that vm. Using
 
 ```
+sudo apt-get update
 sudo apt install open-vm-tools-desktop
 ```
