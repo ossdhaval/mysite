@@ -58,6 +58,18 @@ sudo mysql -u root -p jansdb < /root/jansdb_withtestdata_dump_15_nov_2021.sql
 mysqldump -u root -p gluudb > ~/gluudb-dump.sql
 ```
 
+## Remove or uninstall mysql from ubuntu
+
+```
+sudo apt-get remove --purge mysql*
+sudo apt-get purge mysql*
+sudo apt-get autoremove
+sudo apt-get autoclean
+sudo apt-get remove dbconfig-mysql
+sudo apt-get dist-upgrade
+
+```
+
 ## Troubleshooting
 
 when trying to connect with MySQL instance on local host from mysql workbench, I faced error as below:
@@ -70,3 +82,5 @@ An AppArmor policy prevents this sender from sending this message to this
 Solution :
 `sudo snap connect mysql-workbench-community:password-manager-service :password-manager-service`
 reference : [here](https://askubuntu.com/questions/1242026/cannot-connect-mysql-workbench-to-mysql-server)
+
+
