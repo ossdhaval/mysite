@@ -295,6 +295,9 @@ the changeset concisely, followed by a blank line, followed by a more detailed e
 project requires that the more detailed explanation include your motivation for the change and
 contrast its implementation with previous behavior — this is a good guideline to follow. Write your
 commit message in the imperative: "Fix bug" and not "Fixed bug" or "Fixes bug."
+ 
+More guidelines for commit messages:
+ https://robertcooper.me/post/git-commit-messages
 
 How to troubleshoot : 'Your branch and 'origin/master' have diverged' problem.
 
