@@ -50,6 +50,10 @@ That is it.
 
 ### Troubleshooting:
 
+- `Could not find a default branch to fall back on`
+
+This was due to `<sonar.projectKey>` in pom not having same value as configured in SonarCloud. The value is case-sensitive. 
+
 ## Aggregare report
 
 **Add aggregate code coverage report to your multimodule**
