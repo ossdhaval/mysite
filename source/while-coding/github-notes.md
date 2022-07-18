@@ -312,3 +312,6 @@ Checking out the ref
 /usr/bin/git log -1 --format='%H'
 'bf42446c2ea150faaabcb4037eb1e625a4b4016d'
 ```
+
+## GitHub reference material:
+- Mohammad abu's github cheatsheet: https://medium.com/@moabu/the-github-cheat-sheet-df4b3e3b42a8
