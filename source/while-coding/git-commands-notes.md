@@ -805,3 +805,9 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  ```
  git log --show-signature
  ```
+
+ ### How to create commit without any code change (empty commit)
+ 
+ ```
+ git commit --allow-empty -S -m 'docs: no changes required'
+ ```
