@@ -2,12 +2,26 @@
 
 ### Troubleshooting VMware player error on Ubuntu
 error is about vmmon and vmnet modules when you try to start vmware on ubuntu.
-Solution: https://askubuntu.com/a/1145426
+Solution: 
+first : https://communities.vmware.com/t5/VMware-Workstation-Pro/VMware-16-2-3-not-working-on-Ubuntu-22-04-LTS/m-p/2905637/highlight/true#M175412
+second : https://askubuntu.com/a/1145426
 
-These instructions have been tested for VMWare 15 and Ubuntu 18.04 up to 19.04.
+These instructions have been tested for VMWare player 16.2.1 and Ubuntu 18.04 up to 19.04.
 
 Install VMWare
 Run this
+
+```
+cd /usr/lib/vmware/modules/source
+sudo git clone https://github.com/mkubecek/vmware-host-modules
+cd vmware-host-modules
+sudo git checkout player-16.2.1
+sudo make
+sudo tar -cf vmnet.tar vmnet-only
+sudo tar -cf vmmon.tar vmmon-only
+sudo mv vmnet.tar /usr/lib/vmware/modules/source/
+sudo mv vmmon.tar /usr/lib/vmware/modules/source/
+```
 
 ```
 sudo vmware-modconfig --console --install-all
