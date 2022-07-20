@@ -32,7 +32,7 @@ You'll see that there are issues with monitor and net, thas ok.
 Generate a key
 
 ```
-openssl req -new -x509 -newkey rsa:2048 -keyout VMWARE15.priv -outform DER -out VMWARE15.der -nodes -days 36500 -subj "/CN=VMWARE/"
+sudo openssl req -new -x509 -newkey rsa:2048 -keyout VMWARE15.priv -outform DER -out VMWARE15.der -nodes -days 36500 -subj "/CN=VMWARE/"
 ```
 
 You'll see info that it did it ok.
