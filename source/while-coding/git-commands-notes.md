@@ -25,21 +25,33 @@ or
 `git remote set-url origin https://github.com/ossdhaval/gsg-giftrecommender-service.git`
 
 Command to rename remote repo
+
+```
 git remote rename origin jans-home
+```
 
 Command to get help on any git command :
 
+```
 git help pull
+```
 
 or to see usage of a git command :
 
+```
 git add -h
+```
 
 clone existing repo :
+
+```
 git clone https://github.com/libgit2/libgit2
+```
 
 Deleting files from your workspace that are commited or pushed :
+```
 git rm <filename>
+```
 
 Deleting directory ( and files inside them ) from your workspace that are commited or pushed :
 git rm <dirname> -r
@@ -323,8 +335,9 @@ git pull --rebase
 See the https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches/2452610
 
 How to remove files from 'Changes not staged for commit' category of git status :
+```
 git checkout <file>
-
+```
 git checkout essentially overwrites your local modified file by latest copy from local branch.
 
 
@@ -337,7 +350,9 @@ Your branch is ahead of 'origin/master' by 1 commit.
 This means you have one commit that you have not pushed. 
 
 To see what is going to get committed in next push :
+```
 git log --stat
+```
 
 This will give you history of commits. From this history, you can see one commit that are marked with (head->master), and then few commits down the line, you'll see a commit marked with (origin/master, origin/HEAD). 
 In the next push, your commit marked with (head->master) and all the commits till and not including (origin/master, origin/HEAD) will be pushed. 
@@ -346,23 +361,28 @@ In the next push, your commit marked with (head->master) and all the commits til
 Different file states in git :
 
 
-Unstaged : untracked files + modified tracked files
-git add
-Staged : files that are ready to go in next commit
-git commit
-Committed files to local branch
-git log --stat
-Pushed to remote repo
-git log --stat
+- Unstaged : untracked files + modified tracked files
+    ```
+    git add
+    ```
+- Staged : files that are ready to go in next commit
+    ```
+    git commit
+    ```
+
+- Committed files to local branch
+    ```
+    git log --stat
+    ```
+
+- Pushed to remote repo
+    ```
+    git log --stat
+    ```
 
 Git file moving through various states :
 
-when you create a new file, it is untracked :
-
-
-
-
-
+- when you create a new file, it is untracked :
 
 
 now make this a tracked file :
@@ -382,137 +402,36 @@ Now to change it back to untracked :
 
 
 To untrack everything which is there in staging area :
-
+```
 git reset
-
+```
 
 How to remove files from 'Changes not staged for commit' category of git status :
+```
 git restore <file>
 or
 git checkout <file>
+```
+
 git checkout essentially overwrites your local modified file by latest copy from local branch.
 
 
 add to the staging area :
 
-
-
-
-
-
-
-
-
-
 modified of the already updated file, just for the completeness of the example :
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 to move back to previous state :
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Now commit these files to local git branch :
-
-
-
-
-
-
-
-
 
 see your commit in local branch log :
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Now roll back commit which still in local brach and not pushed to shared repo :
-git reset --soft HEAD~ 
+```
+git reset --soft HEAD~
+``` 
 ( --mixed will undo the commit + it'll unstage the changes from staging area,  but will leave changes in the working copy as is.
 --hard will undo the commit, unstage the changes and update the working copy with what is in the local branch)
-
-
-
-
-
-
-
-
-
-
-
-
-x`
-
-
-
-
 
 Now push commit to remote repo 
 
@@ -577,32 +496,37 @@ check the git log of remote repo to see that the commit has been made :
 Now undo commit from remote repo :
 (ref: https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6)
 
-first check if you are on the right branch by running git status. Then 
-git reset a81b684513aa2d3faa2cced70460797cc8397528 --hard
+first check if you are on the right branch by running git status. Then
 
+```
+git revert a81b684513aa2d3faa2cced70460797cc8397528
+```
+this will not rewrite the history unlike reset above
+
+This can also be done using reset (not recommended as rewrites history) :
+```
+git reset a81b684513aa2d3faa2cced70460797cc8397528 --hard
+```
 (here commit number is the commit which you want to point to going foward. i.e all the commits after
 this one will be removed from github, also from insights>network )
 
 and then run :
+```
 git push origin main -f
-
-This can also be done using revert :
-git revert a81b684513aa2d3faa2cced70460797cc8397528
-this will not rewrite the history unlike reset above
-
+```
 
 
 storing your changes in a separate branch :
 
 Suppose you are working on branch B1. You have made changes to certain files. You now think that these changes are not required for now and you want to store these changes as a separate branch and come back to B1 and start working on that. For example : I was working on a project where first I tried to integrate with RDBMS using JPA. All these changes were pushed to B1. Then I started to make changes on my local to integrate with DynamoDB instead of RDBMS. But that didn't go well. So, Now I wanted to go back to last commited changes on B1 without loosing my DynamoDB changes. So I decided that I'll create a new branch and store DynamoDB changes on a that branch. And then again switch back to B1 and continue working on RDBMS. Below is the sequence of commands that helped.
-
+```
 git branch NoSQL
 git checkout NoSQL
-
+```
 now you'll see that master, NoSQL and origin/master are on the same commit using 'git log'
 
 commit 009ed95a6d83e5b899b5c864a8b84bf72cbb4740 (HEAD -> NoSQL, origin/master, master)
-
+```
 git status
 
 git add .
@@ -612,7 +536,7 @@ git commit -m 'Initial attempt at sing DynamoDB'
 git push origin NoSQL
 
 git checkout master
-
+```
 In case you have made direct changes in your code from github ( or someone else has committed changes in the branch ) and you want to make your local branch updated with those changes then :
 git checkout
 Your branch is behind 'origin/dhaval-development' by 40 commits, and can be fast-forwarded.
