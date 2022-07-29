@@ -735,3 +735,15 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  ```
  git commit --allow-empty -S -m 'docs: no changes required'
  ```
+
+ ### Stash
+ 
+ To stash whatever you have now
+ ```
+ git stash
+ ```
+ 
+ To get the last stash reapplied
+ ```
+ git stash apply
+ ```
