@@ -2132,3 +2132,9 @@ See the section `Changing Log Levels using log4j2.xml`
 
 ### References:
 - good short video on oauth2 flow. Can be used for Janssen tutorial as well. https://www.youtube.com/watch?v=CPbvxxslDTU
+
+### Good online tool for curl
+https://reqbin.com/curl
+
+### jans instance for automated daily deployment
+https://jans-ui.jans.io/admin
