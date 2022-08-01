@@ -707,8 +707,31 @@ encountered this while trying to run jans-auth-server/server using jetty:run-war
 solved by: https://stackoverflow.com/questions/5802096/duplicate-fragment-name-error-jetty-maven-plugin
 
 -------------
+```
+Problem
+```
 
+getting 
 
+```
+Error retreiving data
+
+Unauthorized
+b'ID Token is expired'
+```
+when trying to use config-cli using `sudo /opt/jans/jans-cli/config-cli.py`. This error doesn't come when you fire the command but it comes when you try to use any of the menu options and give all the inputs. 
+
+```
+root-cause
+```
+
+This happens because the token which you had received earlier via device-code authentication, has now expired. You need to request a new token but CLI doesn't give you that prompt
+
+```
+solution
+```
+
+you have to log out of cli using `x` option and reinvoke cli using same command `sudo /opt/jans/jans-cli/config-cli.py`. Now when you try to execute any option, it'll give you a device code to authenticate.
 
 =============
 enable linux GUI on GCP vm
