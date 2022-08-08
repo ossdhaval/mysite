@@ -2161,3 +2161,8 @@ https://reqbin.com/curl
 
 ### jans instance for automated daily deployment
 https://jans-ui.jans.io/admin
+
+
+### debugging custom(interception) scripts
+
+Logs are at: /opt/jans/jetty/jans-auth/jans-auth_script.log
