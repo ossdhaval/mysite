@@ -2166,3 +2166,6 @@ https://jans-ui.jans.io/admin
 ### debugging custom(interception) scripts
 
 Logs are at: /opt/jans/jetty/jans-auth/jans-auth_script.log
+
+### error logs for jans-cli
+/opt/jans/jans-cli/error.log
