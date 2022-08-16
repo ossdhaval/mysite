@@ -211,3 +211,5 @@ Question is: what is the approach that OSS project take towards storing project 
 How to do this when using github? I think Jira (Atlassian) lets you create testcases like issues, but in Github there is nothing similar. So we have to document all the test cases in files and store somewhere.
 
 
+### Hosting source code documentation (like Javadocs) using mkdocs
+https://mkdocstrings.github.io/
