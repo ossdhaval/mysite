@@ -674,6 +674,24 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  
  > Note: when you cherry-pick a commit, git essentially generates a new commit. And if the original commit had a signature (using -S), then new commit **will not** have that signature. If you want to add signature to new commit as well, use `-S` with cherry-pick as well.
  
+  ```
+ git cherry-pick -S 2493781^..c5e9df3
+ ```
+ 
+ ### What to do when you have unsigned commits in your PR
+ - One way which is not recommended is to amend the commits and force push. But this will rewrite the history. So, not suggestable.
+ - Second approach is to create a new branch, cherry-pick all commits of the old branch to new branch and sign them in the process
+ - create a new PR for merging and close old PR without merging
+ - Above steps in more details
+  - go to intellij and switch to `main`
+  - git pull
+  - git branch new-branch
+  - git switch new-branch
+  - git cherry-pick -S 2493781^..c5e9df3 (here the first commit sha is taken from first commit of the old PR and the second sha is last commit)
+  - push this branch and create a new PR
+  - close old PR
+  
+ 
 ### Reset a branch to be same as remote branch
  
  ```
