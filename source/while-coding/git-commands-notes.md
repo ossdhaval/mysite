@@ -679,17 +679,7 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  ```
  
  ### What to do when you have unsigned commits in your PR
- - One way which is not recommended is to amend the commits and force push. But this will rewrite the history. So, not suggestable.
- - Second approach is to create a new branch, cherry-pick all commits of the old branch to new branch and sign them in the process
- - create a new PR for merging and close old PR without merging
- - Above steps in more details
-  - go to intellij and switch to `main`
-  - git pull
-  - git branch new-branch
-  - git switch new-branch
-  - git cherry-pick -S 2493781^..c5e9df3 (here the first commit sha is taken from first commit of the old PR and the second sha is last commit)
-  - push this branch and create a new PR
-  - close old PR
+
   
  
 ### Reset a branch to be same as remote branch
@@ -710,7 +700,24 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
 4587  02/02/22 11:26:08 git pull origin main
 ```
 
-### how to sign commits that you have already pushed to Github
+### (not recommended) how to sign commits that you have already pushed to Github
+
+#### Recommended
+ 
+ - One way which is not recommended is to amend the commits and force push. But this will rewrite the history. So, not suggestable.
+ - Second approach is to create a new branch, cherry-pick all commits of the old branch to new branch and sign them in the process
+ - create a new PR for merging and close old PR without merging
+ - Above steps in more details
+ - go to intellij and switch to `main`
+ - git pull
+ - git branch new-branch
+ - git switch new-branch
+ - git cherry-pick -S 2493781^..c5e9df3 (here the first commit sha is taken from first commit of the old PR and the second sha is last commit)
+ - push this branch and create a new PR
+ - close old PR
+ 
+#### Not recommended (uses force push) 
+ 
  Reference: https://stackoverflow.com/questions/13043357/git-sign-off-previous-commits
  
  Remember that commit number will change when you do this. So, you'll have to force push to github.
