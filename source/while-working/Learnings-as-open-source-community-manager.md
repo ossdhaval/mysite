@@ -213,3 +213,7 @@ How to do this when using github? I think Jira (Atlassian) lets you create testc
 
 ### Hosting source code documentation (like Javadocs) using mkdocs
 https://mkdocstrings.github.io/
+
+Right now, only handlers for python are available
+
+https://mkdocstrings.github.io/handlers/overview/
