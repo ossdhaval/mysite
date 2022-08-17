@@ -1,3 +1,5 @@
+# Janssen Notes
+
 Note : many times docs mention that run this command from 'Inside the Gluu Server chroot', or 'run it from gluu container' etc. All this means one thing that you first login to the gluu container using
 
 /sbin/gluu-serverd login
@@ -2169,3 +2171,13 @@ Logs are at: /opt/jans/jetty/jans-auth/jans-auth_script.log
 
 ### error logs for jans-cli
 /opt/jans/jans-cli/error.log
+
+
+### Create new user using scim cli
+
+- Copy file content from [here](https://raw.githubusercontent.com/maduvena/jans-docs/main/create-user.json) and store it in a file, say `~/create-user.json`.
+- Then run command below to create the user
+
+```
+/opt/jans/jans-cli/scim-cli.py --operation-id create-user --data /tmp/create-user.json
+```
