@@ -326,11 +326,20 @@ Your branch and 'origin/master' have diverged,
 and have 1 and 1 different commits each, respectively.
   (use "git pull" to merge the remote branch into yours)
 
-Now there are two solutions : rebase or merge.
-Since merge creates a non-linear history, rebase is preferred by many.
-rebase essentially brings in commit5 from remote into your local repo and then puts back commit4 on top of that. To use this option :
-git pull --rebase
+Now there are two solutions when you have to synch up two branches: rebase or merge.
 
+In this case, we want to synch up with same branch on remote server. 
+ 
+ Since merge creates a non-linear history, rebase is preferred by many. 
+rebase essentially brings in commit5 from remote into your local repo and then puts back commit4 on top of that. 
+ 
+To use this option :
+ ```
+git pull --rebase
+```
+ 
+### synching your local branch with main (or some other branch)
+ 
 
 See the https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches/2452610
 
