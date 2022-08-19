@@ -346,11 +346,15 @@ git pull --rebase
  In above case we were getting latest commits from remote of same branch, but in here, we want to get latest commits from main branch and make our branch latest.
  
  - If your feature branch is public (i.e pushed to github) then use merge as merge doesn't change SHA of existing commits but creates a new merge commit (to avoid this, many people use rebase as below)
- - if your feature branch is still only on your local then use rebase as rebase creates a linear history by getting commits from main to your branch (keeping the SHA same) and then recreating your commits on top of those (SHA changes for your commits).
  
- - 
+   ```
+ git switch main
+ git pull
+ git switch feature
+ git merge main
+ ```
  
- - rebase feature onto main
+ - if your feature branch is still only on your local then use rebase as rebase creates a linear history by getting commits from main to your branch (keeping the SHA same) and then recreating your commits on top of those (SHA changes for your commits). It is said `rebase feature onto main`
  
  ```
  git switch main
@@ -359,7 +363,7 @@ git pull --rebase
  git rebase main
  ```
  
- **But rebase alters old commits and create new ones** so if the branch has been made public then **rebase should not be used**.
+ **REMEMBER: But rebase alters old commits and create new ones** so if the branch has been made public then **rebase should not be used**.
 
  reference: https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing
 
