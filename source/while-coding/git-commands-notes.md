@@ -337,11 +337,32 @@ To use this option :
  ```
 git pull --rebase
 ```
+ See the https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches/2452610
  
-### synching your local branch with main (or some other branch)
+### synching your local feature branch with main (or some other branch)
  
+ Here you have two options like in above case: rebase or merge
+ 
+ In above case we were getting latest commits from remote of same branch, but in here, we want to get latest commits from main branch and make our branch latest.
+ 
+ - If your feature branch is public (i.e pushed to github) then use merge as merge doesn't change SHA of existing commits but creates a new merge commit (to avoid this, many people use rebase as below)
+ - if your feature branch is still only on your local then use rebase as rebase creates a linear history by getting commits from main to your branch (keeping the SHA same) and then recreating your commits on top of those (SHA changes for your commits).
+ 
+ - 
+ 
+ - rebase feature onto main
+ 
+ ```
+ git switch main
+ git pull
+ git switch feature
+ git rebase main
+ ```
+ 
+ **But rebase alters old commits and create new ones** so if the branch has been made public then **rebase should not be used**.
 
-See the https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches/2452610
+ reference: https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing
+
 
 How to remove files from 'Changes not staged for commit' category of git status :
 ```
