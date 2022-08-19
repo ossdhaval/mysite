@@ -339,6 +339,8 @@ git pull --rebase
 ```
  See the https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches/2452610
  
+ 
+ 
 ### synching your local feature branch with main (or some other branch)
  
  Here you have two options like in above case: rebase or merge
@@ -365,8 +367,8 @@ git pull --rebase
  
  **REMEMBER: But rebase alters old commits and create new ones** so if the branch has been made public then **rebase should not be used**.
 
- reference: https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing
-
+ - reference: https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing
+ - [Golden rule of rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
 How to remove files from 'Changes not staged for commit' category of git status :
 ```
