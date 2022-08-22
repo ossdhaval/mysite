@@ -182,8 +182,19 @@ Now, you can link-up your local branch to a remote tracking branch for ease of u
  
 `git checkout -b 'feature-1'` - Create and switch to new branch
  
-`git push --set-upstream origin feature-1` - this will create a new branch on remote 'origin' and set that new branch as upstream
-branch for local branch.
+```
+ git branch --set-upstream-to origin/feature-1
+ git push 
+```
+Above sets remote tracking branch for current branch
+ 
+ or you can do 
+ 
+```
+ git push origin feature-1:feature-1
+``` 
+ 
+ above will create a new branch on remote 'origin' and push changes of local branch to that branch
 
 ```
  
