@@ -819,3 +819,16 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  ```
  git stash apply
  ```
+ 
+ ### apply signature to commit automatically
+ 
+ Use below command as one-time setting 
+ 
+ ```
+ git config --global commit.gpgsign true
+ ```
+ 
+ Due to this
+ - all commits will be signed automatically, like what `git commit -S` command does manually. You can ignore `-S` now
+ - if you cherry-pick a commit, all commits are newly created. In this case, commits will be auto signed
+ - if you `rebase` any thing, all commits are newly created. In this case, commits will be auto signed
