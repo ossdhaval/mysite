@@ -705,6 +705,7 @@ Finished one cherry-pick.
  ```
  git cherry-pick -S dc99f87656a952f3548c320c6459278876f9f7b7^..6967cfc4751c87579c563ba9cbb3721116b72be0
  ```
+ 
  if your cherry pick gets a merge conflict, it'll show message as below
  
 ```
@@ -770,6 +771,7 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  Remember that commit number will change when you do this. So, you'll have to force push to github.
  
  `git rebase --signoff -S HEAD~3` : this will add PGP sign and `signed-off by` message to last three commits
+ 
  `git rebase --signoff -S <SHA>` : this is for one particular commit 
  
  after this do `git push --force-with-lease` to push out changes. But one thing that I noticed is that in the PR I could still see previous unsigned commits. I expected those commits to be overwritten.
@@ -811,11 +813,13 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  ### Stash
  
  To stash whatever you have now
+ 
  ```
  git stash
  ```
  
  To get the last stash reapplied
+ 
  ```
  git stash apply
  ```
