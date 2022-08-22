@@ -683,7 +683,7 @@ commits on a topic branch and you want to integrate only one of them, or if you 
 commit on a topic branch and you’d prefer to cherry-pick it rather than run rebase.
  
 ```
- $ git cherry-pick e43a6
+ $ git cherry-pick -S e43a6
 Finished one cherry-pick.
 [master]: created a0a41a9: "More friendly message when locking the index fails."
 3 files changed, 17 insertions(+), 3 deletions(-)
@@ -692,7 +692,7 @@ Finished one cherry-pick.
  Or cherry pick a range of commits. Notice the `^` character at the end of first commit. This is to indicate to git to include that commit as well in cherry pick:
  
  ```
- git cherry-pick dc99f87656a952f3548c320c6459278876f9f7b7^..6967cfc4751c87579c563ba9cbb3721116b72be0
+ git cherry-pick -S dc99f87656a952f3548c320c6459278876f9f7b7^..6967cfc4751c87579c563ba9cbb3721116b72be0
  ```
  if your cherry pick gets a merge conflict, it'll show message as below
  
