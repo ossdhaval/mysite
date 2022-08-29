@@ -217,3 +217,20 @@ https://mkdocstrings.github.io/
 Right now, only handlers for python are available
 
 https://mkdocstrings.github.io/handlers/overview/
+
+### running markdown linting tool
+
+To install
+```
+gem install mdl
+```
+
+To run
+```
+mdl ~/IdeaProjects/Janssen/jans/docs/
+```
+
+To run with some rule definitions
+```
+mdl ~/IdeaProjects/Janssen/jans/docs/ -s ~/IdeaProjects/Janssen/jans/automation/markdown/.mdl_style.rb
+```
