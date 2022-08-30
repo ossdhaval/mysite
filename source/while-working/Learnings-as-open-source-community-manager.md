@@ -234,3 +234,8 @@ To run with some rule definitions
 ```
 mdl ~/IdeaProjects/Janssen/jans/docs/ -s ~/IdeaProjects/Janssen/jans/automation/markdown/.mdl_style.rb
 ```
+
+
+### API design
+- API design should happen by creating skeleton code structure first and then generating swagger spec out of it using annotations
+- Also, [stoplight.io](https://stoplight.io/) is a good tool
