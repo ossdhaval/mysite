@@ -63,17 +63,38 @@ connect using new user to new db
 sudo -i -u crux_user
 
 psql -d crux_db
-```
-
-To exit psql prompt:
 
 ```
-postgres=# \q
+
+Set the password for db user
+
+```
+crux_db=#  ALTER USER crux_user PASSWORD 'secretpw';
 ```
 
 List all available users:
 
 ```
-postgres=# \du
+crux_db=#  \du
 ```
+
+List all available db:
+
+```
+crux_db=#  \l
+```
+
+List all available tables:
+
+```
+crux_db=#  \dt
+```
+
+To exit psql prompt:
+
+```
+crux_db=#  \q
+```
+
+
 
