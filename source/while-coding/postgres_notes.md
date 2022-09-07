@@ -40,30 +40,29 @@ first create a linux user:
 sudo adduser crux_integ
 ```
 
-Create new user
+Create new db user with same name as linux user
 
 ```
-postgres=# CREATE USER crux_integ WITH PASSWORD 'secretpw';
+sudo -u postgres
 
-```
+createuser --interactive
 
-Make him super user:
-
-```
-postgres=# ALTER USER crux_integ WITH SUPERUSER;
 ```
 
 Create db
 
 ```
-sudo -u postgres createdb sammy
+sudo -i -u postgres
+
+createdb crux_db
 ```
 
 connect using new user to new db
 
 ```
-sudo -u sammy psql
-psql -d postgres
+sudo -i -u crux_user
+
+psql -d crux_db
 ```
 
 To exit psql prompt:
