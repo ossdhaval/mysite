@@ -20,17 +20,20 @@ What is `Grant` in `grant type` : Basically, these are different ways of getting
   - benefit: also authenticates client when it requests access code using authorization code
   - downside: more round trips than implicit flow
   - Authorization code -> access code -> 
+  
 2) Implicit
   - used by client application that are built in scripting languages
   - it doesn't use authorization code and directly gives out access token to user-agent
   - benefit: more efficient than `authorization code` grant type as there are less roundtrips
   - downside: less secure as access code is shared with user-agent
+  
 3) Password credentials
   - resource owner gives user-id/password credentials to client application once and client app uses these 
     credentials to get a long-lived access token
   - client doesn't store resource owner credentials once it has an access token or refresh token
   - benefit: simplified workflown when dealing with a trusted client
   - downside: very insecure as client gets the credentials
+  
 4) Client credentials
   - client acts on its own to access resources from resource server which are owned by client 
     itself. i.e. when client is the resource owner
