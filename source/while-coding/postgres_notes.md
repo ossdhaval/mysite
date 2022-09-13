@@ -14,11 +14,28 @@ If you have already created the container above, then just start it
 sudo docker start postgresql-container
 ```
 
-start PGadmin:
+start PGadmin (but this was not able to query the db and giving internal server errors):
 
 ```
 docker run --rm -p 5050:5050 thajeztah/pgadmin4
 ```
+
+login to the postgres container shell:
+```
+sudo docker exec -ti p1 bash
+```
+
+then switch to default user
+```
+su postgres
+```
+
+start psql
+```
+psql
+```
+
+Now you can do `\dt` to see all the tables. And execute select queries.
 
 ## without docker direct install on Machine
 
