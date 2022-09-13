@@ -49,18 +49,38 @@ docker stop $(docker ps -aq)
 ```
 
 To remove a container
+```
 docker rm <container-name>
-To remove all containers
-docker rm $(docker ps -a -q)
-to remove an image
-docker rmi <imagename>
- docker pull <image>           : copies images to docker host
-get into shell of a running container :
-docker exec -ti <container-id> bash
-to come out of bash and keep the container running : ctrl P+Q
-Access logs of a container 
-docker logs <container-name>
+```
 
+To remove all containers
+```
+docker rm $(docker ps -a -q)
+```
+
+to remove an image
+```
+docker rmi <imagename>
+```
+
+```
+ docker pull <image>           : copies images to docker host
+```
+
+get into shell of a running container :
+```
+docker exec -ti <container-id> bash
+```
+
+to come out of bash and keep the container running : 
+```
+ctrl P+Q
+```
+
+Access logs of a container 
+```
+docker logs <container-name>
+```
 
 
 Containerise a spring-boot app using docker :
