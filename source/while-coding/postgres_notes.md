@@ -24,6 +24,12 @@ docker run --rm -p 5050:5050 thajeztah/pgadmin4
 
 Good referece : https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04
 
+once installed you can start and stop postgres using command like below:
+
+```
+sudo systemctl start postgresql.service
+```
+
 ## creating user and db
 
 During installation, postgres has created a new **linux** user called `postgres` you can use this login:
