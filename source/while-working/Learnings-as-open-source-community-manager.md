@@ -239,3 +239,6 @@ mdl ~/IdeaProjects/Janssen/jans/docs/ -s ~/IdeaProjects/Janssen/jans/automation/
 ### API design
 - API design should happen by creating skeleton code structure first and then generating swagger spec out of it using annotations
 - Also, [stoplight.io](https://stoplight.io/) is a good tool
+
+### Open source projects and secure supply chain
+- Reference: https://github.com/microsoft/oss-ssc-framework/blob/main/specification/framework.md
