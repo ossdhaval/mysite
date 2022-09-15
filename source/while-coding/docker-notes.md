@@ -83,25 +83,39 @@ docker logs <container-name>
 ```
 
 
-Containerise a spring-boot app using docker :
+#### Containerise a spring-boot app using docker :
 
 create a Dockerfile in the root folder where the target folder resides. Dockerfile content
+
+```
 FROM openjdk:11
 ARG JAR_FILE=target/gsg-event-service-1.0-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
+```
+
 Now use below command to build image. Here the tag could be anything :
+
+```
 docker build -t event-service .
+```
+
 Now use below command to create container using the image :
+
+```
 docker container run -d --name web1 -p 8080:8080 event-service
+```
+
 Now, hit localhost:8080 to access your app.
 
 
-How to install and run jenkins using dockers :
+#### How to install and run jenkins using dockers :
 
+```
 docker pull jenkins/jenkins:lts
 
 docker container run -p 8080:8080 jenkins/jenkins:lts
+```
 
 in the log that is printed on the screen while container is coming up, there will be a password string printed, keep that password. It is password for 'admin' user that is auto created.
 
@@ -111,9 +125,10 @@ or
 http://localhost:8080/
 
 
-docker volumes :
+#### docker volumes :
 
 Docker can store data in three different ways :
+
 1) Volumes ( recommended )
 2) Mounts
 3) tmpfs ( in-memory )
@@ -122,42 +137,57 @@ volume is most preferred. And has many advantages over mounts.
 Basic difference between a volume and mount is that with mount you can specify a directory on your local machine which docker should mount on the container's file system. You have control over this directory. While when you use a volume, a new directory is created within Docker’s storage directory (/var/lib/docker/volumes/) on the host machine and this directory is mounted on container's file system. Docker manages that directory’s contents.
 
 ref :
-https://docs.docker.com/storage/volumes/
-https://docs.docker.com/storage/bind-mounts/
+
+- https://docs.docker.com/storage/volumes/
+- https://docs.docker.com/storage/bind-mounts/
 
 it is storage space on your hard disk which you ask docker container to use when you create a container. This is important when you are using docker to run software like jenkins, where you want to  persist state of software running in the container so that you don't have to recreate and reconfigure it when you restart the container.
 
+```
 docker container run -d -p 8080:8080 -v jenkinsvol1:/var/jenkins_home --name jenkins-local jenkins/jenkins:lts
+```
 
-In above case, a directory call 'jenkinsvol1' will be created under /var/lib/docker/volumes/
+In above case, a directory called 'jenkinsvol1' will be created under /var/lib/docker/volumes/
 and mounted to container's file system under '/var/jenkins_home'
 
+```
 docker container run -d -p 8080:8080 -v /home/jenkinsvol1:/var/jenkins_home --name jenkins-local jenkins/jenkins:lts
+```
 
 commands for volume : 
 
 
 create volume : 
+
+```
 docker volume create <name>
+```
 
 list volumes :
+
+```
 docker volume ls
+```
 
 details of a volume :
+
+```
 docker volume inspect <name>
+```
 
 remove a volume :
-docker volume rm <name>
 
-Note : use volumes when you want to store data that is persisted even if you stop or remove container. Or if you want to share data across containers and machines. But if you want to store temporary data then you should use tmpfs if you are on linux. 
+```
+docker volume rm <name>
+```
+
+_**Note**_ : use volumes when you want to store data that is persisted even if you stop or remove container. Or if you want to share data across containers and machines. But if you want to store temporary data then you should use tmpfs if you are on linux. 
 https://docs.docker.com/storage/tmpfs/
 
 
+### Notes:
 
-
-what is diff between 
-docker run and 
-docker container run
+- what is diff between `docker run` and `docker container run`
 
 Reference:
   - very good quick turotial for using docker with intellij and quickly create containers, install db, and use docker compose:
