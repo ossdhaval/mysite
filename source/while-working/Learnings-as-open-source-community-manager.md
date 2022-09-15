@@ -242,3 +242,13 @@ mdl ~/IdeaProjects/Janssen/jans/docs/ -s ~/IdeaProjects/Janssen/jans/automation/
 
 ### Open source projects and secure supply chain
 - Reference: https://github.com/microsoft/oss-ssc-framework/blob/main/specification/framework.md
+
+
+### tool for providing on-demand k8s instances to devs and testers
+for the https://github.com/Federation/easycloud/ lovers coming next week you will be also able to create a hassle free k8s clusters on aws with a simple management ui added on top of it. The ui is rancher UI btw. Here is what to expect:
+
+a full blown k8s cluster
+Rancher ui which will allow you to easily toggle and view the k8s cluster, install gluu or jans simply with a click of a button and easily view logs and open a terminal without knowing any k8s terminology , sytnax or anything.
+The rancher ui will have a dns record assigned and posted for you with the password to login in the PR
+You will also be given another dns url to use for gluu or jans deployment as your hostname
+Coming next would be adding https://karpenter.sh/ for autoscalling then the last step will finally be enabling the load tests so that we can view any setup and enjoy it without making a hassle about it 🍿
