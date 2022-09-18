@@ -26,6 +26,10 @@ Google technical writting style: https://developers.google.com/tech-writing
 - https://www.youtube.com/watch?v=nGKSnMdBFsk https://www.youtube.com/watch?v=Js0gW8pAnh4
 - quick and informative : https://www.youtube.com/watch?v=b1pyh2XCyrg
 
+#### Good articles
+
+- good list of tooling with details : https://www.infoq.com/presentations/monzo-tools-deploy/?itm_source=infoq&itm_medium=videos_homepage&itm_campaign=videos_row1
+
 #### Live examples:
 
 On community chat platform (gitter/slack) :
