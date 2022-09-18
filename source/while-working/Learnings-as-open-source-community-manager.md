@@ -30,6 +30,10 @@ Google technical writting style: https://developers.google.com/tech-writing
 
 - good list of tooling with details : https://www.infoq.com/presentations/monzo-tools-deploy/?itm_source=infoq&itm_medium=videos_homepage&itm_campaign=videos_row1
 
+#### Good tools
+
+- Developer portals : https://backstage.io/
+
 #### Live examples:
 
 On community chat platform (gitter/slack) :
