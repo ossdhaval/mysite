@@ -211,7 +211,9 @@ This was required when I wanted to find out how many problems are there in all t
 
 To see the problems in all files, you have to click on `project errors` tab in `problems` view. Then click on `inspect` the project (if you are not able to build it). It'll list all the issues in entire project.
 
+### opening a file while working in intellij terminal
 
+There is no direct way, but you can select the file name (with path if possible) and then click ctrl+shift+N, this will automatically search for the file in the text selection along with the path.
 
 #### Troubleshooting:
 
