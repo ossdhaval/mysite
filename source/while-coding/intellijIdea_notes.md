@@ -80,7 +80,7 @@ ctrl+alt+H : Method call tree. Highlight method name and this will show other me
 
 ctrl+click: on a method or variable will take you to declaration of it. To navigate backwards use : alt+shift+left key. To navigate forward, use alt+shift+right.
 
-
+ctrl+tab: opens `switcher` and then you can release the tab and press the shortcut key as shown on the switcher window to quickly open corresponding tool window 
 
 Custom settings:
 
