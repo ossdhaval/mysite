@@ -184,6 +184,62 @@ docker volume rm <name>
 _**Note**_ : use volumes when you want to store data that is persisted even if you stop or remove container. Or if you want to share data across containers and machines. But if you want to store temporary data then you should use tmpfs if you are on linux. 
 https://docs.docker.com/storage/tmpfs/
 
+### know if the image is new or same as old
+
+you can use `inspect` command
+
+```
+sudo docker image ls
+```
+
+```
+REPOSITORY                TAG         IMAGE ID       CREATED        SIZE
+janssenproject/monolith   1.0.3_dev   0a32df8668fd   24 hours ago   370MB
+janssenproject/monolith   <none>      548be1516b12   2 days ago     370MB
+mysql                     8.0.30      43fcfca0776d   2 weeks ago    449MB
+```
+
+```
+sudo docker image inspect 0a32df8668fd
+```
+
+```
+[
+    {
+        "Id": "sha256:0a32df8668fd50e598e145d56f4e805417ad6062cdb18823dc2a97d72e304185",
+        "RepoTags": [
+            "janssenproject/monolith:1.0.3_dev"
+        ],
+        "RepoDigests": [],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2022-09-29T14:05:20.136637609+05:30",
+        "Container": "",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+```
+
+In above output, you can see the sha and creation date of the image.
 
 ### Notes:
 
