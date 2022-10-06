@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=uUzRMOCBorg&list=PLs5n5nYB22fI83_UAFbPLC-Mg9Uc6j
 
 
 
-eclipse to intellij
+### eclipse to intellij
 
 
 
@@ -32,7 +32,9 @@ jre -> sdk
 
 classpath variable -> path variable
 
-Intellij shortcuts ( to see all shortcuts go to settings (ctrl+alt+s) and select 'keymap'):
+### Intellij shortcuts:
+
+( to see all shortcuts go to settings (ctrl+alt+s) and select 'keymap')
 
 alt+7 -> structure(or outline in eclispse)
 
@@ -51,7 +53,6 @@ all these and more options under edit->find
 shift+shift -> search for anything, including Idea menu options and settings etc
 
 ctrl+n -> search for classes ( part of dialogue with above shortcut )
-
 
 
 alt+f12 -> open terminal
@@ -81,6 +82,8 @@ ctrl+alt+H : Method call tree. Highlight method name and this will show other me
 ctrl+click: on a method or variable will take you to declaration of it. To navigate backwards use : alt+shift+left key. To navigate forward, use alt+shift+right.
 
 ctrl+tab: opens `switcher` and then you can release the tab and press the shortcut key as shown on the switcher window to quickly open corresponding tool window 
+
+alt+home : open navigation bar 
 
 Custom settings:
 
