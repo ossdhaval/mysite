@@ -227,22 +227,17 @@ dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$
  
 #### How to know which branches can be deleted?
  
-The useful --merged and --no-merged options can filter this list to branches that you have or have not yet merged into the branch you’re currently on. To see which branches are already merged into the branch you’re on, you can run git branch --merged:
-
-```
-$ git branch --merged
-  iss53
-* master
-```
-
-Because you already merged in iss53 earlier, you see it in your list. Branches on this list without the * in front of them are generally fine to delete with git branch -d; you’ve already incorporated their work into another branch, so you’re not going to lose anything.
-
- Likewise, to see branches that has unmerged changes:
  
-```
-git branch --no-merged
-```
-
+ 
+1. Look at `git branch -vv`
+ 
+ Above will list all the branches with it's remote tracking branches. If you see the `gone` mentioned along side of the remote branch, that it may be a case were the branch was merged using a PR and then workflow has deleted the remote branch on GH. Local Branches where remote branches are `gone` can be deleted.
+ 
+2. To further confirm whether the most lastest commit on the local branch have been added to main, you can search the main branch using command below for the commit message of the last commit on the local branch.
+ 
+ `git log main --grep="fix: add missing README files`
+ 
+ 
 #### How to completely remove local branch and remote-tracking branch and start fresh from remote branch:
  
  In case you have messy code in your local branch that you have committed but not pushed to remote. You want to get rid of this code and start afresh from remote branch. For this you have to 
