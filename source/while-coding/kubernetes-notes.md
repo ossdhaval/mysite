@@ -129,22 +129,65 @@ spec:
 ```
 
 To create pod:
+
 ```
 kubectl create -f ~/code/docker-kubernetes/dk/src/nginx.pod.yaml --save-config
 ```
 
 To get list:
+
+```
 kubectl get all
+```
 
 To get more details about pod :
+
+```
 kubectl describe pod my-nginx
+```
 
 To get access to shell of the container running inside the pod :
+
+```
 kubectl exec my-nginx -it sh
 (you can find your html files hosted with nginx under '/usr/share/nginx/html/' )
+```
 
 To delete the pod :
+
+```
 kubectl delete -f ~/code/docker-kubernetes/dk/src/nginx.pod.yaml
+```
 
 Configuring liveness and readiness probs : 
 
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-nginx
+  labels:
+    app: nginx
+    rel: stable
+spec:
+  containers:
+  -    name: my-nginx
+       image: nginx:alpine
+       ports:
+       - containerPort: 80
+       livenessProbe:
+         httpGet:
+           path: /index.html
+           port: 80
+         initialDelaySeconds: 15
+         timeoutSeconds: 2 #default: 1
+         periodSeconds: 5 #default: 10
+         failureThreshold: 1 #default: 3
+       readinessProbe:
+         httpGet:
+           path: /index.html
+           port: 80
+         initialDelaySeconds: 3
+         periodSeconds: 5 #default: 10
+         failureThreshold: 1 #default: 3
+```
