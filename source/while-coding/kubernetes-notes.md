@@ -29,19 +29,20 @@ How to install and run kubernetes on local machine :
 
 there are few options :
 
-Docker desktop : most preferred and easiest. But has limitation where you can have only one master and one node. Can't scale out. But it is not available for Linux. 
-minikube : best bet for Linux development machines and created by Kubernetes project itself. 
-Kind
-kubeadm : this is fully fledged kubernetes
+- Docker desktop : most preferred and easiest. But has limitation where you can have only one master and one node. Can't scale out. But it is not available for Linux. 
+- minikube : best bet for Linux development machines and created by Kubernetes project itself. 
+- Kind
+- kubeadm : this is fully fledged kubernetes
 
 For production ready light-weight kubernetes, look at k3s(by Rancher), microk8s(by Ubuntu/canonical). 
-Here, light-weight means they have lesser memory footprint. See this for comparison. 
+Here, light-weight means they have lesser memory footprint. See [this](https://www.itprotoday.com/cloud-computing-and-edge-computing/lightweight-kubernetes-showdown-minikube-vs-k3s-vs-microk8s#:~:text=Minikube%20is%20the%20easiest%20overall,configure%20than%20the%20other%20distributions.) for comparison. 
 
-https://www.itprotoday.com/cloud-computing-and-edge-computing/lightweight-kubernetes-showdown-minikube-vs-k3s-vs-microk8s#:~:text=Minikube%20is%20the%20easiest%20overall,configure%20than%20the%20other%20distributions.
+
 
 We will go with minikube here.
 
 ## install minikube :
+
 reference : https://minikube.sigs.k8s.io/docs/start/
 
 ```
