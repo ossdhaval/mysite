@@ -191,3 +191,117 @@ spec:
          periodSeconds: 5 #default: 10
          failureThreshold: 1 #default: 3
 ```
+
+## ReplicaSets and Deployment :
+
+### ReplicaSet :
+In Kubernetes, replicaset came into existance first and then deployments came in as wrapper of replicasets to further ease the configuration. 
+
+self-healing is provided by replicasets. 
+replicaset ensures that we have intended number of pods running at any time.
+takes care of scaling when required
+
+You don't need to create pods directly if you use replicaset.
+
+### Deployment :
+
+deployment is a wrapper around replicaset. Plus, deployment also adds support for zero-downtime deployments, roll-back of deployments ( pod template labels are useful here).
+
+yaml of replicaset and deployment are almost same.
+
+```
+apiVersion: apps/v1 # this is mandatory attribute
+kind: Deployment
+metadata:
+  name: my-frontend
+  labels:
+    app: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template: # template can be stored in a separate file also
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: my-ngnix
+          image: nginx:alpine
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              memory: "128Mi" #128 MB
+              cpu: "200m" #200 millicpu (.2 cpu or 20% of the cpu)
+```
+
+Here, deployment will look for templates that has matching labels as mentioned in the selector section 
+
+to start the deployment :
+
+```
+kubectl create -f ~/code/docker-kubernetes/dk/src/frontend.deployment.yaml --save-config
+```
+
+To get info about deployment :
+
+```
+kubectl describe deployment my-frontend
+```
+
+To see all the deployments along with their labels :
+
+```
+kubectl get deployment --show-labels
+```
+
+To see deployment with a certain label :
+
+```
+kubectl get deployment -l app=frontend
+```
+
+To scale a running deployment :
+```
+kubectl scale -f ~/code/docker-kubernetes/dk/src/frontend.deployment.yaml --replicas=4
+```
+
+or if you want to do via yaml then put the 'replica' entry in yaml as given above and then run apply as below:
+```
+kubectl apply -f ~/code/docker-kubernetes/dk/src/frontend.deployment.yaml
+```
+
+From here on, I have not listed everything in detail. Just commands and what they do. Need to go back and take more detailed notes from video below and onwards :
+
+https://app.pluralsight.com/course-player?clipId=32f4f873-30d1-4a70-9cf0-510a899d2223
+
+
+## zero downtime deployments :
+
+here there are 4 versions of the same app which we are trying to deploy one after other :
+
+yaml for all four are standard deployment yaml.
+
+deployments are done with standard create or apply commands and deployment will take care of rolling deployments(zero down time ) automatically.
+
+## creating services :
+
+services are all about networking.
+
+##### networking notes from (https://kubernetes.io/docs/concepts/services-networking/)
+
+- Every Pod gets its own IP address. 
+- Pods can be treated much like VMs or physical hosts from the perspectives of port allocation, naming, service discovery, load balancing, application configuration, and migration.
+- containers within a Pod share their network namespaces - including their IP address and MAC address. This means that containers within a Pod can all reach each other's ports on localhost. This also means that containers within a Pod must coordinate port usage, but this is no different from processes in a VM. This is called the "IP-per-pod" model.
+
+
+Kubernetes networking addresses four concerns:
+
+- Containers within a Pod use networking to communicate via loopback.
+- Cluster networking provides communication between different Pods.
+- The Service resource lets you expose an application running in Pods to be reachable from outside your cluster.
+- You can also use Services to publish services only for consumption inside your cluster.
+
+
