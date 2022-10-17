@@ -309,3 +309,8 @@ Kubernetes networking addresses four concerns:
 ## Helm
 
 Reference: https://www.youtube.com/watch?v=Zzwq9FmZdsU&t=2s
+
+- helm is three things
+  - templating enging ( i.e use values and templates to create actual k8s yaml)
+  - app lifecycle manager (install-uninstall-status check)
+  - Provide packages from central repository like a package manager
