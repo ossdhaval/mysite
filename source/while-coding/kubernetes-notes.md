@@ -315,3 +315,6 @@ Reference: https://www.youtube.com/watch?v=Zzwq9FmZdsU&t=2s
   - app lifecycle manager (install-uninstall-status-upgrade-rollback)
   - Provide packages from central repository like a package manager
   - helm also keeps history of what got installed with what version of chart. This helps in upgrade and rollback. This is not possible via kubectl
+
+- Helm has few supporting projects
+  - Helmhub
