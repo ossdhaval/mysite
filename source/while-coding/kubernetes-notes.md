@@ -312,5 +312,6 @@ Reference: https://www.youtube.com/watch?v=Zzwq9FmZdsU&t=2s
 
 - helm is three things
   - templating enging ( i.e use values and templates to create actual k8s yaml)
-  - app lifecycle manager (install-uninstall-status check)
+  - app lifecycle manager (install-uninstall-status-upgrade-rollback)
   - Provide packages from central repository like a package manager
+  - helm also keeps history of what got installed with what version of chart. This helps in upgrade and rollback. This is not possible via kubectl
