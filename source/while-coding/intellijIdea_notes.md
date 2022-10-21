@@ -85,6 +85,8 @@ ctrl+tab: opens `switcher` and then you can release the tab and press the shortc
 
 alt+home : open navigation bar 
 
+alt+0 : open commit dialogue box. This can be used to add `Co-authored-by:` like message trailors.
+
 Custom settings:
 
 > go to keymap and remove `shift+esc` from `hide active tool window`. This is because same short cut is used for focusing back on editor. After removing this, you'll be able to switch to editor without hiding the current tool window.
