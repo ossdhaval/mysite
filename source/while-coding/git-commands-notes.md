@@ -837,3 +837,10 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  ```
  git commit --author="temp-ossdhaval" -S -m 'message'
  ```
+
+ ### difference between GPG sign a commit (-S) vs adding Sign-off (-s)
+ 
+ - GPG signing is done by adding -S to commit command. Using this GH can verifies only the intended dev is making the commit.
+ - `sign off by` is added by `-s`. It is up to the organisation how to interprete the sign off given by the developer.
+ - in intellij you can configure signing of every commit with gpg using alt+ctrl+s -> search git -> click configure GPG -> check mark on `sign all commits`
+ - sign-off can be done by clicking `commit options` on the commit tool window that can open using `ctrl+0`
