@@ -87,6 +87,12 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
     ```
     sudo lxc launch images:ubuntu/focal/amd64 my-ubuntu-container
     ```
+    
+
+```
+Note: If you have built container from custom image of (ubuntu-20-4-base), then all the setup till step 7 are already in place. You can try connecting via ssh using user (dev) password (dev)
+```    
+    
 2. list your container using `lxc ls`
 
 3. to get into container shell `lxc exec my-ubuntu-container bash`
