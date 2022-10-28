@@ -82,11 +82,13 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
 ```
 
 ### Steps to create and setup an lxc container
-1) select linux distribution from https://uk.images.linuxcontainers.org/. Note down values in first three columns of the container that you want (distribution, release, architecture) and then run 
+
+1. select linux distribution from https://uk.images.linuxcontainers.org/. Note down values in first three columns of the container that you want (distribution, release, architecture) and then run 
     ```
     sudo lxc launch images:ubuntu/focal/amd64 my-ubuntu-container
     ```
-2) list your container using `lxc ls`
+2. list your container using `lxc ls`
+
 3) to get into container shell `lxc exec my-ubuntu-container bash`
 4) to see the files in container `cd ..` and then `ls`
 5) now to be able to connect to container directly via ssh (and not via `lxc` command), we need to install ssh server on container using `sudo apt install openssh-server`
