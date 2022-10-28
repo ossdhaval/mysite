@@ -89,12 +89,12 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
     ```
 2. list your container using `lxc ls`
 
-3) to get into container shell `lxc exec my-ubuntu-container bash`
-4) to see the files in container `cd ..` and then `ls`
-5) now to be able to connect to container directly via ssh (and not via `lxc` command), we need to install ssh server on container using `sudo apt install openssh-server`
-6) create a new user `adduser dev`
-7) restart sshd service `service sshd restart`
-8) Now to connect to container from other PC using ssh and the newly created user you have to use: `sudo ssh dev@<ip>`. This ip is internal IP of the container. If can be found by logging into container using lxc command and then firing `ip a`. Output will be something like this
+3. to get into container shell `lxc exec my-ubuntu-container bash`
+4. to see the files in container `cd ..` and then `ls`
+5. now to be able to connect to container directly via ssh (and not via `lxc` command), we need to install ssh server on container using `sudo apt install openssh-server`
+6. create a new user `adduser dev`
+7. restart sshd service `service sshd restart`
+8. Now to connect to container from other PC using ssh and the newly created user you have to use: `sudo ssh dev@<ip>`. This ip is internal IP of the container. If can be found by logging into container using lxc command and then firing `ip a`. Output will be something like this
     ```
     root@my-ubuntu-container:~# ip a
     1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
@@ -113,17 +113,17 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
            valid_lft forever preferred_lft forever
     ```
     from this, you have to pick up `10.229.38.143` ip. Now from local PC you can run `sudo ssh dev@10.229.38.143` to login to container.
-9) Now, to install a web server on container and access that web page from local machine 
+9. Now, to install a web server on container and access that web page from local machine 
     - first login to container as root using `lxc exec my-ubuntu-container bash`
     - then install apache server `sudo apt install apache2`
     - check if apache service is running `service apache2 status`
     - now go to your local machine, open browser and try to hit the IP of the container `10.229.38.143`. You should be able to access default apache page
 
-10) if you want to create a shared folder between local computer and container
+10. if you want to create a shared folder between local computer and container
     - from local machine run `sudo lxc config device add my-ubuntu-container shared_dir disk path=/var/www/localhost/htdocs source="/home/nevyan/web_dev"`
     - above command will map content of local directory `/home/nevyan/web_dev` to `/var/www/localhost/htdocs` directory within the container
 
-11) you can delete this container
+11. you can delete this container
     `lxc delete my-ubuntu-container`
 
 Note: 
