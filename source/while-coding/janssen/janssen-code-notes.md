@@ -14,3 +14,11 @@
   - there are many `model` packages in AS but only few (~23) are persistence related. Others (like `CodeVerifier` under `io.jans.as.model.authorize` package) are not related to persistance rather they are like POJOs.
 - `objectClass` is the name of the table. This is visible from `SqlConnectionProvider`.`getTableMappingByKey()`.
 - 
+
+### properties and featureflags
+
+- Classes that hold the properties of some of the modules are below:
+  - io.jans.as.model.configuration.AppConfiguration
+  - io.jans.as.model.common.FeatureFlagType
+  - io.jans.fido2.model.conf.Fido2Configuration
+  - io.jans.scim.model.conf.AppConfiguration
