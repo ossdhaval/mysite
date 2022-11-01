@@ -22,3 +22,11 @@
   - io.jans.as.model.common.FeatureFlagType
   - io.jans.fido2.model.conf.Fido2Configuration
   - io.jans.scim.model.conf.AppConfiguration
+
+## jans-config-api
+
+### code flow for `/jans-config-api/api/v1/jans-auth-server/config` endpoint
+
+- One thing to notice here is that config-api doesn't depend on jans-auth-server to fetch the configuration. Rather it directly reaches to persistence to get the properties
+
+![](../../../images/janssen-code-notes/ConfigResource_getAppConfiguration.svg)
