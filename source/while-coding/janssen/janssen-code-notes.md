@@ -28,5 +28,6 @@
 ### code flow for `/jans-config-api/api/v1/jans-auth-server/config` endpoint
 
 - One thing to notice here is that config-api doesn't depend on jans-auth-server to fetch the configuration. Rather it directly reaches to persistence to get the properties
+- but it uses the model from jans-auth-server (i.e `conf`) to hold these properties fetched from the db.
 
 ![](../../../images/janssen-code-notes/ConfigResource_getAppConfiguration.svg)
