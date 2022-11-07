@@ -141,3 +141,14 @@ Before the Java SE 8 release, annotations could only be applied to declarations.
 annotations can also be applied to any type use. This means that annotations can be used anywhere you use a type. 
 A few examples of where types are used are class instance creation expressions (new), casts, implements clauses, 
 and throws clauses. This form of annotation is called a type annotation.
+
+
+### work on using custom annotation to auto generate documentation of class properties
+
+Check this [PR](https://github.com/JanssenProject/jans/pull/2852)
+
+One important thing in above PR is that annotation is processed at compile time and you don't need a running instance of software to produce the result.
+
+Reference: 
+- https://www.baeldung.com/java-annotation-processing-builder
+- parse java code: https://javaparser.org/
