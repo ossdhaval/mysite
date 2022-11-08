@@ -245,7 +245,7 @@ mdl ~/IdeaProjects/Janssen/jans/docs/ -s ~/IdeaProjects/Janssen/jans/automation/
 
 
 ### API design
-- API design should happen by creating skeleton code structure first and then generating swagger spec out of it using annotations
+- API design should happen by creating skeleton code structure first and then generating swagger spec out of it using annotations. See the section on `code first` approach on [swagger site](https://swagger.io/resources/articles/documenting-apis-with-swagger/)
 - Also, [stoplight.io](https://stoplight.io/) is a good tool
 
 ### Open source projects and secure supply chain
