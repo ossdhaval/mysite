@@ -155,7 +155,11 @@ public class SwaggerSpecConfig {
 Make appropriate changes to point to where your yaml files are stored in the project.
 
 
+## code first approach:
 
+ - Write code and annotate it
+ - generate model from annotations ( start from : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Getting-started )
+ - then use model to generate documentation and client library if needed
 
 
 ### API versioning :
