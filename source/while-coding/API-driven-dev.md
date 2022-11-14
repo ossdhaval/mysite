@@ -18,7 +18,7 @@ When using swagger (and in general too) for API drive development, Remember ther
     - Use [Swagger Inflector](https://github.com/swagger-api/swagger-inflector) to automatically wire up the API definition to the implementation and provide out-of-the-box mocking.
 
 
-## How to use swagger for api driven development and integrate it with Spring boot app :
+## Design first approach: How to use swagger for api driven development and integrate it with Spring boot app :
 
 ### Working with editor.swagger.io
 
