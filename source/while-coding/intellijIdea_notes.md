@@ -85,6 +85,10 @@ ctrl+tab: opens `switcher` and then you can release the tab and press the shortc
 
 alt+home : open navigation bar 
 
+ctrl + e : recent files
+
+ctrl + shift + e + e : recently editted locations
+
 alt+0 : open commit dialogue box. This can be used to add `Co-authored-by:` like message trailors.
 
 Custom settings:
