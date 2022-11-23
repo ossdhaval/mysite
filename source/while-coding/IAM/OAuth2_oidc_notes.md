@@ -21,7 +21,7 @@ What is `Grant` in `grant type` : Basically, these are different ways of getting
   - downside: more round trips than implicit flow
   - Authorization code -> access code -> 
   
-2) Implicit
+2) Implicit (this is now deprecated and replaced by Authorization code with PKCE)
   - used by client application that are built in scripting languages
   - it doesn't use authorization code and directly gives out access token to user-agent
   - benefit: more efficient than `authorization code` grant type as there are less roundtrips
@@ -191,7 +191,9 @@ Reference:
   https://www.youtube.com/watch?v=VI3G4Quzsb8
 
 
+### Using keycloak to protect an app with angular frontend and Java backend
 
+- Here you can use it in two ways, one is to use standard `authorization code` flow and other is to use `authorization code flow wit PKCE`
 
 
 
