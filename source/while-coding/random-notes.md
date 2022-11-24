@@ -83,12 +83,21 @@ Ref:
 
 Hashing and Encryption have different functions. Encryption includes encryption and decryption process while hashing is a one-way process that derives a message digest (alphnumeric string ) from data. This string is irreversible meaning you can't derive data back from string. 
 
-Hashing algorithms:
+**Hashing algorithms:**
 
 SHA algorithm – **S**ecure **H**ash **A**lgorithm was designed by the National Security Agency to be used in their digital signature algorithm. It has a length of 160 bits. Just like the latter, security weaknesses in it means that it is no longer used SHA and SHA-1, organizations are using strong SHA-2 (256 bit) algorithm for the cryptographic purpose. 
 
-Usages:
+**Usages:**
 
 - systems store password in hashed format. Meaning to confirm password is correct or not they derive SHA256 hash from it and compare the hash. For same password, everytime the has will be same.
 - Check the authenticity of downloaded files. 
   - Download provider provides file and also publishes SHA256sum with it. User after download can generate SHA256sum from downloaded file and compare with what is published by the provider. If the downloaded file is tempered with, the SHA will not be the same. 
+
+**Purpose of hashing:**
+
+Hashing can be used to compare a large amount of data. Hash values can be created for different data, meaning that it is easier comparing hashes than the data itself.
+ It is easy to find a record when the data is hashed.
+Hashing algorithms are used in cryptographic applications like a digital signature.
+Hashing is used to generate random strings to avoid duplication of data stored in databases.
+Geometric hashing – widely used in computer graphics to find closet pairs and proximity problems in planes. It is also called grid method and it has also been adopted in telecommunications.
+These characteristics mean that hash can be used to store passwords. This way, it becomes difficult for someone who has the raw data to reverse them.
