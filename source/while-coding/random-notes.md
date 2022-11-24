@@ -91,7 +91,7 @@ SHA algorithm – **S**ecure **H**ash **A**lgorithm was designed by the National
 
 - systems store password in hashed format. Meaning to confirm password is correct or not they derive SHA256 hash from it and compare the hash. For same password, everytime the has will be same.
 - Check the authenticity of downloaded files. 
-  - Download provider provides file and also publishes SHA256sum with it. User after download can generate SHA256sum from downloaded file and compare with what is published by the provider. If the downloaded file is tempered with, the SHA will not be the same. 
+  - Download provider provides file and also publishes SHA256sum with it. User after download can generate SHA256sum from downloaded file and compare with what is published by the provider. If the downloaded file has been corrupted during download or if it is different from the original one, then the SHA will not be the same. This provides protection against network corruptions to large files plus limited assurance of authenticity of the file that it is the one that was produced by original producer. For full authenticity, producers should publish GPG signatures and downloaders should verify that.
 
 **Purpose of hashing:**
 
