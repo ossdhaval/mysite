@@ -75,3 +75,20 @@ mokutil --test-key VMWARE15.der
 You should get VMWARE15.der is already enrolled and that means VMWare should be working.
 
 
+## Encryption Vs Hashing
+
+Ref:
+- https://www.ssl2buy.com/wiki/difference-between-hashing-and-encryption#:~:text=The%20difference%20between%20hashing%20and%20encryption&text=In%20short%2C%20encryption%20is%20a,but%20also%20have%20some%20similarities.
+- https://www.simplilearn.com/tutorials/cyber-security-tutorial/sha-256-algorithm#:~:text=It%20takes%20a%20piece%20of,called%20the%20hash%20value%2Fdigest.
+
+Hashing and Encryption have different functions. Encryption includes encryption and decryption process while hashing is a one-way process that derives a message digest (alphnumeric string ) from data. This string is irreversible meaning you can't derive data back from string. 
+
+Hashing algorithms:
+
+SHA algorithm – **S**ecure **H**ash **A**lgorithm was designed by the National Security Agency to be used in their digital signature algorithm. It has a length of 160 bits. Just like the latter, security weaknesses in it means that it is no longer used SHA and SHA-1, organizations are using strong SHA-2 (256 bit) algorithm for the cryptographic purpose. 
+
+Usages:
+
+- systems store password in hashed format. Meaning to confirm password is correct or not they derive SHA256 hash from it and compare the hash. For same password, everytime the has will be same.
+- Check the authenticity of downloaded files. 
+  - Download provider provides file and also publishes SHA256sum with it. User after download can generate SHA256sum from downloaded file and compare with what is published by the provider. If the downloaded file is tempered with, the SHA will not be the same. 
