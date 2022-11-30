@@ -206,3 +206,48 @@ scp gluudb-dump.sql dhaval@192.168.1.19:/home/dhaval/
 - `lxc config device add <cntr-name> myport443 proxy listen=tcp:0.0.0.0:443 connect=tcp:127.0.0.1:443`
 - `lxc config device add <cntr-name> myport1636 proxy listen=tcp:0.0.0.0:1636 connect=tcp:127.0.0.1:1636`
 - `lxc config device list <cntr-name>` to know list of devices configured for a container (like shared disk, proxy etc) 
+
+
+## Troubleshooting
+
+### not able to access internet from within lxc container
+
+Verify this by checking that `ping google.com` stopped working.
+
+Solution is from here: https://discuss.linuxcontainers.org/t/containers-do-not-have-outgoing-internet-access/10844/4
+
+How I applied above solution is by creating a `.sh` script with content as below on host machine (where lxc is installed):
+
+```
+for ipt in iptables iptables-legacy ip6tables ip6tables-legacy;
+do
+        sudo $ipt --flush;
+        sudo $ipt --flush -t nat;
+        sudo $ipt --delete-chain;
+        sudo $ipt --delete-chain -t nat;
+        sudo $ipt -P FORWARD ACCEPT;
+        sudo $ipt -P INPUT ACCEPT;
+        sudo $ipt -P OUTPUT ACCEPT;
+done
+```
+
+then run this script from host machine
+
+```
+ . lxd-network-script.sh
+```
+
+Then run
+
+```
+sudo systemctl reload snap.lxd.daemon
+```
+
+Restart your lxc container:
+
+```
+lxc stop jans-dynamic-ldap-2
+lxc start jans-dynamic-ldap-2
+```
+
+And you should be able to access network from within lxc container
