@@ -257,7 +257,9 @@ so you'll see all the important info in this.
 
 ### command to skip tests
 
-`mvn install -DskipTests`
+difference between `mvn install -DskipTests` and `mvn install -Dmaven.test.skip=true`
+
+First one will compile and create tests jar files but will not run the tests while the second one will not even compile the test classes and will not run it. [Ref](https://stackoverflow.com/a/30275449/2331225)
 	
 ### command to run one particular test:
 	
