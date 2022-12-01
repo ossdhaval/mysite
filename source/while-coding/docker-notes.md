@@ -248,3 +248,10 @@ In above output, you can see the sha and creation date of the image.
 Reference:
   - very good quick turotial for using docker with intellij and quickly create containers, install db, and use docker compose:
   https://www.youtube.com/watch?v=ck6xQqSOlpw&t=1038s
+
+
+## Install docker-engine, compose and desktop on Ubuntu 22.04
+
+This worked perfectly :
+
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
