@@ -15,3 +15,7 @@ To see vm scree in full screen resolution, you need vmware tools installed on th
 sudo apt-get update
 sudo apt install open-vm-tools-desktop
 ```
+
+## Taking snapshot
+
+https://www.makeuseof.com/vmware-workstation-player-snapshot-free/
