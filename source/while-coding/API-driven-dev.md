@@ -166,6 +166,22 @@ Make appropriate changes to point to where your yaml files are stored in the pro
 
 A good video : https://www.youtube.com/watch?v=M2KCu0Oq3JE
 
+## Install and Use swagger-ui locally on linux
+
+You need to have port 80 free.
+
+```
+sudo docker run -p 80:8080 swaggerapi/swagger-ui
+```
+
+Now if you want to browse a swagger specification (json or yaml) file using swagger UI Then 
+
+```
+sudo docker run -p 80:8080 -e SWAGGER_JSON=/jans/jans-config-api/docs/jans-config-api-swagger.yaml -v /home/dhaval/IdeaProjects/Janssen/jans:/jans swaggerapi/swagger-ui
+```
+
+Now hit `http://localhost:80` and see your yaml or json swagger spec rendered using swagger UI. This is especially useful because now you can point the local copy of the spec file to locally installed REST api server and test your apis. For this you need to edit the `server` element in your local yaml. Just save the file after change and refresh the browser.
+
 
 
 ### References:
