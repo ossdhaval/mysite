@@ -10,6 +10,14 @@ pip install mkdocs-material=="8.3.0"
 
 after installation, if you want to locally see your changes being effective, run `mkdocs serve` from the directory where you have stored mkdocs.yml
 
+### installing plugins
+
+you can search plugins on pypi and then install using pip command given there. For example: `https://pypi.org/project/mkdocs-git-committers-plugin-2/`
+
+```
+pip install mkdocs-git-revision-date-localized-plugin
+pip install mkdocs-git-committers-plugin-2
+```
 
 ## reference
 - https://squidfunk.github.io/mkdocs-material/reference/
