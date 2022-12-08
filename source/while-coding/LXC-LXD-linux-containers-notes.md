@@ -83,9 +83,9 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
 
 ### Steps to create and setup an lxc container
 
-1. select linux distribution from https://uk.images.linuxcontainers.org/. Note down values in first three columns of the container that you want (distribution, release, architecture) and then run 
+1. select linux distribution from https://images.linuxcontainers.org/. Note down values in first three columns of the container that you want (distribution, release, architecture) and then run 
     ```
-    sudo lxc launch images:ubuntu/focal/amd64 my-ubuntu-container
+    sudo lxc launch images:ubuntu/jammy/amd64 my-ubuntu-container
     ```
     
 
