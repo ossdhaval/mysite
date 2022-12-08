@@ -831,6 +831,11 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  git stash show stash@{0}
  ```
  
+ Delete or drop a stash
+ 
+ ```
+ git stash drop stash@{0}
+ ```
  
  
  ### apply signature to commit automatically
