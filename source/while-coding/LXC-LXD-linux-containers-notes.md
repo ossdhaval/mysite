@@ -201,8 +201,11 @@ scp gluudb-dump.sql dhaval@192.168.1.19:/home/dhaval/
 
 ### important commands:
 
+- `lxc launch ubuntu-20-4-base jans-dynamic-ldap-2`
 - `lxc start <cntr-name>`
 - `lxc stop <cntr-name>`
+- `lxc delete <cntr-name>`
+- `lxc exec jans-dynamic-ldap bash`
 - `lxc config device add <cntr-name> myport443 proxy listen=tcp:0.0.0.0:443 connect=tcp:127.0.0.1:443`
 - `lxc config device add <cntr-name> myport1636 proxy listen=tcp:0.0.0.0:1636 connect=tcp:127.0.0.1:1636`
 - `lxc config device list <cntr-name>` to know list of devices configured for a container (like shared disk, proxy etc) 
