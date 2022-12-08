@@ -807,17 +807,31 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
 
  ### Stash
  
- To stash whatever you have now
+ To stash whatever you have now (tracked + untracked)
  
  ```
- git stash
+ git stash -u
  ```
  
- To get the last stash reapplied
+ To get the last stash reapplied (`--index` will stage the files again which were previously staged)
  
  ```
- git stash apply
+ git stash apply --index
  ```
+ 
+ List all awailable stashes:
+ 
+ ```
+ git stash list
+ ```
+ 
+ See contents of a particular stash:
+ 
+ ```
+ git stash show stash@{0}
+ ```
+ 
+ 
  
  ### apply signature to commit automatically
  
