@@ -213,9 +213,13 @@ scp gluudb-dump.sql dhaval@192.168.1.19:/home/dhaval/
 
 ## Troubleshooting
 
+Verify this by checking that `ping google.com` stopped working.
+
 ### not able to access internet from within lxc container
 
-Verify this by checking that `ping google.com` stopped working.
+**On 20.04:** Just do a `sudo apt get update` and `sudo apt get upgrade`. This will start access to internet
+
+**On 22.04:**
 
 Solution is from here: https://discuss.linuxcontainers.org/t/containers-do-not-have-outgoing-internet-access/10844/4
 
