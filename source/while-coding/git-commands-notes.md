@@ -27,7 +27,9 @@ or
 Command to rename remote repo
 
 ```
+
 git remote rename origin jans-home
+
 ```
 
 Command to get help on any git command :
@@ -810,7 +812,7 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  To stash whatever you have now (tracked + untracked)
  
  ```
- git stash -u
+ git stash push -u -m 'my stash message'
  ```
  
  To get the last stash reapplied (`--index` will stage the files again which were previously staged)
