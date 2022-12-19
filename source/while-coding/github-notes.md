@@ -72,17 +72,17 @@ If you want certain files to be set as default for all the repos under your org,
 - creat a new repo `.github` in org github account
 - To create a new template called `development-item`, create a new file as `.github/ISSUE_TEMPLATE/development-item.md`. This will create two new folders and one file. 
 - Put below header in the file and then start writting your contents for template.
-```
 
+```
+---
 name: Contribution item
 about: Developers should use this when contributing a feature or bug fix
 title: ''
 labels: ''
 assignees: ''
-
-
-
+---
 ```
+
 - create another template in `ISSUE_TEMPLATE` directory in similar way. For example `feature-request.md`
 - You may have to enable templates from `settings` of `.github` repo as well. But not sure if this step is required. Ideally, after the first step, whenever you create a new issue, git hub should first show you a screen to select the issue template.
 
