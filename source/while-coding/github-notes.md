@@ -313,5 +313,13 @@ Checking out the ref
 'bf42446c2ea150faaabcb4037eb1e625a4b4016d'
 ```
 
+### Difference between release vs tag in github
+
+Ref : https://stackoverflow.com/a/18512221/2331225
+
+In short, tag is a Git concept. It points to a commit and can be enriched by more content like creator etc
+While `release` is a GH concept built on top of tag. While creating release from a tag, you can add release notes, artifacts etc.
+
 ## GitHub reference material:
 - Mohammad abu's github cheatsheet: https://medium.com/@moabu/the-github-cheat-sheet-df4b3e3b42a8
+
