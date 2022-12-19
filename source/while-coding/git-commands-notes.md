@@ -865,3 +865,13 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  - `sign off by` is added by `-s`. It is up to the organisation how to interprete the sign off given by the developer.
  - in intellij you can configure signing of every commit with gpg using alt+ctrl+s -> search git -> click configure GPG -> check mark on `sign all commits`
  - sign-off can be done by clicking `commit options` on the commit tool window that can open using `ctrl+0`
+
+ ### Detached head state
+ 
+ - HEAD is a file in git that points to the current branch normally
+ - sometimes HEAD can also contain a SHA value of a commit. This is `detached HEAD` state. This happens when you checkout a particular commit, a tag, a PR, or a remote branch without fetching it first. 
+  
+ ### Branch vs Tag
+ 
+ - Branch is a reference to a commit and that reference changes when next commit is made
+ - Tag is also a reference to a commit and it will **not** move if new commits are made
