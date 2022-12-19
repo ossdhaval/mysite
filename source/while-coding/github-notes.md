@@ -320,6 +320,17 @@ Ref : https://stackoverflow.com/a/18512221/2331225
 In short, tag is a Git concept. It points to a commit and can be enriched by more content like creator etc
 While `release` is a GH concept built on top of tag. While creating release from a tag, you can add release notes, artifacts etc.
 
+About backporting changes to old tag/release:
+ref: https://stackoverflow.com/a/21466838/2331225
+
+```
+You can't put a new commit into an existing tag without breaking an important Git guideline: Never(*) modify commits that you have published.
+
+Tags in Git aren't meant to be mutable. Once you push a tag out there, leave it alone.
+
+You can, however, add some changes on top of v1.1 and release something like v1.1.1 or v1.2
+```
+
 ## GitHub reference material:
 - Mohammad abu's github cheatsheet: https://medium.com/@moabu/the-github-cheat-sheet-df4b3e3b42a8
 
