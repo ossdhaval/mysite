@@ -102,6 +102,43 @@ https://github.community/t/additional-function-s-lowercase-uppercase/140632
 https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
 
 
+### how to work with a list, set and access environment variable, run linux commands 
+
+```
+name: workflow with list
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  job-1:
+    name: job-1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: print all
+        env:
+          JVM_PROJECTS: |
+            mod1
+            mod2
+        run: |
+          ls
+          echo $JVM_PROJECTS
+          for module in $JVM_PROJECTS
+          do
+            echo "Module: $module"
+            echo "=============="
+            mvn -f $module/pom.xml javadoc:javadoc
+            ls $module/target/site/apidocs/
+          done
+```
+
 ### Misc
 
 - Actions can be looked at from two different places:
