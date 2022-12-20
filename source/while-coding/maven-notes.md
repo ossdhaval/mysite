@@ -546,3 +546,9 @@ Notes:
 	```
 	 find . -name pom.xml -exec mvn -f {} dependency:list -DexcludeTransitive=true -o -DexcludeScope=compile \; >> ~/temp/test-deps.txt
 	```
+
+### list all the submodules of a pom
+	
+```
+mvn help:evaluate -Dexpression=project.modules -q -DforceStdout | tail -n +2 | head -n -1 | sed 's/\s*<.*>\(.*\)<.*>/\1/'
+```
