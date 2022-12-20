@@ -754,9 +754,24 @@ for example:
 Remember, only try to connect via UI after sometime of starting the vm. Like 10 mins. 
 
 =============================
-general notes :
-main component in Janssen and Gluu is jans-auth-server. Same component is 
+
+## general notes :
+
+- main component in Janssen and Gluu is jans-auth-server. Same component is 
 called oxauth in Gluu.
+- About cache refresh ([ref](https://chat.gluu.org/group/documentation?msg=Bti5ZaBtaFv2jejtr)): 
+
+ ```
+ No cache refresh (CR) in Jans
+
+ CR is a feature in oxTrust
+
+ We have been talking to Shekhar about making a standalone CR project in Jans
+
+ but it’s not top priority
+
+ CR is an enterprise feature, mostly used to connect Active Directory servers
+ ```
 
 ======================
 
@@ -2181,3 +2196,4 @@ Logs are at: /opt/jans/jetty/jans-auth/jans-auth_script.log
 ```
 /opt/jans/jans-cli/scim-cli.py --operation-id create-user --data /tmp/create-user.json
 ```
+
