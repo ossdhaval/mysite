@@ -139,6 +139,22 @@ jobs:
           done
 ```
 
+### how to create an array of values returned from a command and loop through it
+
+```
+        run: |
+          pwd
+          sub_modules=($( mvn help:evaluate -Dexpression=project.modules -q -DforceStdout | tail -n +2 | head -n -1 | sed 's/\s*<.*>\(.*\)<.*>/\1/'))
+          for module in "${sub_modules[@]}"
+          do
+            echo "Module: $module"
+            echo "=============="
+            mvn -f $module/pom.xml javadoc:javadoc
+            echo "=============================================================="
+            ls $module/target/site/apidocs/
+          done
+```
+
 ### Misc
 
 - Actions can be looked at from two different places:
