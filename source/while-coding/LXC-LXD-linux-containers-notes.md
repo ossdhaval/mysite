@@ -255,6 +255,9 @@ Restart your lxc container:
 ```
 lxc stop jans-dynamic-ldap-2
 lxc start jans-dynamic-ldap-2
+enter the bash and then run
+apt-get update
+apt-get upgrade
 ```
 
 And you should be able to access network from within lxc container
