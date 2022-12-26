@@ -14,6 +14,8 @@ and then run commands.
 
 https://github.com/JanssenProject/jans-setup
 
+```
+
 cd ~
 
 dhaval@dhaval-Lenovo-U41-70:~$ curl https://raw.githubusercontent.com/JanssenProject/jans/main/jans-linux-setup/install.py > install.py
@@ -148,6 +150,10 @@ CLI available to manage Jannsen Server:
 ✓ jans-cli         Installing Jans Cli
 ✓ post-setup       Starting Jans Eleven
 
+```
+
+```
+
 dhaval@dhaval-Lenovo-U41-70:~$ 
 
 
@@ -279,13 +285,15 @@ CLI available to manage Jannsen Server:
 
 /opt/jans/jans-cli/scim-cli.py
 
+```
+
 
 
 Uninstall
 
 ----------
 
-
+```
 
 dhaval@dd-lenovo:~$ sudo python3 install.py -uninstall
 [sudo] password for dhaval: 
@@ -319,11 +327,15 @@ Executing rm -r -f /opt/opendj
 Executing rm -r -f /opt/dist
 dhaval@dd-lenovo:~$
 
+```
+
 ==================================
 
  Janssen local install using lxd instructions :
 
 ===================================
+
+```
 
 snap install lxd
 
@@ -382,6 +394,7 @@ Install Fido2 Server                                         True
 Install Scim Server                                          True
 Install Eleven Server                                        True
 
+```
 
 ======================================= 
 installing gluu server on GCP from https://www.youtube.com/watch?v=0RskrQG8km8&t=99s
@@ -458,6 +471,8 @@ change type of your IP to 'static' from ephemeral
 ---- now install gluu server 4.2 
 (reference : https://gluu.org/docs/gluu-server/4.2/installation-guide/install-ubuntu/)
 connect to your VM via ssh.
+
+```
 sudo su
 echo "deb https://repo.gluu.org/ubuntu/ focal main" > /etc/apt/sources.list.d/gluu-repo.list
 curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -
@@ -546,7 +561,7 @@ openssl enc -d -aes-256-cbc -in setup.properties.last.enc -out setup.properties
 
  Gluu Server installation successful! Point your browser to https://gluuserver.gluu.org
 
-
+```
 
 Now, before you acan access UI from you local machine, you have to make 
 following entry in hosts file of your OS ( for ubuntu : /etc/hosts )
@@ -559,6 +574,8 @@ Once this is done, you can access gluu server at
 https://gluuserver.gluu.org
 with user: admin
 and password as mentioned during the setup prompts. In this case 't1Wi&hUdXwvm'.
+
+
 
 ===========================
 handy gluu commands
@@ -772,10 +789,12 @@ called oxauth in Gluu.
 
  CR is an enterprise feature, mostly used to connect Active Directory servers
  ```
+- Janssen provides authentication using OIDC and authorization using OAuth. When referring to Janssen in context of authentication, it can be called OP(OpenId Connect Provider), while referring to Janssen in context of authorization, it can be called AS (Authorization Server) as well. So, You can refer to Janssen as OP or AS.
+
 
 ======================
 
-LDAP/opendj/dsconfig commands :
+## LDAP/opendj/dsconfig commands :
 
 to see all the existing indexes on backend 'userRoot':
 
@@ -815,6 +834,7 @@ https://backstage.forgerock.com/docs/ds/5/configref/
 ==========================
 what actually happens during janssen installation via install.py :
 =========================
+
 There are primarily two scripts, install.py and setup.py.
 User trigger install.py and this script inturn calls setup.py for installation task.
 On top of installation Install.py provides uninstall, upgrade like functions.
