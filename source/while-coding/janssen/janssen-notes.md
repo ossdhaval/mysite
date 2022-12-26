@@ -791,6 +791,8 @@ called oxauth in Gluu.
  ```
 - Janssen provides authentication using OIDC and authorization using OAuth. When referring to Janssen in context of authentication, it can be called OP(OpenId Connect Provider), while referring to Janssen in context of authorization, it can be called AS (Authorization Server) as well. So, You can refer to Janssen as OP or AS.
 
+- `claims` word is also used for multiple things. For Janssen Server configuration properties are also called `claims` (these are the properties that we see in response to .well-known configuration endpoint `https://jans-dynamic-ldap/jans-auth/.well-known/openid-configuration`). Better call it `server claims`. `claims` is also used in context of user. These should be called `user claims` or `user attributes` for better clarity. You can see attributes (user claims) supported by server under `claims_supported` server claim as part of response to .well-known configuration endpoint mentioned above .
+
 
 ======================
 
