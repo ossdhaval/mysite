@@ -2228,6 +2228,8 @@ client from TUI
 
 ```
 curl -k -u "1802.c0547ae9-d667-4b5d-8f4e-29556d5cc138:vajPeuiywXHf" https:/jans-dynamic-ldap/jans-auth/restv1/token -d  "grant_type=client_credentials&scope=https://jans.io/scim/users.read"
+
+curl -k https://jans-dynamic-ldap/jans-auth/restv1/userinfo -H "Authorization: Bearer 5b37e8fa-e4ed-435c-9ab4-3f62261c6815"
 ```
 
 - 
