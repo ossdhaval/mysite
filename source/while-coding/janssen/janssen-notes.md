@@ -2219,3 +2219,15 @@ Logs are at: /opt/jans/jetty/jans-auth/jans-auth_script.log
 /opt/jans/jans-cli/scim-cli.py --operation-id create-user --data /tmp/create-user.json
 ```
 
+## useful curl commands
+
+### accessing userinfo endpoint and getting data about a user
+
+- Get access token using client `jans config api`, its secret and scope `https://jans.io/scim/users.read`. Get details about
+client from TUI
+
+```
+curl -k -u "1802.c0547ae9-d667-4b5d-8f4e-29556d5cc138:vajPeuiywXHf" https:/jans-dynamic-ldap/jans-auth/restv1/token -d  "grant_type=client_credentials&scope=https://jans.io/scim/users.read"
+```
+
+- 
