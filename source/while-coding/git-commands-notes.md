@@ -850,6 +850,11 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  git stash drop stash@{0}
  ```
  
+ Apply stash by name
+ 
+ ```
+ git stash apply stash^{/my_stash_name}
+ ```
  
  ### apply signature to commit automatically
  
