@@ -191,6 +191,20 @@ Reference:
   https://www.youtube.com/watch?v=VI3G4Quzsb8
 
 
+### OpenID Connect uses scopes differently
+
+https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims
+
+Scopes are used to control what information about user should be returned by the userinfo endpoint. As scopes are associated with access token, the OP can look at token, find out the scopes and release information accordingly from userinfo endpoint response.
+
+profile: OPTIONAL. This scope value requests access to the End-User's default profile Claims, which are: name, family_name, given_name, middle_name, nickname, preferred_username, profile, picture, website, gender, birthdate, zoneinfo, locale, and updated_at.
+
+email: OPTIONAL. This scope value requests access to the email and email_verified Claims.
+
+address: OPTIONAL. This scope value requests access to the address Claim.
+
+phone: OPTIONAL. This scope value requests access to the phone_number and phone_number_verified Claims.
+
 ### Using keycloak to protect an app with angular frontend and Java backend
 
 - Here you can use it in two ways, one is to use standard `authorization code` flow and other is to use `authorization code flow wit PKCE`
