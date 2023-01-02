@@ -171,7 +171,7 @@ Now, you can link-up your local branch to a remote tracking branch for ease of u
  git branch -vv
  ```
  
- #### About local branches:
+ #### About local branches
  
  ##### first option of using untracked local branch
  
@@ -187,7 +187,8 @@ Now, you can link-up your local branch to a remote tracking branch for ease of u
  
  - `git checkout -b <new-branch-name>`
  - `git push --set-upstream origin <new-branch-name>`
- - Now if you do `git branch -vv` you'll see that local branch is tracking the remote branch. When remote branch is deleted (after merge) you'll see that `git branch -vv` mentions `gone` against the remote branch. This was you know that local branch is no longer useful and delete it. In the first option above, it is hard to find out whether a local branch has been delivered and not longer usefu. So it is hard to delete it for cleanup.
+ - Now if you do `git branch -vv` you'll see that local branch is tracking the remote branch. 
+ - run `git fetch -p`. After this remote branch is deleted (after merge) you'll see that `git branch -vv` mentions `gone` against the remote branch. This was you know that local branch is no longer useful and delete it. In the first option above, it is hard to find out whether a local branch has been delivered and not longer usefu. So it is hard to delete it for cleanup.
  
  
  
