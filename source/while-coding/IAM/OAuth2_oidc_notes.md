@@ -38,6 +38,9 @@ What is `Grant` in `grant type` : Basically, these are different ways of getting
   - client acts on its own to access resources from resource server which are owned by client 
     itself. i.e. when client is the resource owner
   
+5) Refresh token:
+  - This grant type is used when request is sent to token endpoint, with request parameter `grant_type=refresh_token` and refresh token, to get a new access token. 
+    refer: https://www.oauth.com/oauth2-servers/making-authenticated-requests/refreshing-an-access-token/#:~:text=To%20use%20the%20refresh%20token,the%20client%20credentials%20if%20required.
 ### access token
 
   - Access token is created by authorization server, given to client to access resources on resource server.
