@@ -27,7 +27,7 @@ What is `Grant` in `grant type` : Basically, these are different ways of getting
   - benefit: more efficient than `authorization code` grant type as there are less roundtrips
   - downside: less secure as access code is shared with user-agent
   
-3) Password credentials (deprecated - only used for if client app is trusted app)
+3) Password credentials (deprecated - only used for if client app is trusted app. use auth code grant with pkce)
   - resource owner gives user-id/password credentials to client application once and client app uses these 
     credentials to get a long-lived access token
   - client doesn't store resource owner credentials once it has an access token or refresh token
