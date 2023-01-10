@@ -41,7 +41,7 @@ What is `Grant` in `grant type` : Basically, these are different ways of getting
 ### access token
 
   - Access token is created by authorization server, given to client to access resources on resource server.
-  - Access token is opaque to client.
+  - Access token can be opaque or structured token.
   - Authorization server creates an access token. It also specifies a life time duration for token when 
     creating it. A background process on authorization server keeps on checking tokens and expires them as their lifetime ends.
   - Janssen supports one token type which is bearer token as 
@@ -135,46 +135,6 @@ Notes from : https://www.udemy.com/course/enterprise-oauth-for-developers
 - No identifiers from resource_owners(users)
 - No resource enpoints
 
-## Dynamic Client Registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) notes:
-
-Registration requests send a set of desired client metadata values to the authorization
-   server.  The resulting registration responses return a client
-   identifier to use at the authorization server and the client metadata
-   values registered for the client.
-   
-   There are two separate SPECs for dynamic client registration. One from [OAuth](https://datatracker.ietf.org/doc/html/rfc7591) and another from [openid connect](https://openid.net/specs/openid-connect-registration-1_0.html). Both must be complimenting  each other somehow.
-   
-## other references
-- https://github.com/zmartzone/mod_auth_openidc/blob/master/auth_openidc.conf
-- https://curity.io/resources/learn/openid-connect-understanding-dcr/
-- https://curity.io/resources/learn/using-dynamic-client-registration/
-- https://www.youtube.com/watch?v=AsCL8kMU1iY
-- https://www.youtube.com/watch?v=WnI32e4eEuY
-- https://connect2id.com/products/server/docs/api/client-registration#initial-access
-- Very good link to understand issueing of tokens https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
-
-### about client registration in OAuth and OIDC
-- `client` registration is done by different partys
-  - `client` is a third party which wants to resources in RP. So, this client has to register with OP
-  - In OIDC, `client` is `relying party`(which may be a reverse proxy that is trying secure the RS)
-
-## OpenID Connect
-
-OpenID Connect is `authentication` layer on top of OAuth 2. Why 'on top of'? that is because OIDC adds one more token and few scopes within Oauth flows.
-
-OIDC has three flows:
-
-
-OIDC adds more scopes:
-- `openid`: requests `id token` from auth server. ID token is just a JSON token which contains basic information about user
-- `email`: requests auth server to add email information to `id token`
-- 
-
-OIDC adds `id token`
-- ID token is just a JSON token which contains basic information about user
-- so if you have mentioned `openid` scope, then in auth-code flow, when you request access token from auth server using auth-code, auth server will send you id token along with access token.
-- 
-
 
 ### OpenID Connect data sheet
 
@@ -189,6 +149,22 @@ Reference:
 - very good understanding of OIDC with respect to OAuth: 
 
   https://www.youtube.com/watch?v=VI3G4Quzsb8
+
+## OpenID Connect
+
+OpenID Connect is `authentication` layer on top of OAuth 2. Why 'on top of'? that is because OIDC adds one more token and few scopes within Oauth flows.
+
+OIDC has three flows:
+
+
+OIDC adds more scopes:
+- `openid`: requests `id token` from auth server. ID token is just a JSON token which contains basic information about user
+- `email`: requests auth server to add email information to `id token`
+
+OIDC adds `id token`
+- ID token is just a JSON token which contains basic information about user
+- so if you have mentioned `openid` scope, then in auth-code flow, when you request access token from auth server using auth-code, auth server will send you id token along with access token.
+- 
 
 
 ### OpenID Connect uses scopes differently
@@ -210,7 +186,28 @@ phone: OPTIONAL. This scope value requests access to the phone_number and phone_
 - Here you can use it in two ways, one is to use standard `authorization code` flow and other is to use `authorization code flow wit PKCE`
 
 
+## Dynamic Client Registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) notes:
 
+Registration requests send with a set of desired client metadata values to the authorization
+   server.  The resulting registration responses return a client
+   identifier to use at the authorization server and the client metadata
+   values registered for the client.
+   
+   There are two separate SPECs for dynamic client registration. One from [OAuth](https://datatracker.ietf.org/doc/html/rfc7591) and another from [openid connect](https://openid.net/specs/openid-connect-registration-1_0.html). Both must be complimenting  each other somehow.
+   
+## other references
+- https://github.com/zmartzone/mod_auth_openidc/blob/master/auth_openidc.conf
+- https://curity.io/resources/learn/openid-connect-understanding-dcr/
+- https://curity.io/resources/learn/using-dynamic-client-registration/
+- https://www.youtube.com/watch?v=AsCL8kMU1iY
+- https://www.youtube.com/watch?v=WnI32e4eEuY
+- https://connect2id.com/products/server/docs/api/client-registration#initial-access
+- Very good link to understand issueing of tokens https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
+
+### about client registration in OAuth and OIDC
+- `client` registration is done by different partys
+  - `client` is a third party which wants to resources in RP. So, this client has to register with OP
+  - In OIDC, `client` is `relying party`(which may be a reverse proxy that is trying secure the RS)
 
 
 # All flows
