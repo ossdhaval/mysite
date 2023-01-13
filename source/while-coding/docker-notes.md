@@ -184,6 +184,13 @@ docker volume rm <name>
 _**Note**_ : use volumes when you want to store data that is persisted even if you stop or remove container. Or if you want to share data across containers and machines. But if you want to store temporary data then you should use tmpfs if you are on linux. 
 https://docs.docker.com/storage/tmpfs/
 
+
+Pass environment variables at the start of the container with `-e`
+
+```
+sudo docker container run -d  -e KEYCLOAK_USER='admin' -e KEYCLOAK_PASSWORD='admin' --name custom-kc-container -p 8080:8080 custom-kc
+```
+
 ### know if the image is new or same as old
 
 you can use `inspect` command
