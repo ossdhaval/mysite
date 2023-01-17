@@ -3,6 +3,7 @@
 
 - [OAuth 2](#oauth-2)
 - [OpenID connect](#openid-connect)
+- [OAuth and OpenId Connect]
 - [all flows](#all-flows)
 - [Important terms](#important-terms)
 
@@ -190,10 +191,18 @@ phone: OPTIONAL. This scope value requests access to the phone_number and phone_
 - Here you can use it in two ways, one is to use standard `authorization code` flow and other is to use `authorization code flow wit PKCE`
 
 
+
+## OAuth and OpenId Connect
+
+- Since openid connect is built on top of oauth, there can not be an implementation of OIDC only. All the servers are 
+    oauth first and then OIDC is developed on top of that. So, every OP(OpenId Connect Provider) is also an oauth provider.
+- similarly, there can not be a client that is only oidc client. Rather, OIDC spec doesn't have definition of OIDC client. 
+    An oauth client that requires users to be authenticated is called an RP (relying party). Hence there are no two flavors
+    of clients at the time of registration.
+
 ## Client Registration
 
-### What is `client` in OAuth Vs OIDC
-- `client` in OAuth is not the same as in OIDC. 
+### What is the purpose of `client` in OAuth Vs OIDC
   - In OIDC, `client` is a server(called relying party) that wants to protect resources on resource server (RS) using authentication
   - In OAuth, `client` is a third party app server which wants to access resources in RP/RS
 
