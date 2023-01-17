@@ -199,6 +199,8 @@ phone: OPTIONAL. This scope value requests access to the phone_number and phone_
 - similarly, there can not be a client that is only oidc client. Rather, OIDC spec doesn't have definition of OIDC client. 
     An oauth client that requires users to be authenticated is called an RP (relying party). Hence there are no two flavors
     of clients at the time of registration.
+- When in Oauth context, refer to server as AS(Authorization Server) and client as client. When talking about OIDC,
+    refer to server as OP (OIDC provider) and client as RP (relying party)
 
 ## Client Registration
 
