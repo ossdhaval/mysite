@@ -4,6 +4,7 @@
 - [OAuth 2](#oauth-2)
 - [OpenID connect](#openid-connect)
 - [all flows](#all-flows)
+- [Important terms](#important-terms)
 
 ## OAuth 2 
 
@@ -196,6 +197,7 @@ phone: OPTIONAL. This scope value requests access to the phone_number and phone_
   - In OIDC, `client` is a server(called relying party) that wants to protect resources on resource server (RS) using authentication
   - In OAuth, `client` is a third party app server which wants to access resources in RP/RS
 
+
 ## Dynamic Client Registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) notes:
 
 Registration requests send with a set of desired client metadata values to the authorization
@@ -251,3 +253,7 @@ https://datatracker.ietf.org/doc/html/rfc8628
       +----------+                                +----------------+
 
                     Figure 1: Device Authorization Flow
+
+
+## Important Terms
+
