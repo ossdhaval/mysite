@@ -227,12 +227,6 @@ Registration requests send with a set of desired client metadata values to the a
 - https://connect2id.com/products/server/docs/api/client-registration#initial-access
 - Very good link to understand issueing of tokens https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
 
-### about client registration in OAuth and OIDC
-- `client` registration is done by different partys
-  - `client` is a third party which wants to resources in RP. So, this client has to register with OP
-  - In OIDC, `client` is `relying party`(which may be a reverse proxy that is trying secure the RS)
-
-
 # All flows
 
 ### Device authorization Grant
