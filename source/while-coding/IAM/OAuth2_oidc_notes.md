@@ -189,6 +189,13 @@ phone: OPTIONAL. This scope value requests access to the phone_number and phone_
 - Here you can use it in two ways, one is to use standard `authorization code` flow and other is to use `authorization code flow wit PKCE`
 
 
+## Client Registration
+
+### What is `client` in OAuth Vs OIDC
+- `client` in OAuth is not the same as in OIDC. 
+  - In OIDC, `client` is a server(called relying party) that wants to protect resources on resource server (RS) using authentication
+  - In OAuth, `client` is a third party app server which wants to access resources in RP/RS
+
 ## Dynamic Client Registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) notes:
 
 Registration requests send with a set of desired client metadata values to the authorization
