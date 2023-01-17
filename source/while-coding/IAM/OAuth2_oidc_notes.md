@@ -208,6 +208,21 @@ phone: OPTIONAL. This scope value requests access to the phone_number and phone_
   - In OIDC, `client` is a server(called relying party) that wants to protect resources on resource server (RS) using authentication
   - In OAuth, `client` is a third party app server which wants to access resources in RP/RS
 
+Major aspects of client registration is mentioned in the [OAuth spec](https://datatracker.ietf.org/doc/html/rfc6749#section-2). 
+Important points are as below:
+
+- Before initiating the protocol, the client registers with the authorization server.
+- How client authenticates with authz server is not detailed out in oAuth spec, but [mentions few](https://datatracker.ietf.org/doc/html/rfc6749#section-2.3) 
+   methods as guidelines. Janssen supports four authentication methods(client_secret_basic(default), client_secret_post,
+   client_secret_jwt, private_key_jwt). Better description of methods are given [here](https://connect2id.com/products/server/docs/guides/oauth-client-authentication#credential-types)
+
+### Data collected during registration
+
+#### Mandatory
+
+#### Mandatory with Default Values
+
+#### optional
 
 ## Dynamic Client Registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) notes:
 
