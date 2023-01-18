@@ -2232,4 +2232,50 @@ curl -k -u "1802.c0547ae9-d667-4b5d-8f4e-29556d5cc138:vajPeuiywXHf" https:/jans-
 curl -k https://jans-dynamic-ldap/jans-auth/restv1/userinfo -H "Authorization: Bearer 5b37e8fa-e4ed-435c-9ab4-3f62261c6815"
 ```
 
-- 
+## useful config-cli commands
+
+
+Enable debug by adding 
+
+```shell
+debug = true
+log_dir = /opt/jans
+```
+
+as first lines into
+
+```shell
+vim ~/.config/jans-cli.ini
+```
+
+restart cli session if already open. Debug logs are available at
+
+```shell
+vim /opt/jans/cli_debug.log
+```
+
+Get help. This lists all the possible commandline args for cli. It also lists all the possible
+operations as arguments for `--info` 
+
+```shell
+/opt/jans/jans-cli/config-cli.py --help
+```
+
+To get information about an operation 
+
+```shell
+/opt/jans/jans-cli/config-cli.py --info DefaultAuthenticationMethod
+or
+/opt/jans/jans-cli/config-cli.py --info OauthOpenidConnectClients
+```
+
+Each operation is made up of multiple `operation-id`. An operation-id may have a schema associated.
+Find that from output of above command. Find information about schema using:
+
+```shell
+/opt/jans/jans-cli/config-cli.py --schema AuthenticationMethod
+or
+/opt/jans/jans-cli/config-cli.py --schema Client
+```
+
+
