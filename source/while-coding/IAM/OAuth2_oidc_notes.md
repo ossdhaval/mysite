@@ -260,14 +260,64 @@ Authn methods can be broadly classified in Two types:
 
 [Refer 3. in this](https://darutk.medium.com/oauth-2-0-client-authentication-4b5f929305d4)
 
-## Subject type
+### Subject type
 (Jans default: public)
 Defined by OIDC [REF](https://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes) 
 
-## Sector identifier uri
+### Sector identifier uri
 (jans defaul: blank)
 Defined by OIDC section 8.1 [REF](https://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes)
  
+### Grant
+
+Jans Default selected on TUI: None 
+
+Jans supports:  
+
+"authorization_code", "refresh_token", "client_credentials", "urn:openid:params:grant-type:ciba", "urn:ietf:params:oauth:grant-type:uma-ticket", "implicit", "password", "urn:ietf:params:oauth:grant-type:token-exchange", "urn:ietf:params:oauth:grant-type:device_code"
+
+### Response types
+
+Jans Default selected on TUI: None
+
+Jans supports: all combinations of `code`, `token` and `id_token`
+
+"id_token", "token", "code", "id_token token code", "token code", "id_token token", "id_token code"
+
+### suppress authorization
+
+??
+
+### Redirect URIs
+
+### Redirect regex
+
+### Scopes
+
+------------ items below are in token category in tui --------
+
+### access token type
+
+Jans Default selected on TUI: JWT
+
+Jans supports `JWT` or `Reference` types. 
+
+### include claims in id_token
+
+Jans Default selected on TUI: blank checkbox
+
+### run introspection script before JWT access token creation
+
+Jans Default selected on TUI: blank checkbox
+
+### token binding confirmation method for id_token
+
+Jans Default selected on TUI: blank checkbox
+
+RFCs for token binding:
+https://www.rfc-editor.org/rfc/rfc8471
+https://www.rfc-editor.org/rfc/rfc8473
+https://openid.net/specs/openid-connect-token-bound-authentication-1_0.html
 
 ### Data collected during registration
 
