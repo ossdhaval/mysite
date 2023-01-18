@@ -212,9 +212,54 @@ Major aspects of client registration is mentioned in the [OAuth spec](https://da
 Important points are as below:
 
 - Before initiating the protocol, the client registers with the authorization server.
-- How client authenticates with authz server is not detailed out in oAuth spec, but [mentions few](https://datatracker.ietf.org/doc/html/rfc6749#section-2.3) 
-   methods as guidelines. Janssen supports four authentication methods(client_secret_basic(default), client_secret_post,
-   client_secret_jwt, private_key_jwt). Better description of methods are given [here](https://connect2id.com/products/server/docs/guides/oauth-client-authentication#credential-types)
+- If the client registers as `confidential` client, it has to authenticate itself everytime it requests for an access token 
+    at the token endpoint
+
+### Client authentication
+
+Ref:
+    -   https://darutk.medium.com/oauth-2-0-client-authentication-4b5f929305d4
+    -   https://connect2id.com/products/server/docs/guides/oauth-client-authentication#credential-types
+
+OAuth spec does not details out how client authenticates with authz server , but [mentions few](https://datatracker.ietf.org/doc/html/rfc6749#section-2.3)
+methods as guidelines.
+
+[OIDC](https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication) spec gives more details.
+Janssen supports all four authentication methods(client_secret_basic(default), client_secret_post,
+client_secret_jwt,  as per )
+
+Authn methods can be broadly classified in Two types:
+-   Shared secret (client_secret_basic(default), client_secret_post, client_secret_jwt)
+-   Private key (private_key_jwt)
+
+#### Shared secret
+
+##### client_secret_basic
+
+[Refer 1.4 in this](https://darutk.medium.com/oauth-2-0-client-authentication-4b5f929305d4)
+
+#### client_secret_post
+
+[Refer 1.3 in this](https://darutk.medium.com/oauth-2-0-client-authentication-4b5f929305d4)
+
+#### client_secret_jwt
+
+[Refer 1.5 in this](https://darutk.medium.com/oauth-2-0-client-authentication-4b5f929305d4)
+
+#### private_key_jwt
+
+[Refer 1.6 in this](https://darutk.medium.com/oauth-2-0-client-authentication-4b5f929305d4)
+
+#### Few more
+
+[Refer 1.7 and 1.8 in this](https://darutk.medium.com/oauth-2-0-client-authentication-4b5f929305d4)
+
+#### Considerations for FAPI
+
+[Refer 3. in this](https://darutk.medium.com/oauth-2-0-client-authentication-4b5f929305d4)
+
+
+-  . Better description of methods are given 
 
 ### Data collected during registration
 
