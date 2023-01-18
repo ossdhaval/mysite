@@ -217,6 +217,8 @@ Important points are as below:
 
 ### Client authentication
 
+(In Jans, this defaults to `client_secret_basic`)
+
 Ref:
     -   https://darutk.medium.com/oauth-2-0-client-authentication-4b5f929305d4
     -   https://connect2id.com/products/server/docs/guides/oauth-client-authentication#credential-types
@@ -258,8 +260,14 @@ Authn methods can be broadly classified in Two types:
 
 [Refer 3. in this](https://darutk.medium.com/oauth-2-0-client-authentication-4b5f929305d4)
 
+## Subject type
+(Jans default: public)
+Defined by OIDC [REF](https://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes) 
 
--  . Better description of methods are given 
+## Sector identifier uri
+(jans defaul: blank)
+Defined by OIDC section 8.1 [REF](https://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes)
+ 
 
 ### Data collected during registration
 
@@ -268,6 +276,8 @@ Authn methods can be broadly classified in Two types:
 #### Mandatory with Default Values
 
 #### optional
+
+
 
 ## Dynamic Client Registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) notes:
 
