@@ -353,8 +353,7 @@ End-User who has logged out of the OpenID Provider.
 
 Both this specification and the OpenID Connect Front-Channel Logout 1.0 [OpenID.FrontChannel] specification use 
 front-channel communication, which communicate logout requests from the OP to RPs via the User Agent. 
-In contrast, 
-the OpenID Connect Back-Channel Logout 1.0 [OpenID.BackChannel] specification uses direct back-channel communication 
+In contrast, the OpenID Connect Back-Channel Logout 1.0 [OpenID.BackChannel] specification uses direct back-channel communication 
 between the OP and RPs being logged out. The OpenID Connect RP-Initiated Logout 1.0 [OpenID.RPInitiated] specification 
 complements these specifications by defining a mechanism for a Relying Party to request that an OpenID Provider log out 
 the End-User. This specification can be used separately from or in combination with these other three specifications.
@@ -368,6 +367,8 @@ The front and back channel logout specs complement core OpenID Connect with mech
 
 The relying party must be registered to receive front or back-channel notifications. Those will be delivered only for sessions into which the relying party previously logged in a user (received an ID token)
 
+for more understanding : https://medium.com/@robert.broeckelmann/openid-connect-logout-eccc73df758f
+
 ### Front channel logout uri
 
 ### post logout redirect uris
@@ -378,10 +379,40 @@ The relying party must be registered to receive front or back-channel notificati
 
 ### Back channel logout session required
 
+------------ items below are in sofware info category in tui --------
 
+### contacts
+### authorized JS origins
+### software id
+### software version
+### software statement
 
+------------ items below are in ciba/par/uma category in tui --------
 
+### ciba
 
+#### token delivery method 
+- poll (default)
+- push
+- ping
+
+#### client notification endpoint 
+#### require user code param
+
+### PAR
+
+#### Request lifetime: zero default
+#### request PAR : check box
+
+### UMA
+
+#### PRT token type     
+- jwt
+- reference (default)
+
+#### claim redirect URI: text box
+
+#### RPT modification script: text box 
 
 ### Data collected during registration
 
