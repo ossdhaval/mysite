@@ -414,6 +414,42 @@ for more understanding : https://medium.com/@robert.broeckelmann/openid-connect-
 
 #### RPT modification script: text box 
 
+------------ items below are in Cryptograph/signing category in tui --------
+
+## Encryption/signing
+
+### client jwks uri: text
+### client jwks: text
+### other settings for algo: select
+
+------------ items below are in advance client properties category in tui --------
+
+## advance client properties
+
+### Default prompt login: checkbox
+### persist authorizations: checkbox
+### Allow spontaneous scopes: checkbox
+### spontaneous scope validation regex: text
+### initial login URI
+### request URIs: text
+### Default acr: text
+### allowed acr: text
+### TLS subject DN: text
+### Client expiration date: select
+
+------------ items below are in client scripts category in tui --------
+
+## client scripts
+
+### Spontaneous scopes: text
+### Update token: text
+### post authn: text
+### instrospection: text
+### password grant: text
+### oauth consent: text
+
+
+
 ### Data collected during registration
 
 #### Mandatory
