@@ -315,9 +315,73 @@ Jans Default selected on TUI: blank checkbox
 Jans Default selected on TUI: blank checkbox
 
 RFCs for token binding:
+
 https://www.rfc-editor.org/rfc/rfc8471
+
 https://www.rfc-editor.org/rfc/rfc8473
+
 https://openid.net/specs/openid-connect-token-bound-authentication-1_0.html
+
+for quick understanding of what token binding is, read the first few paragraphs in below:
+
+https://medium.facilelogin.com/oauth-2-0-token-binding-e84cbb2e60
+
+### access token additional audiences
+
+- see why access token needs audience: https://openid.net/specs/openid-connect-core-1_0.html#AccessTokenRedirect
+- what is audience: https://www.youtube.com/watch?v=LdyeC9Il3Cs
+
+Jans Default selected on TUI: blank
+
+### access token lifetime
+
+### refresh token lifetime
+
+### Default max auth age
+
+
+------------ items below are in Logout category in tui --------
+
+Logout is OIDC thing. Not OAuth.
+
+To understand logout, understanding session management [(spec)](https://openid.net/specs/openid-connect-session-1_0.html) is important.
+
+```shell
+This specification complements the OpenID Connect Core 1.0 [OpenID.Core] specification by defining how to monitor 
+the End-User's login status at the OpenID Provider on an ongoing basis so that the Relying Party can log out an 
+End-User who has logged out of the OpenID Provider.
+
+Both this specification and the OpenID Connect Front-Channel Logout 1.0 [OpenID.FrontChannel] specification use 
+front-channel communication, which communicate logout requests from the OP to RPs via the User Agent. 
+In contrast, 
+the OpenID Connect Back-Channel Logout 1.0 [OpenID.BackChannel] specification uses direct back-channel communication 
+between the OP and RPs being logged out. The OpenID Connect RP-Initiated Logout 1.0 [OpenID.RPInitiated] specification 
+complements these specifications by defining a mechanism for a Relying Party to request that an OpenID Provider log out 
+the End-User. This specification can be used separately from or in combination with these other three specifications.
+```
+
+The front and back channel logout specs complement core OpenID Connect with mechanisms for notifying concerned relying parties that an end-user has been logged out of the identity provider:
+
+- The front-channel logout mechanism[(spec)](https://openid.net/specs/openid-connect-frontchannel-1_0.html) notifies the relying party by calling a URL via a hidden browser iframe.
+
+- The back-channel logout mechanism[(spec)] submits the notification as a special logout token (JWT) that is posted directly to the relying party
+
+The relying party must be registered to receive front or back-channel notifications. Those will be delivered only for sessions into which the relying party previously logged in a user (received an ID token)
+
+### Front channel logout uri
+
+### post logout redirect uris
+
+### Back channel logout uri
+
+### Front channel logout session required
+
+### Back channel logout session required
+
+
+
+
+
 
 ### Data collected during registration
 
