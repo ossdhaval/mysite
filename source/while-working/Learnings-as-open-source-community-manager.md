@@ -33,6 +33,11 @@ Google technical writting style: https://developers.google.com/tech-writing
 #### Good tools
 
 - Developer portals : https://backstage.io/
+- cloud software licensing: https://licensespring.com/
+
+Flow of implementation of licensespring in gluu flix licensing:
+![image](https://user-images.githubusercontent.com/343411/214495951-385f4b4e-7830-4d2d-b33f-e233baf9ea40.png)
+
 
 #### Live examples:
 
