@@ -416,6 +416,13 @@ for more understanding : https://medium.com/@robert.broeckelmann/openid-connect-
 
 ------------ items below are in Cryptograph/signing category in tui --------
 
+remember: as per [section 10](https://openid.net/specs/openid-connect-core-1_0.html#SigEnc) the jwks and keys used for signing and encryption
+are used across all places where encryption and signing is required. See the excerpt below:
+
+```
+Depending on the transport through which the messages are sent, the integrity of the message might not be guaranteed and the originator of the message might not be authenticated. To mitigate these risks, ID Token, UserInfo Response, Request Object, and Client Authentication JWT values can utilize
+```
+
 ## Encryption/signing
 
 ### client jwks uri: text
