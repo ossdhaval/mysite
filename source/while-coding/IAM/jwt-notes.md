@@ -30,3 +30,4 @@
 ## Notes:
 
 - JWT is not an authentication mechanism, it comes into picture after trust has been established (may be via authentication or in some other way)
+- Relation between `pem` and `jwks`: https://community.auth0.com/t/jwk-vs-pem-what-is-the-difference/61927
