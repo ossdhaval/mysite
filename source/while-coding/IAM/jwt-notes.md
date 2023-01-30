@@ -16,17 +16,15 @@
 - `part3` is signature
   - signature = Algo(encoded header, encoded payload, secret key)
   - So, the party on the other side, should be able to derive the same signature if it has the secret key. If the other party can do it successfully,
-    is sure about two things.
+    is sure about one thing.
     - No body has tempered with the data
-    - the sender is the actual trusted user
   - the secret key can be a shared secret between client and the server, or it can be done using private key/public key pair. 
   - In the key pair scenario, 
     - one party can give the public key to the other party
     - then use private key to create signature and create JWT with it
     - other party can use the public key to generate the same signature using public key
-  - Remember, the signature is not for hiding the data (encryption), rather it is for checking integrity of the data and making sure that sending party is
-    someone who we trust (already authenticated)
-- they are separated by periods
+  - Remember, the signature is not for hiding the data (encryption), or authentication mechanism. It is for checking integrity of the data. i.e If someone steals JWT from my request, that person can easily impersonate me.
+- Three parts of JWT are separated by periods
 - Use [debugger at jwt.io](jwt.io) to see what is in the JWT
 
 ## Notes:
