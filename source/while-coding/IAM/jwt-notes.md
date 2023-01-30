@@ -24,7 +24,11 @@
     - one party can give the public key to the other party
     - then use private key to create signature and create JWT with it
     - other party can use the public key to generate the same signature using public key
-  - Remember, the signature is not for hiding the data (encryption), rather it is for authenticity of data and the sending party
+  - Remember, the signature is not for hiding the data (encryption), rather it is for checking integrity of the data and making sure that sending party is
+    someone who we trust (already authenticated)
 - they are separated by periods
 - Use [debugger at jwt.io](jwt.io) to see what is in the JWT
-- 
+
+## Notes:
+
+- JWT is not an authentication mechanism, it comes into picture after trust has been established (may be via authentication or in some other way)
