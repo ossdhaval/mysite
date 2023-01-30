@@ -197,6 +197,8 @@ https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-
 
 - `e`	Open source code file in the Edit file tab
 - `ctrl+s` write commit message
+- `.` to open Quick IDE at github.dev
+- `ctrl+k` to open command palette
 
 [full list](https://docs.github.com/en/get-started/using-github/keyboard-shortcuts#about-keyboard-shortcuts)
 
