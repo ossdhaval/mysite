@@ -262,3 +262,12 @@ Reference:
 This worked perfectly :
 
 https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+## Docker compose build and redeploy code
+
+```
+sudo docker-compose ps
+sudo docker-compose build
+sudo docker-compose rm
+sudo docker-compose up
+```
