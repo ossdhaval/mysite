@@ -485,6 +485,10 @@ Registration requests send with a set of desired client metadata values to the a
 - https://connect2id.com/products/server/docs/api/client-registration#initial-access
 - Very good link to understand issueing of tokens https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
 
+Notes:
+
+- sometimes people use DCR acronym to refer to `dynamic client request` and sometimes DCR means `dynamic client registration`. Dynamic client request is the request
+made to register the client dynamically. For example, in statement `In OpenBanking case DCR (Dynamic Client Request) is signed and must contain SSA (Software Statement Assertion) inside it.` DCR means the request.
 # All flows
 
 ### Device authorization Grant
