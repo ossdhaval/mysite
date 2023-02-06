@@ -53,3 +53,8 @@
    
  - it seems that some endpoints authenticate clients, but there are certain endpoints that authenticate user. See if condition at [line](https://github.com/JanssenProject/jans/blob/9c68f914e155de492e54121033c8f0ed45d66817/jans-auth-server/server/src/main/java/io/jans/as/server/auth/AuthenticationFilter.java#L383). For these endpoints it'll invoke client auth, and for rest of the endpoints it'll invoke user auth.
  - actual method that compares clientId and secret with what is stored in backend is the `authenticate` method in `ClientService` class. [here](https://github.com/JanssenProject/jans/blob/f793f92fa275da2e57b2302dcb5c6fdb27666e67/jans-auth-server/server/src/main/java/io/jans/as/server/service/ClientService.java#L106)
+
+### code for redirect URI
+
+- `io.jans.as.server.service.RedirectionUriService.validateRedirectionUri()` : is where incoming URI from various requests get compared with what is registered by client
+- 
