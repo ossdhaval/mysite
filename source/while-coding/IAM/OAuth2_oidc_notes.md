@@ -478,6 +478,8 @@ Registration requests send with a set of desired client metadata values to the a
    
    There are two separate SPECs for dynamic client registration. One from [OAuth](https://datatracker.ietf.org/doc/html/rfc7591) and another from [openid connect](https://openid.net/specs/openid-connect-registration-1_0.html). Both must be complimenting  each other somehow.
    
+   **Usecases**: very useful for understanding and choices: https://www.rfc-editor.org/rfc/rfc7591#appendix-A
+   
 ## other references
 - https://github.com/zmartzone/mod_auth_openidc/blob/master/auth_openidc.conf
 - https://curity.io/resources/learn/openid-connect-understanding-dcr/
@@ -500,7 +502,8 @@ made to register the client dynamically. For example, in statement `In OpenBanki
   -  dcrSignatureValidationSoftwareStatementJwksURIClaim
   -  dcrSignatureValidationSoftwareStatementJwksClaim
 
-- https://www.rfc-editor.org/rfc/rfc7591#section-2.3
+- Software statements: https://www.rfc-editor.org/rfc/rfc7591#section-2.3
+- 
 
 # All flows
 
