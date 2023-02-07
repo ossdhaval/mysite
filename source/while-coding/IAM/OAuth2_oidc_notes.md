@@ -276,6 +276,8 @@ Jans supports:
 
 "authorization_code", "refresh_token", "client_credentials", "urn:openid:params:grant-type:ciba", "urn:ietf:params:oauth:grant-type:uma-ticket", "implicit", "password", "urn:ietf:params:oauth:grant-type:token-exchange", "urn:ietf:params:oauth:grant-type:device_code"
 
+[Relationship between Grant Types and Response Types](https://www.rfc-editor.org/rfc/rfc7591#section-2.1)
+
 ### Response types
 
 Jans Default selected on TUI: None
@@ -489,6 +491,17 @@ Notes:
 
 - sometimes people use DCR acronym to refer to `dynamic client request` and sometimes DCR means `dynamic client registration`. Dynamic client request is the request
 made to register the client dynamically. For example, in statement `In OpenBanking case DCR (Dynamic Client Request) is signed and must contain SSA (Software Statement Assertion) inside it.` DCR means the request.
+
+## Software Statement Assertions (SSA)
+
+- Can be controlled using feature flag
+- Relevent config properties:
+  -  softwareStatementValidationType
+  -  dcrSignatureValidationSoftwareStatementJwksURIClaim
+  -  dcrSignatureValidationSoftwareStatementJwksClaim
+
+- https://www.rfc-editor.org/rfc/rfc7591#section-2.3
+
 # All flows
 
 ### Device authorization Grant
