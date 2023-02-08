@@ -15,16 +15,13 @@
   - is the actual data that is base64 encoded. And it can be easily decoded to get actual data without any key etc
 - `part3` is signature
   - signature = Algo(encoded header, encoded payload, secret key)
-  - So, the party on the other side, should be able to derive the same signature if it has the secret key. If the other party can do it successfully,
-    is sure about one thing.
-    - No body has tempered with the data
-  - the secret key can be a shared secret between client and the server, or it can be done using private key/public key pair. 
-  - In the key pair scenario, 
-    - one party can give the public key to the other party
-    - then use private key to create signature and create JWT with it
-    - other party can use the public key to generate the same signature using public key
-  - Remember, the signature is not for hiding the data (encryption), or authentication mechanism. It is for checking integrity of the data. i.e If someone steals JWT from my request, that person can easily impersonate me.
+  - So the signature is not just a simple hash of encoded header and encoded payload. It is a hash done with a secret key. Hence, if the header or the payload has changed or if you don't have the same secret key (or private-public key), they same signature can not be generated.
 - Three parts of JWT are separated by periods
+- Usage: 
+  - Message integrity: JWT signature verification ensures that data in the header and payload has not been tempered with.
+  - Authentication: 
+    - You can ensure that the JWT was actually signed by you yourself. For example, JWT access token was indeed issued by itself because it can varify the signature using the same secret it has.
+    - You can ensure that JWT is coming from an trusted party. For example, a client can share JWKS(i.e public keys) with server during registration, then send JWT by signing it using its private key. When server receives JWT, it can verify signature using public keys and be sure that JWT was indeed sent by the intended client.
 - Use [debugger at jwt.io](jwt.io) to see what is in the JWT
 
 ## Notes:
