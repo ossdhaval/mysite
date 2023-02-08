@@ -505,6 +505,7 @@ made to register the client dynamically. For example, in statement `In OpenBanki
 
 - Very little material is available around software statements and SSA. Below is a list
   - Software statements: https://www.rfc-editor.org/rfc/rfc7591#section-2.3
+  - How to create software statement, SSA and perform DCR in Openbanking: https://www.youtube.com/playlist?list=PLB4KVrA_iiEHiTHd0ZGLcPUkEuslABfdJ
   - Good videos which show how software statements are used in Open banking. Good for understanding: https://www.youtube.com/watch?v=YeviOSq1jjU&t=173s
 
 # All flows
