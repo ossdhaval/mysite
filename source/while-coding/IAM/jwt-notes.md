@@ -28,6 +28,7 @@
 
 - JWT is not an authentication mechanism, it comes into picture after trust has been established (may be via authentication or in some other way)
 - Relation between `pem` and `jwks`: https://community.auth0.com/t/jwk-vs-pem-what-is-the-difference/61927
+- Good article: https://www.pingidentity.com/en/resources/blog/post/jwt-security-nobody-talks-about.html
 
 ## Creating JWT using command-line
 
@@ -96,3 +97,50 @@
 - Use this JWT in request to the server. As mentioned earlier, the server must have public key registered as part of 
   the client registration process in order to verify the JWT in the request.
 
+## JWT JWS and JWE
+
+JWS and JWE are types or methods of creating JWTs. All of them have different specifications: [JWT](https://www.rfc-editor.org/rfc/rfc7519), [JWS](https://www.rfc-editor.org/rfc/rfc7515), [JWE](https://www.rfc-editor.org/rfc/rfc7516).
+
+JWT can be of three types (there is nothing like plain vanila JWT). Unsecured, JWS or JWE
+
+- Unsecured JWT. Structure here, there are two dots but third part is missing:
+  
+  ```
+  h3k4h5345k34j.34k5j3k4jrlkafi.
+  ```
+  
+- JWS 
+  - `JWS Compact Serialization`: Structure has two dots and all three parts, as specified [here](https://www.rfc-editor.org/rfc/rfc7515#section-3.1). The most widely used representation of JWT.
+    
+    ```
+    h3k4h5345k34j.34k5j3k4jrlkafi.k43jkj34jdfhw
+    ```
+  - `JWS JSON Serialization`: Structure here is like a JSON. As specified [here](https://www.rfc-editor.org/rfc/rfc7515#section-7.2.1). And it looks like:
+  
+    ```
+    {
+      "payload":"<payload contents>",
+      "signatures":[
+       {"protected":"<integrity-protected header 1 contents>",
+        "header":<non-integrity-protected header 1 contents>,
+        "signature":"<signature 1 contents>"},
+       ...
+       {"protected":"<integrity-protected header N contents>",
+        "header":<non-integrity-protected header N contents>,
+        "signature":"<signature N contents>"}]
+    }
+    ```
+  - `Flattened JWS JSON Serialization`: Structure here is like a JSON. As specified [here](https://www.rfc-editor.org/rfc/rfc7515#section-7.2.2). And it looks like:
+  
+    ```
+    {
+      "payload":"<payload contents>",
+      "protected":"<integrity-protected header contents>",
+      "header":<non-integrity-protected header contents>,
+      "signature":"<signature contents>"
+     }
+    ```
+    
+- JWE
+   
+   **TBD**
