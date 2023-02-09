@@ -496,6 +496,17 @@ made to register the client dynamically. For example, in statement `In OpenBanki
 
 ## Software Statement Assertions (SSA)
 
+- Software statement Vs Software Statement Assertions (SSA), are these to different?
+
+  Yes, Excerpt from [here](https://docs.jans.io/v1.0.6/admin/auth-server/endpoints/client-registration/#5-special-mention-about-fapi)
+  
+  ```
+  In case of a typical client registration request in FAPI implementation, the request object which is a signed JWT (as seen in point 3) is also called     an SSA (Software statement Assertion) or DCR payload. This SSA can contain the software_statement inside it which is also a signed JWT. Each of the       JWTs, the outer JWT called the SSA and the inner JWT called the software_statement are signed by different entities - the TPP and OBIE respectively.
+  ```
+
+Usage:
+- In authenticating client
+- In registering client (DCR)
 
 - Can be controlled using feature flag
 - Relevent config properties:
