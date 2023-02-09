@@ -99,7 +99,7 @@
 
 ## JWT JWS and JWE
 
-JWS and JWE are types or methods of creating JWTs. All of them have different specifications: [JWT](https://www.rfc-editor.org/rfc/rfc7519), [JWS](https://www.rfc-editor.org/rfc/rfc7515), [JWE](https://www.rfc-editor.org/rfc/rfc7516). JWT specification defines basic structure of JWT. Meaning it should have a header, payload and third part should be signature. This specification also defines some of the keys in [header](https://www.rfc-editor.org/rfc/rfc7519#section-5) and [payload](https://www.rfc-editor.org/rfc/rfc7519#section-4.1) with their meanings, values etc. Then it leaves the room open for generating the third part using JWS or JWE. Whether it is JWS or JWE is decided by value of header elements like `typ` and `cty`.
+JWS and JWE are types or methods of creating JWTs. All of them have different specifications: [JWT](https://www.rfc-editor.org/rfc/rfc7519), [JWS](https://www.rfc-editor.org/rfc/rfc7515), [JWE](https://www.rfc-editor.org/rfc/rfc7516). JWT specification defines basic structure of JWT. Meaning it should have a header, payload and third part should be signature. This specification also defines some of the keys in [header](https://www.rfc-editor.org/rfc/rfc7519#section-5) and [payload](https://www.rfc-editor.org/rfc/rfc7519#section-4.1) with their meanings, values etc. Then it leaves the room open for generating the third part using JWS or JWE. Whether it is JWS or JWE is decided by value of header elements like `typ` and `cty` and algo used. List of algo for each is [here](https://docs.jans.io/v1.0.6/admin/auth-server/crypto/keys/)
 
 JWT can be of three types (there is nothing like plain vanila JWT). Unsecured, JWS or JWE
 
