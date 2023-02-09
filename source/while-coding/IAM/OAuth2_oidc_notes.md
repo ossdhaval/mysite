@@ -494,9 +494,54 @@ Notes:
 - sometimes people use DCR acronym to refer to `dynamic client request` and sometimes DCR means `dynamic client registration`. Dynamic client request is the request
 made to register the client dynamically. For example, in statement `In OpenBanking case DCR (Dynamic Client Request) is signed and must contain SSA (Software Statement Assertion) inside it.` DCR means the request.
 
+## Assertion
+
+As defined in [OAuth Assertion Framework]([https://www.rfc-editor.org/rfc/rfc7521#section-1](https://www.rfc-editor.org/rfc/rfc7521#section-3))
+
+```
+An assertion is a package of information that allows identity and
+security information to be shared across security domains.  An
+assertion typically contains information about a subject or
+principal, information about the party that issued the assertion and
+when was it issued, and the conditions under which the assertion is
+to be considered valid, such as when and where it can be used.
+
+The entity that creates and signs or integrity-protects the assertion
+is typically known as the "Issuer", and the entity that consumes the
+assertion and relies on its information is typically known as the
+"Relying Party".  In the context of this document, the authorization
+server acts as a relying party.
+
+```
+
+- assertions MUST be signed or signed+encrypted
+- there are two common patterns by which client can obtain 
+  - issued by third party (also called `security token service`, `token service`) ( see, now at this point, `assertion` is being called `token`. This is the reason behind token often being called assertion in general.)
+  - client creates assertions locally (using shared secret or private-public key pair). Although assertions are usually used to convey identity and     security information, self-issued assertions can also serve a different purpose.  They can be used to demonstrate knowledge of some secret, such as a client secret, without actually communicating the secret directly in the transaction.
+
+From the perspective of what must be done by the entity presenting the assertion, there are two general types of assertions:
+
+- **Bearer Assertions**: (Note: this is the origin of `bearer` token). Any entity in possession of a bearer assertion (the bearer) can use it to get access to the associated resources (without demonstrating possession of a cryptographic key).  To prevent misuse, bearer assertions need to be protected from disclosure in storage and in transport.  Secure communication channels are required between all entities to avoid leaking the assertion to unauthorized parties.
+
+- **Holder-of-Key Assertions**: To access the associated resources, the entity presenting the assertion must demonstrate possession of additional cryptographic material.  The token service thereby binds a key identifier to the assertion, and the client has to demonstrate to the relying party that it knows the key corresponding to that identifier when presenting the assertion.
+
 ## Software Statement
 
-- Defining Software statements: https://www.rfc-editor.org/rfc/rfc7591#section-2.3
+- Defining Software statements: Under https://datatracker.ietf.org/doc/html/rfc7591#section-1.2
+
+  ```
+  A digitally signed or MACed JSON Web Token (JWT) [RFC7519] that
+  asserts metadata values about the client software.  In some cases,
+  a software statement will be issued directly by the client
+  developer.  In other cases, a software statement will be issued by
+  a third-party organization for use by the client developer.  In
+  both cases, the trust relationship the authorization server has
+  with the issuer of the software statement is intended to be used
+  as an input to the evaluation of whether the registration request
+  is accepted.  A software statement can be presented to an
+  authorization server as part of a client registration request.
+  ```
+  
 - Software statement can be signed by organization that is developing the client or a third party.
 
 Usage:
@@ -522,7 +567,9 @@ Usage:
 
 ## Software Statement Assertions (SSA)
 
-- Software statement Vs Software Statement Assertions (SSA), are these to different?
+- It is defined here: https://openbankinguk.github.io/dcr-docs-pub/v3.3/dynamic-client-registration.html#software-statement
+
+- Software statement Vs Software Statement Assertions (SSA), are these two different?
 
   Yes, Excerpt from [here](https://docs.jans.io/v1.0.6/admin/auth-server/endpoints/client-registration/#5-special-mention-about-fapi)
   
