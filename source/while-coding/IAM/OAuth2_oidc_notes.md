@@ -494,6 +494,32 @@ Notes:
 - sometimes people use DCR acronym to refer to `dynamic client request` and sometimes DCR means `dynamic client registration`. Dynamic client request is the request
 made to register the client dynamically. For example, in statement `In OpenBanking case DCR (Dynamic Client Request) is signed and must contain SSA (Software Statement Assertion) inside it.` DCR means the request.
 
+## Software Statement
+
+- Defining Software statements: https://www.rfc-editor.org/rfc/rfc7591#section-2.3
+- Software statement can be signed by organization that is developing the client or a third party.
+
+Usage:
+- In authenticating client
+- In registering client (DCR)
+
+### In Authenticating Client
+
+### In Dynamic Client Registration
+- When presented to the authorization server as part of a client registration request, the software statement MUST contain an "iss" (issuer) claim denoting the party attesting to the claims in the software statement.
+
+- Can be controlled using feature flag
+- Relevent config properties:
+  -  softwareStatementValidationType
+  -  dcrSignatureValidationSoftwareStatementJwksURIClaim
+  -  dcrSignatureValidationSoftwareStatementJwksClaim
+
+- Very little material is available around software statements and SSA. Below is a list
+  
+  - How to create software statement, SSA and perform DCR in Openbanking: https://www.youtube.com/playlist?list=PLB4KVrA_iiEHiTHd0ZGLcPUkEuslABfdJ
+  - Good videos which show how software statements are used in Open banking. Good for understanding: https://www.youtube.com/watch?v=YeviOSq1jjU&t=173s
+
+
 ## Software Statement Assertions (SSA)
 
 - Software statement Vs Software Statement Assertions (SSA), are these to different?
@@ -503,21 +529,6 @@ made to register the client dynamically. For example, in statement `In OpenBanki
   ```
   In case of a typical client registration request in FAPI implementation, the request object which is a signed JWT (as seen in point 3) is also called     an SSA (Software statement Assertion) or DCR payload. This SSA can contain the software_statement inside it which is also a signed JWT. Each of the       JWTs, the outer JWT called the SSA and the inner JWT called the software_statement are signed by different entities - the TPP and OBIE respectively.
   ```
-
-Usage:
-- In authenticating client
-- In registering client (DCR)
-
-- Can be controlled using feature flag
-- Relevent config properties:
-  -  softwareStatementValidationType
-  -  dcrSignatureValidationSoftwareStatementJwksURIClaim
-  -  dcrSignatureValidationSoftwareStatementJwksClaim
-
-- Very little material is available around software statements and SSA. Below is a list
-  - Software statements: https://www.rfc-editor.org/rfc/rfc7591#section-2.3
-  - How to create software statement, SSA and perform DCR in Openbanking: https://www.youtube.com/playlist?list=PLB4KVrA_iiEHiTHd0ZGLcPUkEuslABfdJ
-  - Good videos which show how software statements are used in Open banking. Good for understanding: https://www.youtube.com/watch?v=YeviOSq1jjU&t=173s
 
 # All flows
 
