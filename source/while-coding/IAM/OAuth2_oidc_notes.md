@@ -525,6 +525,12 @@ From the perspective of what must be done by the entity presenting the assertion
 
 - **Holder-of-Key Assertions**: To access the associated resources, the entity presenting the assertion must demonstrate possession of additional cryptographic material.  The token service thereby binds a key identifier to the assertion, and the client has to demonstrate to the relying party that it knows the key corresponding to that identifier when presenting the assertion.
 
+- Assertion framework itself doesn't specify format(like JSON etc) but it [points](https://www.rfc-editor.org/rfc/rfc7521#section-7) to SAML and JWT specs for implementation details. JWT, as we know, is the more prefered and widely used. So this is how assertions, tokens and JWT are connected to each other via OAuth Assertion Framework.
+
+This spec details two usages of assertions (read JWT) in two ways when communicating to `token endpoint`:
+- Using Assertions as Authorization Grants
+- Using Assertions for Client Authentication (from here the client authn methods of `client_secret_jwt` and `private_key_jwt` originates)
+
 ## Software Statement
 
 - Defining Software statements: Under https://datatracker.ietf.org/doc/html/rfc7591#section-1.2
