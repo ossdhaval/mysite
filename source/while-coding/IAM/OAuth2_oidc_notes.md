@@ -549,6 +549,14 @@ This spec details two usages of assertions (read JWT) in two ways when communica
   ```
   
 - Software statement can be signed by organization that is developing the client or a third party.
+- [this section](https://datatracker.ietf.org/doc/html/rfc7591#section-2.3) also says:
+
+  ```
+  In some cases, authorization servers MAY choose to accept a software
+  statement value directly as a client identifier in an authorization
+  request, without a prior dynamic client registration having been
+  performed.
+  ```
 
 Usage:
 - In authenticating client
