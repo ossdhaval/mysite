@@ -583,6 +583,20 @@ Usage:
   In case of a typical client registration request in FAPI implementation, the request object which is a signed JWT (as seen in point 3) is also called     an SSA (Software statement Assertion) or DCR payload. This SSA can contain the software_statement inside it which is also a signed JWT. Each of the       JWTs, the outer JWT called the SSA and the inner JWT called the software_statement are signed by different entities - the TPP and OBIE respectively.
   ```
 
+## JWT usecases
+
+### in authorization grant
+
+see [this](https://www.rfc-editor.org/rfc/rfc7523#section-2.1)
+
+### in client authentication
+
+see [this](https://www.rfc-editor.org/rfc/rfc7523#section-2.2)
+
+### in dynamic client registration
+
+### what is special about software statement
+
 # All flows
 
 ### Device authorization Grant
