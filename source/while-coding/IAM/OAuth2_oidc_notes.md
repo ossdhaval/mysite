@@ -16,6 +16,8 @@
 
 What is `Grant` in `grant type` : Basically, these are different ways of getting Granted an access token. All grant types has only one aim: to get access token. Because of different types of clients (confidential(backend) vs Public(SPA, mobile phone and desktop based native apps)) have different capabilities of protecting access tokens, there are different grant types.
 
+Grant types become part of request to token endpoint, with parameter, `grant_type` and 
+
 1) Authorization code
   - Uses an authorization server
   - benefit: protects access code by not sharing it with user agent and uses authorization code to do that
@@ -31,7 +33,10 @@ What is `Grant` in `grant type` : Basically, these are different ways of getting
   - This grant type is used when request is sent to token endpoint, with request parameter `grant_type=refresh_token` and refresh token, to get a new access token. 
     refer: https://www.oauth.com/oauth2-servers/making-authenticated-requests/refreshing-an-access-token/#:~:text=To%20use%20the%20refresh%20token,the%20client%20credentials%20if%20required.
   
-4) Implicit ([removed in oauth 2.1](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-07#name-removal-of-the-oauth-20-imp) : this is now deprecated and replaced by Authorization code with PKCE)
+4) Implicit : 
+   
+   Note: Though pure implicit grant is discouraged and [removed in oauth 2.1](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-07#name-removal-of-the-oauth-20-imp). You can safely use variant like [Implicit Flow with Form Post](https://auth0.com/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post) when you just want an ID token and don't want to get an access token to access resources later. If your usecases also need to request access token as well then use Authorization code with PKCE
+   
   - used by client application that are built in scripting languages
   - it doesn't use authorization code and directly gives out access token to user-agent
   - benefit: more efficient than `authorization code` grant type as there are less roundtrips
@@ -44,6 +49,14 @@ What is `Grant` in `grant type` : Basically, these are different ways of getting
   - benefit: simplified workflown when dealing with a trusted client
   - downside: very insecure as client gets the credentials
   
+6) Extension Grants
+As defined in: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-07#section-4.4
+
+Auth server can define and many other RFCs have created their own standard extension grants. For example, [here](https://www.rfc-editor.org/rfc/rfc8628.html#section-3.4) the device code grant RFC defines it's own grant (extension grant) `urn:ietf:params:oauth:grant-type:device_code`.
+
+### Flows:
+
+Usually, type of grant is the also the flow that you are using. But there can be flows that use combination of grants. Like [hybrid](https://auth0.com/docs/get-started/authentication-and-authorization-flow/hybrid-flow) flow.
 
 ### access token
 
