@@ -7,9 +7,9 @@
 - [all flows](#all-flows)
 - [Important terms](#important-terms)
 
-## OAuth 2 
+## OAuth 2/2.1
 
-([RFC6749](https://datatracker.ietf.org/doc/html/rfc6749))
+([oauth 2](https://datatracker.ietf.org/doc/html/rfc6749)) and [oauth 2.1](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-07)
 
 
 ### Grant types:
@@ -22,27 +22,29 @@ What is `Grant` in `grant type` : Basically, these are different ways of getting
   - benefit: also authenticates client when it requests access code using authorization code
   - downside: more round trips than implicit flow
   - Authorization code -> access code -> 
+
+2) Client credentials
+  - client acts on its own to access resources from resource server which are owned by client 
+    itself. i.e. when client is the resource owner
   
-2) Implicit (this is now deprecated and replaced by Authorization code with PKCE)
+3) Refresh token:
+  - This grant type is used when request is sent to token endpoint, with request parameter `grant_type=refresh_token` and refresh token, to get a new access token. 
+    refer: https://www.oauth.com/oauth2-servers/making-authenticated-requests/refreshing-an-access-token/#:~:text=To%20use%20the%20refresh%20token,the%20client%20credentials%20if%20required.
+  
+4) Implicit ([removed in oauth 2.1](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-07#name-removal-of-the-oauth-20-imp) : this is now deprecated and replaced by Authorization code with PKCE)
   - used by client application that are built in scripting languages
   - it doesn't use authorization code and directly gives out access token to user-agent
   - benefit: more efficient than `authorization code` grant type as there are less roundtrips
   - downside: less secure as access code is shared with user-agent
   
-3) Password credentials (deprecated - only used for if client app is trusted app. use auth code grant with pkce)
+5) Password credentials ([removed in oAuth 2.1](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-07#name-differences-from-oauth-20) - only used for if client app is trusted app. use auth code grant with pkce)
   - resource owner gives user-id/password credentials to client application once and client app uses these 
     credentials to get a long-lived access token
   - client doesn't store resource owner credentials once it has an access token or refresh token
   - benefit: simplified workflown when dealing with a trusted client
   - downside: very insecure as client gets the credentials
   
-4) Client credentials
-  - client acts on its own to access resources from resource server which are owned by client 
-    itself. i.e. when client is the resource owner
-  
-5) Refresh token:
-  - This grant type is used when request is sent to token endpoint, with request parameter `grant_type=refresh_token` and refresh token, to get a new access token. 
-    refer: https://www.oauth.com/oauth2-servers/making-authenticated-requests/refreshing-an-access-token/#:~:text=To%20use%20the%20refresh%20token,the%20client%20credentials%20if%20required.
+
 ### access token
 
   - Access token is created by authorization server, given to client to access resources on resource server.
