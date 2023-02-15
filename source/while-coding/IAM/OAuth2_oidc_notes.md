@@ -56,6 +56,16 @@ Auth server can define and many other RFCs have created their own standard exten
 
 ### Flows:
 
+| flow | response type | grant | other imp params | comments |
+| ---- | ----- | ------------- | ---------------- | -------- |
+| [Authorization Code Flow](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-07#name-authorization-code-grant) | `response_type=code` | `grant_type=authorization_code` | `scope=openid%20name%20picture&` | Suitable when you have a `confidential` client |
+| Authorization Code Flow with Proof Key for Code Exchange (PKCE) | `code` | `code` | other imp params | comments 
+| Implicit Flow with Form Post | `code` | `code` | other imp params | Suitable when application just needs user details(id_token) and doesn't need to request access token from token endpoint to make API calls |
+| Hybrid Flow | `code` | `code` | other imp params | comments |
+| Client Credentials Flow | `code` | `code` | other imp params | comments |
+| Device Authorization Flow | `code` | `code` | other imp params | comments |
+| Resource Owner Password Flow | `code` | `code` | other imp params | comments |
+
 Usually, type of grant is the also the flow that you are using. But there can be flows that use combination of grants. Like [hybrid](https://auth0.com/docs/get-started/authentication-and-authorization-flow/hybrid-flow) flow.
 
 ### access token
