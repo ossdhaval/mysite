@@ -60,15 +60,15 @@ Auth server can define and many other RFCs have created their own standard exten
   - `response_type=` param in request to `authorize` endpoint
   - `grant_type=` param in request to `token` endpoint
 
-| flow                              | response type | grant                | other imp params                 | comments                                                                                                                                   |
-|-----------------------------------|---------------|----------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| Authorization Code Flow           | `code`        | `authorization_code` | `scope=openid%20name%20picture&` | Suitable when you have a `confidential` client                                                                                             |
-| Authorization Code Flow with PKCE | `code`        | `code`               | other imp params                 | comments                                                                                                                                   |
-| Implicit Flow with Form Post      | `code`        | `code`               | other imp params                 | Suitable when application just needs user details(id_token) and doesn't need to request access token from token endpoint to make API calls |
-| Hybrid Flow                       | `code`        | `code`               | other imp params                 | comments                                                                                                                                   |
-| Client Credentials Flow           | `code`        | `code`               | other imp params                 | comments                                                                                                                                   |
-| Device Authorization Flow         | `code`        | `code`               | other imp params                 | comments                                                                                                                                   |
-| Resource Owner Password Flow      | `code`        | `code`               | other imp params                 | comments                                                                                                                                   |
+| flow                              | response type    | grant                | other imp params                 | comments                                                                                                                                   |
+|-----------------------------------|------------------|----------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| Authorization Code Flow           | `code`           | `authorization_code` | `scope=openid%20name%20picture&` | Suitable when you have a `confidential` client that can safely store client credentials, like an app running on server                     |
+| Authorization Code Flow with PKCE | `code`           | `code`               | other imp params                 | Use this grant type for applications that cannot store a client secret, such as native or single-page apps                                 |
+| Implicit Flow with Form Post      | `id_token token` | `code`               | other imp params                 | Suitable when application just needs user details(id_token) and doesn't need to request access token from token endpoint to make API calls |
+| Hybrid Flow                       | `code`           | `code`               | other imp params                 | comments                                                                                                                                   |
+| Client Credentials Flow           | `code`           | `code`               | other imp params                 | comments                                                                                                                                   |
+| Device Authorization Flow         | `code`           | `code`               | other imp params                 | comments                                                                                                                                   |
+| Resource Owner Password Flow      | `code`           | `code`               | other imp params                 | comments                                                                                                                                   |
 
 Usually, type of grant is the also the flow that you are using. But there can be flows that use combination of grants. Like [hybrid](https://auth0.com/docs/get-started/authentication-and-authorization-flow/hybrid-flow) flow.
 
@@ -115,6 +115,134 @@ Usually, type of grant is the also the flow that you are using. But there can be
   "token_type": "Bearer"
   }
   ```
+
+#### [Authorization Code Flow with PKCE](https://www.rfc-editor.org/rfc/rfc7636)
+
+
+- Request to get the code from authorize endpoint
+
+  ```json
+  https://{yourDomain}/authorize?
+  response_type=code&
+  code_challenge=E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM&
+  code_challenge_method=S256&
+  client_id={yourClientId}&
+  redirect_uri={yourCallbackUrl}&
+  scope=openid%20profile&
+  state=xyzABC123
+   ```
+
+- Response should be similar to
+
+  ```
+  HTTP/1.1 302 Found
+  Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
+  ```
+
+- Request token to token endpoint
+
+  ```json
+  curl --request POST \
+  --url 'https://{yourDomain}/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data grant_type=authorization_code \
+  --data 'client_id={yourClientId}' \
+  --data 'code_verifier={yourGeneratedCodeVerifier}' \
+  --data 'code={yourAuthorizationCode}' \
+  --data 'redirect_uri={https://yourApp/callback}'
+  ```
+
+- Response from token endpoint
+
+  ```json
+  https://{yourDomain}/authorize?
+  response_type=code&
+  code_challenge=E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM&
+  code_challenge_method=S256&
+  client_id={yourClientId}&
+  redirect_uri={yourCallbackUrl}&
+  scope=openid%20profile&
+  state=xyzABC123
+  ```
+
+#### Implicit Flow with Form Post
+ 
+
+- Request to get the code from authorize endpoint
+
+  ```json
+  https://{yourDomain}/authorize?
+  response_type=id_token token&
+  response_mode=form_post&
+  client_id={yourClientId}&
+  redirect_uri={https://yourApp/callback}&
+  scope=read:tests&
+  state=xyzABC123&
+  nonce=eq...hPmz
+   ```
+
+- Response should be similar to
+
+  ```
+  HTTP/1.1 302 Found
+    Content-Type: application/x-www-form-urlencoded
+    id_token=eyJ...acA&
+    state=xyzABC123
+  ```
+
+#### [Hybrid Flow](https://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth)
+
+- Request to get the code from authorize endpoint
+
+  ```json
+  https://{yourDomain}/authorize?
+  response_type=code id_token token&
+  client_id={yourClientId}&
+  redirect_uri={https://yourApp/callback}&  
+  scope=appointments%20contacts&
+  audience=appointments:api&
+  state=xyzABC123&
+  nonce=eq...hPmz
+   ```
+
+- Response should be similar to
+
+  ```
+    HTTP/1.1 302 Found
+    Content-Type: application/x-www-form-urlencoded
+    code=AUTHORIZATION_CODE&
+    access_token=ey...MhPw
+    &expires_in=7200
+    &token_type=Bearer
+    id_token=eyJ...acA&
+    state=xyzABC123
+  ```
+
+  - Request token to token endpoint
+
+    ```json
+    curl --request POST \
+    --url 'https://{yourDomain}/oauth/token' \
+    --header 'content-type: application/x-www-form-urlencoded' \
+    --data grant_type=authorization_code \
+    --data 'client_id={yourClientId}' \
+    --data 'client_secret={yourClientSecret}' \
+    --data 'code=yourAuthorizationCode}' \
+    --data 'redirect_uri={https://yourApp/callback}'
+    ```
+
+- Response from token endpoint
+
+  ```json
+  {
+  "access_token": "eyJz93a...k4laUWw",
+  "refresh_token": "GEbRxBN...edjnXbL",
+  "id_token": "eyJ0XAi...4faeEoQ",
+  "token_type": "Bearer"
+ }
+  ```
+
+
 ### access token
 
   - Access token is created by authorization server, given to client to access resources on resource server.
