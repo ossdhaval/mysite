@@ -62,15 +62,15 @@ Ref for below content: https://auth0.com/docs/get-started/authentication-and-aut
   - `response_type=` param in request to `authorize` endpoint
   - `grant_type=` param in request to `token` endpoint
 
-| flow                              | response type    | grant                | other imp params                                   | comments                                                                                                                                   |
-|-----------------------------------|------------------|----------------------|----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| Authorization Code Flow           | `code`           | `authorization_code` | `scope`                                            | Suitable when you have a `confidential` client that can safely store client credentials, like an app running on server                     |
-| Authorization Code Flow with PKCE | `code`           | `authorization_code` | `code_challenge`, `code_challenge_method`, `scope` | Use this grant type for applications that cannot store a client secret, such as native or single-page apps                                 |
-| Implicit Flow with Form Post      | `id_token token` | -                    | -                                                  | Suitable when application just needs user details(id_token) and doesn't need to request access token from token endpoint to make API calls |
-| Hybrid Flow                       | `code id_token token`           | `authorization_code`               | -                                                  | comments                                                                                                                                   |
-| Client Credentials Flow           | `code`           | `code`               | other imp params                                   | comments                                                                                                                                   |
-| Device Authorization Flow         | `code`           | `code`               | other imp params                                   | comments                                                                                                                                   |
-| Resource Owner Password Flow      | `code`           | `code`               | other imp params                                   | comments                                                                                                                                   |
+| flow                              | response type         | grant                | other imp params                                   | comments                                                                                                                                   |
+|-----------------------------------|-----------------------|----------------------|----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| Authorization Code Flow           | `code`                | `authorization_code` | `scope`                                            | Suitable when you have a `confidential` client that can safely store client credentials, like an app running on server                     |
+| Authorization Code Flow with PKCE | `code`                | `authorization_code` | `code_challenge`, `code_challenge_method`, `scope` | Use this grant type for applications that cannot store a client secret, such as native or single-page apps                                 |
+| Implicit Flow with Form Post      | `id_token token`      | -                    | -                                                  | Suitable when application just needs user details(id_token) and doesn't need to request access token from token endpoint to make API calls |
+| Hybrid Flow                       | `code id_token token` | `authorization_code` | -                                                  | comments                                                                                                                                   |
+| Client Credentials Flow           | -                     | `client_credentials` | other imp params                                   | comments                                                                                                                                   |
+| Device Authorization Flow         | -                     | -                    | other imp params                                   | This flow doesn't have a grant type                                                                                                        |
+| Resource Owner Password Flow      | `code`                | `code`               | other imp params                                   | comments                                                                                                                                   |
 
 Usually, type of grant is the also the flow that you are using. But there can be flows that use combination of grants. Like [hybrid](https://auth0.com/docs/get-started/authentication-and-authorization-flow/hybrid-flow) flow.
 
@@ -271,7 +271,7 @@ Usually, type of grant is the also the flow that you are using. But there can be
 
 #### [Device Authorization Flow](https://www.rfc-editor.org/rfc/rfc8628)
 
-- Request to device code from device code endpoint
+- Request from the device to device code endpoint to get device code 
 
   ```json
   curl --request POST \
@@ -293,6 +293,40 @@ Usually, type of grant is the also the flow that you are using. But there can be
   "expires_in": 900,
   "interval": 5
   }
+  ```
+
+- Polling request from the device to token endpoint to get the token  
+
+  ```json
+  curl --request POST \
+  --url 'https://{yourDomain}/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data grant_type=urn:ietf:params:oauth:grant-type:device_code \
+  --data 'device_code={yourDeviceCode}' \
+  --data 'client_id={yourClientId}'
+  ```
+
+- response should be similar to 
+
+  ```
+  {
+  "error": "authorization_pending",
+  "error_description": "..."
+  }
+  ```
+
+  "error" values can be `slow_down`, `access_denied`, `expired_token`
+
+  or when user successfully authorizes via browser, the next polling request from device gets below response
+
+  ```json
+  {
+  "access_token":"eyJz93a...k4laUWw",
+  "refresh_token":"GEbRxBN...edjnXbL",
+  "id_token": "eyJ0XAi...4faeEoQ",
+  "token_type":"Bearer",
+  "expires_in":86400
+ }
   ```
 
 #### [Resource Owner Password Flow](https://www.rfc-editor.org/rfc/rfc6749#section-4.3)
