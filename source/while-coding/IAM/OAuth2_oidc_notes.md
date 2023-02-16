@@ -56,6 +56,8 @@ Auth server can define and many other RFCs have created their own standard exten
 
 ### Flows:
 
+Ref for below content: https://auth0.com/docs/get-started/authentication-and-authorization-flow
+
 - There are two things that decide what flow are you using
   - `response_type=` param in request to `authorize` endpoint
   - `grant_type=` param in request to `token` endpoint
@@ -239,9 +241,88 @@ Usually, type of grant is the also the flow that you are using. But there can be
   "refresh_token": "GEbRxBN...edjnXbL",
   "id_token": "eyJ0XAi...4faeEoQ",
   "token_type": "Bearer"
- }
+  }
   ```
 
+#### [Client Credentials Flow](https://www.rfc-editor.org/rfc/rfc6749#section-4.4)
+
+
+- Request token to token endpoint
+
+  ```json
+  curl --request POST \
+  --url 'https://{yourDomain}/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data grant_type=client_credentials \
+  --data client_id=YOUR_CLIENT_ID \
+  --data client_secret=YOUR_CLIENT_SECRET \
+  --data audience=YOUR_API_IDENTIFIER
+  ```
+
+- Response from token endpoint
+
+  ```json
+  {
+  "access_token":"eyJz93a...k4laUWw",
+  "token_type":"Bearer",
+  "expires_in":86400
+  }
+  ```
+
+#### [Device Authorization Flow](https://www.rfc-editor.org/rfc/rfc8628)
+
+- Request to device code from device code endpoint
+
+  ```json
+  curl --request POST \
+  --url 'https://{yourDomain}/oauth/device/code' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data 'client_id={yourClientId}' \
+  --data 'scope={scope}' \
+  --data 'audience={audience}'
+   ```
+
+- Response should be similar to
+
+  ```
+  {
+  "device_code": "Ag_EE...ko1p",
+  "user_code": "QTZL-MCBW",
+  "verification_uri": "https://accounts.acmetest.org/activate",
+  "verification_uri_complete": "https://accounts.acmetest.org/activate?user_code=QTZL-MCBW",
+  "expires_in": 900,
+  "interval": 5
+  }
+  ```
+
+#### [Resource Owner Password Flow](https://www.rfc-editor.org/rfc/rfc6749#section-4.3)
+
+- Request token to token endpoint
+
+  ```json
+  curl --request POST \
+  --url 'https://{yourDomain}/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data grant_type=password \
+  --data 'username={username}' \
+  --data 'password={password}' \
+  --data 'audience={yourApiIdentifier}' \
+  --data scope=read:sample \
+  --data 'client_id={yourClientId}' \
+  --data 'client_secret={yourClientSecret}'
+  ```
+
+- Response from token endpoint
+
+  ```json
+  {
+  "access_token": "eyJz93a...k4laUWw",
+  "refresh_token": "GEbRxBN...edjnXbL",
+  "id_token": "eyJ0XAi...4faeEoQ",
+  "token_type": "Bearer",
+  "expires_in": 36000
+  }
+  ```
 
 ### access token
 
