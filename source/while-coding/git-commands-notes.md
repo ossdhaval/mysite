@@ -892,3 +892,31 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
  
  - Branch is a reference to a commit and that reference changes when next commit is made
  - Tag is also a reference to a commit and it will **not** move if new commits are made
+
+ ### How to know if there are any conflicts between two branches
+ 
+ - Before raising a PR for your feature branch, if you want to know if PR will get merge conflict with base branch(let's say main) or not, then do this locally on your system:
+ 
+ ```
+ # make sure you are on feature branch
+ git swith feature-branch
+ 
+ # create temp branch from your feature branch
+ git checkout -b temp-feature-branch
+ 
+ # merge main
+ git merge main
+ 
+ # this will give you output as below. It'll exactly tell you if there are conflicts and which files
+ Auto-merging docs/admin/auth-server/crypto/key-generation.md
+ CONFLICT (content): Merge conflict in docs/admin/auth-server/crypto/key-generation.md
+ Automatic merge failed; fix conflicts and then commit the result.
+ 
+ # abort the merge
+ git merge --abort
+ 
+ # Now since our purpose is served, Delete the temp branch 
+ git switch feature-branch
+ git branch -D temp-feature-branch
+
+ ```
