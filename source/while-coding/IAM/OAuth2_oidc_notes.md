@@ -710,6 +710,12 @@ Jans supports: all combinations of `code`, `token` and `id_token`
 
 "id_token", "token", "code", "id_token token code", "token code", "id_token token", "id_token code"
 
+[Relationship between Grant Types and Response Types](https://www.rfc-editor.org/rfc/rfc7591#section-2.1)
+
+[Relation between response types and response modes](https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html)
+
+
+
 ### suppress authorization
 
 ??
