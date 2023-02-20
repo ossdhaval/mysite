@@ -92,6 +92,9 @@ to see what code actually changed use 'patch' option.
 
 to limit commits use option
 `git log -8`
+ 
+ to get list of files changed per commit in a branch
+ `git log --name-only --oneline`
 
  To see status of all files with short representation of status :
 git status --short
