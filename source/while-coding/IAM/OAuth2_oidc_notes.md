@@ -936,6 +936,8 @@ Notes:
 
 - sometimes people use DCR acronym to refer to `dynamic client request` and sometimes DCR means `dynamic client registration`. Dynamic client request is the request
 made to register the client dynamically. For example, in statement `In OpenBanking case DCR (Dynamic Client Request) is signed and must contain SSA (Software Statement Assertion) inside it.` DCR means the request.
+- the OIDC DCR SPEC
+  - 
 
 ## Assertion
 
