@@ -899,16 +899,29 @@ Depending on the transport through which the messages are sent, the integrity of
 
 
 
-## Dynamic Client Registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) notes:
+## Dynamic Client Registration notes:
 
-Registration requests send with a set of desired client metadata values to the authorization
-   server.  The resulting registration responses return a client
-   identifier to use at the authorization server and the client metadata
-   values registered for the client.
+SPECS (in the dependency order) :
+- [OpenId Connect DCR SPEC](https://openid.net/specs/openid-connect-registration-1_0.html)
+- [OAuth DCR - RFC 7591](https://www.rfc-editor.org/rfc/rfc7591)
+- [OAuth dynamic client management - RFC 7592](https://www.rfc-editor.org/rfc/rfc7592)
+
+Traditionally, registration of a client with an authorization server
+   is performed manually.  The mechanisms defined in this specification
+   can be used either for a client to dynamically register itself with
+   authorization servers or for a client developer to programmatically
+   register the client with authorization servers.
+
    
-   There are two separate SPECs for dynamic client registration. One from [OAuth](https://datatracker.ietf.org/doc/html/rfc7591) and another from [openid connect](https://openid.net/specs/openid-connect-registration-1_0.html). Both must be complimenting  each other somehow.
+The OAuth DCR SPEC generalizes the
+   registration mechanisms defined by "OpenID Connect Dynamic Client
+   Registration 1.0" [OpenID.Registration] and used by "User Managed
+   Access (UMA) Profile of OAuth 2.0" [UMA-Core] in a way that is
+   compatible with both, while being applicable to a wider set of OAuth
+   2.0 use cases.
    
-   **Usecases**: very useful for understanding and choices: https://www.rfc-editor.org/rfc/rfc7591#appendix-A
+   
+**Usecases**: very useful for understanding and choices: https://www.rfc-editor.org/rfc/rfc7591#appendix-A
    
 ## other references
 - https://github.com/zmartzone/mod_auth_openidc/blob/master/auth_openidc.conf
