@@ -903,8 +903,9 @@ Depending on the transport through which the messages are sent, the integrity of
 
 SPECS (in the dependency order) :
 - [OpenId Connect DCR SPEC](https://openid.net/specs/openid-connect-registration-1_0.html)
+- [OAuth dynamic client management(CRUD) - RFC 7592](https://www.rfc-editor.org/rfc/rfc7592)
 - [OAuth DCR - RFC 7591](https://www.rfc-editor.org/rfc/rfc7591)
-- [OAuth dynamic client management - RFC 7592](https://www.rfc-editor.org/rfc/rfc7592)
+
 
 Traditionally, registration of a client with an authorization server
    is performed manually.  The mechanisms defined in this specification
