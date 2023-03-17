@@ -1,7 +1,6 @@
 # Janssen code notes
 
 ### code involved in loading configuration
-
 - `io.jans.as.common.service.common.ConfigurationService`:
   - allows to add and update configuration in the database using `PersistenceEntryManager`. Also provides other methods.
 - jans-orm : `FileConfiguration` is used to read configuration from property files
@@ -50,6 +49,13 @@
    ```
    
    This class is a servlet filter as it implements `jakarta.servlet.Filter` interface and overrides `doFilter` method
+   
+  ## Sector identifier
+  
+  - where is sector identifier uri gets validated? [code](https://github.com/JanssenProject/jans/blob/79dcb60491ca8fd9685e68fb8d770aef3c7e89ad/jans-auth-server/server/src/main/java/io/jans/as/server/model/registration/RegisterParamsValidator.java#L326)
+  - where does pairwise ids get generated? [code](https://github.com/JanssenProject/jans/blob/2f2f82c5febe6461c08162f9dbc66898535a4323/jans-auth-server/model/src/main/java/io/jans/as/model/util/SubjectIdentifierGenerator.java#L26)
+ 
+
    
  - it seems that some endpoints authenticate clients, but there are certain endpoints that authenticate user. See if condition at [line](https://github.com/JanssenProject/jans/blob/9c68f914e155de492e54121033c8f0ed45d66817/jans-auth-server/server/src/main/java/io/jans/as/server/auth/AuthenticationFilter.java#L383). For these endpoints it'll invoke client auth, and for rest of the endpoints it'll invoke user auth.
  - actual method that compares clientId and secret with what is stored in backend is the `authenticate` method in `ClientService` class. [here](https://github.com/JanssenProject/jans/blob/f793f92fa275da2e57b2302dcb5c6fdb27666e67/jans-auth-server/server/src/main/java/io/jans/as/server/service/ClientService.java#L106)
