@@ -810,6 +810,20 @@ To get dn and other details:
 cat /opt/jans/jans-setup/setup.properties.last | egrep 'ldapPass=|ldap_binddn=|ldap_hostname=|ldaps_port='
 ```
 
+### Connecting to LDAP running in an lxc container using an apache directory studio running in local machine
+
+- You do not have to open any port and 1636 port on lxc should be open by default
+- first make sure that the ldap is running and it is accessible on 1636 from within lxc using instructions above(#connecting-to-ldap-running-locally-on-a-jans-instance)
+- Now open apache directory studio and create a new connect. Fill out the first form as below (remember to remove `/` from `bind dn` value if it exists like this `cn\=directory manager`. After removal, the value should be `cn=directory manager`)
+- 
+
+![image](https://user-images.githubusercontent.com/343411/226304437-54647b9b-21ad-46ae-846b-57278b243ecf.png)
+
+- Now click next and fill out next form as below (remember to remove `/` from `bind dn` value if it exists like this `cn\=directory manager`. After removal, the value should be `cn=directory manager`):
+
+![image](https://user-images.githubusercontent.com/343411/226305221-eeac9050-e964-49c2-b7f8-0482240b8734.png)
+
+- click finish and you should be able see a new connection in the listing on bottom left panel. Right click on your connection and click `open connection`. It should populate tree on the top left panel and be ready to browse.
 
 ### to see all the existing indexes on backend 'userRoot':
 
