@@ -798,7 +798,20 @@ called oxauth in Gluu.
 
 ## LDAP/opendj/dsconfig commands :
 
-to see all the existing indexes on backend 'userRoot':
+### Connecting to ldap running locally on a jans instance:
+
+```
+sudo /opt/opendj/bin/ldapsearch -h localhost -p 1636 -D "cn=directory manager" -w "Ld@padm1n" -Z -X -b "o=jans" -s one "objectclass=*" dn
+```
+
+To get dn and other details:
+
+```
+cat /opt/jans/jans-setup/setup.properties.last | egrep 'ldapPass=|ldap_binddn=|ldap_hostname=|ldaps_port='
+```
+
+
+### to see all the existing indexes on backend 'userRoot':
 
 `/opt/opendj/bin/dsconfig list-backend-indexes --backend-name userRoot`
 
