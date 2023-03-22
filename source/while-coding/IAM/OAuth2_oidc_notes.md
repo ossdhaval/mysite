@@ -1051,6 +1051,49 @@ see [this](https://www.rfc-editor.org/rfc/rfc7523#section-2.2)
 
 ### what is special about software statement
 
+
+## Understanding ACR
+
+`ACR` is `Authentication Context Class Reference`. It is a value that denotes what is the level of authentication that this user has or should gone through. ACR values are custom to each implementation. To understand ACR more, we have to understand `Authentication Context` and `Authentication Context class`.
+
+**Authentication Context**:
+
+Definition as per OIDC core:
+Information that the Relying Party can require before it makes an entitlement decision with respect to an authentication response. Such context can include, but is not limited to, the actual authentication method used or level of assurance such as ISO/IEC 29115 [ISO29115] entity authentication assurance level
+
+So basically, it is the context which the RP uses to understand how this person has been authenticated. And may be based on that it gives entitlements to that person(i.e session)
+
+**Authentication Context Class**:
+
+Definition as per OIDC core:
+Set of authentication methods or procedures that are considered to be equivalent to each other in a particular context.
+
+Going by the definition, it looks like there can be more than one method or procedures that pertain to the same class.
+
+**ACR**: is a way to refer to the Authentication Context Class
+
+Basically, in jans, acr value -> script has one to one relation. And every script has a level.
+
+Jans server:
+
+`default_acr`
+
+`Internal ACR`
+
+An Authentication method is offered by the AS if its ACR value i.e. its corresponding custom script is enabled.
+
+Level (rank) of an Authentication mechanism: 
+
+Each authentication mechanism (script) has a "Level" assigned to it which describes how secure and reliable it is. The higher the "Level", higher is the reliability represented by the script. Though several mechanisms can be enabled at the same Janssen server instance at the same time, for any specific user's session only one of them can be set as the current one (and will be returned as acr claim of id_token for them). If initial session is created and then later a new authorization request from a RP comes in specifying another authentication method, its "Level" will be compared to that of the method currently associated with this session. If requested method's "Level" is lower or equal to it, nothing is changed and the usual SSO behavior is observed. If it's higher (i.e. a more secure method is requested), it's not possible to serve such request using the existing session's context, and user must re-authenticate themselves to continue. If they succeed, a new session becomes associated with that requested mechanism instead.
+
+Client level:
+
+`default_acr_values`
+
+`acr_values`
+
+`acr` claim of id_token
+
 # All flows
 
 ### Device authorization Grant
