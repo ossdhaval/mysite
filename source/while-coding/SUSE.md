@@ -1,4 +1,12 @@
-# Onboarding to SUSE package hub
+# SUSE
+
+## Difference between SLES, OpenSUSE Leap, OpenSUSE Tumbleweed
+
+- https://www.suse.com/suse-defines/definition/opensuse-leap/
+
+In essence, it starts with Tumbleweed(Free and managed by OpenSUSE), which is the most unstable but most frequently updated version. From this, the SLE (licensed and with paid support) and Leap(Free and managed by OpenSUSE) are created. Both are almost the same, with SLE being little more stable and certified for enterprises. 
+
+## Onboarding to SUSE package hub
 
 
 
