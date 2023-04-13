@@ -12,3 +12,5 @@
 
 - cloud security alliance : https://cloudsecurityalliance.org/
 
+- Complete and chart of types of cyber attacks : https://attack.mitre.org/versions/v12/
+
