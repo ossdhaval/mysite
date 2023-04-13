@@ -1,5 +1,11 @@
 # curl notes
 
+## Resources: 
+- Very good site to learn and try out : https://reqbin.com/curl
+- curl official tutorial: https://curl.se/docs/manual.html
+- curl official book: https://everything.curl.dev/
+
+
 ##### detailed info about request response
 
 ```
@@ -43,4 +49,18 @@ use `-k`
 
 ```
 curl -X POST -k https://127.0.0.1:443/.well-known/openid-configuration
+```
+
+##### send json data with post
+
+```
+curl -X POST https://reqbin.com/echo/post/json
+   -H 'Content-Type: application/json'
+   -d '{"login":"my_login","password":"my_password"}'
+```
+
+##### POST JSON File
+
+```
+curl -X POST https://reqbin.com/echo/post/json -d @filename
 ```
