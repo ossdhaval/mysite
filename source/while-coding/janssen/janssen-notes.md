@@ -2305,4 +2305,12 @@ or
 /opt/jans/jans-cli/config-cli.py --schema Client
 ```
 
+## jans-tent
 
+Once you have setup and run the jans-tent using [these]() instructions, to run in next time, you just have to follow below steps:
+
+```
+cd IdeaProjects/Janssen/jans-for-tent/jans/demos/jans-tent/
+source venv/bin/activate
+python main.py
+```
