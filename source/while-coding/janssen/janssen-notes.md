@@ -2315,11 +2315,14 @@ source venv/bin/activate
 python main.py
 ```
 
-Troubleshooting:
+### Troubleshooting jans tent:
 
-Error: where server says the client is not authorized to make this request.
-Here you should check if the client exists or the server or not. Many times when I tried to start testing on a new day, the client with `jans tent client` from previous day did not exist on server. I don't know why. 
-Solution: run the `python register_new_client.py` command and then start the main program again by runnnig `python main.py`
+- Error: where server says the client is not authorized to make this request.
 
-Error: mismatching_state: CSRF Warning! State not equal in request and response.
+ Here you should check if the client exists or the server or not. Many times when I tried to start testing on a new day, the client with `jans tent client` from previous day did not exist on server. I don't know why. 
+ Solution: run the `python register_new_client.py` command and then start the main program again by runnnig `python main.py`
+
+- Error: mismatching_state: CSRF Warning! State not equal in request and response.
+
+This is when there is a mismatch between name of the host mentioned in the redirect URI for the client used by Jans-tent, and the host name mentioned in the url used in browser to initiate the flow. See [this issue](https://github.com/JanssenProject/jans/issues/4617)
 
