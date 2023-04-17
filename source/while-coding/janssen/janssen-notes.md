@@ -2314,3 +2314,12 @@ cd IdeaProjects/Janssen/jans-for-tent/jans/demos/jans-tent/
 source venv/bin/activate
 python main.py
 ```
+
+Troubleshooting:
+
+Error: where server says the client is not authorized to make this request.
+Here you should check if the client exists or the server or not. Many times when I tried to start testing on a new day, the client with `jans tent client` from previous day did not exist on server. I don't know why. 
+Solution: run the `python register_new_client.py` command and then start the main program again by runnnig `python main.py`
+
+Error: mismatching_state: CSRF Warning! State not equal in request and response.
+
