@@ -336,3 +336,9 @@ You can, however, add some changes on top of v1.1 and release something like v1.
 ## GitHub reference material:
 - Mohammad abu's github cheatsheet: https://medium.com/@moabu/the-github-cheat-sheet-df4b3e3b42a8
 
+
+## Notifications
+
+- Inbox : the number shown besides `inbox` on left menu is just unread messages (not all the messages). So, when you mark a notification in `octobox` as `read` by pressing `d` (and click synch button), it reduces that number on github as well, but remember that the notification is still in the `inbox`. You can see all the messages in GH inbox by clicking `all` button on GH.
+- There is no way to mark something `done` using octobox directly.
+- Mute on octobox also mutes a notification on GH
