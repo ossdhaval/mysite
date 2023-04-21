@@ -199,6 +199,16 @@ sudo ss -tulwn | grep LISTEN
 scp gluudb-dump.sql dhaval@192.168.1.19:/home/dhaval/
 ```
 
+### how to transfer from host to container
+
+From above steps, follow 1, 2 on LxD container.
+3rd, from host run
+
+```
+scp gluudb-dump.sql dev@192.168.1.19:/home/dhaval/
+```
+(note: I tried to use `root` but couldn't find the password. So i used a custom created `dev` user with `dev` as password and it worked)
+
 ### important commands:
 
 - `lxc launch ubuntu-20-4-base jans-dynamic-ldap-2`
