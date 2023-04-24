@@ -381,6 +381,7 @@ Reference:
 - for dealing with gpg keys: https://central.sonatype.org/publish/requirements/gpg/
 - Nice article to understand why we can't change artifact (apart from snapshot) once it is released on maven central 
   https://central.sonatype.org/faq/can-i-change-a-component/
+- related GitHub [issue](https://github.com/JanssenProject/jans/issues/316) for janssen
 
 Notes:
   
@@ -527,7 +528,7 @@ Notes:
 - Once this is done, run these three commands as explained in `release` section of [this](https://itnext.io/publishing-artifact-to-maven-central-b160634e5268)
 
 
-### how to list only the direct dependencies and exclude transitive dependencies 
+## how to list only the direct dependencies and exclude transitive dependencies 
 	
 	```
 	mvn dependency:list -DexcludeTransitive=true
