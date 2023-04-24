@@ -342,3 +342,14 @@ You can, however, add some changes on top of v1.1 and release something like v1.
 - Inbox : the number shown besides `inbox` on left menu is just unread messages (not all the messages). So, when you mark a notification in `octobox` as `read` by pressing `d` (and click synch button), it reduces that number on github as well, but remember that the notification is still in the `inbox`. You can see all the messages in GH inbox by clicking `all` button on GH.
 - There is no way to mark something `done` using octobox directly.
 - Mute on octobox also mutes a notification on GH
+
+## Guidelines for Good PR and communication
+
+https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/
+
+There two points that are good:
+
+- Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Can you use positive language as opposed to neutral?
+- Use emoji to clarify tone. Compare “sparkles sparkles Looks good +1 sparkles sparkles” to “Looks good.”
+
+Another good article: https://github.com/alphagov/styleguides/blob/master/pull-requests.md
