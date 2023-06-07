@@ -95,6 +95,10 @@ to limit commits use option
  
  to get list of files changed per commit in a branch
  `git log --name-only --oneline`
+ 
+ To get list of contributions grouped by author
+ 
+ `git shortlog`
 
  To see status of all files with short representation of status :
 git status --short
