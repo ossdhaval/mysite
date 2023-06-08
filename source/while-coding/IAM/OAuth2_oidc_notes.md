@@ -129,10 +129,10 @@ Grant types become part of request to token endpoint, with parameter, `grant_typ
 
 1) Authorization code
   - Uses an authorization server
-  - benefit: protects access code by not sharing it with user agent and uses authorization code to do that
-  - benefit: also authenticates client when it requests access code using authorization code
+  - benefit: protects access token by not sharing it with user agent and uses authorization code to do that
+  - benefit: also authenticates client when it requests access token using authorization code
   - downside: more round trips than implicit flow
-  - Authorization code -> access code -> 
+  - Authorization code -> access token -> 
 
 2) Client credentials
   - client acts on its own to access resources from resource server which are owned by client 
