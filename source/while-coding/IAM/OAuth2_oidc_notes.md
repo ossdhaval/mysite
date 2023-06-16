@@ -799,7 +799,17 @@ The front and back channel logout specs complement core OpenID Connect with mech
 
 The relying party must be registered to receive front or back-channel notifications. Those will be delivered only for sessions into which the relying party previously logged in a user (received an ID token)
 
-for more understanding : https://medium.com/@robert.broeckelmann/openid-connect-logout-eccc73df758f
+for more understanding : 
+https://betterprogramming.pub/managing-user-sessions-and-openid-connect-logout-eb886facd321
+https://medium.com/@robert.broeckelmann/openid-connect-logout-eccc73df758f
+https://curity.io/resources/learn/openid-connect-logout/
+
+Specifications:
+
+https://openid.net/specs/openid-connect-session-1_0.html
+https://openid.net/specs/openid-connect-rpinitiated-1_0.html
+https://openid.net/specs/openid-connect-frontchannel-1_0.html
+https://openid.net/specs/openid-connect-backchannel-1_0.html#BCSupport
 
 ### Front channel logout uri
 
