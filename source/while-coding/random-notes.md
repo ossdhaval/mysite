@@ -101,3 +101,7 @@ Hashing algorithms are used in cryptographic applications like a digital signatu
 Hashing is used to generate random strings to avoid duplication of data stored in databases.
 Geometric hashing – widely used in computer graphics to find closet pairs and proximity problems in planes. It is also called grid method and it has also been adopted in telecommunications.
 These characteristics mean that hash can be used to store passwords. This way, it becomes difficult for someone who has the raw data to reverse them.
+
+## GPG signatures on packages aka artifacts
+
+Good link for understanding : https://central.sonatype.org/publish/requirements/gpg/
