@@ -187,10 +187,19 @@ or
 
 this can be done via scp, steps to setup:
 1) setup ssh on host
-```
+```bash
+# ubuntu
 sudo apt install openssh-server
+
+# opensuse
+sudo zypper install openssh
+sudo systemctl start sshd
+sudo systemctl enable sshd
+sudo firewall-cmd --permanent --add-service=ssh
+sudo firewall-cmd --reload
 ```
-2) this will open port 22, you can check this by 
+
+2) Above will open port 22, you can check this by 
 ```
 sudo ss -tulwn | grep LISTEN
 ```
