@@ -184,16 +184,20 @@ Comma-delimited list of profiles to activate
 
 To define a property use the following option on the command line:
 
--D, --define <arg>: Defines a system property
+`-D`, --define <arg>: Defines a system property
 
 
--h, --help: Display help information
+`-h`, --help: Display help information
 
 `mvn -h`
 	
--f to run mvn from a different directory than where the pom file is located
+`-f` to run mvn from a different directory than where the pom file is located
 	
--o  don't download dependencies everytime and just use the local repo(.m2). 
+`-o`  don't download dependencies everytime and just use the local repo(.m2). Very useful when running tests repeatedly during dev.
+
+`--log-file <file-name>` to write console log to a log file `$ mvn --log-file ./mvn.log clean compile`
+
+
 
 ```
 mvn -f jans-auth-server/pom.xml compile
@@ -553,3 +557,11 @@ Notes:
 ```
 mvn help:evaluate -Dexpression=project.modules -q -DforceStdout | tail -n +2 | head -n -1 | sed 's/\s*<.*>\(.*\)<.*>/\1/'
 ```
+
+### useful ways to run maven commands
+
+```
+mvn test | egrep 'Running|Tests|TEST'
+```
+above is useful in seeing progress as each test gets executed.
+
