@@ -265,3 +265,11 @@ Rancher ui which will allow you to easily toggle and view the k8s cluster, insta
 The rancher ui will have a dns record assigned and posted for you with the password to login in the PR
 You will also be given another dns url to use for gluu or jans deployment as your hostname
 Coming next would be adding https://karpenter.sh/ for autoscalling then the last step will finally be enabling the load tests so that we can view any setup and enjoy it without making a hassle about it 🍿
+
+
+## How to handle discussions on issues
+
+Here are some examples where the community manager, or dev has supported an issue/troubleshooting in a nice way:
+
+https://github.com/canonical/lxd/issues/7910
+
