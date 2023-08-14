@@ -100,6 +100,12 @@ to limit commits use option
  
  `git shortlog`
 
+ To check what all changes a particular file has gone through(even deleted files)
+
+ ```
+ git log -- */cli-agama.md
+ ```
+
  To see status of all files with short representation of status :
 git status --short
 
