@@ -353,3 +353,10 @@ There two points that are good:
 - Use emoji to clarify tone. Compare “sparkles sparkles Looks good +1 sparkles sparkles” to “Looks good.”
 
 Another good article: https://github.com/alphagov/styleguides/blob/master/pull-requests.md
+
+
+## issue resolved comments are useful
+
+See the comment at the end of [this issue](https://github.com/dcoapp/app/issues/69). It is really useful when people know when a fix was available for that particular issue.
+
+![image](https://github.com/ossdhaval/mysite/assets/343411/904f7cec-5364-40e4-9401-89231b642e36)
