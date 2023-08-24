@@ -1183,3 +1183,14 @@ https://datatracker.ietf.org/doc/html/rfc8628
 |                                              |                                                                                                                                                                                                                                                                                                                        | [OIDC Spec terms](https://openid.net/specs/openid-connect-core-1_0.html#Terminology) |         |
 |                                              |                                                                                                                                                                                                                                                                                                                        | [OIDC Spec terms](https://openid.net/specs/openid-connect-core-1_0.html#Terminology) |         |
 |                                              |                                                                                                                                                                                                                                                                                                                        | [OIDC Spec terms](https://openid.net/specs/openid-connect-core-1_0.html#Terminology) |         |
+
+
+## OpenID Connect Native SSO for Mobile Apps [draft](https://openid.net/specs/openid-connect-native-sso-1_0.html)
+
+Imp lines from the RFC:
+
+- applies to `authorization code` flow of OAuth.
+- a new scope `device_sso` is added. So, when an mobile-app-1(the client) uses a system browser to send authorization code request to `/authorize` endpoint, the request contains the `device_sso` scope.
+- In response to this, the `/authorize` endpoint returns a code. AS on the backend knows what scopes are attached to this code.
+- When the mobile-app-1 presents the `code` to the token endpoint, the AS looks at attached scopes and notices the `device_sso` scope attached. It sends back an `device_secret` token along with an access token back to the mobile-app-1. From this point onwards, the AS knows that this token has `device_sso` scope attached and an `device_secret` has also been issued, so it expects a `device_secret` to be passed in all future token requests.
+- mobile-app-1 stores this `device_secret` in the local mobile storage which can be accessed only by other apps of the same company (e.g: facebook and instagram can access the same storage). So, if there is a mobile-app-2 on the mobile from the same vendor, then mobile-app-2 doesn't have to again to `/authorize` endpoint and reauthenticate the user. Instead, mobile-app-2 can take the client-id, device_secret and id_token and send it to token endpoint to receive an access token and refresh token directly.
