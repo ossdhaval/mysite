@@ -278,7 +278,21 @@ dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$
  
  
 
- 
+### About git ignore:
+
+- git ignore doesn't have a command. It is only controlled by patterns mentioned in the files.
+- There are two files that you can edit. Below is except from [here](https://git-scm.com/docs/gitignore)
+  ```
+  Which file to place a pattern in depends on how the pattern is meant to be used.
+
+  Patterns which should be version-controlled and distributed to other repositories
+  via clone (i.e., files that all developers will want to ignore) should go into a .gitignore file.
+
+  Patterns which are specific to a particular repository but which do not need to be shared with other
+  related repositories (e.g., auxiliary files that live inside the repository but are specific to one
+  user’s workflow) should go into the $GIT_DIR/info/exclude file.
+  ```
+  
 Avoiding to use .gitignore for your custom file :
 
 In a large project, everyone shares the same gitignore file which is commited and maintained in repository just like any other common code file. I you want to add few custom ignores to this file, it'll affect everyone. To avoid this, use below :
