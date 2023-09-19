@@ -2327,3 +2327,11 @@ python main.py
 
 This is when there is a mismatch between name of the host mentioned in the redirect URI for the client used by Jans-tent, and the host name mentioned in the url used in browser to initiate the flow. See [this issue](https://github.com/JanssenProject/jans/issues/4617)
 
+### gluu.org
+
+[https://www.gl uu.org](https://glu u.org/)https://g luu.org/ is hosted on www.glu u.org and can be connected using `ssh -p 22222 -i ~/.ssh/id_rsa root@w ww.g luu.o rg` while on VPN.
+
+swagger UI is hosted at `/opt/wordpress/swagger-ui/`
+
+apache is under `/etc/apache2`
+
