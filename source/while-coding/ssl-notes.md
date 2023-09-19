@@ -79,3 +79,30 @@ Once you have created key-pair and signed certificate (self or CA), you need to 
 ```
 keytool -list -keystore keystore.test.local.jans.io.jks
 ```
+
+## SSL key Vs SSH key
+
+#### what are they and when they are used?
+- SSL key: used to send encrypted messages to owner of the private key. Owner of the private key will share the public key with the other party(message sender). Then sender will encrypt a file using public key and then send across to the owner of the private key. Owner of the private key can decrypt. Tool used to create private and public key pair is `openssl`
+- SSH key: used to authenticate SSH session with remote machine. Here, the person needing ssh access to a machine will give a public key to administrator of the server. The admin will add that public key to the target server. Once after this configuration, when the person tries to access the machine using ssh, the protocol will look at private keys stored under `~/.ssh/` folder to authenticate. Since public key is already there on the server, it will be successful. Tool that is used for generating ssh key is `ssh-keygen`. By default, your ssh keys are generated under `~/.ssh/` directory
+
+#### how are they generated?
+- SSL
+  - generating private key: `openssl genrsa -aes128 -out ~/my-ssl-keys/my-ssl.pem 1024`
+  - getting public key: `openssl rsa -in ~/my-ssl-keys/my-ssl.pem -pubout > /tmp/my_public_key-temp.pem`
+  - See the public key: `cat /tmp/my_public_key-temp.pem`
+- SSH
+  - generating private key: `ssh-keygen -o`
+  - getting corresponding public key: `ssh-keygen -y -f private-key-path > my-ssh-pub-key.pub`
+
+#### Steps involved in getting ssh access to a server from admin:
+- Give your **SSH** public key to admin
+- he adds your key to the server
+- You use the command `ssh -p 22222 -i path-to-private-key root@www.gluu.org`
+
+#### How admin can share user id password of something in encrypted format with you
+- Give your **SSL** public key to admin
+- admin will put username and password in a text file
+- He will use your public key to encrypt that text file
+- Send you encrypted text file via chat or email etc
+- You use this command to decrypt the content: `openssl rsautl -decrypt -inkey path-to-private-key -in path-to-encrypted-file > path-to-output-file` like `openssl rsautl -decrypt -inkey ~/my-ssl-keys/my-ssl.pem -in ~/docs/office/gluu/gluu_password_for_gluu_org.enc > gluu_password_for_gluu_org.txt`
