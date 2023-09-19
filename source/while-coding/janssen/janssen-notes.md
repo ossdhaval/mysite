@@ -2335,3 +2335,25 @@ swagger UI is hosted at `/opt/wordpress/swagger-ui/`
 
 apache is under `/etc/apache2`
 
+in order to configure using [config parameters](https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/), you have to edit `vim /opt/wordpress/swagger-ui/index.html` and add configuration parameters like below:
+```
+    <script src="./swagger-ui-bundle.js"> </script>
+    <script src="./swagger-ui-standalone-preset.js"> </script>
+    <script>
+    window.onload = function() {
+
+      // Build a system
+      const ui = SwaggerUIBundle({
+        url: "https://raw.githubusercontent.com/GluuFederation/oxd/version_4.0.0/oxd-server/src/main/resources/swagger.yaml#/developers/setup-client",
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        defaultModelRendering: "model",    
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+```
+
+If you are running newer version of swagger UI, you have to edit `vim /var/www/html/swagger-initializer.js` to add config variables.
+
+after adding config variables, just save the file and refresh the webpage on browser. Effect should be visible.
+
