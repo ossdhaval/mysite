@@ -1984,6 +1984,20 @@ Now, to access Janssen end-points, please map `IP` address of your Janssen serve
     |scim              | `https://demoexample.jans.io/.well-known/scim-configuration`           |   
     
 
+### no prompt installation
+
+Run commands one by one. This will uninstall install janssen with local ldap 
+
+```
+sudo python3 /opt/jans/jans-setup/install.py -uninstall -y
+
+wget https://github.com/JanssenProject/jans/releases/download/v1.0.20.nightly/jans-1.0.20.nightly-suse15.x86_64.rpm
+
+sudo zypper install -n ~/jans-1.0.20.nightly-suse15.x86_64.rpm
+
+sudo python3 /opt/jans/jans-setup/setup.py -n -ip-address 10.229.38.28 -host-name jans-opensuse -city ah -state gj -country in -org-name gluu -email dhaval@gluu.org -jans-max-mem 26349 -admin-password admin -ldap-admin-password admin --listen_all_interfaces --with-casa --install-jans-keycloak-link -t
+```
+
 ## Setup your workspace
 
 #### Minimal software requirements
