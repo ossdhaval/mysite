@@ -273,3 +273,7 @@ Here are some examples where the community manager, or dev has supported an issu
 
 https://github.com/canonical/lxd/issues/7910
 
+
+## how to revert certain decisions which were not received well by community
+
+https://www.keycloak.org/2023/10/reactivating-discourse.html
