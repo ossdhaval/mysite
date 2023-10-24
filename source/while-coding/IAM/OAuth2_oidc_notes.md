@@ -496,6 +496,8 @@ spec: https://www.ietf.org/archive/id/draft-ietf-oauth-dpop-16.html
 DPoP is used when MTLS can't be used. I.e in single page applications. Purpose of both DPoP and MTLS is to ensure that the access token in the request is being used by the client to which it was originally issued and not by someone who stole it. This is called `sender-constrained` token. DPoP is a method of creating such sender
 constrained access tokens.
 
+DPoP tokens are bound to the HTTP request and cannot be reused across different requests. This significantly reduces the risk of token theft and misuse. OAuth 2.0 access tokens are typically bearer tokens, which means anyone with possession of the token can use it.
+
 ```
 The main data structure introduced by this specification is a DPoP proof JWT, described in detail below, which is sent as a header in an HTTP request. A client uses a DPoP proof JWT to prove the possession of a private key corresponding to a certain public key.
 
