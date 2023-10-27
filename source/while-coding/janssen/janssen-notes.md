@@ -2371,3 +2371,26 @@ If you are running newer version of swagger UI, you have to edit `vim /var/www/h
 
 after adding config variables, just save the file and refresh the webpage on browser. Effect should be visible.
 
+## jans-lock
+
+Understanding the OPA: 
+
+This is based on https://play.openpolicyagent.org/
+
+OPA is like this equation: 
+
+```
+input+(policy+data(user-role-mapping, role-action-subject-mapping)) = Output(allow/disallow)
+```
+
+OPA has 4 parts:
+
+- input (this is transactional, current incoming data which talks about the action being performed. By whom, on what, what action)
+- data (this is mapping of role-user, and also which role can do what action on which data)
+- policy (this is the logic or rules which derives whether to give permission or not. Policy basically takes input, looks at data and decides whether the input is eligible to take the requested action or not)
+- output: usually one of the output is allow/deny. There can be other outcomes also after policy execution.
+
+Important notes:
+
+- Here, the data basically has all the knowledge about what should be allowed and what should be not. All that policy does is to put this knowledge in the context of the input and give output.
+- Data is the admin data and user data. Like user-role mapping, role-action-subject mappings etc. Hence data can be a collection of multiple sets of data. 
