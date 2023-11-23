@@ -271,3 +271,7 @@ sudo docker-compose build
 sudo docker-compose rm
 sudo docker-compose up
 ```
+
+## know ip address of a docker container
+
+`sudo docker inspect <container name or id> | grep IPAddress`
