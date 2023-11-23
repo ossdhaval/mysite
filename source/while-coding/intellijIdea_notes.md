@@ -241,3 +241,4 @@ When you setup a new project from version control, you project may start showing
 - Mark `src/main/java` as source root by `right click on java folder -> mark directory as -> mark as source root`
 - Make sure you have the correct JDK attached to the project
 - if the project is using lombok, make sure you have `lombok` plugin downloaded. `main menu -> settings -> plugins -> marketplace`
+- if you are going to use `mvnw` for building the project, and it is showing issues about classnotfound then you have to download the requied jar files. To do so, just run `mvn wrapper:wrapper`.
