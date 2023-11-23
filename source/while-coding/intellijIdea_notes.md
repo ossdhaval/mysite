@@ -231,3 +231,13 @@ scenario: I was working on one branch of project. Then I switched the branch. su
 solution:
 
 I noticed that pom file for all the child projects were shown as ignored ( greyed out and strikethrough ). On searching I found that they were ignored under ( settings (ctrt+alt+s) > build,executing,deployment > maven > ignored files). There is a list of files with checkbox which are ignored. I unchecked all and everything started working.
+
+
+## Setting up java (maven based) projects in Intellij
+
+When you setup a new project from version control, you project may start showing lots of errors. These are some of the steps that you should take to make the project error free.
+
+- Make it a maven project by `right click on pom file -> add as maven project`
+- Mark `src/main/java` as source root by `right click on java folder -> mark directory as -> mark as source root`
+- Make sure you have the correct JDK attached to the project
+- if the project is using lombok, make sure you have `lombok` plugin downloaded. `main menu -> settings -> plugins -> marketplace`
