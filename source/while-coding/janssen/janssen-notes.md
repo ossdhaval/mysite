@@ -2394,3 +2394,13 @@ Important notes:
 
 - Here, the data basically has all the knowledge about what should be allowed and what should be not. All that policy does is to put this knowledge in the context of the input and give output.
 - Data is the admin data and user data. Like user-role mapping, role-action-subject mappings etc. Hence data can be a collection of multiple sets of data. 
+
+
+## installing flex
+
+I was able to install flex using [these instructions](https://docs.gluu.org/v5.0.0-20/install/vm-install/suse/). Below are few points to take care of. 
+
+Once after the installation, when I tried accessing admin UI, it showed below. According to a chat from Arnab, it could be because of two reasons. One if the license is obtained from dev, or the VPN is off. 
+![image](https://github.com/ossdhaval/mysite/assets/343411/71f75e83-18dd-4589-af93-488c34477b6e)
+
+So I turned on the VPN as my license was from PROD already. But after that when I click on `start 30 day trial`, it gives a screen with message as `bad gateway`. But when I still click on `start 30 day trial`, this message goes away and admin login page is shown and admin-ui is accessible. 
