@@ -113,6 +113,12 @@ List all available tables:
 crux_db=#  \dt
 ```
 
+Describe a table and know the columns
+
+```
+\d <table-name>
+```
+
 To exit psql prompt:
 
 ```
