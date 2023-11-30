@@ -63,6 +63,13 @@ to remove an image
 docker rmi <imagename>
 ```
 
+to remove all images
+
+```
+docker rmi -f $(docker images -aq)
+
+```
+
 ```
  docker pull <image>           : copies images to docker host
 ```
