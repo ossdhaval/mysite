@@ -275,6 +275,18 @@ Here are some examples where the community manager, or dev has supported an issu
 https://github.com/canonical/lxd/issues/7910
 
 
-## how to revert certain decisions which were not received well by community
+## Communication
+
+### How to handle discussions on issues
+
+Here are some examples where the community manager, or dev has supported an issue/troubleshooting in a nice way:
+
+https://github.com/canonical/lxd/issues/7910
+
+
+### how to revert certain decisions which were not received well by community
 
 https://www.keycloak.org/2023/10/reactivating-discourse.html
+
+### How to communicate big and complex roadmap change and engineering choices
+https://www.redhat.com/en/blog/rhel-10-plans-wayland-and-xorg-server
