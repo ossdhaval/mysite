@@ -64,3 +64,30 @@
 
 - `io.jans.as.server.service.RedirectionUriService.validateRedirectionUri()` : is where incoming URI from various requests get compared with what is registered by client
 - 
+
+### how web pages are built 
+
+Web pages like `https://jans-opensuse/device-code` are xhtml pages. For example: 
+```
+jans-auth-server/server/src/main/webapp/device_authorization.xhtml
+```
+in the code base.
+These pages are placed in war file. In a deployed environment, you can find them under 
+```
+/opt/jetty-11.0/temp/jetty-localhost-8081-jans-auth_war-_jans-auth-any-2256945074165495919/webapp/device_authorization.xhtml
+```
+Texts in these pages come from properties files. For instance
+```
+jans-auth-server/server/src/main/resources/jans-auth.properties
+```
+Most of these xhtml pages use base xhtml templates. For example, the `device_authorization.xhtml` uses the `login-template.xhtml` as a template. In the code base, the templates can be found
+```
+jans-auth-server/server/src/main/webapp/WEB-INF/incl/layout/login-template.xhtml
+```
+and in deployment, templates are part of war file that is exploded under paths like
+```
+/opt/jetty-11.0/temp/jetty-localhost-8081-jans-auth_war-_jans-auth-any-2256945074165495919/webapp/WEB-INF/incl/layout/login-template.xhtml
+/opt/jetty-11.0/temp/jetty-localhost-8081-jans-auth_war-_jans-auth-any-2256945074165495919/webapp/casa/login-template.xhtml
+```
+Templates have the basic logo etc.
+
