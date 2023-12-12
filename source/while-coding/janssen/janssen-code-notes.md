@@ -91,3 +91,11 @@ and in deployment, templates are part of war file that is exploded under paths l
 ```
 Templates have the basic logo etc.
 
+Command to find out which template is used in which xhtml. Run the command at the root of your source code:
+```
+dhaval@thinkpad:~/IdeaProjects/Janssen/jans$ grep -r -i --include *.xhtml "template=" .
+```
+
+How is logo on an xhtml page is fetched:
+
+Logo is served by a servlet `jans-auth-server/server/src/main/java/io/jans/as/server/servlet/LogoServlet.java`. This servlet is called from template files like `login-template.xhtml`, `login-extended-template.xhtml`. Various files, like `device_authorization.xhtml` use these template files and hence get the logo. 
