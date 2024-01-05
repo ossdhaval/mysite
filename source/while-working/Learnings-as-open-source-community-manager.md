@@ -35,6 +35,8 @@ Google technical writting style: https://developers.google.com/tech-writing
 - Developer portals : https://backstage.io/
 - cloud software licensing: https://licensespring.com/
 - use [stepsecurity](https://www.stepsecurity.io/) to improve security of github actions workflow and to help conform to OpenSSF standards
+- scan open source project dependencies and risks: https://scanoss.com/
+- is an opensource library good and credible and secure: https://stacklok.com/
 
 Flow of implementation of licensespring in gluu flix licensing:
 ![image](https://user-images.githubusercontent.com/343411/214495951-385f4b4e-7830-4d2d-b33f-e233baf9ea40.png)
