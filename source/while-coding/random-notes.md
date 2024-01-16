@@ -105,3 +105,10 @@ These characteristics mean that hash can be used to store passwords. This way, i
 ## GPG signatures on packages aka artifacts
 
 Good link for understanding : https://central.sonatype.org/publish/requirements/gpg/
+
+
+## how to check hash for python (pip) packages
+- pip gets packages from pypi. For example, for mkdocs-exclude-search package : https://pypi.org/project/mkdocs-exclude-search
+- at this location, go to download files section : https://pypi.org/project/mkdocs-exclude-search/#files
+- here hashes are available for source and binary packages
+- you can take has from above location and place it in your `requirements.txt` file like `https://github.com/JanssenProject/jans/blob/main/docs/requirements.txt`. This way, python will match the hash of downloaded package and only then install it
