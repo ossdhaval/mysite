@@ -358,7 +358,7 @@ commit message in the imperative: "Fix bug" and not "Fixed bug" or "Fixes bug."
 More guidelines for commit messages:
  https://robertcooper.me/post/git-commit-messages
 
-How to troubleshoot : 'Your branch and 'origin/master' have diverged' problem.
+### How to troubleshoot : 'Your branch and 'origin/master' have diverged' problem.
 
 this is because the your branch has commits that are not built on top of commits currently available in same branch on origin(remote).  i.e : master branch in your local repo vs master branch in remote repo.
 
