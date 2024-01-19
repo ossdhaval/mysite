@@ -66,7 +66,8 @@ Large open-source projects that are actively managed and can be looked at as ref
 - guidelines for labels : https://seantrane.com/posts/logical-colorful-github-labels-18230/
 - good github workflow for contributors: https://www.kubernetes.dev/docs/guide/github-workflow/
 - github's own roadmap managed via project board: https://github.com/github/roadmap/projects/1
-- 
+- About open source license trends and which are most used: https://innovationgraph.github.com/global-metrics/licenses
+- analytics and trend reports on github data. Very useful to understand trends. https://innovationgraph.github.com/
 
 
 ### Regular house holding checks :
