@@ -18,3 +18,6 @@ You can access keycloak at
 ```
 http://localhost:8180/auth/
 ```
+
+signin to the admin console using user `admin` and password `admin`.
+
