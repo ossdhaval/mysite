@@ -232,7 +232,7 @@ https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-
 
 ### questions or missing features:
 - how to know which all PRs are containing changes for a particular file? At times what happens is that same file is being changed in multiple PRs that leads to merge conflicts later on.
-- sometimes it happens that after looking at file content you want to know who change this piece of text? there should be a way to find commit and PR that changed that part in file
+- sometimes it happens that after looking at file content you want to know who changed this piece of text? there should be a way to find commit and PR that changed that part in file
 - We need codeowner groups. So that review can be requested from a group and if anyone from that group gives approval, that should be sufficient (configurable).
 
 
@@ -360,3 +360,15 @@ Another good article: https://github.com/alphagov/styleguides/blob/master/pull-r
 See the comment at the end of [this issue](https://github.com/dcoapp/app/issues/69). It is really useful when people know when a fix was available for that particular issue.
 
 ![image](https://github.com/ossdhaval/mysite/assets/343411/904f7cec-5364-40e4-9401-89231b642e36)
+
+## Pull request reviews: approving reviews Vs non-approving reviews
+
+when someone reviews and approves a PR, based on who is providing the approval, the review can be considered `approving`. See in [this PR]() image below, there are three reviewers. PR needs two approving reviewers to be able to merge. Though two out of three reviewers have given the approval, the PR was not ready to merge as one of the reviewer who gave the approval was not an `approving reviewer`.
+
+![image](https://github.com/ossdhaval/mysite/assets/343411/7ac02b30-90d3-40a2-94d4-033c916fd019)
+
+In the image above, you see that one of the review approval is shown as green tick while the other one is grey. Green one is from an approving reviewer, which the other one is from a normal user.
+
+I still have to find out what makes a reviewer an `approving` reviewer, but CODEOWNERs attached to that PR are surely the `approving` reviewers.
+
+
