@@ -1,5 +1,21 @@
 # keycloak
 
+## install
+Ref: https://www.keycloak.org/getting-started/getting-started-docker
+
+run the command below to install using docker
+```
+docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.6 start-dev
+```
+
+then access
+```
+http://localhost:8080/admin
+```
+
+User: admin, password: admin
+
+
 ## Local start:
 
 ```
