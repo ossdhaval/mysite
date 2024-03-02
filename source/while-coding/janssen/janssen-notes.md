@@ -2273,6 +2273,10 @@ curl -k -u "1802.c0547ae9-d667-4b5d-8f4e-29556d5cc138:vajPeuiywXHf" https:/jans-
 
 curl -k https://jans-dynamic-ldap/jans-auth/restv1/userinfo -H "Authorization: Bearer 5b37e8fa-e4ed-435c-9ab4-3f62261c6815"
 ```
+## TUI
+
+- TUI uses config-api always. Doesn't connect directly with auth-server or any other backend api.
+
 
 ## useful config-cli commands
 
