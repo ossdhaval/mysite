@@ -23,6 +23,10 @@ https://frontside.com/blog/2020-05-26-github-actions-pull_request/
 #### list of workflow trigger events
 https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 
+#### A good reference of a major project that uses github action for ci-cd
+
+cpython which is official python interpreter: https://github.com/python/cpython
+
 #### Action that can build multiple dependent projects
 
 Here current repository needs BOM project, which is a separate project, to be built first.
