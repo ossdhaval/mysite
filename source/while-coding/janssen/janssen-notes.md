@@ -2408,3 +2408,20 @@ Once after the installation, when I tried accessing admin UI, it showed below. A
 ![image](https://github.com/ossdhaval/mysite/assets/343411/71f75e83-18dd-4589-af93-488c34477b6e)
 
 So I turned on the VPN as my license was from PROD already. But after that when I click on `start 30 day trial`, it gives a screen with message as `bad gateway`. But when I still click on `start 30 day trial`, this message goes away and admin login page is shown and admin-ui is accessible. 
+
+
+## Create easy cloud VM
+
+Easycloud github action is setup to provide you a blank infrastructure (VM or Kub) with nothing installed (no jans, no flex, just OS).
+
+- go to this action in https://github.com/GluuFederation/easycloud/actions/workflows/create_ephemerals_envs.yml
+- click on `run workflow button`. It'll give you a popup form to fill.
+- To create a VM on AWS with 2 core and 8 GB, Ubuntu22.04 for 12 hours use the following inputs
+ - ![image](https://github.com/ossdhaval/mysite/assets/343411/633e8bb4-406a-4444-a5fd-b25efd090fdf)
+ - ![image](https://github.com/ossdhaval/mysite/assets/343411/e9ef6875-ba48-4045-9e9b-dacffa2349db)
+- click on run workflow. You should see a workflow created in the list and also a PR getting created with title like `ci: ossdhaval`. This PR has IP of the system and FQDN of the system. You'll need both of these when installing jans or flex later.
+- This PR stays open till your environment is alive, and gets closed based on the date and time mentioned in its description. If you want to kill an environment quickly then just update the PR description and set the date to yesterdays.
+- Also, you'll get a message on `#bot_reporter` channel with a pem file in it.
+- download that pem file.
+- To access the environment via ssh, run this command `ssh -i <path-to-pem> ubuntu@<IP>`. For ubuntu the user is `ubuntu`, (else try `ec2-user`) as well. Check PR description for more info if it dosn't work.
+- Now you can install jans as in a local lxc vm. Just remember to give the domain name as FQDN during the setup.
