@@ -2423,5 +2423,6 @@ Easycloud github action is setup to provide you a blank infrastructure (VM or Ku
 - This PR stays open till your environment is alive, and gets closed based on the date and time mentioned in its description. If you want to kill an environment quickly then just update the PR description and set the date to yesterdays.
 - Also, you'll get a message on `#bot_reporter` channel with a pem file in it.
 - download that pem file.
+- change the permissions of the pem file : `chmod 600 private.pem`
 - To access the environment via ssh, run this command `ssh -i <path-to-pem> ubuntu@<IP>`. For ubuntu the user is `ubuntu`, (else try `ec2-user`) as well. Check PR description for more info if it dosn't work.
 - Now you can install jans as in a local lxc vm. Just remember to give the domain name as FQDN during the setup.
