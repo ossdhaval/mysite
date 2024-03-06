@@ -25,7 +25,7 @@
 - Use [debugger at jwt.io](jwt.io) to see what is in the JWT
 
 ## Notes:
-
+- General note: tokens are typically signed to achieve integrity and sometimes also encrypted to achieve confidentiality
 - JWT is not an authentication mechanism, it comes into picture after trust has been established (may be via authentication or in some other way)
 - Relation between `pem` and `jwks`: https://community.auth0.com/t/jwk-vs-pem-what-is-the-difference/61927
 - Good article: https://www.pingidentity.com/en/resources/blog/post/jwt-security-nobody-talks-about.html
