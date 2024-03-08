@@ -2426,3 +2426,13 @@ Easycloud github action is setup to provide you a blank infrastructure (VM or Ku
 - change the permissions of the pem file : `chmod 600 private.pem`
 - To access the environment via ssh, run this command `ssh -i <path-to-pem> ubuntu@<IP>`. For ubuntu the user is `ubuntu`, (else try `ec2-user`) as well. Check PR description for more info if it dosn't work.
 - Now you can install jans as in a local lxc vm. Just remember to give the domain name as FQDN during the setup.
+
+
+## How to get to various UI screens of Janssen Server?
+
+### Authorization (consent gathering) screen
+
+- Using Jans Tarp, create a new client with all the default values. This will create an untrusted client
+- Initiate an authorization code flow.
+- This should first give you a authentication screen and then show the authorization screen. Even if there are no scopes attached to request.
+
