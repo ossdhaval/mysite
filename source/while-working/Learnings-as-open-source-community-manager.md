@@ -294,3 +294,15 @@ https://www.keycloak.org/2023/10/reactivating-discourse.html
 
 ### How to communicate big and complex roadmap change and engineering choices
 https://www.redhat.com/en/blog/rhel-10-plans-wayland-and-xorg-server
+
+
+## checklist when adding a new module
+- decide on technical name, formal name and if required an informal name
+- jenkins build
+- gh actions
+- tools integration (like sonar)
+- GH `component` label creation
+- GH team creation
+- GH codeowner updates
+- where to put documentation on the documention site navigation
+- Updates to readme files where all the modules are listed
