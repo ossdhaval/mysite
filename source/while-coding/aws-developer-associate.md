@@ -13,3 +13,6 @@ downloaded material at: /home/dhaval/docs/learning/tech/learning material/aws/de
 ### IAM policies
 - a policy can be applied to a group or an individual user.
 - policy applied to individual user is called `inline` policies
+- initially, in any new AWS account, there are no users, no groups. But there are predefined policies. Like `AdministratorAccess`.
+- policies have permissions within them. Permissions are simply a list of actions/resources that are allowed or denied under that policy.
+- 
