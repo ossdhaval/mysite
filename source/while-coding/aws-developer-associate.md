@@ -4,7 +4,7 @@ downloaded material at: /home/dhaval/docs/learning/tech/learning material/aws/de
 
 # Understanding AWS account
 
-When you open a new aws account, 
+When you open a new aws account, the user using which you create aws account becomes your `root` user. And each was account has an ID. Like, `805640060484`. Every other user(called IAM user) you create will be recognised in reference to this id. So for example, AWS recommends creating another user with `admin` privileges instead of root user for all further logins. So, when you want to use this admin user, you need to add the account ID along with user-name and password. While the root user doesn't need account id.
 
 ## IAM:
 - IAM is a global service so there is no region to be selected
