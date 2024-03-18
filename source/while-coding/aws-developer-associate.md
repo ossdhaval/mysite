@@ -2,6 +2,9 @@
 
 downloaded material at: /home/dhaval/docs/learning/tech/learning material/aws/developer associate certification/
 
+# Understanding AWS account
+
+When you open a new aws account, 
 
 ## IAM:
 - IAM is a global service so there is no region to be selected
