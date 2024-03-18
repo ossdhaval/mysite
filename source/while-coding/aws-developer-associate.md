@@ -15,4 +15,4 @@ downloaded material at: /home/dhaval/docs/learning/tech/learning material/aws/de
 - policy applied to individual user is called `inline` policies
 - initially, in any new AWS account, there are no users, no groups. But there are predefined policies. Like `AdministratorAccess`.
 - policies have permissions within them. Permissions are simply a list of actions/resources that are allowed or denied under that policy.
-- 
+- password policy is under account settings for admin/root user. So, this will not be available for normal users. But MFA, is available under User profile -> security credetials, so it should be available to all the users not just admin/root.
