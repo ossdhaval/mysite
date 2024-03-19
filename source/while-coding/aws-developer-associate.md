@@ -16,6 +16,32 @@ When you open a new aws account, the user using which you create aws account bec
 ### IAM policies
 - a policy can be applied to a group or an individual user.
 - policy applied to individual user is called `inline` policies
+- Policy structure:
+  ```json
+  {
+    "Version": "2023-03-23",
+    "Id": "allowRootToS3",
+    "Statement":
+    [
+      {
+        "Sid": "1",
+        "Effect": "Deny",
+        "Principal":
+        {
+          "AWS": ["arn:aws:iam::34523532453:root"]
+        },
+        "Action":
+        [
+          "s3:GetObject",
+          "s3:PutObject"
+        ],
+        "Resource":
+        [
+          "arn:aws:s3:::mybucket/*"
+        ]
+      }
+    ]
+  ```
 - initially, in any new AWS account, there are no users, no groups. But there are predefined policies. Like `AdministratorAccess`.
 - policies have permissions within them. Permissions are simply a list of actions/resources that are allowed or denied under that policy.
 - password policy is under account settings for admin/root user. So, this will not be available for normal users. But MFA, is available under User profile -> security credetials, so it should be available to all the users not just admin/root.
