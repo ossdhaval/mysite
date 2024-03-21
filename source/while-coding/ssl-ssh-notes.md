@@ -106,3 +106,23 @@ keytool -list -keystore keystore.test.local.jans.io.jks
 - He will use your public key to encrypt that text file
 - Send you encrypted text file via chat or email etc
 - You use this command to decrypt the content: `openssl rsautl -decrypt -inkey path-to-private-key -in path-to-encrypted-file > path-to-output-file` like `openssl rsautl -decrypt -inkey ~/my-ssl-keys/my-ssl.pem -in ~/docs/office/gluu/gluu_password_for_gluu_org.enc > gluu_password_for_gluu_org.txt`
+
+## SSH
+
+### Create a keypair
+
+To create a `ed25519` key (sites like github and gitlab suggest and accept these keys)
+
+```
+ssh-keygen -t ed25519 -C "my-generic-key"
+```
+
+To create an rsa key
+
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+Key pair gets created under `~/.ssh/` directory in form of two files with same name. One of them has `.pub` extension as it contains public key.
+
+To see and copy the public key (so that you can provide it to github/gitlab etc). Just open the `.pub` file with `vim` and copy the content.
