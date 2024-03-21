@@ -123,6 +123,9 @@ To create an rsa key
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
+- commands above will ask for a passphrase. You can leave it blank or if you provide the passphrase, remember it because it'll be asked whenever you try to connect with remote service using this key. Pass phrase like `mygenerickey`
+
+
 Key pair gets created under `~/.ssh/` directory in form of two files with same name. One of them has `.pub` extension as it contains public key.
 
 To see and copy the public key (so that you can provide it to github/gitlab etc). Just open the `.pub` file with `vim` and copy the content.
