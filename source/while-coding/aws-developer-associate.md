@@ -16,7 +16,11 @@ When you open a new aws account, the user using which you create aws account bec
 
 ### user credentials
 -  when you create a user, AWS doesn't ask to set a password by default. User is created without any security credentials
--  How user will be authenticated depends on what mode of interaction will the user be using to connect with AWS. Like for example, if you allow user the access to the admin console, aws will ask to set the password. While if the user is just going to interact with aws using CLI then admin can create an access key for the user. If the user is going to just use `codecommit` service to commit the code, then admin should just create SSH public key for the user.
+-  How user will be authenticated depends on what mode of interaction will the user be using to connect with AWS. There are three ways you can interact with AWS
+  - AWS management console (password and MFA protected)
+  - AWS CLI (access key)
+  - AWS SDK (access key)
+Like for example, if you allow user the access to the admin management console, aws will ask to set the password. While if the user is just going to interact with aws using CLI then admin can create an access key for the user. If the user is going to just use `codecommit` service to commit the code, then admin should just create SSH public key for the user.
 ### IAM policies
 - a policy can be applied to a group or an individual user.
 - policy applied to individual user is called `inline` policies
