@@ -59,6 +59,9 @@ Like for example, if you allow user the access to the admin management console, 
 ### Roles
 
 - While groups are for IAM users, the roles are for amazon services or users that are not authenticated by amazon IAM (for example, SAML, web identity by external providers etc)
+- One role is created for one service only (one role one service)
+- for exam only the roles or `aws services` are important
+- when you create a role, you have to choose which service it may apply to. 
 - You need to attach one or more permissions to a role
 
 ### AWS CLI
