@@ -13,6 +13,8 @@ When you open a new aws account, the user using which you create aws account bec
 - a single user can be part of multiple groups
 - there can be users who are not part of any group
 - groups can't contain other groups
+- group is a set of users who we want to apply same policies
+- Policies are group of permissions.
 
 ### user credentials
 -  when you create a user, AWS doesn't ask to set a password by default. User is created without any security credentials
@@ -54,11 +56,21 @@ Like for example, if you allow user the access to the admin management console, 
 - policies have permissions within them. Permissions are simply a list of actions/resources that are allowed or denied under that policy.
 - password policy is under account settings for admin/root user. So, this will not be available for normal users. But MFA, is available under User profile -> security credetials, so it should be available to all the users not just admin/root.
 
+### Roles
+
+- While groups are for IAM users, the roles are for amazon services or users that are not authenticated by amazon IAM (for example, SAML, web identity by external providers etc)
+- You need to attach one or more permissions to a role
+
 ### AWS CLI
 
 #### configuration
 - cli needs an access key to be able to authenticate
 - Root/admin user can create an access key for any user from the management console > IAM > users > select the user > security credentials > access key. From here the root/admin user can generate access key (every access key has a access key ID as well).
+
+#### Cloudshell
+- cloud shell is not available in all regions
+- when you click on cloudshell icon on management console it opens a shell with the same credentials as the management console.
+- You can create new files on cloudshell. These files will persist. Also, you can upload and download files to cloudshell.
 - provide access key ID and key to the user
 - user can install CLI on its machine and run `aws configure` on command line to configure the access key ID and access key
 
