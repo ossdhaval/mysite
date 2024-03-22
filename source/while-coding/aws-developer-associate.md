@@ -53,3 +53,16 @@ Like for example, if you allow user the access to the admin management console, 
 - initially, in any new AWS account, there are no users, no groups. But there are predefined policies. Like `AdministratorAccess`.
 - policies have permissions within them. Permissions are simply a list of actions/resources that are allowed or denied under that policy.
 - password policy is under account settings for admin/root user. So, this will not be available for normal users. But MFA, is available under User profile -> security credetials, so it should be available to all the users not just admin/root.
+
+### AWS CLI
+
+#### configuration
+- cli needs an access key to be able to authenticate
+- Root/admin user can create an access key for any user from the management console > IAM > users > select the user > security credentials > access key. From here the root/admin user can generate access key (every access key has a access key ID as well).
+- provide access key ID and key to the user
+- user can install CLI on its machine and run `aws configure` on command line to configure the access key ID and access key
+
+#### commands
+
+- if a user doesn't have permissions to perform an action, the cli will simply returns a blank response.
+- 
