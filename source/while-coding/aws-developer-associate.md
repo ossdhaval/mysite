@@ -70,10 +70,6 @@ Like for example, if you allow user the access to the admin management console, 
 - when you create a role, you have to choose which service it may apply to. 
 - You need to attach one or more permissions to a role
 
-### accessing budget dashboard
-- At the start budget and cost management is only available to the root user and not to any IAM users. Not even IAM users with admin policy access.
-- to allow the IAM admin user the access to budget and cost management, the root user has to go to its account home page, and enable the `iam user and the role access to the billing information`. 
-
 ### AWS CLI
 
 #### configuration
@@ -91,3 +87,27 @@ Like for example, if you allow user the access to the admin management console, 
 
 - if a user doesn't have permissions to perform an action, the cli will simply returns a blank response.
 - 
+
+## EC2
+
+### billing info and setup of budget 
+- There are three important sections under this
+  - budget: allows you to set budget
+  - bills: shos you breakdown of the monthly bills
+  - free tier: shows usage under free tier and whether the usage will exceed free tier allowed usage
+- At the start budget and cost management is only available to the root user and not to any IAM users. Not even IAM users with admin policy access.
+- to allow the IAM admin user the access to budget and cost management, the root user has to go to its account home page, and enable the `iam user and the role access to the billing information`.
+- billing info page can show following info
+  - monthly bill
+  - breakdown of monthly bill by service and even more granular
+ 
+### EC2
+  -  elastic compute cloud = ec2
+  -  covers services of EBS, ELB, ASG
+  -  An ec2 instance config involves choosing:
+    -  cpu
+    - ram
+    - storage (either `instance store` on the same EC2 hardware, or the network attached (EBS or EFS))
+    - network: network speed, do you need static IP or not,
+    - firewall: using security groups
+    - Bootstrap script called `user data` (only configurable at the first launch)
