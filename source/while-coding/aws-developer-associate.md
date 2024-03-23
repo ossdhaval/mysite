@@ -9,6 +9,7 @@ When you open a new aws account, the user using which you create aws account bec
 ## IAM:
 - IAM is a global service so there is no region to be selected
 - first, you create a root account and set up aws account with it. After this, using that user or sharing creds with anyone is not recommended.
+- AWS works on shared responsibility model where AWS is responsible for protecting and keeping AWS services safe but you(root user) is responsible to keep all the account users safe by creating proper password policies, enabling MFA etc.
 ### users and groups
 - a single user can be part of multiple groups
 - there can be users who are not part of any group
@@ -23,6 +24,7 @@ When you open a new aws account, the user using which you create aws account bec
   - AWS CLI (access key)
   - AWS SDK (access key)
 Like for example, if you allow user the access to the admin management console, aws will ask to set the password. While if the user is just going to interact with aws using CLI then admin can create an access key for the user. If the user is going to just use `codecommit` service to commit the code, then admin should just create SSH public key for the user.
+
 ### IAM policies
 - a policy can be applied to a group or an individual user.
 - policy applied to individual user is called `inline` policies
@@ -49,9 +51,13 @@ Like for example, if you allow user the access to the admin management console, 
         [
           "arn:aws:s3:::mybucket/*"
         ]
+        "Condition": {
+                  "NumericLessThanEquals": {"aws:MultiFactorAuthAge": "3600"}
+        }
       }
     ]
   ```
+  - condition is optional in a statement
 - initially, in any new AWS account, there are no users, no groups. But there are predefined policies. Like `AdministratorAccess`.
 - policies have permissions within them. Permissions are simply a list of actions/resources that are allowed or denied under that policy.
 - password policy is under account settings for admin/root user. So, this will not be available for normal users. But MFA, is available under User profile -> security credetials, so it should be available to all the users not just admin/root.
@@ -63,6 +69,10 @@ Like for example, if you allow user the access to the admin management console, 
 - for exam only the roles or `aws services` are important
 - when you create a role, you have to choose which service it may apply to. 
 - You need to attach one or more permissions to a role
+
+### accessing budget dashboard
+- At the start budget and cost management is only available to the root user and not to any IAM users. Not even IAM users with admin policy access.
+- to allow the IAM admin user the access to budget and cost management, the root user has to go to its account home page, and enable the `iam user and the role access to the billing information`. 
 
 ### AWS CLI
 
