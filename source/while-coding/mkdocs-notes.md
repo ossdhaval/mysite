@@ -22,3 +22,9 @@ pip install mkdocs-git-committers-plugin-2
 ## reference
 - https://squidfunk.github.io/mkdocs-material/reference/
 - url for local deployment: http://127.0.0.1:8000/
+
+## troubleshooting
+
+### index.md getting mapped to the category header
+
+See this [PR](https://github.com/JanssenProject/jans/pull/8147) Here since there was only one index.md under the `plugins` directory, it was getting mapped to the category and ignoring the mapping given in the mkdocs.yml. This got fixed when file name was changed to something apart from `index.md`.
