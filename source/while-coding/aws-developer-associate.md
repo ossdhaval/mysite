@@ -111,3 +111,15 @@ Like for example, if you allow user the access to the admin management console, 
     - network: network speed, do you need static IP or not,
     - firewall: using security groups
     - Bootstrap script called `user data` (only configurable at the first launch)
+
+### Security groups
+  -  SG is a firewall around an ec2 instance.
+  -  it consists of rules for inbound and outbound network traffic
+  -  by default all inbound traffic is blocked and all outbound traffic is enabled for an EC2 instance that doesn't have an SG attached
+  -  SG to EC2 is an many to many relation. One SG can be attached to multiple EC2 and a single EC2 can be assigned multiple SGs
+  -  SGs are regione and VPC specific
+  -  Tip: if you are trying to access an ec2 instance from outside (like using htttp, ss etc) and your request is timing out, then it is a problem with SG. But if your request is returning with `connection refused ` then it may be your application issue
+  -  each SG rules are made up of `type`, `protocol`, `port`, `SOURCE ip`. Type is like SSH, HTTP, https etc, while the protocol is TCP
+  -  a security group can also allow connections from and to other security groups. That is all the EC2 instances that have that SG attached to them.
+  -  
+  -  
