@@ -111,6 +111,7 @@ Like for example, if you allow user the access to the admin management console, 
     - network: network speed, do you need static IP or not,
     - firewall: using security groups
     - Bootstrap script called `user data` (only configurable at the first launch)
+    - remember that even a stopped instance will continue to be charged for attached resources like EBS and elastic ip if any.
 
 ### Security groups
   -  SG is a firewall around an ec2 instance.
