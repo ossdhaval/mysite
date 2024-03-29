@@ -104,6 +104,8 @@ Like for example, if you allow user the access to the admin management console, 
 ### EC2
   -  elastic compute cloud = ec2
   -  covers services of EBS, ELB, ASG
+  -  each instance has private and public IPs and corresponding DNS names for both
+  -  for each OS, amazon creates an initial user. For amazon linux AMI, the default user is `ec2-user`. You can use this user when you want to ssh into the instance. 
   -  An ec2 instance config involves choosing:
     -  cpu
     - ram
