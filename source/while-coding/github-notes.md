@@ -372,4 +372,45 @@ In the image above, you see that one of the review approval is shown as green ti
 
 I still have to find out what makes a reviewer an `approving` reviewer, but CODEOWNERs attached to that PR are surely the `approving` reviewers.
 
+## Github graphql queries
+
+Use these queries at: https://docs.github.com/en/graphql/overview/explorer
+
+### get issues and PRs raised by you between two dates
+
+```text
+{
+  viewer {
+    login
+    contributionsCollection(from:"2024-03-31T00:00:00Z", to:"2024-04-05T00:00:00Z") {
+      issueContributions(first: 100) {
+        edges {
+          node {
+            occurredAt
+            issue {
+              id
+              title
+            }
+            
+          }
+        }
+      }
+      pullRequestContributions(first:100){
+                 edges{
+                  node{
+                    occurredAt
+                    pullRequest{
+                      title
+                  }
+                }
+             }
+          }
+      
+        }
+      }
+    }
+
+
+```
+
 
