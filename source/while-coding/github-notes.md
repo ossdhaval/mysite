@@ -139,13 +139,13 @@ curl  https://api.github.com/orgs/JanssenProject/repos
 
 Till version 3, github had rest apis but from version 4 they have moved to GraphQL. 
 
-#### using version 4 (graphQL api)
-Reference : https://docs.github.com/en/graphql
-public schema: https://docs.github.com/en/graphql/overview/public-schema
-how to use without explorer: https://docs.github.com/en/graphql/guides/forming-calls-with-graphql
-how to use : https://docs.github.com/en/graphql/guides/using-the-explorer
-explorer url: https://docs.github.com/en/graphql/overview/explorer
+#### using version 4 (graphQL API)
 
+- Reference : https://docs.github.com/en/graphql
+- public schema: https://docs.github.com/en/graphql/overview/public-schema
+- how to use without explorer: https://docs.github.com/en/graphql/guides/forming-calls-with-graphql
+- how to use : https://docs.github.com/en/graphql/guides/using-the-explorer
+- explorer url: https://docs.github.com/en/graphql/overview/explorer
 
 #### using rest API
 
@@ -191,6 +191,7 @@ https://docs.github.com/en/organizations/keeping-your-organization-secure/review
 - only jobs from those workflow will be appear in search selection box which get triggered on [pull-request] event
 
 a good link for troubleshooting: 
+
 https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/troubleshooting-required-status-checks
 
 ### useful shortcuts
