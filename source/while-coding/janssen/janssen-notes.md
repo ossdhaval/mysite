@@ -2436,3 +2436,14 @@ Easycloud github action is setup to provide you a blank infrastructure (VM or Ku
 - Initiate an authorization code flow.
 - This should first give you a authentication screen and then show the authorization screen. Even if there are no scopes attached to request.
 
+### account selection screen
+
+- Using Jans Tarp, create a new client with all the default values. This will create an untrusted client
+- Initiate an authorization code flow.
+- This should first give you a authentication screen where you login as a user, let's say `admin`. Tarp will show the user details page with a logout button. Don't logout and leave the page open.
+- then you open another tab in the same browser and open tarp.
+- tarp will show the client details where under `additional params` text box, add `{"prompt":"select_account"}`
+- Initiate an authorization code flow.
+- This will show you a page where you can select the account (existing admin login, or add another one) like below
+  ![image](https://github.com/ossdhaval/mysite/assets/343411/012a875d-65a5-4daf-b2f6-23ec9ac12843)
+- upon selecting `login as another user`, you'll be redirected to the authentication screen again where you can login
