@@ -282,3 +282,9 @@ sudo docker-compose up
 ## know ip address of a docker container
 
 `sudo docker inspect <container name or id> | grep IPAddress`
+
+## copy files from docker container to host
+
+```
+docker cp <containerId>:/file/path/within/container /host/path/target
+```
