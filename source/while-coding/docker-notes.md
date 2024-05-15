@@ -279,6 +279,20 @@ sudo docker-compose rm
 sudo docker-compose up
 ```
 
+Get list of docker compose projects running currently:
+
+```
+docker compose ls
+```
+
+Get list of containers running as part of a docker project
+
+```
+docker compose -f jans-mysql-compose.yml ps
+```
+
+
+
 ## know ip address of a docker container
 
 `sudo docker inspect <container name or id> | grep IPAddress`
