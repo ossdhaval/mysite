@@ -291,7 +291,11 @@ Get list of containers running as part of a docker project
 docker compose -f jans-mysql-compose.yml ps
 ```
 
+Docker compose down doesn't completely remove everything. It will not remove the volumes or images for example. To remove everything use
 
+```
+docker compose down --rmi all --volumes
+```
 
 ## know ip address of a docker container
 
