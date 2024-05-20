@@ -85,7 +85,7 @@ dhaval@thinkpad:~/IdeaProjects/Janssen$
 
 1. select linux distribution from new image server, https://images.lxd.canonical.com/. Note down values in first three columns of the container that you want (distribution, release, architecture) and then run 
     ```
-    sudo lxc launch images:ubuntu/jammy/amd64 my-ubuntu-container
+    sudo lxc launch ubuntu:22.04 ubuntu-container
     ```
     
 
