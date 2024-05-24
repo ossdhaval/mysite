@@ -670,9 +670,11 @@ apt remove gluu-server
 
 rm -fr /opt/gluu-server.save
 
-==============================
-troubleshooting
-==============================
+
+
+## troubleshooting
+
+
 
 ------------
 getting 503 when trying to access oxtrust of a gluu server newly installed on
@@ -751,6 +753,32 @@ solution
 ```
 
 you have to log out of cli using `x` option and reinvoke cli using same command `sudo /opt/jans/jans-cli/config-cli.py`. Now when you try to execute any option, it'll give you a device code to authenticate.
+
+-----------
+
+`problem`:
+
+```
+root@jans-node:~# sudo apt install  ./jans_1.1.2.nightly.ubuntu22.04_amd64.deb
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'jans' instead of './jans_1.1.2.nightly.ubuntu22.04_amd64.deb'
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ jans : Depends: python3-ldap3 but it is not installable
+        Depends: python3-ruamel.yaml but it is not installable
+
+```
+
+`Solution`:
+
+This usually happens on a fresh ubuntu VM. So, this gets solved if you run `sudo apt update` and `sudo apt upgrade` first.
 
 =============
 enable linux GUI on GCP vm
