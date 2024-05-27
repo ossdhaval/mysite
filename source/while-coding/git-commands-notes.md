@@ -952,4 +952,34 @@ git clean -dxf
  git switch feature-branch
  git branch -D temp-feature-branch
 
+ # Working with patch
+
+ Git doesn't have a `git patch` command. What it has is `git format-patch` command. 
+
+ ## Create a patch
+
+ Of uncommitted changes
  ```
+git diff > my_patch.diff
+```
+
+Generate a Patch for Staged Changes
+```
+git diff --cached > my_patch.diff
+```
+
+ Generate a Patch for the Last Commit
+ ```
+git format-patch -1
+```
+
+## Apply a patch
+
+apply a patch file
+```
+git apply my_patch.diff
+```
+
+
+
+ 
