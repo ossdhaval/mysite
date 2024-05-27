@@ -2,9 +2,9 @@
 
 *Git initial setup* :
 
-`git config --global user.name "Dhaval Desai"`
+`git config --global user.name "First-name last-name"`
 
-`git config --global user.email ossdhaval@github.com`
+`git config --global user.email myemail@github.com`
 
 `git config --list`
 
