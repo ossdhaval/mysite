@@ -7,10 +7,20 @@ Cedar is a language for defining permissions as policies, which describe who sho
 ## What is it used for?
 Use Cedar policies to control what each user of your application is permitted to do and what resources they may access.
 
-## Details
+## PARC model
 
 Works on `PARC` model:
 - Principal: The user or the actor of the request
 - Action: action to be taken (like CRUD actions)
 - Resource: Subject of the request (like a photo, some data in the app or some feature)
 - Context: Contextual info about the principal (like has the pricipal been authenticated etc)
+
+## policy statement
+
+Every policy statement must include an effect and a scope:
+
+- The effect specifies whether this a permit or a forbid policy.
+- The scope specifies the principal[s], the action[s], and the resource[s] to which the effect applies.
+- Optionally, the statement may also include one or more conditions in the form of when or unless clauses. Conditions help add the context in decision making.
+
+Each principal and resource are identified by a type and id. Everytime you refer to a resource or principal, you have to mention the type and its id. For example, the type could be `user` and id could be `alice`.
