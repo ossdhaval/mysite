@@ -19,6 +19,11 @@ pip install mkdocs-git-revision-date-localized-plugin
 pip install mkdocs-git-committers-plugin-2
 ```
 
+### Icons sets available in mkdocs by default
+
+https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#configuration
+
+
 ## reference
 - https://squidfunk.github.io/mkdocs-material/reference/
 - url for local deployment: http://127.0.0.1:8000/
