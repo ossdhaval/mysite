@@ -125,4 +125,25 @@ Like for example, if you allow user the access to the admin management console, 
   -  each SG rules are made up of `type`, `protocol`, `port`, `SOURCE ip`. Type is like SSH, HTTP, https etc, while the protocol is TCP
   -  a security group can also allow connections from and to other security groups. That is all the EC2 instances that have that SG attached to them.
   -  
-  -  
+
+### EC2 buying options
+- EC2 is billed per second
+- 3 Different ways to book a EC2 instance that will affect the final price. With each category a different type of discount is applied to EC2 instance price.
+  - On demand EC2 instances: [pricing](https://aws.amazon.com/ec2/pricing/on-demand/)
+  - savings plan: Savings Plans is a flexible pricing model that can help you reduce your bill by up to 72% compared to On-Demand prices, in exchange for a one- or three-year hourly spend commitment. AWS offers three types of Savings Plans: Compute Savings Plans, EC2 Instance Savings Plans, and Amazon SageMaker Savings Plans.
+  - Reserved instances: Amazon EC2 Reserved Instances (RI) provide discount in return of a capacity reservation. Reservation can be either 1 year or 3 years.
+  - Spot instances : Amazon EC2 Spot Instances let you take advantage of unused EC2 capacity in the AWS cloud and are available at a discount of up to 90% compared to On-Demand prices. These instances can be taken away any time. These are good for fault-tolerant, stateless operations.
+- 2 ways to get reserved capacity or instance
+  - On-demand capacity reservation: On-Demand Capacity Reservations enable you to reserve compute capacity for your EC2 instances in a specific Availability Zone for any duration. Capacity reservations mitigate against the risk of being unable to get On-Demand capacity in case of capacity constraints and ensure that you always have access to EC2 capacity when you need it, for as long as you need it. On-Demand Capacity Reservations are recommended for:
+    - Business-critical events or workloads that require capacity assurance
+    - Workloads that need to meet regulatory requirements for high availability
+    - Disaster recovery
+  - Dedicated Host: A Dedicated Host is a physical EC2 server fully dedicated for your use. Dedicated Hosts can help you reduce costs by allowing you to use your existing server-bound software licenses, including Windows Server, SQL Server, and SUSE Linux Enterprise Server (subject to your license terms). Dedicated Hosts can be purchased On-Demand (hourly) or can be purchased as part of Savings Plans. Dedicated Hosts are recommended for:
+  - Users looking to save money on licensing costs
+  - Workloads that need to run on dedicated physical servers
+  - Users looking to offload host maintenance onto AWS, while controlling their maintenance event schedules to suit their business’s operational needs
+
+## Storage options
+
+### EBS
+
