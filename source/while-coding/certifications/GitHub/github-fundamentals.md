@@ -62,6 +62,19 @@ Git is distributed, which means that a project's complete history is stored both
 
 **Branch**: A branch is a named series of linked commits. The most recent commit on a branch is called the head. The default branch, which is created when you initialize a repository, is called main, often named master in Git. The head of the current branch is named HEAD(in caps). Branches are an incredibly useful feature of Git because they allow developers to work independently (or together) in branches and later merge their changes into the default branch.
 
+## Features provided by GitHub on top of Git
+
+Key features provided by GitHub include:
+
+- Issues
+- Discussions
+- Pull requests
+- Notifications
+- Labels
+- Actions
+- Forks
+- Projects
+
 **Remote**: A remote is a named reference to another Git repository. When you create a repo, Git creates a remote named origin that is the default remote for push and pull operations.
 
 **Commands, subcommands, and options**: Git operations are performed by using commands like git push and git pull. git is the command, and push or pull is the subcommand. The subcommand specifies the operation you want Git to perform. Commands frequently are accompanied by options, which use hyphens (-) or double hyphens (--). For example, git reset --hard.
