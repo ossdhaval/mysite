@@ -1,6 +1,8 @@
 # GitHub Fundamentals
 
+## References
 
+- 
 ##### Add a change to last commit without changing the commit message
 
 For example you want to fix a typo that got into the last commit
