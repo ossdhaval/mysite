@@ -728,6 +728,10 @@ A cherry-pick in Git is like a rebase for a single commit. It takes the patch th
 and tries to reapply it on the branch you’re currently on. This is useful if you have a number of
 commits on a topic branch and you want to integrate only one of them, or if you only have one
 commit on a topic branch and you’d prefer to cherry-pick it rather than run rebase.
+
+remember that when cherry picking, you don't have to mention the source-branch. Just mention the commit sha.
+
+By default cherry pick will bring in the changes from source commit and commit them to your branch. See the command below. (you can use -n option if you don't want to commit the incoming changes. Then it'll just stage those changes, which you can edit and manually merge. This is very useful)
  
 ```
  $ git cherry-pick -S e43a6
@@ -761,7 +765,9 @@ You can edit conflicted file and resolve the conflict, run `git add` to add that
   ```
  git cherry-pick -S 2493781^..c5e9df3
  ```
- 
+
+
+
  ### What to do when you have unsigned commits in your PR
 
   
