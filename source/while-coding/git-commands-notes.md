@@ -381,9 +381,11 @@ In this case, we want to synch up with same branch on remote server.
 rebase essentially brings in commit5 from remote into your local repo and then puts back commit4 on top of that. 
  
 To use this option :
- ```
+
+```
 git pull --rebase
 ```
+
  See the https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches/2452610
  
  
@@ -396,12 +398,12 @@ git pull --rebase
  
  - If your feature branch is public (i.e pushed to github) then use merge as merge doesn't change SHA of existing commits but creates a new merge commit (to avoid this, many people use rebase as below)
  
-   ```
+```
  git switch main
  git pull
  git switch feature
  git merge main
- ```
+```
  
  - if your feature branch is still only on your local then use rebase as rebase creates a linear history by getting commits from main to your branch (keeping the SHA same) and then recreating your commits on top of those (SHA changes for your commits). It is said `rebase feature onto main`
  
@@ -418,6 +420,7 @@ git pull --rebase
  - [Golden rule of rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
 How to remove files from 'Changes not staged for commit' category of git status :
+
 ```
 git checkout <file>
 ```
@@ -433,6 +436,7 @@ Your branch is ahead of 'origin/master' by 1 commit.
 This means you have one commit that you have not pushed. 
 
 To see what is going to get committed in next push :
+
 ```
 git log --stat
 ```
@@ -936,9 +940,9 @@ git clean -dxf
  
  - Before raising a PR for your feature branch, if you want to know if PR will get merge conflict with base branch(let's say main) or not, then do this locally on your system:
  
- ```
+```
  # make sure you are on feature branch
- git swith feature-branch
+ git switch feature-branch
  
  # create temp branch from your feature branch
  git checkout -b temp-feature-branch
@@ -958,6 +962,8 @@ git clean -dxf
  git switch feature-branch
  git branch -D temp-feature-branch
 
+```
+
  # Working with patch
 
  Git doesn't have a `git patch` command. What it has is `git format-patch` command. 
@@ -965,7 +971,7 @@ git clean -dxf
  ## Create a patch
 
  Of uncommitted changes
- ```
+```
 git diff > my_patch.diff
 ```
 
