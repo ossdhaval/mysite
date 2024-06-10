@@ -84,4 +84,4 @@ Key features provided by GitHub include:
 
 ### lifecycle
 
-(create) ----- inactive for 30 mins ---> Stopped --- stopped for 30 days --> deleted
+(create) ----- inactive for 30 mins ---> (Stopped) --- stopped for 30 days --> (deleted)
