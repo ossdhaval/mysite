@@ -78,3 +78,10 @@ Key features provided by GitHub include:
 **Remote**: A remote is a named reference to another Git repository. When you create a repo, Git creates a remote named origin that is the default remote for push and pull operations.
 
 **Commands, subcommands, and options**: Git operations are performed by using commands like git push and git pull. git is the command, and push or pull is the subcommand. The subcommand specifies the operation you want Git to perform. Commands frequently are accompanied by options, which use hyphens (-) or double hyphens (--). For example, git reset --hard.
+
+
+## Codespaces
+
+### lifecycle
+
+(create) ----- inactive for 30 mins ---> Stopped --- stopped for 30 days --> deleted
