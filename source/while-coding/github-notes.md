@@ -414,3 +414,34 @@ Use these queries at: https://docs.github.com/en/graphql/overview/explorer
 ```
 
 
+## configuring ssh key for GitHub
+
+- create a key
+  ```
+  ssh-keygen -f ssh-key-github-ed25519-ossdhaval -t ed25519 -C "343411+ossdhaval@users.noreply.github.com"
+  ```
+- Open the public key file
+  ```
+  cat ~/.ssh/ssh-key-github-ed25519-ossdhaval.pub
+  ```
+  copy the content of this
+- Add public key to GitHub
+  - go to your github account on web > settings > ssh and gpg keys > add ssh key
+  - paste the public key content copied above
+- On your machine, start the ssh-agent
+  ```
+  eval `ssh-agent`
+  ```
+  This will show a PID.
+- add your private key to ssh agent
+  ```
+  ssh-add ~/.ssh/ssh-key-github-ed25519-ossdhaval
+  ```
+- Then test authentication with github
+  ```
+  ssh -T git@github.com
+  ```
+  This should show a message like below if the authn is successful.
+  ```
+  Hi ossdhaval! You've successfully authenticated, but GitHub does not provide shell access.
+  ```
