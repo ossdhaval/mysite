@@ -85,3 +85,17 @@ Key features provided by GitHub include:
 ### lifecycle
 
 (create) ----- inactive for 30 mins ---> (Stopped) --- stopped for 30 days --> (deleted)
+
+- You can create codespace
+  -  From a GitHub template or any template repository on GitHub.com to start a new project.
+  -  From a branch in your repository for new feature work.
+  -  From an open pull request to explore work-in-progress.
+  -  From a commit in a repository's history to investigate a bug at a specific point in time.
+-  If starting a new project, create a Codespace from a template and publish it to a repository on GitHub later.
+- You can create more than one Codespace per repository or even per branch.
+- When you create a GitHub Codespace, four processes occur:
+  -  VM and storage are assigned to your Codespace.
+  -  A container is created.
+  -  A connection to the Codespace is made.
+  -  A post-creation setup is made.
+- When you connect to a Codespace through the web, AutoSave is automatically enabled to save changes after a specific amount of time has passed. When you connect to a Codespace through Visual Studio Code running on your desktop, you must enable AutoSave.
