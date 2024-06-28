@@ -79,10 +79,27 @@ Key features provided by GitHub include:
 
 **Commands, subcommands, and options**: Git operations are performed by using commands like git push and git pull. git is the command, and push or pull is the subcommand. The subcommand specifies the operation you want Git to perform. Commands frequently are accompanied by options, which use hyphens (-) or double hyphens (--). For example, git reset --hard.
 
+## Development and code editing options from GitHub.com  
 
-## Codespaces
+Github provides three different ways you can edit or develop code from the browser itself. 
+- Browsing and editing code from github.com site (good for basic browsing and editing a single file at a time)
+- Use github.dev light weight VS code editor to edit code and perform all git operations (Full fledged code browser, editor and can perform all git commands. But can't run, test or debug code)
+- Use codespaces, which provides full VS code running on an azure VM with access to shell.
 
-### lifecycle
+
+ ### github.dev
+- to start, navigate to a repo or a PR on github.com and then hit `dot` (.)
+- github.dev is a lightweight VS code editor that can be launched from the browser on your current repo. It is essentially meant to enable all code editing options and git operations. You can't test, run or debug programs there. Also you don't have access to terminal (which you have in codespaces).
+- github.dev doesn't have compute attached to it so you can't process your code. Just edit and git operations.
+- detailed differences between github.dev and codespaces are described [here](https://learn.microsoft.com/en-us/training/modules/code-with-github-codespaces/4-codespaces-versus-github-dev-editor)
+
+  
+### Codespaces
+
+- codespaces is dedicated remote VM on Azure (with compute and storage) with preconfigured VS code (full version) and terminal access
+- currently Individuals can use Codespaces for free each month for 60 hours, with pay-as-you-go pricing after that. Teams or Enterprises pay for Codespaces. A maximum monthly cap can also be set for extra pricing control.
+
+### codespaces lifecycle
 
 (create) ----- inactive for 30 mins ---> (Stopped) --- stopped for 30 days --> (deleted)
 
@@ -99,3 +116,13 @@ Key features provided by GitHub include:
   -  A connection to the Codespace is made.
   -  A post-creation setup is made.
 - When you connect to a Codespace through the web, AutoSave is automatically enabled to save changes after a specific amount of time has passed. When you connect to a Codespace through Visual Studio Code running on your desktop, you must enable AutoSave.
+- list of your current code spaces: https://github.com/codespaces
+- A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you won't be able to access your Codespace. However, any uncommitted changes are saved. When you reestablish the internet connection, you can access the Codespace in the same state that it was left in when the connection was lost. If you have an unstable internet connection, you should frequently commit and push your changes.
+- Only running Codespaces incur CPU charges. A stopped Codespace incurs only storage costs.
+- codespaces personlisation: there is a list of things you can personalize [here](https://learn.microsoft.com/en-us/training/modules/code-with-github-codespaces/3-personalize-codespace) but didn't quite understand how to do it.
+
+
+- 
+
+
+
