@@ -98,6 +98,8 @@ Github provides three different ways you can edit or develop code from the brows
 
 - codespaces is dedicated remote VM on Azure (with compute and storage) with preconfigured VS code (full version) and terminal access
 - currently Individuals can use Codespaces for free each month for 60 hours, with pay-as-you-go pricing after that. Teams or Enterprises pay for Codespaces. A maximum monthly cap can also be set for extra pricing control.
+- You can customize your project for GitHub Codespaces by committing configuration files to your repository (also known as configuration-as-code), which creates a repeatable codespace configuration for all users of your project. Each codespace you create is hosted by GitHub in a Docker container that runs on a virtual machine. You can choose the type of machine you want to use depending on the resources you need.
+- It is not necessary to create a codespace from an existing repo/pr/commit. You can create a blank workspace from a template as well.
 
 ### codespaces lifecycle
 
@@ -121,8 +123,14 @@ Github provides three different ways you can edit or develop code from the brows
 - Only running Codespaces incur CPU charges. A stopped Codespace incurs only storage costs.
 - codespaces personlisation: there is a list of things you can personalize [here](https://learn.microsoft.com/en-us/training/modules/code-with-github-codespaces/3-personalize-codespace) but didn't quite understand how to do it.
 
+#### devcontainers
 
-- 
+By default, when you start a codespace, it launches a Azure VM and creates a docker container within the VM to host your dev environment. 
+
+You can configure the development container(aka dev containers) for a repository so that any codespace created for that repository will give you a tailored development environment, complete with all the tools and runtimes you need to work on a specific project.
+
+A dev container file(.devcontainer/devcontainer.json) is a JSON file that lets you customize the default image that runs your codespace, VS code settings, run custom code, forward ports and much more!
+
 
 
 
