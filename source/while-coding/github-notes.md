@@ -1,5 +1,18 @@
 # Github notes
 
+## Github authenticating with Git
+
+Your local git repo may be setup with email and username etc, but these are for local git. These do not help with authenticating with platforms like github or gitlab. Using just a git initialized directory, you will be able to clone remote public repositories from these platforms but you will not be able to perform actions like pushing commits, cloning using SSH etc. 
+
+### Cloning a repo
+
+You can clone repo from github using three ways
+-  HTTPS: No authentication needed for cloning, so this is the easiest way to clone a repo. But when you try to push a commit, it'll ask for github username and password. In the password, you have to provide personal token (not the password). So, prefer this mode when you plan to work with the repo for short time and mostly for read-only purposes.
+-  SSH: Here the authentication with github is required up-front. You have to [setup ssh authentication](#configuring-ssh-key-for-github) even to clone the repo. But once done, you can push commits etc. Prefer this mode when you plan to use the repo for longer time, and not just for read-only purposes.
+-  GH CLI
+
+When working with github, you'll need to setup authentication for GitHub in your local git settings 
+
 ### setting up github commit signature verification:
 - First check that your email id is verified:
   - go to github->user settings->emails->see if it mentions 'unverified' below your email id
