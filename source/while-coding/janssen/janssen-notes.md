@@ -2442,6 +2442,9 @@ So I turned on the VPN as my license was from PROD already. But after that when 
 
 Easycloud github action is setup to provide you a blank infrastructure (VM or Kub) with nothing installed (no jans, no flex, just OS).
 
+- For VMs choose `do`(digital ocean) and for k8s choose `aws`
+- `VM` and `do` are default, and for Jans if you wnat 4-core 8gb machine then everything is set, just change the region from nyc1 to blr1 if you want to.
+  
 - go to this action in https://github.com/GluuFederation/easycloud/actions/workflows/create_ephemerals_envs.yml
 - click on `run workflow button`. It'll give you a popup form to fill.
 - To create a VM on AWS with 2 core and 8 GB, Ubuntu22.04 for 12 hours use the following inputs
