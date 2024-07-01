@@ -1,5 +1,10 @@
 # VSCode Notes
 
+## Essential setup items
+- install gitlens from gitkraken for git history visualization
+- in settings(ctrl+,), search for `gpg` and enable commit signing for both (user and workspace)
+- in settings(ctrl+,), search for `signoff` and enable the `Git: always sign off` for both (user and workspace)
+
 ## Shortcuts
 
 
