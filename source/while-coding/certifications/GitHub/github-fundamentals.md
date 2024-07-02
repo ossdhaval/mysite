@@ -131,6 +131,25 @@ You can configure the development container(aka dev containers) for a repository
 
 A dev container file(.devcontainer/devcontainer.json) is a JSON file that lets you customize the default image that runs your codespace, VS code settings, run custom code, forward ports and much more!
 
+GitHub Codespaces offers two main ways of personalizing your codespace: Settings Sync with VS Code and dotfiles(this refers to files that start from `.` on any unix, linux system in general).
 
+#### dotfiles
+
+Reference: https://docs.github.com/en/codespaces/setting-your-user-preferences/personalizing-github-codespaces-for-your-account#dotfiles
+
+When you create a new codespace, GitHub clones your selected dotfiles repository(in your GH user settings) to the codespace environment, and looks for one of the following files to set up the environment.
+```
+install.sh
+install
+bootstrap.sh
+bootstrap
+script/bootstrap
+setup.sh
+setup
+script/setup
+```
+If none of these files are found, then any files or folders in your selected dotfiles repository starting with . are symlinked to the codespace's ~ or $HOME directory.
+
+You need to have all the dotfiles in any one of your GH repositories and mention it under the `settings`->`codespaces`->`enable dotfiles`
 
 
