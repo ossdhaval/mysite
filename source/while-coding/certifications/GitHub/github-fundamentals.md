@@ -194,11 +194,11 @@ You need to have all the dotfiles in any one of your GH repositories and mention
   Admins of organization-level Projects can manage access for the entire organization, for teams, for individual organization members, and for outside collaborators. Admins of user-level Projects can invite individual collaborators and manage their access.
 
 - Organization level Project
-  No access: Only organization owners and users granted individual access can see the Project. Organization owners are also admins for the Project.
-  Read: Everyone in the organization can see the Project. Organization owners are also admins for the Project.
-  Write: Everyone in the organization can see and edit the Project. Organization owners are also admins for the Project.
-  Admin: Everyone in the organization is an admin for the Project.
+ - No access: Only organization owners and users granted individual access can see the Project. Organization owners are also admins for the Project.
+ - Read: Everyone in the organization can see the Project. Organization owners are also admins for the Project.
+ - Write: Everyone in the organization can see and edit the Project. Organization owners are also admins for the Project.
+ - Admin: Everyone in the organization is an admin for the Project.
 - Personal/User level Project
-  Read: The individual can view the Project.
-  Write: The individual can view and edit the Project.
-  Admin: The individual can view, edit, and add new collaborators to the Project.
+  - Read: The individual can view the Project.
+  - Write: The individual can view and edit the Project.
+  - Admin: The individual can view, edit, and add new collaborators to the Project.
