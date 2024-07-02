@@ -153,3 +153,52 @@ If none of these files are found, then any files or folders in your selected dot
 You need to have all the dotfiles in any one of your GH repositories and mention it under the `settings`->`codespaces`->`enable dotfiles`
 
 
+## GitHub Projects
+
+- Projects can be at Org level(where there is a GH org), or at repo level. 
+
+### Compare `Projects` Vs `Projects(classic)`
+
+![image](https://github.com/ossdhaval/mysite/assets/343411/9be3748d-d2ae-4f6c-9b75-cff05d7cd160)
+
+
+**Comprehensive lists of Project enhancements**
+
+-  Tables and boards
+  -  Plan and track work in a table or board view
+  -  Rank, sort, and group within a table by any custom field
+  -  Create draft issues with detailed descriptions and metadata
+  -  Materialize any perspective with tokenized filtering and saved views
+  -  Customize cards and group-by in Project boards
+  -  Real-time Project updates and user presence indicators
+-  Data
+  -  Define custom fields of type: text, number, date, iteration, and single select
+  -  Configure iterations with flexible date ranges and breaks to represent your sprints, cycles, or quarterly roadmap
+  -  View linked pull requests and reviewers in both table and board views
+-  Insight
+  -  Create and configure custom bar, column, line, and stacked area charts
+  -  Use aggregation functions like sum, count, average, min, and max to get the proper insight
+  -  Persist charts and share them with a URL to keep everyone in the know
+-  Automation
+  -  GraphQL ProjectsV2 API
+  -  GitHub app Project scopes
+  -  Webhooks events for Project item metadata updates
+  -  GitHub Action to automate adding issues to Projects
+
+### access control
+
+- Project visibility: You have the ability to control whether or not your Project is public or private. When your Project is public, everyone on the internet can view it. When your Project is private, only users granted at least read access can see your Project.
+    - If the project is part of an org, then you can also define a `base role` which dictates what is a default role for a member of that org. So if the project is private, but the base role is `write`, then all the members of the org
+      would be able to edit the project items. But for people outside of the org, it'll be on invite.
+- Who can manage access to your Project
+  Admins of organization-level Projects can manage access for the entire organization, for teams, for individual organization members, and for outside collaborators. Admins of user-level Projects can invite individual collaborators and manage their access.
+
+- Organization level Project
+  No access: Only organization owners and users granted individual access can see the Project. Organization owners are also admins for the Project.
+  Read: Everyone in the organization can see the Project. Organization owners are also admins for the Project.
+  Write: Everyone in the organization can see and edit the Project. Organization owners are also admins for the Project.
+  Admin: Everyone in the organization is an admin for the Project.
+- Personal/User level Project
+  Read: The individual can view the Project.
+  Write: The individual can view and edit the Project.
+  Admin: The individual can view, edit, and add new collaborators to the Project.
