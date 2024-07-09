@@ -276,7 +276,22 @@ dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$
  `ref:` https://stackoverflow.com/a/23961231/2331225
  
  
- 
+## Ignoring files
+
+There are three ways to which files should git ignore:
+
+- using `.gitignore` file in your repo : best way to share with other developers who use the same repo
+- using `$LOCAL_REPO_DIR/info/exclude`: use this when you want to ignore files and don't want to commit to the repo. But this `exclude` file is repository-specific
+- using `core.excludesFile` global ignore files: best way to ignore ide-specific or user-specific files in the local workspace **that need to be applied to all the local git repositories**
+ - create a text file anywhere and list the files which you want to ignore. For example, if you want to ignore `.vscode` directory, put the content below in the file.
+   ```
+   .vscode
+   ```
+ - run the command below to make a settings entry in your global git config file which is usually at your home directory `~/.gitconfig`
+   ```
+   git config --global core.excludesFile '~/code/personal-configs/git-global-ignore-settings'
+   ```
+ - after this `.vscode` directory will be ignored everywhere in all your repositories on this machine
 
 ### About git ignore:
 
@@ -287,10 +302,11 @@ dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$
 
   Patterns which should be version-controlled and distributed to other repositories
   via clone (i.e., files that all developers will want to ignore) should go into a .gitignore file.
+  Meaning, these are files created by your project itself and should be ignored by every developer
+  who is using this codebase.
 
   Patterns which are specific to a particular repository but which do not need to be shared with other
-  related repositories (e.g., auxiliary files that live inside the repository but are specific to one
-  user’s workflow) should go into the $GIT_DIR/info/exclude file.
+  related repositories (e.g., IDE specific files like `.vscode` etc) should go into the $GIT_DIR/info/exclude file.
   ```
   
 Avoiding to use .gitignore for your custom file :
