@@ -283,15 +283,15 @@ There are three ways to which files should git ignore:
 - using `.gitignore` file in your repo : best way to share with other developers who use the same repo
 - using `$LOCAL_REPO_DIR/info/exclude`: use this when you want to ignore files and don't want to commit to the repo. But this `exclude` file is repository-specific
 - using `core.excludesFile` global ignore files: best way to ignore ide-specific or user-specific files in the local workspace **that need to be applied to all the local git repositories**
- - create a text file anywhere and list the files which you want to ignore. For example, if you want to ignore `.vscode` directory, put the content below in the file.
-   ```
-   .vscode
-   ```
- - run the command below to make a settings entry in your global git config file which is usually at your home directory `~/.gitconfig`
-   ```
-   git config --global core.excludesFile '~/code/personal-configs/git-global-ignore-settings'
-   ```
- - after this `.vscode` directory will be ignored everywhere in all your repositories on this machine
+  - create a text file anywhere and list the files which you want to ignore. For example, if you want to ignore `.vscode` directory, put the content below in the file.
+    ```
+    .vscode
+    ```
+  - run the command below to make a settings entry in your global git config file which is usually at your home directory `~/.gitconfig`
+    ```
+    git config --global core.excludesFile '~/code/personal-configs/git-global-ignore-settings'
+    ```
+  - after this `.vscode` directory will be ignored everywhere in all your repositories on this machine
 
 ### About git ignore:
 
