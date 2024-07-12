@@ -1008,12 +1008,16 @@ apply a patch file
 git apply my_patch.diff
 ```
 
-## copy a file from a different branch to your current branch
+# copy a file from a different branch to your current branch
 
 ```
 git checkout <other-branch-name> file-path
 ```
 file will be added to the same location in your branch as the other branch.
 
+# add all files except one
 
+```
+git add . :^mkdocs.yml
+```
  
