@@ -171,14 +171,17 @@ You need to have all the dotfiles in any one of your GH repositories and mention
   -  Materialize any perspective with tokenized filtering and saved views
   -  Customize cards and group-by in Project boards
   -  Real-time Project updates and user presence indicators
+    
 -  Data
   -  Define custom fields of type: text, number, date, iteration, and single select
   -  Configure iterations with flexible date ranges and breaks to represent your sprints, cycles, or quarterly roadmap
   -  View linked pull requests and reviewers in both table and board views
+    
 -  Insight
   -  Create and configure custom bar, column, line, and stacked area charts
   -  Use aggregation functions like sum, count, average, min, and max to get the proper insight
   -  Persist charts and share them with a URL to keep everyone in the know
+    
 -  Automation
   -  GraphQL ProjectsV2 API
   -  GitHub app Project scopes
