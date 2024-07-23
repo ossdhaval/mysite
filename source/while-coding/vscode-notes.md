@@ -22,6 +22,23 @@
     - This will create a new directory under the parent with the code from github `/home/xyz/vscode/my-repo`
 - in vscode, you should download extension from microsoft `extension pack for java`. This extension pack installs 6 extensions to support java development.
 
+## Enabling settings sync
+
+When you turn on sync, your settings are linked to a Microsoft(outlook) or github account. Suppose you have a VSCode on your desktop and you also want same settings on GitHub codespaces. Do the following:
+
+- On desktop VSCode
+  - Go to `settings` > `backup and sync settings`
+  - Choose what you want to sync and Click on `sign in`
+  - Select GH or microsoft account (I have used ossdhavalATTHERATEoutlookDOTcom)
+  - and done. You settings sync is turned-on on desktop VSCode
+- On GH codespaces
+  - to make sure your codespaces are using the same settings as desktop VScode do following
+  - go to GH web
+  - settings
+  - go to `Code, planning, and automation` > `codespaces` section
+  - there is a section for `settings sync`, enable it
+  - also, since codespaces open for a particular repo, you have to add repo in the trusted repo list on the same page. Now when you open the codespace for that repo, settings will be synced. 
+
 ## References
 - msft doc for using java in VScode: https://code.visualstudio.com/docs/java/java-tutorial
 - keyboard shortcuts(OS vise): https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_keyboard-reference-sheets
