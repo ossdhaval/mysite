@@ -17,6 +17,14 @@ When working with github, you'll need to setup authentication for GitHub in your
 - First check that your email id is verified:
   - go to github->user settings->emails->see if it mentions 'unverified' below your email id
   - ref [here](https://docs.github.com/en/github/getting-started-with-github/signing-up-for-github/verifying-your-email-address)
+#### signing using SSH key (preferred)
+- I am preferring this method as here you can use the same ssh key to authenticate with github as well as to sign the commits. So, you have to manage only one key. And since there is only one key, it is easy to move it to a different machine if you are setting up a new hardware. To move ssh key, you just have to copy the public and private key files from ~/.ssh/ directory to new machine, same directory.
+- In this method you can add the same SSH key as signing and authn key in the github settings -> ssh and gpg key section.
+- Two setting that you have to change in the local git configuration is as below:
+  ```
+  
+  ```
+#### signing using GPG key
 - Check if you have a GPG key (private-public key pair) already generated for this email id on your machine
   - `gpg --list-secret-keys --keyid-format LONG`
 - if you don't have a key generate it
@@ -35,7 +43,21 @@ When working with github, you'll need to setup authentication for GitHub in your
   - now go to github->profile->settings->SSH and GPG keys->New GPG key. Paste public key block that you copied in step above.
 - after this whenever you want to sign a commit add `-S` flag
   - `git commit -S -m your commit message` 
+- If you want to move gpg key from some other machine to a new hardware setup, then do following
+  - find the id of the key. List the existing keys on current machine as below and `id` is the part after `rsa4096` in `sec   rsa4096/[**YOUR KEY ID**] 2024-03-30 [SC]` 
+  - export keys from currect machine
+    ```
+    # export public key
+    gpg --export -a [your key id] > gpg-pub.asc
 
+    # export private key
+    gpg --export-secret-keys -a [your key] > gpg-sc.asc
+    ```
+  - Move these key files to new machine and import keys using
+    ```
+    gpg --import gpg-pub.asc
+    gpg --import gpg-sc.asc
+    ```
 - Troubleshooting:
   - Many times people face this error while trying to push to github.
   `commits must have valid signatures` 
