@@ -58,6 +58,7 @@ When working with github, you'll need to setup authentication for GitHub in your
     gpg --import gpg-pub.asc
     gpg --import gpg-sc.asc
     ```
+  - ref: https://blog.ridaeh.com/migrate-you-gpg-keys-from-one-machine-to-another-3341e980dfac
 - Troubleshooting:
   - Many times people face this error while trying to push to github.
   `commits must have valid signatures` 
