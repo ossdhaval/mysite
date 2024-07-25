@@ -59,6 +59,10 @@ When working with github, you'll need to setup authentication for GitHub in your
     gpg --import gpg-sc.asc
     ```
   - ref: https://blog.ridaeh.com/migrate-you-gpg-keys-from-one-machine-to-another-3341e980dfac
+  - You have to edit this key to add trust and validity
+    - add validity using: `gpg --lsign-key <key-fingerprint>`, you can find the fingerprint using `gpg --list-keys --fingerprint`, the line below `pub rsa..` is the finger print.
+    - add trust using `gpg --edit-key <key-id`, when asked, select `5` that is `ultimate` and exit using `save`
+  - With this setup, you should be able to use the key for signing and github will show `verified`
 - Troubleshooting:
   - Many times people face this error while trying to push to github.
   `commits must have valid signatures` 
