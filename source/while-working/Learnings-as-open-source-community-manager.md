@@ -306,3 +306,12 @@ https://www.redhat.com/en/blog/rhel-10-plans-wayland-and-xorg-server
 - GH codeowner updates
 - where to put documentation on the documention site navigation
 - Updates to readme files where all the modules are listed
+
+## in the role of opensource release/community manager
+
+- release management (backlog grooming, sprint planning, tracking) (tools: github projects, issues, PRs)
+- Process : PR flow, automatic checks, contribution guidelines
+- Open source project initiation: Starting from README, PR-issue templates, issue triage, codeowners, security best practises(Open Source Security Foundation (OpenSSF) Best Practices badge), 
+- polyrepo to monorepo migration
+- community engagement: Hosting Office hours, meet-ups, community calls/events, PRs, issues and discussions, gitter, twitter, 
+- Documentation and multimedia content creation
