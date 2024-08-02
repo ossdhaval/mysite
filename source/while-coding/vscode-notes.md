@@ -7,8 +7,16 @@
 
 ## Shortcuts
 
-
+- ctrl+p: find files
 - ctrl+shit+p: command palette
+- ctrl+j: hide/unhide panel
+- ctrl+`: open terminal panel
+- crtl+shift+e: open editor view
+- crtl+shift+f: open find view
+- crtl+shift+g g: open git view
+- ctrl+w: close current open editor file
+- ctrl+k ctrl+w: close all open editor files
+- ctrl+pgup or ctrl+pgdonw: to move between terminals
 
 ## cloning a new project from Github
 
