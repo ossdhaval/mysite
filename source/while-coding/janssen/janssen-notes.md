@@ -2440,13 +2440,17 @@ So I turned on the VPN as my license was from PROD already. But after that when 
 
 ## Create easy cloud VM
 
-Easycloud github action is setup to provide you a blank infrastructure (VM or Kub) with nothing installed (no jans, no flex, just OS).
+Easycloud github action is setup to provide you machine with jans (docker) installed on it.
 
-- For VMs choose `do`(digital ocean) and for k8s choose `aws`
-- `VM` and `do` are default, and for Jans if you wnat 4-core 8gb machine then everything is set, just change the region from nyc1 to blr1 if you want to.
-  
 - go to this action in https://github.com/GluuFederation/easycloud/actions/workflows/create_ephemerals_envs.yml
 - click on `run workflow button`. It'll give you a popup form to fill.
+- For VMs choose `do`(digital ocean) and for k8s choose `aws`
+- `VM` and `do` are default, and for Jans if you wnat 4-core 8gb machine then everything is set, just change the region from nyc1 to blr1 if you want to.
+- in the select branch as `main` or give a commit number
+- in persistence, select `pgsql`
+  
+
+
 - To create a VM on AWS with 2 core and 8 GB, Ubuntu22.04 for 12 hours use the following inputs
  - ![image](https://github.com/ossdhaval/mysite/assets/343411/633e8bb4-406a-4444-a5fd-b25efd090fdf)
  - ![image](https://github.com/ossdhaval/mysite/assets/343411/e9ef6875-ba48-4045-9e9b-dacffa2349db)
@@ -2456,7 +2460,11 @@ Easycloud github action is setup to provide you a blank infrastructure (VM or Ku
 - download that pem file.
 - change the permissions of the pem file : `chmod 600 private.pem`
 - To access the environment via ssh, run this command `ssh -i <path-to-pem> ubuntu@<IP>`. For ubuntu the user is `ubuntu`, (else try `ec2-user`) as well. Check PR description for more info if it dosn't work.
-- Now you can install jans as in a local lxc vm. Just remember to give the domain name as FQDN during the setup.
+- now you can do `docker ps` to see two docker containers running. One for jans monolith and one for db. As you can see in the output the port `80` has been forwarded already.
+- On your local machine(not the cloud VM), you can add the IP of the cloud vm in the /etc/hosts so that you can use the browser to send requests. Just ensure that you use the name of the server as `<name-of-cloud-vm>.gluu.info`
+- Now you can access well-known URL: `https://ossdhaval-inspired-tahr.gluu.info/jans-auth/.well-known/openid-configuration`
+- and use the device code url like: `https://ossdhaval-inspired-tahr.gluu.info/device-code`
+- getting user name of the admin user and the password: login to the docker container using `docker exec -ti <container-id> bash` and then look at the file `/opt/jans/jans-setup/setup.properties.last`. Here the `admin_password` is the password and for user name ``
 
 
 ## How to get to various UI screens of Janssen Server?
