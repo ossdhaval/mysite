@@ -112,3 +112,17 @@ Good link for understanding : https://central.sonatype.org/publish/requirements/
 - at this location, go to download files section : https://pypi.org/project/mkdocs-exclude-search/#files
 - here hashes are available for source and binary packages
 - you can take has from above location and place it in your `requirements.txt` file like `https://github.com/JanssenProject/jans/blob/main/docs/requirements.txt`. This way, python will match the hash of downloaded package and only then install it
+
+
+## general troubleshooting
+
+### Problem
+
+facing `Unable to correct problems, you have held broken packages` error when `sudo apt install npm`
+
+**solution**:
+
+```
+sudo apt install aptitude
+sudo aptitude install npm
+```
