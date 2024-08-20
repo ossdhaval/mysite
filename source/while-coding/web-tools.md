@@ -17,3 +17,5 @@ clipchamp.com - this is from microsoft. Allows you to download the recorded vide
 loom.com - good for recording screen casts and tutorials but doesn't allow download of videos
 
 AI image creation from text description: https://designer.microsoft.com/image-creator
+
+for auto scrolling scripts: www.speakflow.com
