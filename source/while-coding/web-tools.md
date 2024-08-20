@@ -12,7 +12,7 @@ https://grapesjs.com/demo.html
 
 ### video recording, screen capture, tutorials
 
-clipchamp.com - this is from microsoft. Allows you to download the recorded videos
+clipchamp.com - this is from microsoft. Allows you to download the recorded videos. For text to speech, select the `record and create` -> select `text to speech`. For good voice, select `Andrew` with pace at 80% and default pitch.
 
 loom.com - good for recording screen casts and tutorials but doesn't allow download of videos
 
