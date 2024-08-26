@@ -203,10 +203,11 @@ sudo firewall-cmd --reload
 ```
 sudo ss -tulwn | grep LISTEN
 ```
-3) now you can send file from container
+3) now you can send file from container. Make sure that destination directory has permissions 777.
 ```
 scp gluudb-dump.sql dhaval@192.168.1.19:/home/dhaval/
 ```
+
 
 ### how to transfer from host to container
 
