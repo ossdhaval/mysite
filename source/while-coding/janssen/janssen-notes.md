@@ -844,7 +844,7 @@ called oxauth in Gluu.
   ```
 - run `./status` you will see output with line `127.0.0.1:1636 : LDAPS    : Enabled`
 - Now open eclipse, download apache directory studio plugin from market place. Once installed the eclipse will restart and then you need to go to open LDAP perspective.
-- create a new connection using details as hostname `127.0.0.1`, port `1636`, encryption method `use ssl encryption`
+- create a new connection using details as hostname `127.0.0.1` or `localhost`, port `1636`, encryption method `use ssl encryption`
   ![image](https://github.com/user-attachments/assets/bd3179b1-da2f-4884-991a-d0839297b631)
 - on next screen, keep the authentication as `simple authentication` and bind DN or user as `cn=Directory Manager`, password is same as what was given at the installation time, which I useally keep as `admin`.
   ![image](https://github.com/user-attachments/assets/09b23494-05d1-4d5e-9af8-bad52e028365)
