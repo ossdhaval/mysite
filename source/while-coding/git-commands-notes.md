@@ -183,6 +183,12 @@ Now, you can link-up your local branch to a remote tracking branch for ease of u
  ```
  git branch -vv
  ```
+
+if you want to see complete list of branches on the remote (i.e github) for this repo:
+
+```
+git branch -r
+```
  
  #### About local branches
  
