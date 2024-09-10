@@ -42,8 +42,8 @@ you can search plugins on pypi and then install using pip command given there. F
 
 ```
 pip install mkdocs-git-revision-date-localized-plugin
-pip install mkdocs-git-committers-plugin-2
 pip install mkdocs-exclude-search
+pip install mkdocs-include-markdown-plugin
 ```
 
 ### Icons sets available in mkdocs by default
