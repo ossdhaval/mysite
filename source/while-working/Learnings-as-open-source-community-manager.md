@@ -38,6 +38,7 @@ Google technical writting style: https://developers.google.com/tech-writing
 - scan open source project dependencies and risks: https://scanoss.com/
 - is an opensource library good and credible and secure: https://stacklok.com/
 - database explorer: https://azimutt.app/
+- managing contributor license agreement (ICLA/CCLA): [EasyCLA](https://docs.linuxfoundation.org/lfx/easycla) from Linux Foundation
 
 Flow of implementation of licensespring in gluu flix licensing:
 ![image](https://user-images.githubusercontent.com/343411/214495951-385f4b4e-7830-4d2d-b33f-e233baf9ea40.png)
