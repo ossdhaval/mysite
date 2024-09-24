@@ -82,7 +82,15 @@ note that the '\' before $ is because $ is considered as special character and h
 
 get current commit history of your local active branch ( HEAD points to local active branch )
 `git log HEAD`
-Note : HEAD is case-sensitive
+Note : HEAD is case-sensitive. Also, this will show all the commits coming from the target branch too
+
+To see commit history of current branch after it was created from the target branch
+
+```
+git log main..
+```
+
+This will only show commits made to the current branch after it was created from main
 
 get current commit history of your remote branch ( origin usually points to branch that is your current remote  )
 `git log origin`
@@ -106,8 +114,12 @@ to limit commits use option
  git log -- */cli-agama.md
  ```
 
+
+
  To see status of all files with short representation of status :
+```
 git status --short
+```
 
 
 To add all untracked and modified tracked files and folders recursively in git staging area ( ready for next commit )
