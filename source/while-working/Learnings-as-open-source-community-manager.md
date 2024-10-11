@@ -10,6 +10,7 @@ There could be three kinds of documentation:
 3) Configuration guides ( like how to use various configuration option, enable disable features, setup basic usecases )
 4) Technical documentation (this is technical documentation of code, modules and architecture)
 5) developer documentation (How to setup workspace, run tests, remote debug,Contribution process, guidelines etc)
+6) dashboard for github data and saved queries: https://github.com/dlvhdr/gh-dash
 
 All of above documentation can also be assisted with video tutorials, FAQs etc
 
