@@ -485,3 +485,25 @@ Use these queries at: https://docs.github.com/en/graphql/overview/explorer
   ```
   Hi ossdhaval! You've successfully authenticated, but GitHub does not provide shell access.
   ```
+## Resolve merge conflicts reported in a GitHub PR
+
+Sometimes GH PRs can't be merged due to merge conflicts between your branch and the base branch. And GitHub can't even merge it automatically and asks you to merge it manually. 
+
+Follow the steps below:
+
+- First update your base branch, like `main`
+   ```
+   git pull origin main
+   ```
+- checkout the PR branch or PR
+  ```
+  # Using github cli
+  gh checkout pr <pr-number>
+  ```
+  Above will switch your workspace to PR branch
+- Now checkout the files in conflict from the base branch.
+  ```
+  git checkout main -- docs/janssen-server/developer/scripts/interception-scripts-debug.md docs/janssen-server/developer/scripts/link.md docs/janssen-server/developer/scripts/persistence.md
+  ```
+  if there are merge conflicts, resolve those and make a new commit to the PR branch
+- Push the commit to the PR branch
