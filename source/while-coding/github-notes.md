@@ -505,5 +505,5 @@ Follow the steps below:
   ```
   git checkout main -- docs/janssen-server/developer/scripts/interception-scripts-debug.md docs/janssen-server/developer/scripts/link.md docs/janssen-server/developer/scripts/persistence.md
   ```
-  if there are merge conflicts, resolve those and make a new commit to the PR branch
+  if there are merge conflicts, resolve those and make a new commit to the PR branch. Note that sometimes Git will be able to auto-merge the changes even though GitHub reported that the conflicts can't be merged automatically. This is due to GH is not trying to merge like local git. 
 - Push the commit to the PR branch
