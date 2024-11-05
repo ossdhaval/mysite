@@ -176,6 +176,8 @@ Labels:
 - Write clear sentences
   - Choose strong verbs
 
+### Good reference
+- How to avoid he/she confusion: https://medium.com/technical-writing-is-easy/how-to-make-your-documentation-gender-neutral-5592c9591b65
 
 
 ## setup meetings and calendar app
