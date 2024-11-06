@@ -114,6 +114,39 @@ to limit commits use option
  git log -- */cli-agama.md
  ```
 
+To get list of commits that are not in main branch but are made to your current branch with details of files that are changed:
+
+```
+git log main.. --stat
+```
+
+```output
+commit bbc024e023aa0f41e83519eb10a9818d8a72cb17 (HEAD -> docs-remove-spanner, origin/docs-remove-spanner)
+Author: ossdhaval <343411+ossdhaval@users.noreply.github.com>
+Date:   Wed Nov 6 12:06:31 2024 +0530
+
+    fix(docs): remove spanner
+    
+    Signed-off-by: ossdhaval <343411+ossdhaval@users.noreply.github.com>
+
+ jans-pycloudlib/docs/api/persistence/spanner.md | 3 ---
+ jans-pycloudlib/mkdocs.yml                      | 1 -
+ 2 files changed, 4 deletions(-)
+
+commit df4b64c255103bd920163252fe2afa3437b4e16a
+Author: ossdhaval <343411+ossdhaval@users.noreply.github.com>
+Date:   Wed Nov 6 10:41:16 2024 +0530
+
+    fix(docs): remove spanner
+    
+    Signed-off-by: ossdhaval <343411+ossdhaval@users.noreply.github.com>
+
+ docs/janssen-server/reference/database/spanner-config.md | 186 ------------------------------------------------------------------------
+ docs/janssen-server/reference/database/spanner-ops.md    |  18 -------
+ docs/janssen-server/reference/database/spanner-schema.md |  18 -------
+ mkdocs.yml                                               |   4 --
+ 4 files changed, 226 deletions(-)
+```
 
 
  To see status of all files with short representation of status :
@@ -286,6 +319,7 @@ dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$
 #### How to completely remove local branch and remote-tracking branch and start fresh from remote branch:
  
  In case you have messy code in your local branch that you have committed but not pushed to remote. You want to get rid of this code and start afresh from remote branch. For this you have to 
+ 
  1) Delete local branch: `git branch -D file-sync-22-master-1623760119`. Check using `git branch -vv`
  2) Delete local remote-tracking branch: `git branch -dr origin/file-sync-22-master-1623760119`. Check using `git remote show <remote-name>`
  3) Get remote branch in local tracker branch again: `git pull`. Check using `git remote show <remote-name>`
