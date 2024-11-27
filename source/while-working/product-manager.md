@@ -10,3 +10,15 @@ Learning Material:
 ```
 One thing that every Product Manager must understand is how every moving part of a product interacts with other moving parts.
 ```
+
+## lecture notes
+
+17
+-----------
+Four stages of product lifecycle
+
+- introduction
+  
+- growth
+- maturity
+- decline
