@@ -17,6 +17,7 @@
 - ctrl+w: close current open editor file
 - ctrl+k ctrl+w: close all open editor files
 - ctrl+pgup or ctrl+pgdonw: to move between terminals
+- ctrl+b : toggle side bar views (explorer, find, git etc)
 
 ## cloning a new project from Github
 
