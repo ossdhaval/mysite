@@ -1073,3 +1073,29 @@ file will be added to the same location in your branch as the other branch.
 git add . :^mkdocs.yml
 ```
  
+### getting new changes without loosing local changes
+
+scenario:
+
+You have made some local changes in the file but have not committed yet. Then you get to know that someone has pushed changes to the same branch in the same file but in a different section of the file. Now you want to get those new changes and put your changes in the new file. If you simply `git pull` then it'll fail with error as below:
+
+```
+error: Your local changes to the following files would be overwritten by merge:
+        docs/janssen-server/developer/agama/quick-start-using-agama-lab.md
+Please commit your changes or stash them before you merge.
+Aborting
+```
+
+Solution:
+
+```
+# create a stash, this will clear your branch of any uncommitted changes and 
+git stash
+
+# now pull. It should be successful
+git pull
+
+# apply the stash. If the changes are not overlapping, meaning they are not on the same line numbers then the apply will be successful
+git stash apply
+
+```
