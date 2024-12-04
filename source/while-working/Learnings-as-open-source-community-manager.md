@@ -72,6 +72,8 @@ Large open-source projects that are actively managed and can be looked at as ref
 - github's own roadmap managed via project board: https://github.com/github/roadmap/projects/1
 - About open source license trends and which are most used: https://innovationgraph.github.com/global-metrics/licenses
 - analytics and trend reports on github data. Very useful to understand trends. https://innovationgraph.github.com/
+- good guidelines around what are the rights and responsibilities of moderators of a repo: https://squidfunk.github.io/mkdocs-material/contributing/#rights-and-responsibilities
+- good checklist for community for using comments, issues and discussions: https://squidfunk.github.io/mkdocs-material/contributing/#checklist
 
 
 ### Regular house holding checks :
