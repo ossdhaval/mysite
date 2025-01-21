@@ -431,7 +431,9 @@ More guidelines for commit messages:
 this is because the your branch has commits that are not built on top of commits currently available in same branch on origin(remote).  i.e : master branch in your local repo vs master branch in remote repo.
 
 head(master)    : commit1, commit2, commit3, commit5
+
 origin(master)  : commit1, commit2, commit3, commit4
+
 It may be because while you were working on code changes for commit5 in your local repo and committed to local repo, the remote branch moved on due to somebody else pushed changes in it. 
 At this point, if you do a 'git status', you get above message.
 
