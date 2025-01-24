@@ -7,7 +7,7 @@
 
 ## Shortcuts
 
-- ctrl+p: find files
+- ctrl+p: find files. It also shows most recently edited files.
 - ctrl+shit+p: command palette
 - ctrl+j: hide/unhide panel
 - ctrl+`: open terminal panel
@@ -18,6 +18,7 @@
 - ctrl+k ctrl+w: close all open editor files
 - ctrl+pgup or ctrl+pgdonw: to move between terminals
 - ctrl+b : toggle side bar views (explorer, find, git etc)
+- ctrl+k+p : open list of currently open editors
 
 ## cloning a new project from Github
 
