@@ -47,3 +47,20 @@ Product development process or lifecycle stages
   
 
 there is no definitive guide on how to tell in which phase your product is going through right now. There are only few characteristic of each phase by which you may be able to judge. There phases may also differe from product to product and market to market. 
+
+25
+----------------------------------
+
+agile has two styles: scrum and kanban
+
+kanban is different from scrum 
+
+- In Kanban doesn't timebox the work (as in 2 week or 4 week sprints). Kanban doesn't have sprints. Hence it doesn't have sprint backlog etc. But it has product backlog.
+- Kanban has not prescribed any meeting types. Like stand up meeting, sprint planning, retrospective etc.
+- In Kanban, the team should decide how many items can be in a particular state. For example, no more than 4 items in `in-progress` state.
+- Kanban is suited for the team working on items where estimates do not vary too much and hence the team keeps on moving items to completion one-after-another. For example, customer service team working on tickets.
+
+30
+-----------------------------------------
+
+- Sources of Ideas
