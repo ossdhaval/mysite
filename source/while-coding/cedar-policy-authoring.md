@@ -32,3 +32,8 @@ Each principal and resource are identified by a type and id. Everytime you refer
 Policy applicability: A policy is applicable if the scope matches that of the authorization request, and all conditions are met.
 
 How engine evaluates the final effect: Cedar policies are evaluated by a Cedar evaluation engine. The engine considers a set of policy statements in response to an authorization request, and returns either an allow or deny decision. For the authorization request to be allowed, there must be at least one applicable permit statement and no applicable forbid statements. 
+
+
+## References
+
+- https://github.com/cedar-policy
