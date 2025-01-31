@@ -1,5 +1,10 @@
 # Copilot
 
+Copilot = cp
+
+- Open cp chat in VSCode : ctrl+alt+i
+- Open inline chat in code: ctrl+i
+
 ## Usecases
 
 #### ask explain something in terminal
