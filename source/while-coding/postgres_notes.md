@@ -47,6 +47,8 @@ once installed you can start and stop postgres using command like below:
 sudo systemctl start postgresql.service
 ```
 
+
+
 ## creating user and db
 
 During installation, postgres has created a new **linux** user called `postgres` you can use this login:
@@ -72,6 +74,10 @@ createuser --interactive
 
 ```
 
+## Navigating Postgres
+
+In PostgreSQL, a database is a self-contained unit of data storage, while a schema is a logical namespace within a database that groups related objects like tables, views, and functions, enabling better organization and security
+
 Create db
 
 ```
@@ -86,6 +92,8 @@ connect using new user to new db
 sudo -i -u crux_user
 
 psql -d crux_db
+or
+\c crux_db
 
 ```
 
