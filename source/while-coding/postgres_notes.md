@@ -135,3 +135,13 @@ crux_db=#  \q
 
 
 
+## Install PGAdmin
+
+```
+// to add PGadmin repository to your system
+curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+
+// actually installs PGAdmin
+sudo apt install pgadmin4
+```
