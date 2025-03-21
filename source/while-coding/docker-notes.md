@@ -297,6 +297,10 @@ Docker manages individual containers. Vs Docker compose manages `services` that 
 
 For instance, docker compose can create service call `backend-app` which has 5 containers. Multiple services created using the docker compose can refer to each other via name (instead of IP). This way, if a container goes down and a new container is created, still the service name stays the same. 
 
+## Reference
+
+docker compose subcommand list: https://docs.docker.com/reference/cli/docker/compose/#subcommands
+
 ## Docker compose build and redeploy code
 
 ```
@@ -365,3 +369,5 @@ If any containers have connections open to the old container, they are closed. I
  mvn clean install package -DskipTests && docker compose build && docker compose up
 
 ```
+
+
