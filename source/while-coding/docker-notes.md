@@ -278,6 +278,25 @@ This worked perfectly :
 
 https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
+
+## know ip address of a docker container
+
+`sudo docker inspect <container name or id> | grep IPAddress`
+
+## copy files from docker container to host
+
+```
+docker cp <containerId>:/file/path/within/container /host/path/target
+```
+
+# Docker compose
+
+## Docker vs docker compose
+
+Docker manages individual containers. Vs Docker compose manages `services` that can be made up of multiple containers.
+
+For instance, docker compose can create service call `backend-app` which has 5 containers. Multiple services created using the docker compose can refer to each other via name (instead of IP). This way, if a container goes down and a new container is created, still the service name stays the same. 
+
 ## Docker compose build and redeploy code
 
 ```
@@ -305,15 +324,6 @@ Docker compose down doesn't completely remove everything. It will not remove the
 docker compose down --rmi all --volumes
 ```
 
-## know ip address of a docker container
-
-`sudo docker inspect <container name or id> | grep IPAddress`
-
-## copy files from docker container to host
-
-```
-docker cp <containerId>:/file/path/within/container /host/path/target
-```
 
 ## docker compose networking
 
@@ -342,3 +352,9 @@ Each container can now look up the service name web or db and get back the appro
 It is important to note the distinction between HOST_PORT and CONTAINER_PORT. In the above example, for db, the HOST_PORT is 8001 and the container port is 5432 (postgres default). Networked service-to-service communication uses the CONTAINER_PORT. When HOST_PORT is defined, the service is accessible outside the swarm as well.
 
 Within the web container, your connection string to db would look like postgres://db:5432, and from the host machine, the connection string would look like postgres://{DOCKER_IP}:8001 for example postgres://localhost:8001 if your container is running locally.
+
+If you make a configuration change to a service and run docker compose up to update it, the old container is removed and the new one joins the network under a different IP address but the same name. Running containers can look up that name and connect to the new address, but the old address stops working.
+
+If any containers have connections open to the old container, they are closed. It is a container's responsibility to detect this condition, look up the name again and reconnect.
+
+**Reference containers by name, not IP, whenever possible. Otherwise you’ll need to constantly update the IP address you use.**
