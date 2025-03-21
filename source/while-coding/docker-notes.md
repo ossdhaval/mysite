@@ -358,3 +358,10 @@ If you make a configuration change to a service and run docker compose up to upd
 If any containers have connections open to the old container, they are closed. It is a container's responsibility to detect this condition, look up the name again and reconnect.
 
 **Reference containers by name, not IP, whenever possible. Otherwise you’ll need to constantly update the IP address you use.**
+
+## Command to build, and redeploy a spring boot app using docker compose
+
+```
+ mvn clean install package -DskipTests && docker compose build && docker compose up
+
+```
