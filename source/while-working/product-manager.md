@@ -73,4 +73,6 @@ The difference between user vs client:
 
 Client is someone who pays. The term users is a broader term which may refer to free users. For example, I am a user of gmail. But if I pay for google business suit, then I am google's client.
 
+When product is a B2B product, you might have client and users in the same organization. For example, if citibank buys a software, the decision to buy and the payment comes from a director level person, but then the software gets used by someone who actually reports to him/her. So from a feedback perspective, you may get feedback from a different perspective from the director about your product, while the person who is actually using the product may also give you a different feedback.
+
 
