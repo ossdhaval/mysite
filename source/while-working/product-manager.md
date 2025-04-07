@@ -64,3 +64,13 @@ kanban is different from scrum
 -----------------------------------------
 
 - Sources of Ideas
+  -  Employees (yourself, co-workers, management)
+  -  Metrics (for example, pattern of UI usage)
+  -  Users (user feedback via forums, emails, complaints etc)
+  -  Clients (client feedback)
+ 
+The difference between user vs client: 
+
+Client is someone who pays. The term users is a broader term which may refer to free users. For example, I am a user of gmail. But if I pay for google business suit, then I am google's client.
+
+
