@@ -371,3 +371,16 @@ If any containers have connections open to the old container, they are closed. I
 ```
 
 
+## get SBOM from a docker image
+
+- Download the image
+
+  ```
+  docker pull ghcr.io/janssenproject/jans/auth-server:1.5.0-1
+  ```
+
+- Get from the SBOM from it
+  
+  ```
+  docker buildx imagetools inspect ghcr.io/janssenproject/jans/auth-server:1.5.0-1  --format "{{ json .SBOM.SPDX }}"
+  ```
