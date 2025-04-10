@@ -507,3 +507,8 @@ Follow the steps below:
   ```
   if there are merge conflicts, resolve those and make a new commit to the PR branch. Note that sometimes Git will be able to auto-merge the changes even though GitHub reported that the conflicts can't be merged automatically. This is due to GH is not trying to merge like local git. 
 - Push the commit to the PR branch
+
+
+## SBOM
+
+You can get SBOM of any project from `insights` -> `dependency graph` -> `export SBOM`
