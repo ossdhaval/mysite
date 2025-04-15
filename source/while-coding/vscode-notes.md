@@ -19,6 +19,7 @@
 - ctrl+pgup or ctrl+pgdonw: to move between terminals
 - ctrl+b : toggle side bar views (explorer, find, git etc)
 - ctrl+k+p : open list of currently open editors
+- ctrl+tab : cycle through currently open files
 
 ## cloning a new project from Github
 
