@@ -30,9 +30,10 @@
              # for more options
              release-type: simple
     ``` 
-
+3. Push these changes to github repo
 3. Create a token and configure as a secret:
    - Go to your account settings > developer settings > create a new classic token with name `for release please`. Copy the token value.
    - Go to the repository settings > secrets and variables > add a new secret `MY_RELEASE_PLEASE_TOKEN` with the token value
    - Under the same repository settings, Move to the `Actions` > `general` > check the `Allow GitHub Actions to create and approve pull requests`
-   - 
+4. Now all is set. Push any commit to the `main` branch in repo and the action above will create a new PR for next release. Example: [here](https://github.com/ossdhaval/empmgmt/pull/3). This is just a release PR, release is not yet created.
+5. merge this PR and a new release will be created. Example [here](https://github.com/ossdhaval/empmgmt/releases/tag/v1.0.0)
