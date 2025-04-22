@@ -27,13 +27,13 @@ Spacing is not important as long as same spacing is maintained throughout the fi
 
 ```
 american:
-- Boston Red Sox
-- Detroit Tigers
-- New York Yankees
+  - Boston Red Sox
+  - Detroit Tigers
+  - New York Yankees
 national:
-- New York Mets
-- Chicago Cubs
-- Atlanta Braves
+  - New York Mets
+  - Chicago Cubs
+  - Atlanta Braves
 ```
 
 ## maps
@@ -46,5 +46,21 @@ Spacing is not important as long as same spacing is maintained throughout the fi
 burger:
   calories: 12
   price: 15
+```
+
+you can mix arrays and maps.
+
+```
+drinks:
+  - milk:
+      calories: 4
+      price: 3
+  - water:
+      calories: 0
+      price: 0
+```
+  
+
+
 ```
 
