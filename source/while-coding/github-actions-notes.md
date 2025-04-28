@@ -74,7 +74,7 @@ https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-g
 #### github action contexts vs Runner variables:
 https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#determining-when-to-use-contexts
 
-basically, in your workflow code, the part apart from 'run:' is executed by Github action and code under 'run:' is executed by runner. You have [contexts](https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#contexts) like `github.repository` in the part which is executed by github action, while runner doesn't have context but it has many [environment variables](https://docs.github.com/en/actions/reference/environment-variables#default-environment-variables), like `$GITHUB_REF`. You can also read most of the `github` context data(available to action) in environment variables `env` context (available in `run`).
+basically, in your workflow code, the part apart from 'run:' is executed by Github action and code under 'run:' is executed by runner. You have [contexts](https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#contexts) like `github.repository` in the part which is executed by github action, while runner doesn't have context but it has many [environment variables](https://docs.github.com/en/actions/reference/environment-variables#default-environment-variables), like `$GITHUB_REF`. The `github` context contains information about the workflow run and the event that triggered the run.You can also read most of the `github` context data(available to action) in environment variables `env` context (available in `run`).
 
 ### Run scripting
 
