@@ -512,3 +512,10 @@ Follow the steps below:
 ## SBOM
 
 You can get SBOM of any project from `insights` -> `dependency graph` -> `export SBOM`
+
+## difference between a GitHub app Vs an OAuth app 
+
+OAuth app means a third party app that uses `login using GitHub` button, and asks for github access permissions in the next steps. Like octostats.
+A github app is more integrated into github. Like octobox.
+
+very insightful Reference: https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/differences-between-github-apps-and-oauth-apps
