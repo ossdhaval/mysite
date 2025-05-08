@@ -282,6 +282,10 @@ Gather data directly from potential customers to estimate market size.
 * **SAM** = “If everyone in your target market did.”
 * **SOM** = “What you could actually get.”
 
-Would you like a diagram to visualize TAM → SAM → SOM?
+Market analysis/research sources:
+- Google industry reports
+- Look at websites that provide traffic data. Check what kind of traffic or app downloads your competitors are getting.
+
+
 
 
