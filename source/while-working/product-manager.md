@@ -289,3 +289,28 @@ Market analysis/research sources:
 
 
 
+37
+--------------------------------------
+
+## Find the competitors
+
+1. Known competitors:
+   - based on your experience with the product and domain, you already know who your primary competitors are. Every product manager should know this. It is essential.
+   - feature competitors: not all competitors have the same set of features. So, if your focus is on a feature of your product, for example, cedarling (a embedable, light weight PDP), then you need to know which of your competitors have features that solve the same problem.
+2. Unknown competitors:
+   - When you are building a new feature or a new product altogether. Also, for an existing product the competetors keep on changing (companies shutdown, new companies come up, existing competitors may change the direction) etc, you should periodically survey the current competition state.
+  
+### Looking for unknown competitors
+
+- google search for `<your product name> versus`. And google will suggest most likely searches. with possible names. This is because people have searched for it. But this will only be helpful if your product is well known.
+- You can do a chatgpt search
+- search for what your product is e.g `embedable PDP`
+- search reddit, twitter etc for what user issue your product solves. You may find users that are complaining about the same thing and other suggesting them products that solve that problem.
+- check sites like below and look for alternatives of a product or product category.
+  - https://www.gartner.com/peer-insights/home
+  - https://www.g2.com
+  - https://www.capterra.com/
+ 
+  - 
+- 
+- 
