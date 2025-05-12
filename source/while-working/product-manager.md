@@ -312,5 +312,21 @@ Market analysis/research sources:
   - https://www.capterra.com/
  
   - 
-- 
-- 
+### types of competitors
+
+- Direct
+  -  Products that solve the same problem as your product
+  -  They solve the same problem in the same way
+  -  They solve the same problem in the same way for the same set of market or geography
+  -  Example: Red Hat Single Sign-On (RH-SSO) is Gluu's direct competitor. RH-SSO is built on top of Keycloak which is OSS, just like Flex is built on top of Janssen Server.
+  -  Action item for PM: Keep a close eye on roadmap of such products and feature releases of such products and company news. What features are being developed, released, how are they marketing their product, where are they marketing their product, their market share movements, leadership changes, acquisitions etc.
+- Indirect
+  -  Products that solve same problem but in a different way and may be for a different user market. Their market could be superset of yours or a subset or may be having a little bit of overlap.
+  - Example:  
+- Potential
+  -  companies that have a product that solves a different problem but it is in the same domain as yours. They serve the same set of market (customer group). They could expand their portfolio and add a new product with competing features as your product and then they can potentially become a direct competetor.
+  -  Example: `https://www.cerbos.dev/` is a company that provides authorization software. But they could potentially add authentication features and become a direct competetors.
+- Substitute
+  - solves the same problem but doesn't deliver to the same people in the same way and it is far from what you are offering to the market.
+  - For instance, gluu offers IAM software which is backed by a core team and an enterprise support plan. Substitute could be an opensource IAM repository in the GitHub which doesn't have any sponsor or a company backing it with an enterprise plan. Yes, it may provide the same function and large enterprises can use it as their IAM server but it is not the same as Gluu.
+  - 
