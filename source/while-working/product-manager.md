@@ -340,6 +340,16 @@ Market analysis/research sources:
   1. product core (product team):
      - better team can out pace you in feature delivery, out engineer you by building better and stable product. If you have a team with much lower quality than your competitor, then features and markets won't matter. Features that depend on high quality engineering are difficult to imitate by your competetors.
   2. user base size:
-     - Companies with large user base have certain advantages
+     - Companies with large user base(e.g microsoft) have certain advantages
        - New product and feature launches are easier get initial set of users. As existing customers would easily adopt those new features.
        - publicity: new products and new features from a company with large user base get more publicity quickly. Content creators and early adoptors start             immediately talking about those things.
+     -  . Easier to make deals with other companies and have collaboration and integrations:
+     - For a product with large userbase, other companies will readily agree to create integrations and collaborations
+  3. Design
+     - Be aware of competetor's ability to design an intuitive user experience.
+  4. Brand
+     - A company's brand can give them advantage in certain markets while it will be of disadvantage in other markets. Like for example, Sony as a brand can easily make and sell kitchen appliences if they wanted to. But Mercedese which is known only for cars will find it difficult to get into kitchen appliences market. Same thing with Sony, it'll hard to get into making cars.
+     - At the same time, apple could move easily from making Phone to making watches. This is because their brand stands for inituitively designed and high quality consumer goods.
+  5. Speed
+       - Understand the speed at which your competetor can move to build a new feature in the product. Generally, larget companies are slower that smaller companies. In case of opensource products, you can check your competetor's GH account and see how long an new feature request takes to compete.
+  
