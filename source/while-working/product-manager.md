@@ -332,3 +332,14 @@ Market analysis/research sources:
   - solves the same problem but doesn't deliver to the same people in the same way and it is far from what you are offering to the market.
   - For instance, gluu offers IAM software which is backed by a core team and an enterprise support plan. Substitute could be an opensource IAM repository in the GitHub which doesn't have any sponsor or a company backing it with an enterprise plan. Yes, it may provide the same function and large enterprises can use it as their IAM server but it is not the same as Gluu.
   - Action item for PM: Be better then these in solving the problem. Meaning feature parity perspective.
+
+### what you should know about your competitors
+
+- Need to closely monitor and watch your competetors. On following criterias.
+
+  1. product core (product team):
+     - better team can out pace you in feature delivery, out engineer you by building better and stable product. If you have a team with much lower quality than your competitor, then features and markets won't matter. Features that depend on high quality engineering are difficult to imitate by your competetors.
+  2. user base size:
+     - Companies with large user base have certain advantages
+       - New product and feature launches are easier get initial set of users. As existing customers would easily adopt those new features.
+       - publicity: new products and new features from a company with large user base get more publicity quickly. Content creators and early adoptors start             immediately talking about those things.
