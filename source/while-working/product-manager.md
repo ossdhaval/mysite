@@ -352,4 +352,17 @@ Market analysis/research sources:
      - At the same time, apple could move easily from making Phone to making watches. This is because their brand stands for inituitively designed and high quality consumer goods.
   5. Speed
        - Understand the speed at which your competetor can move to build a new feature in the product. Generally, larget companies are slower that smaller companies. In case of opensource products, you can check your competetor's GH account and see how long an new feature request takes to compete.
-  
+
+--------------------------
+42
+--------------------------------
+
+feature tables:
+
+- table where you compare your product with your competitor's. Mostly the direct competitors.
+- It can also cover the factors(price, reliability etc) and not just features.
+
+| feature table | compete 1 | compete 2 | compete 3 | You |
+| ------------- | --------- | --------- | --------- | --- |
+| feature 1 | compete 1 | compete 2 | compete 3 | You |
+
