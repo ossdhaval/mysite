@@ -4,7 +4,17 @@ Learning Material:
 - udemy course: https://www.udemy.com/course/become-a-product-manager-learn-the-skills-get-a-job/
 - https://productlogic.org/2014/09/13/the-product-triangle-a-visual-vocabulary-for-product-building/
 - https://medium.com/earnest-product-management
+- PM daily routine: https://www.linkedin.com/posts/sachin-sharma-product-career-coach_careercoach-sachinsharma-productmanagers-activity-7327550621127966720-Rs0q?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADcnXwB2SGQ3YB0J31qjo1zUTB5LqDuqag
+- Product manager interview guides:
+  - https://www.linkedin.com/posts/sachin-sharma-product-career-coach_google-career-skills-activity-7326463447863349248-xaAn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADcnXwB2SGQ3YB0J31qjo1zUTB5LqDuqag
+  - https://www.linkedin.com/posts/sachin-sharma-product-career-coach_career-skills-interview-activity-7325376290356629504-uYIe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADcnXwB2SGQ3YB0J31qjo1zUTB5LqDuqag
+- Free product management interviews: https://productschool.com/product-management-events
+- Free product management e-books: https://productschool.com/resources/ebooks
+- Blog to follow: https://productschool.com/blog
+- PM's stakeholders : https://www.linkedin.com/posts/sachin-sharma-product-career-coach_productmanagement-careercoach-sachinsharma-activity-7321027648397213696-2ES9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADcnXwB2SGQ3YB0J31qjo1zUTB5LqDuqag
+- Hello PM curriculam: https://hellopm.co/#curriculum (price: 60k)
 
+- 
 ## Notes
 
 ```
@@ -366,3 +376,20 @@ feature tables:
 | ------------- | --------- | --------- | --------- | --- |
 | feature 1 | compete 1 | compete 2 | compete 3 | You |
 
+
+
+
+
+-------------------------------------------------
+General notes
+-------------------------------
+
+## Feature prioritization (roadmapping)
+
+- Prioritization, roadmap, feature analysis
+  - Feature analysis methods compared : RICE/ICE/MoSCoW : https://www.linkedin.com/posts/sachin-sharma-product-career-coach_projects-productmanagement-careercoach-activity-7322839576505372672-InQ_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADcnXwB2SGQ3YB0J31qjo1zUTB5LqDuqag
+  - Analysis methods list: https://www.productplan.com/learn/strategies-prioritize-product-features/
+  - simple 2x2 technique of value vs effort analysis: https://mtp2017.wpenginepowered.com/enter-matrix-lean-prioritisation/
+- One critical aspect in any prioritization/roadmap effort is to estimate business value of the feature. A feature's value can be derived by considering two factors:
+  - Value offered to users: The value an initiative will deliver to your user personas or your market more broadly. This type of value would include, for example, the degree to which your initiative will reduce users’ pain or improve their efficiency, and how urgently your market seems to be demanding it.
+  - Value offered to the business: An estimation of the initiative’s direct business value to your company. This value might be reflected in terms of acquiring new customers, retaining existing customers, the ability to upsell customers, and the anticipated new revenue the initiative will bring.
