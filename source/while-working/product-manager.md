@@ -14,6 +14,7 @@ Learning Material:
 - PM's stakeholders : https://www.linkedin.com/posts/sachin-sharma-product-career-coach_productmanagement-careercoach-sachinsharma-activity-7321027648397213696-2ES9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADcnXwB2SGQ3YB0J31qjo1zUTB5LqDuqag
 - Hello PM curriculam: https://hellopm.co/#curriculum (price: 60k)
 - product roadmapping microcertification: https://productschool.teachable.com/p/productroadmapping
+- product manager certification by microsoft: https://www.coursera.org/professional-certificates/microsoft-ai-product-manager#courses
 
 - 
 ## Notes
@@ -407,3 +408,6 @@ Product design, UI, UX
 - UX: UX is the experience that a person gets while using the product. Each person would feel(expereince) the same product differently based on what they value. A sports car's experience would be fantastic to a person who loves thrills and speed. While Same sports car would be experienced differently by someone who has been troumatized by a recent car accident. So, it is not the design of the car that is at fault. It is knowing what is the value that user is seeking from the product.
 - How user experiences the product is also dependent on under what circumstances that product is being used. High pressure, leisure etc.
 - Use 5-why technique to get some idea of what customer values about the product
+
+- 12 principles : https://hellopm.co/12-key-product-design-principles-every-product-manager-should-master/
+- figma course: https://www.youtube.com/watch?v=urVHC-ReSV0
