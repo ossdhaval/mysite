@@ -13,6 +13,7 @@ Learning Material:
 - Blog to follow: https://productschool.com/blog
 - PM's stakeholders : https://www.linkedin.com/posts/sachin-sharma-product-career-coach_productmanagement-careercoach-sachinsharma-activity-7321027648397213696-2ES9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADcnXwB2SGQ3YB0J31qjo1zUTB5LqDuqag
 - Hello PM curriculam: https://hellopm.co/#curriculum (price: 60k)
+- product roadmapping microcertification: https://productschool.teachable.com/p/productroadmapping
 
 - 
 ## Notes
@@ -393,3 +394,16 @@ General notes
 - One critical aspect in any prioritization/roadmap effort is to estimate business value of the feature. A feature's value can be derived by considering two factors:
   - Value offered to users: The value an initiative will deliver to your user personas or your market more broadly. This type of value would include, for example, the degree to which your initiative will reduce users’ pain or improve their efficiency, and how urgently your market seems to be demanding it.
   - Value offered to the business: An estimation of the initiative’s direct business value to your company. This value might be reflected in terms of acquiring new customers, retaining existing customers, the ability to upsell customers, and the anticipated new revenue the initiative will bring.
+
+
+
+
+
+
+----------------------------
+Product design, UI, UX
+----------------------------
+
+- UX: UX is the experience that a person gets while using the product. Each person would feel(expereince) the same product differently based on what they value. A sports car's experience would be fantastic to a person who loves thrills and speed. While Same sports car would be experienced differently by someone who has been troumatized by a recent car accident. So, it is not the design of the car that is at fault. It is knowing what is the value that user is seeking from the product.
+- How user experiences the product is also dependent on under what circumstances that product is being used. High pressure, leisure etc.
+- Use 5-why technique to get some idea of what customer values about the product
