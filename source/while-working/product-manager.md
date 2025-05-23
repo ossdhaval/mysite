@@ -431,6 +431,7 @@ Revenue,
 MRR : monthly recurring revenue (imp for SaaS)
 ARPU: average revenue per user
 DAU: Daily active users
+  - DAU's definition can be specific to each company. For example, Facebook may consider a user as an active user if the user has spent 5 minutes on the facebook. While Netflix may decide to call a user active only if they have watched content for 20 minutes. Flipkart may only call a user active if they have put something in the cart. 
 
 Metric tree: 
 
@@ -446,3 +447,4 @@ Revenue = MRR x 12
           +                
           Old users(Active users last month - churn rate(ie users who left your system)
 ```
+
