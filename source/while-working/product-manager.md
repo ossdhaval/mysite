@@ -411,3 +411,38 @@ Product design, UI, UX
 
 - 12 principles : https://hellopm.co/12-key-product-design-principles-every-product-manager-should-master/
 - figma course: https://www.youtube.com/watch?v=urVHC-ReSV0
+
+
+------------------------
+product analytics
+------------------------
+
+Ref: https://www.youtube.com/watch?v=N-Igkw7__z0
+
+Product analytics: 
+
+product lifecycle: discovery, delivery, distribution
+
+Metrics: Any thing that you can measure about your product. KPIs are metrics that are important.
+
+Few well known metrics:
+
+Revenue,
+MRR : monthly recurring revenue (imp for SaaS)
+ARPU: average revenue per user
+DAU: Daily active users
+
+Metric tree: 
+
+For SaaS companies like Zoho:
+
+```
+Revenue = MRR x 12
+           |
+           |
+           Active users x ARPU
+                |          
+          New users        
+          +                
+          Old users(Active users last month - churn rate(ie users who left your system)
+```
