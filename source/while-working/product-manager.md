@@ -448,3 +448,23 @@ Revenue = MRR x 12
           Old users(Active users last month - churn rate(ie users who left your system)
 ```
 
+----------------------
+product roadmapping microcertification
+-----------------------------------------
+
+https://productschool.teachable.com/p/productroadmapping
+
+- What is a product roadmap?
+  Product roadmap is a communication and collaboration tool. With primarily 3 consumers of it. The product team, business and customers. Roadmap is used by these three stackholders to understand different things.
+  - Product team: what needs to be build and when (priority)
+  - Business: How efforts will align to gain business values
+  - customer: how product will deliver value to customers in terms of useful features and fixes
+- Roadmap as
+  - Roadmap should be a central piece where all 3 stakeholders of the product collaborate and come to know the real picture. You need to build a culture in the company that refer to product roadmap to collaborate on delivering features, priorities, values. Hence, It is important that product roadmap is dependable. To make it dependeble, refer to avoid the difficulties listed below.
+ 
+- Difficulties with a product roadmap
+  - People find it hard to keep the product roadmap updated. If not updated frequently, slowly it loses it's importance and it is then updated only when it needs to be presented to someone. Just for namesake.
+  - Product roadmap should be balanced with details. Not too detailed and not too high level. If it is too high level then it loses the value for product teams. At the same time, if it is too detailed, then the business stackholders and customers will get drowned in the details. 
+  - Organisations may lack futuristic long term view. Or may lack clearly definded product vision, business values to achieve. These things are input into creating a meaningful roadmap.
+  - Organisations may have other driving factors like regulatory, budgetory etc which make it hard to create a long term plan and hence creating roadmap for a very short term is not so useful.
+  - If business has frequently changing priorities then product roadmap would be changing too often. That also makes it unreliable. 
