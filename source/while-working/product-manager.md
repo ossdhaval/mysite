@@ -480,19 +480,20 @@ https://productschool.teachable.com/p/productroadmapping
 OKRs (Objectives and Key Results)
 ---------------------
 
-Template:
+Template example:
 
 ```
 Objective: Increase new user adoption
 
 📖 Objective Description
-<explain why this is an objective, clarify terms in the title if needed, Give high-level HOW>
+<explain why this is an objective, clarify terms in the title if needed. Give high-level HOW which talks about approach or areas of product that would be instrumental in achieving this objective.>
+
 To increase the user base we need to have continuous addition of new users on the platform. 
 This involves 
-- creating features/integrations/tools that open new channels for reaching out to potential users 
-- creating features/integrations/tools that enrich existing channels of getting in touch with potential users 
-- creating features/integrations/tools that provide potential users with immediate value propositions so that they are motivated to join the platform.  
 
+- creating features/integrations/tools that open new channels for reaching out to potential users. For example, ability refer a friend
+- creating features/integrations/tools that enrich existing channels of getting in touch with potential users. For example, by improving on-boarding experience
+- creating features/integrations/tools that provide potential users with immediate value propositions so that they are motivated to join the platform. For example, providing them access to premium features for first 10 days.
 
 
 🎯 Measuring Success
@@ -511,7 +512,7 @@ Explain if this objective is dependent on any other objective and why.
 
 📣 Segment
 <list of user segmanets or your product varients (SKUs) this objective is applicable to>
-
+New Users: New users of the Zlack platform between day 1-90.
 
 📚 Other considerations
 Timeframe – Provide a timeline for this objective
@@ -519,3 +520,44 @@ Team – Assign a team that will own this objective
 Features – Link relevant features to this objective
 Illustrative design – Consider adding a screenshot or embed a design link to portray how the potential feature/solution could look like
 
+```
+
+Example 2:
+
+```
+
+Objective: Improve User Productivity and Efficiency
+
+📖 Objective Description
+<explain why this is an objective, clarify terms in the title if needed. Give high-level HOW which talks about approach or areas of product that would be instrumental in achieving this objective.>
+
+To improve retention rates we need to increase user's productivity and efficiency. 
+User productivity for our platform is defined [here]().
+User efficiency for our platform is defined [here]().
+This should include providing more efficient user journeys that require lesser clicks to integration of AI tools to assist users. 
+
+
+🎯 Measuring Success
+<To write this, read the objective title again and then think what are the matrics>
+
+- 20% reduction in time it takes to complete the payment process
+- 20% reduction in time it takes to complete the checkout process
+
+
+
+
+🔗 Related Objectives
+Explain if this objective is dependent on any other objective and why.
+
+
+📣 Segment
+<list of user segmanets or your product varients (SKUs) this objective is applicable to>
+Existing users who buy more than 3 products every month from our portal
+
+📚 Other considerations
+Timeframe – Provide a timeline for this objective
+Team – Assign a team that will own this objective
+Features – Link relevant features to this objective
+Illustrative design – Consider adding a screenshot or embed a design link to portray how the potential feature/solution could look like
+
+```
