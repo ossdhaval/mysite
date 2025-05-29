@@ -542,6 +542,7 @@ This should include providing more efficient user journeys that require lesser c
 
 - 20% reduction in time it takes to complete the payment process
 - 20% reduction in time it takes to complete the checkout process
+- Make search results more accurate so that customers can quickly find what they need
 
 
 
