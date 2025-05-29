@@ -16,7 +16,10 @@ Learning Material:
 - product roadmapping microcertification: https://productschool.teachable.com/p/productroadmapping
 - product manager certification by microsoft: https://www.coursera.org/professional-certificates/microsoft-ai-product-manager#courses
 
-- 
+Roadmap examples:
+
+- Very good OSS roadmap. GitHub's own: https://github.com/orgs/github/projects/4247/views/1?sliceBy%5Bvalue%5D=%F0%9F%8C%B1+Secure+at+every+step
+- Roadmap published as article for a licensed product: https://tuskr.app/article/roadmap
 ## Notes
 
 ```
@@ -469,3 +472,50 @@ https://productschool.teachable.com/p/productroadmapping
   - Organisations may lack futuristic long term view. Or may lack clearly definded product vision, strategy and business values to achieve. These things are input into creating a meaningful roadmap. Without these a roadmap will not be able to priorise or de-prioritise competing features. 
   - Organisations may have other driving factors like regulatory, budgetory etc which make it hard to create a long term plan and hence creating roadmap for a very short term is not so useful.
   - If business has frequently changing priorities then product roadmap would be changing too often. That also makes it unreliable. 
+
+- What product roadmaps are made up of?
+  - Product OKRs
+ 
+--------------
+OKRs (Objectives and Key Results)
+---------------------
+
+Template:
+
+```
+Objective: Increase new user adoption
+
+📖 Objective Description
+<explain why this is an objective, clarify terms in the title if needed, Give high-level HOW>
+To increase the user base we need to have continuous addition of new users on the platform. 
+This involves 
+- creating features/integrations/tools that open new channels for reaching out to potential users 
+- creating features/integrations/tools that enrich existing channels of getting in touch with potential users 
+- creating features/integrations/tools that provide potential users with immediate value propositions so that they are motivated to join the platform.  
+
+
+
+🎯 Measuring Success
+<To write this, read the objective title again and then think what are the matrics>
+Includes the main success metric(s) for the Objective
+Example – Key Results:
+Product fully localized for languages X, Y, and Z
+At least 20 new customers in each region by end of Q3
+Within 90 days, the Monthly Active Users in all new regions is 30% or higher
+
+
+
+🔗 Related Objectives
+Explain if this objective is dependent on any other objective and why.
+
+
+📣 Segment
+<list of user segmanets or your product varients (SKUs) this objective is applicable to>
+
+
+📚 Other considerations
+Timeframe – Provide a timeline for this objective
+Team – Assign a team that will own this objective
+Features – Link relevant features to this objective
+Illustrative design – Consider adding a screenshot or embed a design link to portray how the potential feature/solution could look like
+
