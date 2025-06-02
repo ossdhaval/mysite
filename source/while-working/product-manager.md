@@ -580,3 +580,25 @@ Prioritization process of grooming feature with following details:
 - Prioritization board should be different from planning board
 - You prepare prioritization board first to groom the features. Then create a copy of that board and call it quaterly planning board. And remove some of the columns which are not needed anymore (like individual columns for RICE. But only keep the final RICE score column). Add new columns to denote Quaterly(or any other) releases.
 
+---------------------
+Using Roadmaps for communication
+--------------------------
+
+- After the prioritization and planning has been done, it is time to create different views of the same roadmap. Each view is tailored for audience below.
+  - Product team
+    - Product roadmap for product teams should be detailed one. Because they are going to base their development priorities on this roadmap.
+    - Info to include: Detailed effort estimates of features, timelines, customer impact, confidence levels etc.
+  - Business leadership team
+    - From roadmap they want to understand if the efforts are being spent towards the strategic direction of the product or company.
+    - Info to include: target segments for features, related OKRs (objectives), themes, relation with customer feedback etc. Shouldn't be too detailed.
+  - External audience
+    - External audience groups consists of customers, investors, partners
+    - info to include: forward looking information like feature delivery quarters, when features will be available in beta, themes that you are going to deliver your features on.
+    - Here it is not important to show exact delivery timelines. That detail will confuse this audience. Similarly, things like effort estimates should not be in this view of the roadmap.
+  - Customer facing teams
+    - These teams are sales, support, customer success, Go-to-market etc. They will look at the roadmap to get answers to questions like `what can I tell to the customer about availability of this feature`, `which customer feedbacks are being targetted by features`, `Are we working on features to improve maintainebility and supportability of the product?` etc.
+    - Information to inlcude: High level feature delivery timelines, team's confidence levels for deliveries that are far in future, feedback to feature mapping, major themes are we are targetting (like UI overhaul etc that impact customers).
+  - Development partners
+    - These are the external companies that are developing 3rd party integrations with your product. Where they are running development cycles in tendum with yours.
+    - They need details with availability of the feature in alpha, beta or GA. Themes that we are targetting. etc
+      
