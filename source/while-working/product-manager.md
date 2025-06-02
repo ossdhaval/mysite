@@ -568,3 +568,11 @@ Illustrative design – Consider adding a screenshot or embed a design link to p
 prioritization 
 ----------------------
 
+process of grooming feature with:
+- Voice of customer (notes, positive/negative, align notes with features and finally deriving `customer importance score`)
+- Voice of product team (capture RICE(reach, impact, confidence, effort) for each feature and derive a rice score from that)
+- voice of business
+  - Business value on the prioritization board is represented by adding `segments` that we want to grow in.
+  - A segment field will show a score that is derived using the `segment` - `company` - `feature feedback` connection
+  - How segment - company are connected? There are two ways in Productboard to do so. One is automatic where rules are manually defined (say a company with greater revenue than 10000 should be aligned to `enterprise` segment) while creating a segment. Company and revenue data comes via Salesforce integration.
+  - How feature feedback - company are connectd? This is done via notes in the `insights` section. Insight section essentially pulls all the data from email, slack and other customer communication channels. Then you can manually read the notes and link them to features. Also, each note can be annotated with importance score and positive/negative/neutral sentiment. Using all this data, you know what feature is important for a customer.
