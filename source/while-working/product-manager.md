@@ -565,10 +565,10 @@ Illustrative design – Consider adding a screenshot or embed a design link to p
 
 
 -----------------
-prioritization 
+prioritization and planning
 ----------------------
 
-process of grooming feature with:
+Prioritization process of grooming feature with following details:
 - Voice of customer (notes, positive/negative, align notes with features and finally deriving `customer importance score`)
 - Voice of product team (capture RICE(reach, impact, confidence, effort) for each feature and derive a rice score from that)
 - voice of business
@@ -576,3 +576,7 @@ process of grooming feature with:
   - A segment field will show a score that is derived using the `segment` - `company` - `feature feedback` connection
   - How segment - company are connected? There are two ways in Productboard to do so. One is automatic where rules are manually defined (say a company with greater revenue than 10000 should be aligned to `enterprise` segment) while creating a segment. Company and revenue data comes via Salesforce integration.
   - How feature feedback - company are connectd? This is done via notes in the `insights` section. Insight section essentially pulls all the data from email, slack and other customer communication channels. Then you can manually read the notes and link them to features. Also, each note can be annotated with importance score and positive/negative/neutral sentiment. Using all this data, you know what feature is important for a customer.
+ 
+- Prioritization board should be different from planning board
+- You prepare prioritization board first to groom the features. Then create a copy of that board and call it quaterly planning board. And remove some of the columns which are not needed anymore (like individual columns for RICE. But only keep the final RICE score column). Add new columns to denote Quaterly(or any other) releases.
+
