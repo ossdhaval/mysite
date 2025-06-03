@@ -602,3 +602,27 @@ Using Roadmaps for communication
     - These are the external companies that are developing 3rd party integrations with your product. Where they are running development cycles in tendum with yours.
     - They need details with availability of the feature in alpha, beta or GA. Themes that we are targetting. etc
       
+-------------------
+types (or formats) of roadmaps
+------------------------
+
+You can use different format to create roadmap for different audience based on the need of information for that audience.
+
+- Release plans (Granularity: feature(i.e epic) level)
+  - shows features(epics) planned per release
+  - doesn't show exact release dates to reduce the clutter and to accomodate the fact that release dates may change
+- Sprint plans (Granularity: user story level)
+  - used to run sprints
+  - more granular where dates are tracked at the userstory level 
+  - primarily used by development org
+- now-next-later (Granularity: feature(i.e epic) level)
+  - used to show what features are being worked on right now, what comes after that and what is in the `later` bucket.
+  - This allows to show how features are prioritized without showing releases or timelines
+- Kanban/status based roadmaps (Granularity: feature(i.e epic) level)
+  - This is more of an detailed view of `now` part of the `now-next-later` roadmap. 
+  - unlike sprint plan, This shows features in various stage of development and doesn't go to the userstory level
+- Timeline based roadmaps
+  - These are detailed version of `now-next-later` roadmaps where features that are being worked and when they are going to be delivered with dates
+  - If you choose to show dates for features coming up `later` (i.e far future), it is important to make sure to communicate the fact that those may change. Otherwise, external partners, development partners, customers may start banking on those dates.
+ 
+  - 
