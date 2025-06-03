@@ -606,7 +606,7 @@ Using Roadmaps for communication
 types (or formats) of roadmaps
 ------------------------
 
-You can use different format to create roadmap for different audience based on the need of information for that audience.
+Each Roadmap format serves a unique purpose and is suited to different communication needs. The choice of Roadmap depends on the nature of your project, the audience you're communicating with, and the level of detail you wish to provide. Properly utilized, these Roadmap formats can significantly enhance your product planning and communication processes.
 
 - Release plans (Granularity: feature(i.e epic) level)
   - shows features(epics) planned per release
@@ -624,5 +624,9 @@ You can use different format to create roadmap for different audience based on t
 - Timeline based roadmaps
   - These are detailed version of `now-next-later` roadmaps where features that are being worked and when they are going to be delivered with dates
   - If you choose to show dates for features coming up `later` (i.e far future), it is important to make sure to communicate the fact that those may change. Otherwise, external partners, development partners, customers may start banking on those dates.
+  - Timeline-based Roadmaps can be further categorized based on their focus. These are:
+    -  Features Timeline: Focusing on when features will be developed and launched, this Roadmap helps internal teams plan and communicate upcoming releases and allows customers to anticipate what's next. Due to its granular nature, it's best used for high-certainty planning.
+    -  Objectives Timeline: Focusing on achieving specific objectives over time, this Roadmap emphasizes the "why" over the "what." Depending on communication needs, you can include aligned features or just the objectives.
+    -  Release Timeline: Similar to Release Plans, this Roadmap visually depicts when different product versions or updates are planned for release, giving stakeholders an overview of the product's future.
  
-  - 
+ 
