@@ -19,7 +19,10 @@ Learning Material:
 Roadmap examples:
 
 - Very good OSS roadmap. GitHub's own: https://github.com/orgs/github/projects/4247/views/1?sliceBy%5Bvalue%5D=%F0%9F%8C%B1+Secure+at+every+step
+- VScode roadmap:https://github.com/microsoft/vscode/wiki
+- Azure AKS product public roadmap: https://github.com/orgs/Azure/projects/685
 - Roadmap published as article for a licensed product: https://tuskr.app/article/roadmap
+- 
 ## Notes
 
 ```
@@ -630,3 +633,30 @@ Each Roadmap format serves a unique purpose and is suited to different communica
     -  Release Timeline: Similar to Release Plans, this Roadmap visually depicts when different product versions or updates are planned for release, giving stakeholders an overview of the product's future.
  
  
+---------------
+which format to use for which audience
+--------------------
+
+When it comes to choosing Roadmap types, it's essential to consider the needs of different audience groups within your organization:
+
+Note: release roadmap and release timeline roadmaps are different. The later one has timelines details available. 
+
+1.   Leadership: This group is typically interested in a high-level view of the product team's work, aligned with the company or product objectives. Two effective Roadmap types for this group are the Release Timeline and the Objectives Timeline. These formats can provide a strategic perspective, outlining how the product initiatives contribute to overarching objectives, without delving into granular details.
+_Release Timeline, Objectives Timeline_
+
+2.   Customer-facing Teams: These teams, including sales, customer success, marketing, and support, need more detail to communicate effectively with prospects or customers. The Release Plan, supplemented with a Kanban or Status-based Roadmap, can be highly beneficial for these teams. These Roadmaps provide detailed insights into upcoming features and functionalities, enabling these teams to prepare internal and external materials and confidently answer customer queries about upcoming product enhancements.
+_Release Plan, Release Timeline, Kanban/Status-based_
+
+3.   External Audiences: External customers generally appreciate a high-level product vision and near-term expected functionalities. Roadmap types similar to those used by Customer-facing teams can be suitable here. However, it's often best to provide summarized information and avoid committing to specific release timeframes to maintain trust and minimize potential frustrations.
+Examples of public opensource project roadmaps:
+- GitHub roadmap: [It is](https://github.com/orgs/github/projects/4247) most detailed and well managed roadmap. Along with committed timelines and maximum details such as themes, product lines mentioned as labels. Even the feature descriptions are well writen. 
+See this [microsoft AKS roadmap](https://github.com/orgs/Azure/projects/685/views/1) where they have not marked any features to a specific release. It is kanban/status-based board without timelines. It is also important to note that this is an open source product so it is even harder to commit timelines because contribution is done by contributors. Another example is [VScode roadmap](https://github.com/microsoft/vscode/wiki/Roadmap). Again a major open source project. It manages roadmap in a very different format. But again, doesn't give any timelines for features on a public roadmap to external audience. But surely, there would be more roadmaps managed internally for stackholders, paid customers etc.
+_Release Plan, Kanban/Status-based_
+
+5.   Product Teams: These teams require granular information about what's being built, how it's being built, the required timeframe, and dependencies between functions and other teams. Several Roadmap types can meet these needs, including Now-Next-Later, Release Plans, Sprint Plans, and Kanban/Status-based formats. These Roadmaps aid in planning and execution, providing a clear direction for the product development process.
+Now-Next-Later, Release Plans, Sprint Plans, Kanban/Status-based
+
+6.   Development Partners: For partners who need to align their development efforts with yours, a Release Timeline Roadmap is the most suitable. This Roadmap shows when different product versions or updates are planned, enabling partners to coordinate their efforts accordingly.
+_Release Timeline Roadmap_
+
+Remember, while these are common examples, every audience and organization has unique needs. The key is to identify your different audiences and select the Roadmap type that best represents the information they need. This will ensure effective communication and alignment across all stakeholders, contributing to successful product development and delivery.
