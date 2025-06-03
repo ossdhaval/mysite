@@ -74,6 +74,7 @@ Large open-source projects that are actively managed and can be looked at as ref
 - analytics and trend reports on github data. Very useful to understand trends. https://innovationgraph.github.com/
 - good guidelines around what are the rights and responsibilities of moderators of a repo: https://squidfunk.github.io/mkdocs-material/contributing/#rights-and-responsibilities
 - good checklist for community for using comments, issues and discussions: https://squidfunk.github.io/mkdocs-material/contributing/#checklist
+- Real life (VSCode) Good OSS project management documentation: https://github.com/microsoft/vscode/wiki
 
 
 ### Regular house holding checks :
