@@ -660,3 +660,51 @@ Now-Next-Later, Release Plans, Sprint Plans, Kanban/Status-based
 _Release Timeline Roadmap_
 
 Remember, while these are common examples, every audience and organization has unique needs. The key is to identify your different audiences and select the Roadmap type that best represents the information they need. This will ensure effective communication and alignment across all stakeholders, contributing to successful product development and delivery.
+
+
+
+# Product led growth
+
+A good summary from ChatGPT --------------------------------------------------------------------
+
+**Product-Led Growth (PLG)** is a go-to-market strategy where the **product itself drives customer acquisition, expansion, conversion, and retention**. In PLG, the product is the main vehicle for delivering value and generating growth, rather than relying primarily on sales or marketing efforts.
+
+### Key Characteristics of PLG:
+
+1. **Self-serve onboarding** – Users can sign up, try, and start getting value from the product on their own.
+2. **Freemium or free trial model** – Users can experience the product without a paywall.
+3. **Product virality** – The product has built-in features that encourage users to share, invite others, or collaborate.
+4. **Usage-based expansion** – As customers use more of the product (users, data, features), they move into higher-tier plans.
+5. **User-centric design** – The product is intuitive and valuable from day one without needing heavy support or training.
+
+### Examples of PLG Companies:
+
+* **Slack** – Free teams grow into paid workspaces.
+* **Zoom** – Free meetings lead to upgrades for longer calls or more participants.
+* **Notion** – Individuals start using it, then teams adopt it.
+
+### PLG Funnel (Typical Flow):
+
+1. **Acquisition** – User finds and signs up for the product.
+2. **Activation** – User hits a key milestone (e.g., creates first note, hosts a meeting).
+3. **Retention** – User continues to return and use the product.
+4. **Expansion** – User invites others or moves to a paid plan.
+5. **Referral** – User shares product with others.
+
+### Advantages:
+
+* Lower customer acquisition costs (CAC)
+* Faster and scalable growth
+* Better product-market fit visibility (based on usage data)
+* Reduced friction in the buying process
+
+### When PLG Works Best:
+
+* The product can be easily adopted by end users.
+* The value of the product is quickly apparent.
+* There’s low dependency on integration or setup.
+
+Let me know if you’d like a comparison between PLG and Sales-Led or Marketing-Led Growth models.
+
+
+-------------------------------------------------------------------------------------------------------------------
