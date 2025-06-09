@@ -708,3 +708,36 @@ Let me know if you’d like a comparison between PLG and Sales-Led or Marketing-
 
 
 -------------------------------------------------------------------------------------------------------------------
+
+
+----------------------
+product prioritization microcertification
+-----------------------------------------
+
+Prioritization helps you stay confident about delivering value and not get swayed by the loudest stackholder or latest market trend.
+
+### Ruthless prioritization
+
+One concept you’ll often encounter in product management is ruthless prioritization. This means saying “no” to certain ideas (even good ones!) to protect your product’s focus and ensure the most valuable work gets done first.
+
+As Sheryl Sandberg, former Chief Operating Officer at Meta, explains, ruthless prioritization means making deliberate, sometimes tough choices about what goes on the product roadmap—and just as importantly, what doesn’t. It’s about focusing on the initiatives that truly matter rather than spreading your resources across everything that “could” be done.
+
+#### **Why It's Important to Say "No"**
+
+- Resource Realities
+
+  As a Product Manager, you're constantly working within constraints—limited time, limited budget, and a finite team's bandwidth. Saying “yes” to everything stretches those resources too thin. The result? Delayed timelines, rushed features, or work that doesn’t meet the bar. Prioritization is about protecting focus and ensuring that what does move forward gets the attention it needs to be high-quality and truly impactful.
+
+- Value First
+
+  Not all requests are equal. Some features might sound exciting or come from influential stakeholders, but if they don’t meaningfully move the needle for your users or your business, they’re not worth the investment. Saying “no” to lower-impact ideas allows you to say “yes” to the ones that matter most. It’s all about being intentional, not rigid.
+
+#### **Saying "No" Doesn't Mean You're Dismissive**
+
+- Clarity Over Rejection
+
+  Declining a request doesn’t mean disregarding the person who suggested it. In fact, the way you say ‘no’ may actually strengthen your relationships. When you can explain your reasoning, whether it’s tied to user research, alignment with company goals, or current technical constraints, you show that your decisions are thoughtful, not arbitrary. That’s the kind of clarity that builds trust for future projects.
+
+- "No" Doesn't Mean "Never"
+
+  A lower-priority request today might rise in importance tomorrow. New data, evolving customer needs, or strategic shifts can quickly change what’s worth building. Be sure to document these decisions and remain open to re-evaluation. This will help you stay agile without losing sight of what matters most right now.
