@@ -801,7 +801,7 @@ It’s a great fit for prioritizing:
 ✍️ Sprint or planning meetings: When you need agreement on what the team should work on next.
 ✍️ Early-stage product work: When there’s limited data, but decisions still need to be made.
 
-Part of what makes MoSCoW work well with cross-functional groups is its ability to structure the conversation without getting overly technical, especially when not everyone has a product background.
+Part of what makes MoSCoW work well with cross-functional groups is its ability to structure the conversation without getting overly technical, especially when not everyone has a product background. MoSCoW is a qualitative approach and not quantitative as it depends on individual judgement and not data. 
 
 **How MoSCoW Works in Practice**
 
@@ -830,5 +830,60 @@ You're scoping your MVP. "Login" and "core task flow" go in Must-have. A “dark
 
 #### RICE
 
+Unlike MoSCoW, which is a fast, qualitative approach, RICE adds structure by using a simple formula to score and compare initiatives. It helps product teams evaluate different types of work on a more objective scale, using four factors:
+
+- Reach: How many users will this initiative affect in a given time period?
+
+- Impact: How much will it move the needle on user behavior, satisfaction, or business goals?
+
+- Confidence: How certain are you about the reach and impact estimates?
+
+- Effort: How much time or work will it take to build?
+
+calculation of RICE Score = (Reach × Impact × Confidence) ÷ Effort
+
+**When to Use RICE**
+
+RICE is especially useful when you're dealing with a long list of ideas and need a consistent, objective way to weigh them, especially when team opinions differ or resources are tight. While it’s not perfect, it helps remove some of the emotion or gut instinct from prioritization and replaces it with logic that teams can align around.
+
+It’s useful for prioritizing:
+
+✍️ Competing priorities that all seem valuable: It brings clarity to decisions that might otherwise come down to opinion.
+✍️ New roadmap or sprint cycle planning: RICE can help surface the highest-impact, lowest-effort opportunities.
+✍️ How to justify your choices to stakeholders: The numbers provide a simple, shareable rationale for what’s getting prioritized and why.
+✍️ Where to reduce bias: It forces teams to articulate assumptions about value and effort, which can reveal blind spots or overconfidence.
+
+You don’t need perfect data to use RICE. In fact, even rough estimates are helpful. What matters most is that you apply the same logic across each option.
+
+**How RICE Works in Practice**
+
+Each factor in the RICE framework is given a numeric estimate based on available data or team judgment. Just remember, it’s not about precision, it’s about consistent, directional scoring.
+
+Here’s how each input typically works:
+
+**Reach**: How many users will this affect? (e.g., 500 users/30%)
+This is scored as either a number or a total percent of the user base
+
+**Impact**: How much will the initiative move the needle on user behavior or business goals? (e.g. 2)
+This is rated on a 3-point scale: 3 = high, 2 = medium, 1 = low, 0.5 = minimal)
+
+**Confidence**: How sure are you about your reach and impact values? (e.g., 80%)
+This is expressed as a %, based on how sure you are.
+
+**Effort**: How much time will it take to complete? (e.g., 5)
+This is a rough estimate in person-days or “small/medium/large,” converted to numbers like 2 (quick win), 5 (moderate effort), or 8+ (big lift).
+
+💡**EXAMPLE:**
+
+Let’s say you’re comparing two initiatives: improving user onboarding and adding a new feature. For onboarding, you estimate:
+
+1. Reach = 500 users
+2. Impact = 3 (high)
+3. Confidence = 80% (0.8)
+4. Effort = 5
+
+RICE Score = (500 × 3 × 0.8) ÷ 5 = 240
+
+As a comparative, the RICE score of the new feature initiative might be lower due to the higher effort required and lower confidence in its execution.
 
 #### Weighted 
