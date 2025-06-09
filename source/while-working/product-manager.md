@@ -886,4 +886,86 @@ RICE Score = (500 × 3 × 0.8) ÷ 5 = 240
 
 As a comparative, the RICE score of the new feature initiative might be lower due to the higher effort required and lower confidence in its execution.
 
-#### Weighted 
+RICE Pros and Cons
+After walking through how RICE helps quantify trade-offs, let’s explore where it shines and where it may require more nuance or setup to be effective.
+
+|Pros	| Cons|
+|Brings structure to prioritization: Helps remove bias and emotional decision-making.	| Requires at least some data: Harder to apply when you have little user or usage info. |
+|Useful for long lists of ideas: Makes it easier to compare multiple initiatives at once. |	Estimates can feel subjective: Scores are only as reliable as the assumptions behind them.|
+|Makes trade-offs visible: Helps teams think critically about effort vs. impact.	| Can give a false sense of precision: A higher score doesn’t always mean a better decision. |
+|Supports stakeholder communication: Provides a transparent rationale behind choices.	| More time-consuming than lightweight frameworks: Not ideal for rapid decision-making.|
+
+
+#### Weighted scoring
+
+(good for representing trade-offs between high-level initiatives and prioritising them)
+
+Weighted Scoring is a customizable prioritization framework that helps you evaluate and compare initiatives based on the factors that matter most to your product, team, or business. Unlike MoSCoW or RICE, it gives you full control over the criteria you evaluate and how much influence each one should have.
+
+![image](https://github.com/user-attachments/assets/70815ff2-4fba-488d-a1fc-8d248809719a)
+
+**When to Use Weighted Scoring**
+
+Weighted Scoring works best when you’re faced with multiple initiatives that all seem important, and you need to make a confident, transparent decision. Because it forces teams to clarify what matters most, it’s particularly valuable when you’re balancing strategic priorities, working across cross-functional teams, or need to justify trade-offs to stakeholders.
+
+It’s especially useful for prioritizing:
+
+✍️ Strategic roadmap planning: It helps to evaluate big bets or initiatives with long-term implications.
+✍️ Cross-functional trade-offs: It provides a common language when product, design, and engineering need to make decisions together.
+✍️ Stakeholder alignment and presentation: It helps provide evidence when you need to defend or explain prioritization decisions.
+✍️ Resource-constrained environments: It clearly demonstrates where it’s critical to invest time and energy, and where it counts most.
+
+**How Weighted Scoring Works in Practice**
+
+To apply Weighted Scoring effectively, you’ll need a consistent way to rate each initiative against your chosen criteria. One simple and accessible approach is to use a nonlinear scale, such as 0, 1, 3, 7, and 10. This allows you to reflect meaningful differences without getting stuck in precision.
+
+Here’s how to put it into action:
+
+1. Start with your list of initiatives
+These could be features, fixes, experiments, or anything you're considering for the roadmap.
+
+2. Choose your evaluation criteria
+Decide what to evaluate ideas against based on your goals. Some common examples include:
+
+Value to Customers: How much will this help your users? Will it solve a meaningful problem or significantly improve the experience?
+Risk: How uncertain is the outcome? Consider technical unknowns, delivery complexity, or business risk.
+Effort: How much time and work will this take? Higher effort typically lowers priority, unless the payoff is worth it.
+3. ⚠️ A quick note on risk and effort
+Since high risk and high effort are typically less desirable, you’ll assign negative weights to those criteria. That way, a high score (e.g., 10 for "very risky") reduces the overall priority instead of increasing it. You don’t need to reverse your scoring—the negative weight does the work for you. This lets you use the same 0–10 scale across all criteria while keeping the math aligned with intelligent trade-offs.
+
+4. Assign weights to each criterion
+If user value is more important than effort or risk, give it a higher percentage. Your weights should total 100%.
+
+5. Score each initiative
+To evaluate how each initiative performs on each criterion, apply a consistent scale (like the 0, 1, 3, 7, or 10 mentioned earlier). 
+
+6. Calculate and compare
+Multiply the score by the weight for each criterion, then add up the results. The higher the total, the higher the priority.
+
+
+💡**EXAMPLE:**
+You’re evaluating an initiative to fix a sync issue in your calendar planner app. The team agrees on the following evaluation weights:
+
+1. Value = 50% (0.5)
+2. Risk = -30% (-0.3)
+3. Effort = -20% (-0.2)
+
+Here's how you might score it:
+1. Value = 7: It solves a known pain point for a wide user segment
+2. Risk: 1: It's technically straightforward with minimal unknowns
+3. Effort: 3: It's a moderate lift that can be handled within a sprint
+
+Now apply the formula:
+1. 7 x 0.5 = 3.5
+2. 1 x -0.3 = -0.3
+3. 3 x -0.2 = -0.6
+Final Score = 3.5 - 0.3 - 0.6 = 2.6
+
+This initiative is high—value, low-risk, and manageable in scope. The final score helps the team see it as a smart, high-priority opportunity.
+
+
+
+|Pros	| Cons|
+|Custom-fit to your context: You define the criteria and weights based on what matters most to your team and product.	| Takes time to set up: Requires upfront effort to define scoring rules and agree on weights.|
+|Great for stakeholder alignment: Makes trade-offs visible and brings structure to cross-functional prioritization conversations.	| Still subjective: Even with a system, people may score things differently—and that’s okay.|
+|Backs up your strategy: Helps you clearly communicate why you're prioritizing one initiative over another.	| Looks more precise than it is: The math can feel official, but the inputs are still based on human judgment.|
