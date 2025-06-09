@@ -741,3 +741,36 @@ As Sheryl Sandberg, former Chief Operating Officer at Meta, explains, ruthless p
 - "No" Doesn't Mean "Never"
 
   A lower-priority request today might rise in importance tomorrow. New data, evolving customer needs, or strategic shifts can quickly change what’s worth building. Be sure to document these decisions and remain open to re-evaluation. This will help you stay agile without losing sight of what matters most right now.
+
+
+In 1997, when steve jobs came back to Apple, a loss making company at that time, He famously slashed the product lineup from around fifteen different models to just four primary categories: a consumer desktop, a consumer laptop, a professional desktop, and a professional laptop. This wasn't just a matter of reducing numbers to bring costs down; it was about making hard decisions and eliminating distractions so the company could regain its focus. Jobs' vision for Apple was clear: by focusing on a smaller set of products, the company could make a real impact, which would drive long-term success.
+
+While ruthless prioritization is essential, that doesn’t mean the answer is always “no.”
+
+Great Product Managers also know when to say “yes”—and here’s a hint: it’s not about pleasing everyone. Fundamentally, it’s about recognizing when a feature aligns with your product’s goals, users’ needs, and the company’s long-term vision.
+
+**Signals when you should say `yes`:**
+
+- Significant Customer Impact
+
+  If a key customer, especially one that contributes meaningfully to your revenue, requests a feature that would improve their experience or prevent churn, it’s worth considering. Losing that customer could have ripple effects beyond just lost income, including internal stakeholder pressure or reputational risk.
+
+- Common Customer Issue
+
+  When multiple customers raise the same issue or ask for similar functionality, it often signals a broader need. But don’t jump straight to “yes.” Validate the pattern, check if it aligns with your product strategy, and determine whether solving it will improve the experience for a meaningful portion of your user base.
+
+- Opportunity for Market Expansion
+
+  Some requests do more than just serve existing customers—they unlock new use cases or attract new segments. If a feature has the potential to open the door to a new market or strengthen your competitive edge, it may carry long-term strategic value.
+
+- Prerequisite for Future Development
+
+  Sometimes, a request may not feel high-impact on its own, but it lays the groundwork for something bigger. Think of it as an enabler, a building block that allows your team to deliver more valuable functionality down the line.
+
+- Aligned with Company Capabilities
+
+  Not every good idea is right for your team to execute. Before saying “yes,” make sure the request is feasible within your current capabilities, whether that’s technical expertise, budget, timeline, or business model. The best feature ideas are the ones you can execute well and sustainably.
+
+**So—what is prioritization really all about?**
+
+It’s about making intentional choices in a world of competing demands. Every decision to prioritize one feature over another involves trade-offs: speed vs. impact, user needs vs. business goals, and short-term wins vs. long-term vision.
