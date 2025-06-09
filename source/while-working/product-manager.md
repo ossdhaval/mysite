@@ -714,6 +714,8 @@ Let me know if you’d like a comparison between PLG and Sales-Led or Marketing-
 product prioritization microcertification
 -----------------------------------------
 
+Prioritization is about focusing your team’s energy on the initiatives that will have the greatest impact.
+
 Prioritization helps you stay confident about delivering value and not get swayed by the loudest stackholder or latest market trend.
 
 ### Ruthless prioritization
@@ -774,3 +776,59 @@ Great Product Managers also know when to say “yes”—and here’s a hint: it
 **So—what is prioritization really all about?**
 
 It’s about making intentional choices in a world of competing demands. Every decision to prioritize one feature over another involves trade-offs: speed vs. impact, user needs vs. business goals, and short-term wins vs. long-term vision.
+
+### Prioritization frameworks
+
+#### MoSCoW
+
+MoSCoW is one of the simplest and most widely used prioritization frameworks in product management. 
+It helps you sort features, ideas, or requests into four clear categories:
+
+- Must-haves: Critical to success. The product can’t function without these.
+
+- Should-haves: Valuable, but not essential. Can be postponed without major risk.
+
+- Could-haves: Nice-to-haves. Low-priority items that only make the cut if there’s extra time.
+
+- Won’t-haves (for now): Explicitly deprioritized to keep focus on what matters most.
+
+**When to Use MoSCoW**
+
+It’s a great fit for prioritizing:
+
+✍️ Scoping a release or MVP: When you need to decide what’s absolutely required to ship.
+✍️ Backlog grooming: When your list of ideas is long and time is short.
+✍️ Sprint or planning meetings: When you need agreement on what the team should work on next.
+✍️ Early-stage product work: When there’s limited data, but decisions still need to be made.
+
+Part of what makes MoSCoW work well with cross-functional groups is its ability to structure the conversation without getting overly technical, especially when not everyone has a product background.
+
+**How MoSCoW Works in Practice**
+
+MoSCoW is often run as a collaborative exercise. You can do it in a shared document, with a whiteboard, or via virtual tools like Miro, Mural, FigJam, or Notion.
+
+Start by listing all current ideas, requests, or features. Then sort each into one of the four categories.
+
+Once that’s done, ask:
+
+1. Are there too many “Musts”?
+2. Can we downgrade any “Shoulds”?
+3. What are we confident saying “No” to (for now)?
+
+**Example**
+
+You're scoping your MVP. "Login" and "core task flow" go in Must-have. A “dark mode toggle” goes in Could-have. And that complex calendar sync? It’s a Won’t-have...at least for this release.
+
+
+
+| Pros	| Cons |
+|---|---|
+|Easy to understand and apply: No complex math or scoring is needed. |	Subjective by nature: Without clear criteria, what’s a “Must” for one person might be a “Should” for another. |
+| Drives quick alignment: Great for team discussions when time is limited.	| Not data-driven: May oversimplify trade-offs in more mature or complex products. |
+| Works with low data environments: Useful even when you’re early in the product lifecycle or lacking metrics. |	Doesn’t account for effort: Doesn’t factor in cost, time, or difficulty unless you layer that in separately, such as a Level of Effort (LOE) measurement. |
+| Encourages constraint-based thinking: Forces teams to distinguish between “essential” and “nice-to-have.” ||
+
+#### RICE
+
+
+#### Weighted 
