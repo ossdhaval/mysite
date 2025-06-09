@@ -969,3 +969,37 @@ This initiative is high—value, low-risk, and manageable in scope. The final sc
 |Custom-fit to your context: You define the criteria and weights based on what matters most to your team and product.	| Takes time to set up: Requires upfront effort to define scoring rules and agree on weights.|
 |Great for stakeholder alignment: Makes trade-offs visible and brings structure to cross-functional prioritization conversations.	| Still subjective: Even with a system, people may score things differently—and that’s okay.|
 |Backs up your strategy: Helps you clearly communicate why you're prioritizing one initiative over another.	| Looks more precise than it is: The math can feel official, but the inputs are still based on human judgment.|
+
+
+
+### How AI tools can help in prioritization
+
+Here are a few powerful ways to bring AI into your prioritization process within the three frameworks you’ve just learned:
+
+ Idea Clustering and Theme Detection
+AI tools can analyze user feedback, support tickets, survey responses, and product reviews to automatically surface common themes or pain points. This helps you group related ideas and spot high-frequency requests you might have missed.
+
+In MoSCoW, clustering helps you determine what truly qualifies as a Must-have vs. a Could-have.
+In RICE, identifying high-frequency requests improves your Reach input, giving you stronger signals about how many users are impacted.
+Example: AI reveals that “sync issues” come up in 30% of support tickets. That strengthens its case as a Must-have or high-Reach item.
+ Effort Estimation Support
+AI models trained on internal engineering data can suggest effort ranges for new initiatives based on past work. This makes your scoring more consistent, especially when you’re uncertain or lacking time.
+
+In RICE, it refines your Effort estimate.
+In Weighted Scoring, it can improve effort-related inputs like “Cost,” “Complexity,” or “Time to Build,” depending on which criteria you’ve included in your custom scorecard. 
+Example: AI analyzes similar backlog tickets and predicts the sync initiative will take 12 dev days. You now feel confident assigning a medium effort score.
+ Predictive Scoring and Pattern Matching
+
+Some AI tools go a step further and are able to analyze historical product decisions and business results to forecast which initiatives are likely to succeed. These aren’t perfect, but they can help you sense-check your roadmap.
+
+In RICE, it can refine your Impact and Confidence inputs.
+In Weighted Scoring, it offers an early signal to adjust weights or reconsider assumptions.
+Example: AI flags that a feature similar to what you’re considering (calendar integration) had low adoption last year. You lower your Impact or Confidence score accordingly.
+ Drafting and Communicating Priorities
+You can also use AI tools like ChatGPT to draft stakeholder updates, roadmap rationales, or internal documentation. This ensures clear, consistent messaging, especially when time is tight or you’re juggling multiple requests.
+
+No matter which method you use, explaining your prioritization is key. 
+AI can help you articulate your logic and write clear summaries others can rally behind.
+💡 More on communicating with confidence coming up in Module 4!
+
+Example: After scoring with Weighted Scoring, you use AI to generate a 1-slide summary explaining how each initiative ranked and why.
