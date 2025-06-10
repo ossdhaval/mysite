@@ -1018,3 +1018,94 @@ As a PM, you may look at backlog items in 4 different categories:
 
 **Note**: when prioritizing you have to gauge things like reach, impact, business value, must-have etc with respect to a feature. At this point understand the difference between `opinion` vs `data-driven judgement`. Try to give a `data-driven jugdgement` as much as possible. Try to find data from your own product. If not possible then try to find data from market and competitor products. Some relevant data is better than a personal opinion. This will be evident when you communicate your prioritization to the stakeholders and broader teams.
 
+product team does something critical: they didn’t just share what they prioritized, they explained why. They walked stakeholders through their decision-making framework, explained how each initiative had been scored, and made the trade-offs clear.
+
+Bring others along in your prioritization journey, whether it’s your designers, engineers, executives, or customers. 
+
+**Product success isn’t just about what you build; it’s about how well you help others see why it matters.**
+
+How to communicate your roadmaps and prioritization:
+
+- Explain Your Logic Clearly (Even If It’s Not Perfect)
+
+  People don’t need every detail. In fact, that may just bog them down. But they do need to see your thought process.
+
+  Try this:
+  Use a 1-slide summary or 2-minute verbal walkthrough to explain how you prioritized. Reference the criteria you used (value, effort, risk, etc.), not just the
+  outcome. Include a lightweight explanation like:
+
+  ```
+  "We prioritized this feature because it helps 70% of users, has a high trust impact, can be shipped in under two weeks, plus it builds trust and reduces resistance."
+  ```
+
+  Pitfalls to Avoid:
+
+  - Don't Flood Them with Data: Focus on clarity, not complexity.
+  - Don't Wait for Perfect Info: Prioritize transparency over precision.
+ 
+- Get Alignment Early (Before You Announce the Plan)
+
+  Surprises break trust. Proactive conversations build it. Give others space to raise concerns before decisions feel locked in.
+
+  Try this:
+  
+  Before finalizing your roadmap or sprint, check in with key stakeholders, such as design, engineering, sales, or leadership. Ask:
+
+  ```
+  “Here’s how I’m thinking about priorities. Does anything feel misaligned from your side?”
+  ```
+
+  Pitfalls to Avoid:
+
+  - Don’t Anounce Prirorities Without Input : Give a heads up as often as posssible.
+  - Avoid Only Aligning Up With Leadership: Peer alignment is just as critical.
+ 
+- Manage Trade-Offs Out Loud (Not Just in Your Head)
+
+  Trade-offs are inevitable. What matters is that others see you making them intentionally. Reframing trade-offs as intentional choices helps others understand your strategy.
+
+  Try this:
+  When saying no (or “not now”), show what you’re saying yes to. For example:
+
+  ```
+  “We’re holding off on this feature not because it’s a bad idea, but because the sync fix impacts more users and supports our Q3 retention goals.”
+  ```
+  
+  Pitfalls to Avoid:
+  
+  ❌ Don't Just Say "It's Not a Priority": Explain why.
+  ❌ Don't Assume Trade-Offs are Obvious: Even great PMs forget others need context.
+
+- Revisit Priorities as Inputs Change (and Let People Know When You Do)
+
+  Prioritization isn’t a one-time event—it’s an ongoing practice. Build a simple habit of revisiting your prioritization assumptions every 2–4 weeks, especially when new user data comes in, resources shift, or a major opportunity or risk emerges.
+
+  Try this:
+   Let others know when something changes and why. For example:
+
+  ```
+  “Given the surge in feedback about calendar syncing, we’re moving it up from ‘Could-have’ to ‘Should-have’ in our next cycle.”
+  ```
+  
+  Pitfalls to Avoid:
+
+  ❌ Don't Stick to a Plan Just Because It's Written Down: Adapt with intention.
+  ❌ Don't Update Priorities Silently: Keep all teams in the loop to build trust and visibility.
+
+  Remember: Prioritization doesn’t end when you make the decision. It becomes real when others understand it, support it, and move forward with you.
+
+## Conclusion
+
+-  Prioritization is about focus, not just ranking
+  -  You’ll never have enough time or resources to do everything. Great product managers make intentional choices about what to do next and what to say “no” to.
+-  Use frameworks to bring structure and clarity
+  -  Whether it’s MoSCoW for fast alignment, RICE for lightweight scoring, or Weighted Scoring for deeper analysis, frameworks help you compare competing priorities through a consistent lens.
+-  Apply the right tool for the moment
+  -  Each framework has its strengths. Use MoSCoW when you need to move quickly, RICE when you have data to guide you, and Weighted Scoring when alignment and customization matter most.
+-  Communication is just as important as the decision itself
+  - Getting buy-in means showing your logic, managing trade-offs transparently, and staying open to change as new insights come in. Prioritization is a team sport—and you're the one keeping everyone on the same page.
+
+Resources: ROI calculator : https://productschool.com/download/templates/roi-calculator-resource
+
+ROI calculator PPT: on my PC: /home/dhaval/docs/learning/tech/certifications/product-management
+
