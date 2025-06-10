@@ -970,7 +970,9 @@ This initiative is high—value, low-risk, and manageable in scope. The final sc
 |Great for stakeholder alignment: Makes trade-offs visible and brings structure to cross-functional prioritization conversations.	| Still subjective: Even with a system, people may score things differently—and that’s okay.|
 |Backs up your strategy: Helps you clearly communicate why you're prioritizing one initiative over another.	| Looks more precise than it is: The math can feel official, but the inputs are still based on human judgment.|
 
+[Template](https://docs.google.com/spreadsheets/d/1NQAGD1C3olikI1Ba7pl8hjTJoVn1OHlWfDVQtAhes-Y/template/preview)
 
+**Note**: Remember: Frameworks don’t replace judgment, they sharpen it.
 
 ### How AI tools can help in prioritization
 
@@ -1010,3 +1012,9 @@ As a PM, you may look at backlog items in 4 different categories:
   -  customer delight: UX improvements
   -  feature requests: frequently requested feature on the user forums
   -  strategic bets: new feature request from stackholders to expand into new markets
+
+## Communication to get buy-in
+
+
+**Note**: when prioritizing you have to gauge things like reach, impact, business value, must-have etc with respect to a feature. At this point understand the difference between `opinion` vs `data-driven judgement`. Try to give a `data-driven jugdgement` as much as possible. Try to find data from your own product. If not possible then try to find data from market and competitor products. Some relevant data is better than a personal opinion. This will be evident when you communicate your prioritization to the stakeholders and broader teams.
+
