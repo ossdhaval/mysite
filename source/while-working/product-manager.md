@@ -1003,3 +1003,10 @@ AI can help you articulate your logic and write clear summaries others can rally
 💡 More on communicating with confidence coming up in Module 4!
 
 Example: After scoring with Weighted Scoring, you use AI to generate a 1-slide summary explaining how each initiative ranked and why.
+
+
+As a PM, you may look at backlog items in 4 different categories: 
+  -  tech debt: improved logging, reducing memory footprint
+  -  customer delight: UX improvements
+  -  feature requests: frequently requested feature on the user forums
+  -  strategic bets: new feature request from stackholders to expand into new markets
