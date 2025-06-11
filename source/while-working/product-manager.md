@@ -1109,3 +1109,65 @@ Resources: ROI calculator : https://productschool.com/download/templates/roi-cal
 
 ROI calculator PPT: on my PC: /home/dhaval/docs/learning/tech/certifications/product-management
 
+----------------------
+product launch microcertification
+-----------------------------------------
+
+The launch event keynotes:
+
+Should have
+
+- product positioning: Why of the product
+- value proposition: What it enables users to do
+- excitement: Tell why you and (audience) should be excited about the product
+
+Look at steve jobs launch videos:
+
+- MacBook Air launch
+- iPhone launch
+
+### Product launch key elements
+
+![image](https://github.com/user-attachments/assets/c09f49c0-2fc4-4470-ac04-1437f71f9a8b)
+
+
+The four foundational elements of an effective product launch are:
+
+- Positioning
+- Messaging
+- Pricing and Packaging
+- Competitive Intelligence
+
+Specifically for foundational elements, you will need to ensure that each of these have their own dedicated work stream, and rely on internal stakeholders, such as Sales, Marketing, Customer Success or even senior level executives to help bring them to life.
+
+#### Positioning
+
+An effective product launch starts with positioning. Positioning provides all the crucial context about a product required to effectively build it and bring it to market.
+
+Positioning allows to effective articulate your product’s position in the market by clearly stating:
+
+- Who your product serves (During MacBook air launch, steve jobs did not make this clear. But at the end of the keynote speech, you know that it was for everyone)
+- What your product does (Again, in the launch speech, steve jobs didn't mention that the MacBook air does anything extra. But he stressed that it does everything that larger laptops could do)
+- How your product is different (MacBook air's differentiator was slim profile. And still do everything that other laptops could do. So in the entire speech, steve jobs stressed on this one point only)
+
+So, all in all, you don't have to be a differentiator in all 3 aspects above. Any one is enough. 
+  
+As such, developing and iterating on positioning should begin early on in the product development lifecycle, this way, everyone is on the same page from the beginning. Positioning is essential not only to help capture the attention of your target audiences, but also instrumental for your internal teams. Having your internal teams understand these three core elements will help provide clarity and drive alignment. 
+
+Here are some questions you should ask yourself to gather relevant information for each of the six components and construct your framework.
+
+- Who is the core target audience for the product?
+  - This product is for…
+  - who is this product intended for, who will get the most value
+- What is the core need that you solve for them? Who want/need…
+  - what problem is your product solving
+- What is your product? We offer…
+  - what do you offer, how do you do it
+- What is our specific value that you provide to customers? Because of…
+  - what benefits the customer will get by using your product
+- What are the shortcomings that you must get past? Despite…
+  - what push back you may received from the customer, how to overcome that.
+  - In MacBook air launch speech, steve jobs has addressed the lack of CD drive. A limitation of MacBook air and a possible point of pushback. He also explained what apple is doing to workaround this limitation. And in doing so, the justified the priority decision they have taken about droping the cd drive.
+- How do you do this better than competing products? Better than…
+  - talk about competitor devices, what areas are they lacking, how your product/service plug those gaps.
+  - Steve jobs does this in MacBook air launch speech. Rather the speech start from that. He also brings in competitor phone's mention in iPhone speech. 
