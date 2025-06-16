@@ -1171,3 +1171,30 @@ Here are some questions you should ask yourself to gather relevant information f
 - How do you do this better than competing products? Better than…
   - talk about competitor devices, what areas are they lacking, how your product/service plug those gaps.
   - Steve jobs does this in MacBook air launch speech. Rather the speech start from that. He also brings in competitor phone's mention in iPhone speech. 
+
+
+#### messaging
+
+![image](https://github.com/user-attachments/assets/7d324f25-c246-4c39-839b-65d641043a57)
+
+- if positioning is like defining goals for the product (who is it for, what need is catered to, what is the product etc), then the messaging is about communicating all this to the customers
+- So how is messaging developed? As mentioned, it comes from the core content you have defined in your positioning framework. However, one key element that is unique to messaging is that, while it is important to clearly communicate your product’s value and benefits, these must first be done in the context of the product in the general market. Using your messaging to set the stage on your point of view of the market is key to ensuring customers can attach meaning to why they need your product and why they should care about your product right now.
+- Messaging Pillars:
+Remember that messaging is constructed from two parts: the context and the content. You’ve covered the market shift (aka the context), now it’s time to build your messaging pillars and get into the content.
+- In simple terms, think of constructing your messaging pillars as a three step plan:
+
+  Step 1: Articulate the values your product delivers to your customers.
+
+  Step 2: Highlight the specific product capabilities that deliver those values.
+
+  Step 3: Back it up with social proof.
+
+- Messaging Activations:
+  Once your messaging has been constructed around context and content, you can use it to create messaging activations across a variety of channels.
+  
+  These may be:
+  
+  Marketing Copy: Web pages, emails, promotions, and other assets
+  In-Product Copy: Words that appear within the product to reinforce functionality and value
+  Sales Assets: Pitch decks, webinar narratives, and other materials used in B2B sales
+  Just remember, for your messaging to be most effective it needs to be consistent - even if it's been tailored to marketing, sales, or is kept for in-product copy.
