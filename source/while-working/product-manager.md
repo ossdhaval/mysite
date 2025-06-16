@@ -1142,6 +1142,8 @@ Specifically for foundational elements, you will need to ensure that each of the
 
 #### Positioning
 
+As such, developing and iterating on positioning should begin early on in the product development lifecycle, this way, everyone is on the same page from the beginning. Positioning is essential not only to help capture the attention of your target audiences, but also instrumental for your internal teams.
+
 An effective product launch starts with positioning. Positioning provides all the crucial context about a product required to effectively build it and bring it to market.
 
 Positioning allows to effective articulate your product’s position in the market by clearly stating:
@@ -1152,7 +1154,7 @@ Positioning allows to effective articulate your product’s position in the mark
 
 So, all in all, you don't have to be a differentiator in all 3 aspects above. Any one is enough. 
   
-As such, developing and iterating on positioning should begin early on in the product development lifecycle, this way, everyone is on the same page from the beginning. Positioning is essential not only to help capture the attention of your target audiences, but also instrumental for your internal teams. Having your internal teams understand these three core elements will help provide clarity and drive alignment. 
+ Having your internal teams understand these three core elements will help provide clarity and drive alignment. 
 
 Here are some questions you should ask yourself to gather relevant information for each of the six components and construct your framework.
 
@@ -1195,6 +1197,50 @@ Remember that messaging is constructed from two parts: the context and the conte
   These may be:
   
   Marketing Copy: Web pages, emails, promotions, and other assets
+  
   In-Product Copy: Words that appear within the product to reinforce functionality and value
+
   Sales Assets: Pitch decks, webinar narratives, and other materials used in B2B sales
+  
   Just remember, for your messaging to be most effective it needs to be consistent - even if it's been tailored to marketing, sales, or is kept for in-product copy.
+
+#### Pricing and packaging
+
+pricing and packaging needs to be finalized before your product is ready to launch. This is to ensure that there is alignment between internal teams and key stakeholders.
+
+- packaging: The grouping of features or attributes into different bundles (gluu vs Solo (gluu's cloud offering)), (basic vs pro subscription plans)
+- pricing: Amount of money that you charge for each bundle
+
+As your pricing and packaging develops, there are three key steps to plan for to ensure that you are ready to launch.
+
+- Test the pricing and bundling
+  - check and ask a small set of customers or sales teams to experiment with xyz price to see the customer response
+  - Enable customer facing teams: make sure that the teams like customer success, PR, marketing, sales etc are up-to-date of pricing and packaging before the launch. This can be done via video conference, etc
+  - update and test systems: systems like company website, CRM, inventory etc where the orders are going to come should be updated with new data and should be kept ready before the launch. Make sure that systems like websites don't reveal products before launch.
+
+#### Competitive Intelligence
+
+And the final foundational element is competitive intelligence, which is relevant for all functions related to an effective product launch. 
+
+What is it? Competitive intelligence is the practice of collecting and sharing knowledge about competitors to improve organizational performance. 
+
+Who can benefit from competitive intelligence?
+
+Product Managers: to make sure that they are building differentiated products. 
+
+Product Marketers: to influence the positioning and messaging that we just talked about. 
+
+Sales Reps: to make sure that they're armed with the relevant information they need to win deals.
+
+Where can you find the information you need to build your competitive intelligence?
+
+- Competitor's website
+- help and product documentation
+- your sales teams
+- your partner ecosystem
+- Review sites like G2
+- industry analysts
+- win/loss interviews
+
+  
+  
