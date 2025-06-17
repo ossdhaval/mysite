@@ -1244,9 +1244,15 @@ Where can you find the information you need to build your competitive intelligen
 
 ### Go to market (GTM) plan
 
+
+
 - What is a GTM plan?
 
-  It is basically a path for bringing a product or a feature to the market. It has details about how to conduct a launch event, to communication and marketing, to planning for content for communication and marketing, what parameters to measure to decide if the launch was success, beta releases etc 
+  It is basically what, who, when, how plan a product or a feature to the market. It has details about how to conduct a launch event, to communication and marketing, to planning for content for communication and marketing, what parameters to measure to decide if the launch was success, beta releases etc 
+
+#### What
+
+What are you releasing and does it need GTM?
 
 - Do you need GTM for this release?
   
@@ -1263,9 +1269,25 @@ Where can you find the information you need to build your competitive intelligen
 
   Ask yourself the following questions to help determine which tier your launch might fall into:
 
-  Reach: How many customers will be affected? Usually, more customers mean more visibility.
-  Impact: What is the potential impact on overall business goals and the user experience? Will it drive growth and revenue? Is it worth being proactive to help us achieve more ambitious goals more quickly? Do we need users to change their actions somehow?
-  Risk: What risk is there if this feature is not communicated proactively to users? Will there be blowback?
+  - Reach: How many customers will be affected? Usually, more customers mean more visibility.
+  - Impact: What is the potential impact on overall business goals and the user experience? Will it drive growth and revenue? Is it worth being proactive to help us achieve more ambitious goals more quickly? Do we need users to change their actions somehow?
+  - Risk: What risk is there if this feature is not communicated proactively to users? Will there be blowback?
+
+#### Who
+
+Knowing who you are launching for by identifying your target audience is another key element to consider in your go-to-market plan.
+
+While you will likely have an idea of who your product is for, there are some additional granularities to consider when building your go-to-market plan. Developing a more rigorous set of audiences will set you up to develop a channel plan that will reach them effectively, so this is a crucial step. 
+
+Your primary question should be: ‘Who am I aiming to connect with and market our product to?’
+
+Here are some potential questions to consider when deciding on who you aim to target:
+
+- Are you trying to reach current customers or attract new ones?
+- Are you adjusting your go-to-market based on whether a customer is a subscriber or not?
+- Are you adjusting your go-to-market to consider lapsed inactive customers? How might you target them if they’re not actively using your product?
+- Are you considering your go-to-market approach based on how long a user has been using your product?
+- Do these audiences have specific titles, work in specific regions, certain industries or have other similar characteristics?
 
 - What are the goals of this GTM?
   - What is the target for
