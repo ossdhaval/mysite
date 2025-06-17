@@ -1242,5 +1242,40 @@ Where can you find the information you need to build your competitive intelligen
 - industry analysts
 - win/loss interviews
 
+### Go to market (GTM) plan
+
+- What is a GTM plan?
+
+  It is basically a path for bringing a product or a feature to the market. It has details about how to conduct a launch event, to communication and marketing, to planning for content for communication and marketing, what parameters to measure to decide if the launch was success, beta releases etc 
+
+- Do you need GTM for this release?
   
+  A company may be releasing a completely new product, or a major revision/version of a flagship product, or a major feature in a product, or a minor feature in a product. 
+  Not all the releases need a Go-To-Market effort. A minor feature can be just release with an accompaniying blog on the company website. No major launch event like iPhone is needed. So, not everything needs a GTM/launch event.
+
+- First decide what kind of launch is needed for this release?
   
+  - Tier-1: Big launch event hosted by company, engagement on all channels
+    - This is required if a new product is being launched, or a major upgrade to company's main product where this upgrade is going to touch every or majority of company's customer base. Like iPhone's next upgrade. Or Launching iPad air.
+  - Tier-2: No event or small company launch event with specific on-invite audience. Engagement on `owned` channels only, like company website.
+    - When a smaller feature or product gets released. This feature is of interest for only specific set of customers. Like for example, feature for enterprise customers.
+  - Tier-3: Release and then tell. A minor feature or release that touches many people but the feature is not significant. Just a blog on company website announcing availability of the feature is enough. Like service pack release for OS. 
+
+  Ask yourself the following questions to help determine which tier your launch might fall into:
+
+  Reach: How many customers will be affected? Usually, more customers mean more visibility.
+  Impact: What is the potential impact on overall business goals and the user experience? Will it drive growth and revenue? Is it worth being proactive to help us achieve more ambitious goals more quickly? Do we need users to change their actions somehow?
+  Risk: What risk is there if this feature is not communicated proactively to users? Will there be blowback?
+
+- What are the goals of this GTM?
+  - What is the target for
+    - People engagement
+    - new user on-boarding
+    - user churn
+    - Revenue impact
+    - user conversion rates
+    - etc
+
+- What metrics are we going to track?
+- Schedule for each activity. When to release beta, when to have launch event, when to update websites with new content about this product, when to send product/feature briefs to the sales/marketing teams,
+- 
