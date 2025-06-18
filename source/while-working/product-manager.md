@@ -1328,3 +1328,49 @@ Here are some potential questions to consider when deciding on who you aim to ta
     -  Phase 3: Post launch adoption
         ![image](https://github.com/user-attachments/assets/e8bf13bf-b3f5-43bc-a0bf-c05c20c85890)
    
+- Enablement Plan
+  
+  Since you will likely be working with a variety of key stakeholders in order to get your product successfully launched, ensure that your enablement plan keeps everyone informed and on the same page.
+  
+  Every launch (or release!) will require some level of enablement to ensure that internal stakeholders have the information they need. Different teams have different priorities and tasks, so make sure that you are sharing your enablement documents to help everyone contextualize the product and get up to speed.
+  
+  
+  - Who needs to know?
+    Revenue Enablement, Sales, Customer Support, Social, Marketing, and PR are your primary stakeholders who would benefit from your enablement plan.
+  
+  - What do they need to know?
+    -  The Product Description: Keep the formula clear and concise.
+
+       Try (type of product) + (main benefit)
+      
+    -  Its Key Features: List them separately using snappy, action verbs.
+      
+        Try enables / monitors / tracks
+  
+    -  How it Works: Include a quick product demo so that these stakeholders quickly understand it and explain how to use it.
+   
+-  Channel Plan
+
+    Channel plans can help you identify which channels to use for your launch. Great go-to-market plans incorporate and leverage a mix of different channels that work to achieve specific goals. 
+    
+    Channels are dictated by:
+    
+    Your campaign goals and metrics
+    Your target audiences
+    Think about it this way: if your goal is to reactivate lapsed or inactive users of your fitness app, you shouldn’t rely too heavily on in-app messages, since those users won’t see them anyway!
+    Three Common Kinds of Channels to Think About
+    In order for your messaging to reach the right audiences, your channel plan should incorporate the three most common channels: owned, paid and earned.
+
+    - Owned channels:
+      
+      ![image](https://github.com/user-attachments/assets/6d5fcb1c-f2e5-44b9-b0c1-d52dbc22223f)
+
+    - Paid channels:
+
+      ![image](https://github.com/user-attachments/assets/21a3ae32-7fd3-46f3-beab-225a03d42701)
+
+    - earned channels:
+    
+      ![image](https://github.com/user-attachments/assets/6b32fc10-d910-478c-9cce-b19048894157)
+
+
