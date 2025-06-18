@@ -1321,4 +1321,9 @@ Here are some potential questions to consider when deciding on who you aim to ta
   -  Phased approach:
     -  Breaking down the different phases of your launch can help strategically place activities for sustained momentum while also planning for maximum initial impact. Many GTM plans include multiple channel activations to amplify the launch moment and then cycle through additional channels over time to sustain engagement. Check out this example of a typical phased marketing plan approach. As you can see, it has been divided into three phases. The key is that each phase has been designed to achieve a specific goal with tactics and channels to match:
     -  Phase 1: Beta/early access
-        - Lean into your own channels and only invite high-value customers to provide feedback. 
+        ![image](https://github.com/user-attachments/assets/6b6f3521-2bfe-47cf-aece-555935373c79)
+    -  Phase 2: Launch moment
+        ![image](https://github.com/user-attachments/assets/2d3e64ce-5a68-4c49-b11d-defa56b93e53)
+    -  Phase 3: Post launch adoption
+        ![image](https://github.com/user-attachments/assets/e8bf13bf-b3f5-43bc-a0bf-c05c20c85890)
+   
