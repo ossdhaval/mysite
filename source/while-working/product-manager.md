@@ -1290,14 +1290,35 @@ Here are some potential questions to consider when deciding on who you aim to ta
 - Do these audiences have specific titles, work in specific regions, certain industries or have other similar characteristics?
 
 - What are the goals of this GTM?
+  - Usually there are three catagories in which a GTM initiative would set it's goals:
+    - Awareness
+    - Engagement
+    - Conversion and revenue impact
+      
   - What is the target for
-    - People engagement
-    - new user on-boarding
-    - user churn
+    - user engagement: how frequently and how much time users are spending with your product
+    - new user on-boarding: how many new users the product has gained after launch
+    - user churn: How many users have stopped using your product after launch  
     - Revenue impact
-    - user conversion rates
+    - user conversion rates: how many users have actually started paying for your product
     - etc
+   
+- What metrics are being used?
+  - Your metrics should highlight and explain what you’re tracking for your launch and how you will evaluate progress towards success.
 
-- What metrics are we going to track?
-- Schedule for each activity. When to release beta, when to have launch event, when to update websites with new content about this product, when to send product/feature briefs to the sales/marketing teams,
-- 
+    These may be:
+
+    - Quantitatively: with numbers or percentages showing if you achieved or exceed your metrics for the launch.
+    - Qualitatively: with positive feedback or industry recognition.
+
+
+- GTM timelines
+  - Schedule for each activity. When to release beta, when to have launch event, when to update websites with new content about this product, when to send product/feature briefs to the sales/marketing teams,
+  - It is important to build your go-to-market timeline so you can figure out exactly when and over what time horizon to bring your plan to life.
+  - But remember, a go-to-market plan is not a one-off moment in time. It's a structured journey ensuring engagement and growth over longer time horizons, so consider a phased approach so there’s sustainable momentum after your initial launch date. Your GTM plan should include:
+    -  A high level timeline that shows exactly when certain channels and marketing tactics will go live.
+    -  Potential breakdown of different phases of product launch and what the goals are for each phase.
+  -  Phased approach:
+    -  Breaking down the different phases of your launch can help strategically place activities for sustained momentum while also planning for maximum initial impact. Many GTM plans include multiple channel activations to amplify the launch moment and then cycle through additional channels over time to sustain engagement. Check out this example of a typical phased marketing plan approach. As you can see, it has been divided into three phases. The key is that each phase has been designed to achieve a specific goal with tactics and channels to match:
+    -  Phase 1: Beta/early access
+        - Lean into your own channels and only invite high-value customers to provide feedback. 
