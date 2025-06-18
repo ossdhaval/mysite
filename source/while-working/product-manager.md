@@ -1373,4 +1373,28 @@ Here are some potential questions to consider when deciding on who you aim to ta
     
       ![image](https://github.com/user-attachments/assets/6b32fc10-d910-478c-9cce-b19048894157)
 
+- Launch Assets
 
+  In order to fully bring you go-to-market plan to life, you will need to develop and build assets to generate awareness, interest and excitement in your product. These assets will play a crucial role in your launch strategy and are the final piece of the go-to-market puzzle.
+  
+  There are many different types of assets, and each serves a different function or is useful for different teams. Whichever you choose, be sure that your vision and message for your product launch is clearly understood and communicated - especially when getting help from your creative teams.
+
+  - sales slides
+  - landing pages
+  - one pagers
+  - email templates
+  - customer stories
+  - Blog posts
+  - webinars
+  - Launch videos
+  - Interactive product tours
+  - demo environments for sales
+
+
+Keep in mind: Product Marketing Managers (PMMs) in particular are your key partners for go-to-market. They can help support go-to-market activities like segmenting customers, choosing the appropriate customer acquisition channels, and creating external-facing messaging.  
+
+Resources:
+
+- https://productschool.com/resources/glossary/go-to-market-gtm
+- GTM from a product marketer's perspective: https://productschool.teachable.com/courses/2406983/lectures/50625699
+- measure launch success using these three Metrics: https://productschool.com/blog/product-marketing/how-to-measure-product-launch-success
