@@ -1320,6 +1320,7 @@ Here are some potential questions to consider when deciding on who you aim to ta
     -  Potential breakdown of different phases of product launch and what the goals are for each phase.
   -  Phased approach:
     -  Breaking down the different phases of your launch can help strategically place activities for sustained momentum while also planning for maximum initial impact. Many GTM plans include multiple channel activations to amplify the launch moment and then cycle through additional channels over time to sustain engagement. Check out this example of a typical phased marketing plan approach. As you can see, it has been divided into three phases. The key is that each phase has been designed to achieve a specific goal with tactics and channels to match:
+    - 
     -  Phase 1: Beta/early access
         ![image](https://github.com/user-attachments/assets/6b6f3521-2bfe-47cf-aece-555935373c79)
     -  Phase 2: Launch moment
