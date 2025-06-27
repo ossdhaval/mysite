@@ -89,6 +89,17 @@ Top k limits the number of words to the top k most probable words, regardless of
 - High top k (for example, 500)
     - With a high top k setting, like 500, the model will consider the 500 most probable words for the next word in the sequence, regardless of their individual probabilities. This can lead to more diverse and creative output, because the model has a larger pool of potential words to choose from.
 
+Length:
+
+The length inference parameter category refers to the settings that control the maximum length of the generated output and specify the stop sequences that signal the end of the generation process. To learn more, choose each of the following parameters.
+
+    - Maximum length
+        The maximum length setting determines the maximum number of tokens that the model can generate during the inference process. This parameter helps to prevent the model from generating excessive or infinite output, which could lead to resource exhaustion or undesirable behavior. The appropriate value for this setting depends on the specific task and the desired output length. For instance, in natural language generation tasks like text summarization or translation, the maximum length can be set based on the typical length of the target text. In open-ended generation tasks, such as creative writing or dialogue systems, a higher maximum length might be desirable to allow for more extended outputs.
+
+How to give these parameters to chatgpt:
+
+![image](https://github.com/user-attachments/assets/2fe87700-0fec-4dec-b22c-d59ffdb51c75)
+
 
 Adjusting these inference parameters can significantly impact the model's output, so you can fine-tune the level of creativity, diversity, and coherence to suit your specific needs.
 
@@ -183,3 +194,76 @@ Craft prompts with natural, flowing language and coherent sentence structure. Av
   Prompt templates are predefined structures or formats that can be used to provide consistent inputs to FMs. They help ensure that the prompts are phrased in a way that is easily understood by the model and can lead to more reliable and higher-quality outputs. Prompt templates often include instructions, context, examples, and placeholders for information relevant to the task at hand.
 
   Prompt templates can help streamline the process of interacting with models, making it easier to integrate them into various applications and workflows.
+
+
+### Techniques
+
+#### Zero-shot prompting
+
+Zero-shot prompting is a technique where a user presents a task to a generative model without providing any examples or explicit training for that specific task. In this approach, the user relies on the model's general knowledge and capabilities to understand and carry out the task without any prior exposure, or shots, of similar tasks. Remarkably, modern FMs have demonstrated impressive zero-shot performance, effectively tackling tasks thatthey were not explicitly trained for.
+
+Example:
+
+Tell me the sentiment of the following social media post and categorize it as positive, negative, or neutral:
+
+Huge shoutout to the amazing team at AnyCompany! Your top-notch customer service continues to blow me away. Proud to be a loyal customer!
+
+Note that this prompt did not provide any examples to the model. However, the model was still effective in deciphering the task.
+
+#### Few-shot prompting
+
+Few-shot prompting is a technique that involves providing a language model with contextual examples to guide its understanding and expected output for a specific task. In this approach, you supplement the prompt with sample inputs and their corresponding desired outputs, effectively giving the model a few shots or demonstrations to condition it for the requested task. Although few-shot prompting provides a model with multiple examples, you can also use single-shot or one-shot prompting by providing just one example.
+
+Example:
+
+```
+Tell me the sentiment of the following news headline and categorize it as positive, negative, or neutral. Here are some examples:
+
+Investment firm fends off allegations of corruption
+Answer: Negative
+
+Local teacher awarded with national prize
+Answer: Positive
+
+
+Community organization exceeds fundraising goal, to provide meals for thousands in need
+
+Answer:
+
+```
+
+#### Chain-of-thought (CoT) prompting 
+
+is a technique that divides intricate reasoning tasks into smaller, intermediary steps. This approach can be employed using either zero-shot or few-shot prompting techniques.  CoT prompts are tailored to specific problem types. To initiate the chain-of-thought reasoning process in a machine learning model, you can use the phrase "Think step by step." It is recommended to use CoT prompting when the task requires multiple steps or a series of logical reasoning.
+
+Example:
+
+prompt:
+
+```
+Which service requires a larger deposit based on the following information?
+
+The total cost of service A is $50,000, and it requires a 30 percent deposit.
+
+The total cost of service B is $40,000, and it requires a 40 percent deposit.
+
+Think step by step.
+
+```
+
+Response:
+
+```
+The deposit for service A is 30 percent of $50,000, which is
+0.3 * 50,000 = $15,000
+
+
+
+The deposit for service B is 40 percent of $40,000, which is
+0.4 * 40,000 = $16,000
+
+
+
+Therefore, based on the given information, service B requires a larger deposit.
+```
+
