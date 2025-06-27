@@ -68,11 +68,12 @@ Prompts should be straightforward and avoid ambiguity. Clear prompts lead to mor
 Craft prompts with natural, flowing language and coherent sentence structure. Avoid isolated keywords and phrases.
 
   -  bad prompt
-    Compute the sum total of the subsequent sequence of numerals: 4, 8, 12, 16.
+
+    - Compute the sum total of the subsequent sequence of numerals: 4, 8, 12, 16.
 
   - Good prompt:
 
-    What is the sum of these numbers: 4, 8, 12, 16?
+    - What is the sum of these numbers: 4, 8, 12, 16?
 
 - Include context if needed.
 
@@ -97,11 +98,11 @@ Craft prompts with natural, flowing language and coherent sentence structure. Av
 
   -  Bad prompt
 
-      What is the capital?
+      - What is the capital?
 
   -  Good prompt
 
-      What is the capital of New York? Provide the answer in a full sentence.
+      - What is the capital of New York? Provide the answer in a full sentence.
 
 - Consider the output in the prompt.
 
@@ -109,11 +110,11 @@ Craft prompts with natural, flowing language and coherent sentence structure. Av
 
   -  Bad prompt
 
-      Calculate the area of a circle.
+      - Calculate the area of a circle.
 
   -  Good prompt
 
-      Calculate the area of a circle with a radius of 3 inches (7.5 cm). Round your answer to the nearest integer.
+      - Calculate the area of a circle with a radius of 3 inches (7.5 cm). Round your answer to the nearest integer.
 
  - Provide an example response.
 
@@ -126,6 +127,27 @@ Craft prompts with natural, flowing language and coherent sentence structure. Av
    -  Good prompt
 
         Determine the sentiment of the following social media post using these examples:
+      
         post: "great pen" => Positive
+      
         post: "I hate when my phone battery dies" => Negative
+      
         [insert social media post] =>
+
+- Break up complex tasks.
+
+  Foundation models can get confused when asked to perform complex tasks. Break up complex tasks by using the following techniques:
+
+    - Divide the task into several subtasks. If you cannot get reliable results, try splitting the task into multiple prompts.
+    - Ask the model if it understood your instruction. Provide clarification based on the model's response.
+    - If you don’t know how to break the task into subtasks, ask the model to think step by step. You will learn more about this type of prompt technique later on in this course. This method might not work for all models, but you can try to rephrase the instructions in a way that makes sense for the task. For example, you might request that the model divides the task into subtasks, approaches the problem systematically, or reasons through the problem one step at a time.
+
+- Experiment and be creative.
+
+    Try different prompts to optimize the model's responses. Determine which prompts achieve effective results and which prompts achieve inaccurate results. Adjust your prompts accordingly. Novel and thought-provoking prompts can lead to innovative outcomes.
+
+- Use prompt templates.
+
+  Prompt templates are predefined structures or formats that can be used to provide consistent inputs to FMs. They help ensure that the prompts are phrased in a way that is easily understood by the model and can lead to more reliable and higher-quality outputs. Prompt templates often include instructions, context, examples, and placeholders for information relevant to the task at hand.
+
+  Prompt templates can help streamline the process of interacting with models, making it easier to integrate them into various applications and workflows.
