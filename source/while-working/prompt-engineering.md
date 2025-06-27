@@ -58,7 +58,39 @@ Product C: 1 unit
 Tell model what not to do. For instance, in a text generation model, negative prompts could be used to prevent the model from 
 producing hate speech, explicit content, or biased language.
 
+#### Model parameters
 
+Temperature:
+
+This parameter controls the randomness or creativity of the model's output. A higher temperature makes the output more diverse and unpredictable, and a lower temperature makes it more focused and predictable. Temperature is set between 0 and 1. The following are examples of different temperature settings.
+
+
+-  Low temperature (for example, 0.2)	
+    -  Outputs are more conservative, repetitive, and focused on the most likely responses.
+-  High temperature (for example, 1.0)
+    -  Outputs are more diverse, creative, and unpredictable, but might be less coherent or relevant.
+
+TOP P:
+
+Top p is a setting that controls the diversity of the text by limiting the number of words that the model can choose from based on their probabilities. Top p is also set on a scale from 0 to 1. The following are examples of different top p settings.
+
+- Low top p (for example, 0.250)	
+    - With a low top p setting, like 0.250, the model will only consider words that make up the top 25 percent of the total probability distribution. This can help the output be more focused and coherent, because the model is limited to choosing from the most probable words given the context.
+- High top p (for example, 0.990)
+    - With a high top p setting, like 0.990, the model will consider a broad range of possible words for the next word in the sequence, because it will include words that make up the top 99 percent of the total probability distribution. This can lead to more diverse and creative output, because the model has a wider pool of words to choose from.
+
+Top K:
+
+Top k limits the number of words to the top k most probable words, regardless of their percent probabilities. For instance, if top k is set to 50, the model will only consider the 50 most likely words for the next word in the sequence, even if those 50 words only make up a small portion of the total probability distribution.
+
+
+- Low top k (for example, 10)	
+    - With a low setting, like 10, the model will only consider the 10 most probable words for the next word in the sequence. This can help the output be more focused and coherent, because the model is limited to choosing from the most probable words given the context.
+- High top k (for example, 500)
+    - With a high top k setting, like 500, the model will consider the 500 most probable words for the next word in the sequence, regardless of their individual probabilities. This can lead to more diverse and creative output, because the model has a larger pool of potential words to choose from.
+
+
+Adjusting these inference parameters can significantly impact the model's output, so you can fine-tune the level of creativity, diversity, and coherence to suit your specific needs.
 
 #### Good bad prompt examples:
 
