@@ -267,3 +267,61 @@ The deposit for service B is 40 percent of $40,000, which is
 Therefore, based on the given information, service B requires a larger deposit.
 ```
 
+==================== end of course ==================================================
+
+
+#### helpful words to be used in a prompts
+
+- actionable: “Give me an actionable summary of this article for someone who needs to make decisions.”
+- concise: “Write a concise explanation of this product for a beginner.”
+- insightful: “Give me an insightful review of this trend and what it means for consumers.”
+- simplified: “Simplify this news article so a 12-year-old could understand it.”
+- bullet-pointed: “Summarize this podcast episode in bullet points with timestamps.”
+- prioritized: “List the top 3 takeaways from this report, prioritized by impact.”
+- stategic: “Give me a strategic summary of this competitor’s product launch.”
+- persuasive: “Write a persuasive pitch for this eco-friendly water bottle.”
+- comparative: “Compare Claude and ChatGPT in a table showing strengths and weaknesses.”
+- contextual: Give me a contextual overview of this legislation and who it affects.”
+- visual: “Give me a visual summary of this market research in table form.”
+
+#### 3 word rule
+
+`Like a lawyer`
+`Like a journalist`
+`Like a 8 year old`
+
+These three words can instantly shape the tone, voice and depth of the output.
+
+Tell chatgpt how the response should be writen. This sets tone, structure and depth etc and responses will be better.
+
+- “Summarize this article like a journalist”
+- “Explain dark matter like a physics professor”
+- “Give me career advice like a mentor”
+- “Translate this email like a professional diplomat”
+- “Write a poem like a Nashville songwriter”
+- “Design a pitch deck like a Silicon Valley founder”
+- “Review this document like a detail-oriented lawyer”
+- “Brainstorm ideas like a Gen Z influencer”
+- “Ask me questions like a therapist would”
+- “Rewrite this paragraph like an editor at The Atlantic”
+- “Give me feedback like a startup investor”
+- “Summarize this book like a 10th grade English teacher”
+- “Critique this image like an art historian”
+- “Plan a vacation like a travel agent on a budget”
+- “Explain this concept like I’m five”
+- “Pitch this idea like a TED Talk speaker”
+
+#### Prompt dusting
+
+Use multiple chat bots (chatgpt, claude, perplexity etc) using the same prompt and combine the result 
+
+https://www.tomsguide.com/ai/this-game-changing-ai-trick-is-the-secret-to-getting-the-best-chatbot-results
+
+#### which bot is better at what
+
+- ChatGPT (GPT-4o): Excellent for writing, summarizing, organizing thoughts and tone matching. Great at step-by-step logic and structure.
+- Claude 3.7 Sonnet: Amazing at nuance, emotional intelligence and digesting long documents. Feels like a gentle co-thinker.
+- Gemini 2.0: Strong at pulling in Google Search info, perfect for travel planning, event discovery and integrating with your calendar or Gmail.
+- Perplexity AI: My go-to for source-backed research, current news and citations.
+- Groq 3: Blazing fast. Ideal for logic puzzles, short answers or coding.
+- DeepSeek: Surprisingly sharp at multimodal reasoning, good with charts, graphs and solving math problems step-by-step.
