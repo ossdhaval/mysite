@@ -325,3 +325,18 @@ https://www.tomsguide.com/ai/this-game-changing-ai-trick-is-the-secret-to-gettin
 - Perplexity AI: My go-to for source-backed research, current news and citations.
 - Groq 3: Blazing fast. Ideal for logic puzzles, short answers or coding.
 - DeepSeek: Surprisingly sharp at multimodal reasoning, good with charts, graphs and solving math problems step-by-step.
+
+
+#### start with a verb
+
+- Summarize
+- Compare
+- Rewrite
+- List
+- Explain
+  
+This tells ChatGPT exactly what you want, which eliminates the guesswork (and potential for error).
+
+prompt: "Can you help me compare the best summer side dishes for a backyard barbecue?
+
+Better Prompt: "Compare easy side dishes for a backyard barbeque."
