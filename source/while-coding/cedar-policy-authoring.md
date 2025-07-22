@@ -59,7 +59,7 @@ permit(
 );
 ```
 
-#### broaden principals using roles
+#### broaden principals using roles (RBAC)
 
 The other way to broaden the scope of a policy is to define it for a group of entities, rather than an individual entity. Principal groups provide us with a way to manage permissions using roles.
 
@@ -128,6 +128,60 @@ In short, to broaden the scope:
 
 - Leave principal, action, resource blank. Blank means `*`
 - Additionally, actions can be broadened by using sets, while principal can be broadened by using role
+
+
+#### Attribute based access control (ABAC)
+
+The policy below permits any principal to view any resource, but only on the condition that the accessLevel for the resource is designated as public. It permits any principal to view any photo, but only on the condition that the resource is tagged as public and the location of the principal is equal to "USA".
+
+```
+permit(
+  principal,
+  action == Action::"view",
+  resource
+)
+when {resource.accessLevel == "public" && principal.location == "USA"};
+```
+
+With entity json as:
+
+```
+{
+        "uid": {
+            "type": "Photo",
+            "id": "VacationPhoto94.jpg"
+        },
+        "attrs": {
+            "accessLevel": "public"
+        },
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "User",
+            "id": "alice"
+        },
+        "attrs": {
+            "location": "USA"
+        },
+        "parents": []
+    }
+
+```
+
+Operators available for condition:
+
+- &&
+- ||
+- ==
+
+The example above uses an attribute of type String. Cedar can also support the following types:
+
+- Boolean
+- Integer
+- Entity ID: eg. User::"Alice"
+- Sets: collections of values, expressed with []
+- !=
 
 ## References
 
