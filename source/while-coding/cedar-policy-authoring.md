@@ -349,6 +349,46 @@ Example:
 }
 ```
 
+#### policy templates
+
+When you write a complete policy that specifies both the principal and the resource, it’s referred to as a static policy. A static policy is immediately ready for use in authorization decisions.
+
+However, sometimes you’ll want to use one set of authorization rules and apply them to many different principals and resources.
+
+```
+permit (
+    principal == User::"x", // "Alice"
+    action in [Action::"readFile", Action::"writeFile"],
+    resource in Folder::"r1"   // "Vacation Photos"
+);
+```
+
+```
+permit (
+    principal == User::"y", // "Bob"
+    action in [Action::"readFile", Action::"writeFile"],
+    resource in Folder::"r2"   // "Birthday Photos"
+);
+```
+
+Instead of creating two or more policies like above, you can create a template like the below and pass in the placeholder value dynamically to generate policies.
+
+Template:
+
+```
+permit(
+    principal == ?principal, 
+    action in [Action::"readFile", Action::"writeFile"] 
+    resource  == ?resource
+  );
+```
+
+Using static policies in this way can result in a lot of redundant policies that differ only in the principal and resource elements. It also introduces a big issue If you ever need to make a change in the underlying business logic of what sharing a photo means. In that case you’d have to update every one of the individual policies.
+
+Policy templates solve this issue by letting you create policies from a template that uses placeholders for the principal or resource, or both. After creating a policy template, you can instantiate individual policies by referencing the template and providing values for the specific principal and resource to use. This template-linked policy then works just like an static policy.
+
+**Placeholders can appear only in the header of a policy, and only on the right-hand side of the == or in operators. You can’t use a placeholder for actions, and you can’t use a placeholder in a when or unless clause.**
+
 ## References
 
 - https://github.com/cedar-policy
