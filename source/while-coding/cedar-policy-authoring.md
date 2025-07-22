@@ -183,6 +183,172 @@ The example above uses an attribute of type String. Cedar can also support the f
 - Sets: collections of values, expressed with []
 - !=
 
+**Define conditions that compare the values of different attributes**:
+
+```
+permit(
+  principal, 
+  action in [Action::"view", Action::"edit", Action::"delete"], 
+  resource 
+)
+when {
+  resource.owner == principal.id
+};
+```
+
+#### Context record
+
+In the examples so far we’ve examined policies based on attributes of the principal and/or the resource. But what if you wanted to write a policy that takes takes into account variables that are unrelated to either the principal or the resource? Cedar provides a way for you to do this, using the Context record. Context enables you to pass additional data into the authorization request, **which can be referenced in policy conditions**.
+
+Examples of context data you might use are OpenID claims in a JWT or anything else that is only known at the time of the incoming request and **not necessarily stored in your database**.
+
+In prior examples our conditions have all been evaluated against static values. Cedar also lets you define conditions that compare the values of different attributes. The example policy below permits any principal to view, edit or delete, any resource, with the condition that the resource owner is the principal.
+
+The policy below permits a User called Alice to update and delete a photo called VacationPhoto94.jpg, but only on the condition that she has authenticated using multi-factor authentication and is accessing the application from a specific IP address.
+
+```
+permit(
+    principal in User::"alice", 
+    action in [Action::"update", Action::"delete"],
+    resource == Photo::"flower.jpg")
+when {
+    context.mfa_authenticated == true &&
+    context.request_client_ip == "222.222.222.222"
+};
+```
+
+The context and entities parameters of the request are different. The entities parameter enables the calling application to provide data about the resource and principal, such as attribute values and group membership. Context provides a mechanism for you to write policies that consider other data beyond that of the principal and resource.
+
+
+### schema
+
+Cedar can validate policies against the schema. Remember, schema is for validation of the policy and not the authz request.
+
+A schema is a formal declaration of the names and structure of your entity types. You declare the name of each type of principal, resource, and action that your application supports. The definition of those entities can also include a list of the attributes that define an entity of that type, with each attribute specifying a name and a data type. Schema is not a must but it can help you make policy evaluations less error prone. 
+
+A schema is defined by using JSON. Schemas have three main properties:
+
+- Namespace: uniquely identifies the schema. The namespace helps you distinguish between elements with the same name from multiple schemas, for example HRApp::File and MedicalRecordsApp::File. The namespace is expressed as the top level key of the schema. Within each namespace, there is a JSON object defining entityTypes, actions, and types.
+- entityTypes: defines the principal types and resource types supported by your application. Each entity type defines a shape that describes its characteristics. The shape must specify a Cedar supported data type, and define the structure for the more complex types like records or sets. The entity can also specify an optional memberOf attribute to describe how this type can participate in a hierarchy, like files can be in folders, users can be members of groups, or photos can be organized in albums. Note that if you specify that an entity can be a member of its own type, then you are specifying that you can nest them, such as placing folders in other folders.
+- actions: defines the operations that the principals can potentially perform on the resources. Each action defines a name for the action, and a list of the resources and principals to which the action can apply.
+- commonTypes: defines type aliases for complex record types in the schema. Pre-defining types allows for code re-usability whenever the same type is referenced in multiple entities. This key is optional.
+
+
+Example:
+
+```
+{
+    "PhotoApp": {
+        "commonTypes": {
+            "PersonType": {
+                "type": "Record",
+                "attributes": {
+                    "age": {
+                        "type": "Long"
+                    },
+                    "name": {
+                        "type": "String"
+                    }
+                }
+            },
+            "ContextType": {
+                "type": "Record",
+                "attributes": {
+                    "ip": {
+                        "type": "Extension",
+                        "name": "ipaddr"
+                    }
+                }
+            }
+        },
+        "entityTypes": {
+            "User": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {
+                        "employeeId": {
+                            "type": "String",
+                            "required": true
+                        },
+                        "personInfo": {
+                            "type": "PersonType"
+                        }
+                    }
+                },
+                "memberOfTypes": [
+                    "UserGroup"
+                ]
+            },
+            "UserGroup": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {}
+                }
+            },
+            "Photo": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {}
+                },
+                "memberOfTypes": [
+                    "Album"
+                ]
+            },
+            "Album": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {}
+                }
+            }
+        },
+        "actions": {
+            "viewPhoto": {
+                "appliesTo": {
+                    "principalTypes": [
+                        "User",
+                        "UserGroup"
+                    ],
+                    "resourceTypes": [
+                        "Photo"
+                    ],
+                    "context": {
+                        "type": "ContextType"
+                    }
+                }
+            },
+            "createPhoto": {
+                "appliesTo": {
+                    "principalTypes": [
+                        "User",
+                        "UserGroup"
+                    ],
+                    "resourceTypes": [
+                        "Photo"
+                    ],
+                    "context": {
+                        "type": "ContextType"
+                    }
+                }
+            },
+            "listPhotos": {
+                "appliesTo": {
+                    "principalTypes": [
+                        "User",
+                        "UserGroup"
+                    ],
+                    "resourceTypes": [
+                        "Photo"
+                    ],
+                    "context": {
+                        "type": "ContextType"
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
 ## References
 
 - https://github.com/cedar-policy
