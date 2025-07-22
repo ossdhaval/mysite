@@ -124,6 +124,10 @@ Entities JSON is data about the entities mentioned in the request. In this case,
 As you can see above, the Bob's user entity has a parents. Two roles. Both roles are also defined in the same JSON. Since `vacationPhotoJudges` is parent to Bob, the cedar engine interpretes this as bob having the role of `vacationPhotoJudges` and the policy will match the request for bob accessing the photo.
 
 
+In short, to broaden the scope:
+
+- Leave principal, action, resource blank. Blank means `*`
+- Additionally, actions can be broadened by using sets, while principal can be broadened by using role
 
 ## References
 
