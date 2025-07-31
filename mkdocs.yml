@@ -1,5 +1,5 @@
 site_name: My Docs
-
+docs_dir: .
 nav:
   - Home: README.md
 
