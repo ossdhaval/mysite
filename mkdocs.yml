@@ -1,7 +1,117 @@
 site_name: My Docs
 docs_dir: ./source
+markdown_extensions:
+- admonition
+- attr_list
+- toc:
+    permalink: '#'
+- codehilite
+- pymdownx.superfences:
+    custom_fences:
+    - class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
+      name: mermaid
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.emoji:
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+- pymdownx.details
+
+plugins:
+- search
 nav:
-  - Home: README.md
+- Home: README.md
+- While Coding:
+  - Api Driven Dev: while-coding/API-driven-dev.md
+  - Cdi Weld Notes: while-coding/CDI-weld-notes.md
+  - Iam:
+    - Home: while-coding/IAM/README.md
+    - Oauth2_Oidc_Notes: while-coding/IAM/OAuth2_oidc_notes.md
+    - Scim: while-coding/IAM/SCIM.md
+    - Siop Did: while-coding/IAM/SIOP-DID.md
+    - Api Security: while-coding/IAM/api-security.md
+    - Cryptography Security: while-coding/IAM/cryptography-security.md
+    - Jwt Notes: while-coding/IAM/jwt-notes.md
+    - Zero Trust Framework: while-coding/IAM/zero-trust-framework.md
+  - Lxc Lxd Linux Containers Notes: while-coding/LXC-LXD-linux-containers-notes.md
+  - Suse: while-coding/SUSE.md
+  - Ai:
+    - Sdlc Tools:
+      - Ai Tools For Coding: while-coding/ai/SDLC-tools/ai-tools-for-coding.md
+      - Index: while-coding/ai/SDLC-tools/index.md
+    - Index: while-coding/ai/index.md
+    - Machine Learning: while-coding/ai/machine-learning.md
+    - Prompt Engineering: while-coding/ai/prompt-engineering.md
+    - Rag Agentic Ai: while-coding/ai/rag-agentic-ai.md
+  - Apache_On_Ubuntu: while-coding/apache_on_ubuntu.md
+  - Aws Developer Associate: while-coding/aws-developer-associate.md
+  - Cedar Policy Authoring: while-coding/cedar-policy-authoring.md
+  - Certifications:
+    - Home: while-coding/certifications/README.md
+    - Github:
+      - Github Fundamentals: while-coding/certifications/GitHub/github-fundamentals.md
+      - Index: while-coding/certifications/GitHub/index.md
+  - Container Security Cosign: while-coding/container-security-cosign.md
+  - Containerisation Notes: while-coding/containerisation-notes.md
+  - Copilot: while-coding/copilot.md
+  - Curl Notes: while-coding/curl-notes.md
+  - Devops: while-coding/devops.md
+  - Digital Certificates: while-coding/digital-certificates.md
+  - Docker Notes: while-coding/docker-notes.md
+  - Ff4J Notes: while-coding/ff4j-notes.md
+  - Git Commands Notes: while-coding/git-commands-notes.md
+  - Github Actions Notes: while-coding/github-actions-notes.md
+  - Github Notes: while-coding/github-notes.md
+  - Gitter Notes: while-coding/gitter-notes.md
+  - Index: while-coding/index.md
+  - Install Docker On Suse Enterprise: while-coding/install-docker-on-suse-enterprise.md
+  - Intellijidea_Notes: while-coding/intellijIdea_notes.md
+  - Janssen:
+    - Agama Language Notes: while-coding/janssen/agama-language-notes.md
+    - Index: while-coding/janssen/index.md
+    - Jans Cn Docker: while-coding/janssen/jans-cn-docker.md
+    - Janssen Code Notes: while-coding/janssen/janssen-code-notes.md
+    - Janssen Log Analysis With Test Load: while-coding/janssen/janssen-log-analysis-with-test-load.md
+    - Janssen Notes: while-coding/janssen/janssen-notes.md
+  - Java Language:
+    - Creating Custom Annotations: while-coding/java-language/creating-custom-annotations.md
+    - Debugging Java Memory Issues: while-coding/java-language/debugging-java-memory-issues.md
+    - Index: while-coding/java-language/index.md
+  - Jetty Notes: while-coding/jetty-notes.md
+  - Keycloak Notes: while-coding/keycloak-notes.md
+  - Kubernetes Notes: while-coding/kubernetes-notes.md
+  - Learning Journal: while-coding/learning-journal.md
+  - Makdown Notes: while-coding/makdown-notes.md
+  - Maven Notes: while-coding/maven-notes.md
+  - Md Test: while-coding/md-test.md
+  - Mkdocs Notes: while-coding/mkdocs-notes.md
+  - Mysql Notes: while-coding/mysql-notes.md
+  - Notes Monorepo: while-coding/notes-monorepo.md
+  - Postgres_Notes: while-coding/postgres_notes.md
+  - Quarkus Notes: while-coding/quarkus notes.md
+  - Rancher Notes: while-coding/rancher-notes.md
+  - Random Notes: while-coding/random-notes.md
+  - Redis Notes: while-coding/redis-notes.md
+  - Release Please Notes: while-coding/release-please-notes.md
+  - Sbom: while-coding/sbom.md
+  - Sonar Notes: while-coding/sonar-notes.md
+  - Ssl Ssh Notes: while-coding/ssl-ssh-notes.md
+  - Tools To Build Command Line Cli: while-coding/tools-to-build-command-line-cli.md
+  - Vmware Notes: while-coding/vmware-notes.md
+  - Vscode Notes: while-coding/vscode-notes.md
+  - Web Tools: while-coding/web-tools.md
+  - Yaml: while-coding/yaml.md
+- While Working:
+  - Learnings As Open Source Community Manager: while-working/Learnings-as-open-source-community-manager.md
+  - Index: while-working/index.md
+  - Need For High Commit Quality In Open Source: while-working/need-for-high-commit-quality-in-open-source.md
+  - Open Banking: while-working/open-banking.md
+  - Product Manager: while-working/product-manager.md
+  - Product Ux Ui Design: while-working/product-ux-ui-design.md
+  - Remote Team Organization: while-working/remote-team-organization.md
+  - Trello Workflow: while-working/trello-workflow.md
+    
 
 theme:
   name: mkdocs
