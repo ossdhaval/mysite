@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Kubernetes Notes - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">While Coding</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../API-driven-dev/" class="dropdown-item">Api Driven Dev</a>
+</li>
+                                    
+<li>
+    <a href="../CDI-weld-notes/" class="dropdown-item">Cdi Weld Notes</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Iam</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../IAM/" class="dropdown-item">Home</a>
+</li>
+            
+<li>
+    <a href="../IAM/OAuth2_oidc_notes/" class="dropdown-item">Oauth2_Oidc_Notes</a>
+</li>
+            
+<li>
+    <a href="../IAM/SCIM/" class="dropdown-item">Scim</a>
+</li>
+            
+<li>
+    <a href="../IAM/SIOP-DID/" class="dropdown-item">Siop Did</a>
+</li>
+            
+<li>
+    <a href="../IAM/api-security/" class="dropdown-item">Api Security</a>
+</li>
+            
+<li>
+    <a href="../IAM/cryptography-security/" class="dropdown-item">Cryptography Security</a>
+</li>
+            
+<li>
+    <a href="../IAM/jwt-notes/" class="dropdown-item">Jwt Notes</a>
+</li>
+            
+<li>
+    <a href="../IAM/zero-trust-framework/" class="dropdown-item">Zero Trust Framework</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../LXC-LXD-linux-containers-notes/" class="dropdown-item">Lxc Lxd Linux Containers Notes</a>
+</li>
+                                    
+<li>
+    <a href="../SUSE/" class="dropdown-item">Suse</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ai</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sdlc Tools</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ai/SDLC-tools/ai-tools-for-coding/" class="dropdown-item">Ai Tools For Coding</a>
+</li>
+            
+<li>
+    <a href="../ai/SDLC-tools/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../ai/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../ai/machine-learning/" class="dropdown-item">Machine Learning</a>
+</li>
+            
+<li>
+    <a href="../ai/prompt-engineering/" class="dropdown-item">Prompt Engineering</a>
+</li>
+            
+<li>
+    <a href="../ai/rag-agentic-ai/" class="dropdown-item">Rag Agentic Ai</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../apache_on_ubuntu/" class="dropdown-item">Apache_On_Ubuntu</a>
+</li>
+                                    
+<li>
+    <a href="../aws-developer-associate/" class="dropdown-item">Aws Developer Associate</a>
+</li>
+                                    
+<li>
+    <a href="../cedar-policy-authoring/" class="dropdown-item">Cedar Policy Authoring</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Certifications</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../certifications/" class="dropdown-item">Home</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Github</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../certifications/GitHub/github-fundamentals/" class="dropdown-item">Github Fundamentals</a>
+</li>
+            
+<li>
+    <a href="../certifications/GitHub/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../container-security-cosign/" class="dropdown-item">Container Security Cosign</a>
+</li>
+                                    
+<li>
+    <a href="../containerisation-notes/" class="dropdown-item">Containerisation Notes</a>
+</li>
+                                    
+<li>
+    <a href="../copilot/" class="dropdown-item">Copilot</a>
+</li>
+                                    
+<li>
+    <a href="../curl-notes/" class="dropdown-item">Curl Notes</a>
+</li>
+                                    
+<li>
+    <a href="../devops/" class="dropdown-item">Devops</a>
+</li>
+                                    
+<li>
+    <a href="../digital-certificates/" class="dropdown-item">Digital Certificates</a>
+</li>
+                                    
+<li>
+    <a href="../docker-notes/" class="dropdown-item">Docker Notes</a>
+</li>
+                                    
+<li>
+    <a href="../ff4j-notes/" class="dropdown-item">Ff4J Notes</a>
+</li>
+                                    
+<li>
+    <a href="../git-commands-notes/" class="dropdown-item">Git Commands Notes</a>
+</li>
+                                    
+<li>
+    <a href="../github-actions-notes/" class="dropdown-item">Github Actions Notes</a>
+</li>
+                                    
+<li>
+    <a href="../github-notes/" class="dropdown-item">Github Notes</a>
+</li>
+                                    
+<li>
+    <a href="../gitter-notes/" class="dropdown-item">Gitter Notes</a>
+</li>
+                                    
+<li>
+    <a href="../" class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../install-docker-on-suse-enterprise/" class="dropdown-item">Install Docker On Suse Enterprise</a>
+</li>
+                                    
+<li>
+    <a href="../intellijIdea_notes/" class="dropdown-item">Intellijidea_Notes</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Janssen</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../janssen/agama-language-notes/" class="dropdown-item">Agama Language Notes</a>
+</li>
+            
+<li>
+    <a href="../janssen/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../janssen/jans-cn-docker/" class="dropdown-item">Jans Cn Docker</a>
+</li>
+            
+<li>
+    <a href="../janssen/janssen-code-notes/" class="dropdown-item">Janssen Code Notes</a>
+</li>
+            
+<li>
+    <a href="../janssen/janssen-log-analysis-with-test-load/" class="dropdown-item">Janssen Log Analysis With Test Load</a>
+</li>
+            
+<li>
+    <a href="../janssen/janssen-notes/" class="dropdown-item">Janssen Notes</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Java Language</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../java-language/creating-custom-annotations/" class="dropdown-item">Creating Custom Annotations</a>
+</li>
+            
+<li>
+    <a href="../java-language/debugging-java-memory-issues/" class="dropdown-item">Debugging Java Memory Issues</a>
+</li>
+            
+<li>
+    <a href="../java-language/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../jetty-notes/" class="dropdown-item">Jetty Notes</a>
+</li>
+                                    
+<li>
+    <a href="../keycloak-notes/" class="dropdown-item">Keycloak Notes</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Kubernetes Notes</a>
+</li>
+                                    
+<li>
+    <a href="../learning-journal/" class="dropdown-item">Learning Journal</a>
+</li>
+                                    
+<li>
+    <a href="../makdown-notes/" class="dropdown-item">Makdown Notes</a>
+</li>
+                                    
+<li>
+    <a href="../maven-notes/" class="dropdown-item">Maven Notes</a>
+</li>
+                                    
+<li>
+    <a href="../md-test/" class="dropdown-item">Md Test</a>
+</li>
+                                    
+<li>
+    <a href="../mkdocs-notes/" class="dropdown-item">Mkdocs Notes</a>
+</li>
+                                    
+<li>
+    <a href="../mysql-notes/" class="dropdown-item">Mysql Notes</a>
+</li>
+                                    
+<li>
+    <a href="../notes-monorepo/" class="dropdown-item">Notes Monorepo</a>
+</li>
+                                    
+<li>
+    <a href="../postgres_notes/" class="dropdown-item">Postgres_Notes</a>
+</li>
+                                    
+<li>
+    <a href="../quarkus%20notes/" class="dropdown-item">Quarkus Notes</a>
+</li>
+                                    
+<li>
+    <a href="../rancher-notes/" class="dropdown-item">Rancher Notes</a>
+</li>
+                                    
+<li>
+    <a href="../random-notes/" class="dropdown-item">Random Notes</a>
+</li>
+                                    
+<li>
+    <a href="../redis-notes/" class="dropdown-item">Redis Notes</a>
+</li>
+                                    
+<li>
+    <a href="../release-please-notes/" class="dropdown-item">Release Please Notes</a>
+</li>
+                                    
+<li>
+    <a href="../sbom/" class="dropdown-item">Sbom</a>
+</li>
+                                    
+<li>
+    <a href="../sonar-notes/" class="dropdown-item">Sonar Notes</a>
+</li>
+                                    
+<li>
+    <a href="../ssl-ssh-notes/" class="dropdown-item">Ssl Ssh Notes</a>
+</li>
+                                    
+<li>
+    <a href="../tools-to-build-command-line-cli/" class="dropdown-item">Tools To Build Command Line Cli</a>
+</li>
+                                    
+<li>
+    <a href="../vmware-notes/" class="dropdown-item">Vmware Notes</a>
+</li>
+                                    
+<li>
+    <a href="../vscode-notes/" class="dropdown-item">Vscode Notes</a>
+</li>
+                                    
+<li>
+    <a href="../web-tools/" class="dropdown-item">Web Tools</a>
+</li>
+                                    
+<li>
+    <a href="../yaml/" class="dropdown-item">Yaml</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">While Working</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../while-working/Learnings-as-open-source-community-manager/" class="dropdown-item">Learnings As Open Source Community Manager</a>
+</li>
+                                    
+<li>
+    <a href="../../while-working/" class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../../while-working/need-for-high-commit-quality-in-open-source/" class="dropdown-item">Need For High Commit Quality In Open Source</a>
+</li>
+                                    
+<li>
+    <a href="../../while-working/open-banking/" class="dropdown-item">Open Banking</a>
+</li>
+                                    
+<li>
+    <a href="../../while-working/product-manager/" class="dropdown-item">Product Manager</a>
+</li>
+                                    
+<li>
+    <a href="../../while-working/product-ux-ui-design/" class="dropdown-item">Product Ux Ui Design</a>
+</li>
+                                    
+<li>
+    <a href="../../while-working/remote-team-organization/" class="dropdown-item">Remote Team Organization</a>
+</li>
+                                    
+<li>
+    <a href="../../while-working/trello-workflow/" class="dropdown-item">Trello Workflow</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../keycloak-notes/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../learning-journal/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#kubernetes-notes" class="nav-link">Kubernetes Notes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#then-and-now" class="nav-link">then and now</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#key-things-in-kubernetes-setup" class="nav-link">Key things in kubernetes setup :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#why-should-a-developer-learn-kubernetes" class="nav-link">why should a developer learn kubernetes :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#install-minikube" class="nav-link">install minikube :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#kubernetes-pods" class="nav-link">Kubernetes PODs :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#replicasets-and-deployment" class="nav-link">ReplicaSets and Deployment :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#zero-downtime-deployments" class="nav-link">zero downtime deployments :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creating-services" class="nav-link">creating services :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#helm" class="nav-link">Helm</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="kubernetes-notes">Kubernetes Notes<a class="headerlink" href="#kubernetes-notes" title="Permanent link">#</a></h1>
+<h2 id="then-and-now">then and now<a class="headerlink" href="#then-and-now" title="Permanent link">#</a></h2>
+<p>earlier :</p>
+<p>we used to have applications deployed on clusters of web-servers ( like websphere, tomcat etc ) and there was a load-balancer which was managing load across all those. In this, what was missing is when one of the server nodes in the cluster goes down. You needed to manually intervene and bring up a new node. All the network configurations were manual too. The load balancer only managed load with available server nodes in the cluster. It could not scale by creating new servers as needed and destroying those which were not needed. </p>
+<p>With kubernetes :</p>
+<p>It manages the containers ( start, stop, check health etc )
+It eliminates single point of failure ( like load balancer ealier )
+Scale containers by create more containers if needed
+Update the containers without bringing down the application
+it also manages networking and interconnections among containers
+plus, facilities like service discovery, configuration management etc</p>
+<h2 id="key-things-in-kubernetes-setup">Key things in kubernetes setup :<a class="headerlink" href="#key-things-in-kubernetes-setup" title="Permanent link">#</a></h2>
+<h2 id="why-should-a-developer-learn-kubernetes">why should a developer learn kubernetes :<a class="headerlink" href="#why-should-a-developer-learn-kubernetes" title="Permanent link">#</a></h2>
+<p>Emulate production environment locally to :
+ensure that application scales properly
+ensure that secrets and configs are working properly
+Performance testing along with scaling
+How to install and run kubernetes on local machine :</p>
+<p>there are few options :</p>
+<ul>
+<li>Docker desktop : most preferred and easiest. But has limitation where you can have only one master and one node. Can't scale out. But it is not available for Linux. </li>
+<li>minikube : best bet for Linux development machines and created by Kubernetes project itself. </li>
+<li>Kind</li>
+<li>kubeadm : this is fully fledged kubernetes</li>
+</ul>
+<p>For production ready light-weight kubernetes, look at k3s(by Rancher), microk8s(by Ubuntu/canonical). 
+Here, light-weight means they have lesser memory footprint. See <a href="https://www.itprotoday.com/cloud-computing-and-edge-computing/lightweight-kubernetes-showdown-minikube-vs-k3s-vs-microk8s#:~:text=Minikube%20is%20the%20easiest%20overall,configure%20than%20the%20other%20distributions.">this</a> for comparison. </p>
+<p>We will go with minikube here.</p>
+<h2 id="install-minikube">install minikube :<a class="headerlink" href="#install-minikube" title="Permanent link">#</a></h2>
+<p>reference : https://minikube.sigs.k8s.io/docs/start/</p>
+<div class="highlight"><pre><span></span><code>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+
+sudo dpkg -i minikube_latest_amd64.deb
+
+minikube start
+</code></pre></div>
+<p>Now install kubectl :</p>
+<div class="highlight"><pre><span></span><code>sudo snap install kubectl --classic
+</code></pre></div>
+<p>Starting kubernetes dashboard :</p>
+<div class="highlight"><pre><span></span><code>minikube dashboard
+</code></pre></div>
+<h2 id="kubernetes-pods">Kubernetes PODs :<a class="headerlink" href="#kubernetes-pods" title="Permanent link">#</a></h2>
+<ul>
+<li>Pod is the smallest and most basic unit for Kubernetes</li>
+<li>Pod provides environment for container to run</li>
+<li>Pod can have multiple containers, but mostly generally, it is used to host one container</li>
+<li>Pod has its own IP address, memory, volumes.</li>
+<li>Pod, once destroyed, can never be resurrected.</li>
+<li>One node can have multiple pods. One pod can have multiple containers. Each pod has unique IP address. So if the app is running on different pods, it can listen on the same Port. But if an app is running on containers on the same POD then each instance need to use a different port.</li>
+</ul>
+<h3 id="creating-a-pod">Creating a pod :<a class="headerlink" href="#creating-a-pod" title="Permanent link">#</a></h3>
+<p>Create a pod</p>
+<div class="highlight"><pre><span></span><code>kubectl run my-first-pod --image=nginx:alpine
+</code></pre></div>
+<p>check if the pod has been created </p>
+<div class="highlight"><pre><span></span><code>kubectl get all
+</code></pre></div>
+<p>Accessing service on that Pod :</p>
+<div class="highlight"><pre><span></span><code>kubectl port-forward my-first-pod 8080:80
+</code></pre></div>
+<p>Keep the process running</p>
+<p>now go to browser and hit 'localhost:8080'. You should see welcome page of nginx</p>
+<p>here in command, 8080 is external port, request to which is being forwarded to internal port 80 of cluster IP of pod where the container is listening</p>
+<p>deleting the pod</p>
+<div class="highlight"><pre><span></span><code>kubectl delete pod my-first-pod
+</code></pre></div>
+<h3 id="creating-pod-using-yaml">Creating POD using YAML :<a class="headerlink" href="#creating-pod-using-yaml" title="Permanent link">#</a></h3>
+<p>Simple yaml :</p>
+<p>use create, apply commands when creating pod using yaml. If you are not using yaml then you can directly use 'kubectl run' as mentioned above.</p>
+<div class="highlight"><pre><span></span><code>apiVersion: v1
+kind: Pod
+metadata:
+  name: my-nginx
+  labels:
+    app: nginx
+    rel: stable
+spec:
+  containers:
+  -    name: my-nginx
+       image: nginx:alpine
+       ports:
+       - containerPort: 80
+</code></pre></div>
+<p>To create pod:</p>
+<div class="highlight"><pre><span></span><code>kubectl create -f ~/code/docker-kubernetes/dk/src/nginx.pod.yaml --save-config
+</code></pre></div>
+<p>To get list:</p>
+<div class="highlight"><pre><span></span><code>kubectl get all
+</code></pre></div>
+<p>To get more details about pod :</p>
+<div class="highlight"><pre><span></span><code>kubectl describe pod my-nginx
+</code></pre></div>
+<p>To get access to shell of the container running inside the pod :</p>
+<div class="highlight"><pre><span></span><code>kubectl exec my-nginx -it sh
+(you can find your html files hosted with nginx under &#39;/usr/share/nginx/html/&#39; )
+</code></pre></div>
+<p>To delete the pod :</p>
+<div class="highlight"><pre><span></span><code>kubectl delete -f ~/code/docker-kubernetes/dk/src/nginx.pod.yaml
+</code></pre></div>
+<p>Configuring liveness and readiness probs : </p>
+<div class="highlight"><pre><span></span><code>apiVersion: v1
+kind: Pod
+metadata:
+  name: my-nginx
+  labels:
+    app: nginx
+    rel: stable
+spec:
+  containers:
+  -    name: my-nginx
+       image: nginx:alpine
+       ports:
+       - containerPort: 80
+       livenessProbe:
+         httpGet:
+           path: /index.html
+           port: 80
+         initialDelaySeconds: 15
+         timeoutSeconds: 2 #default: 1
+         periodSeconds: 5 #default: 10
+         failureThreshold: 1 #default: 3
+       readinessProbe:
+         httpGet:
+           path: /index.html
+           port: 80
+         initialDelaySeconds: 3
+         periodSeconds: 5 #default: 10
+         failureThreshold: 1 #default: 3
+</code></pre></div>
+<h2 id="replicasets-and-deployment">ReplicaSets and Deployment :<a class="headerlink" href="#replicasets-and-deployment" title="Permanent link">#</a></h2>
+<h3 id="replicaset">ReplicaSet :<a class="headerlink" href="#replicaset" title="Permanent link">#</a></h3>
+<p>In Kubernetes, replicaset came into existance first and then deployments came in as wrapper of replicasets to further ease the configuration. </p>
+<p>self-healing is provided by replicasets. 
+replicaset ensures that we have intended number of pods running at any time.
+takes care of scaling when required</p>
+<p>You don't need to create pods directly if you use replicaset.</p>
+<h3 id="deployment">Deployment :<a class="headerlink" href="#deployment" title="Permanent link">#</a></h3>
+<p>deployment is a wrapper around replicaset. Plus, deployment also adds support for zero-downtime deployments, roll-back of deployments ( pod template labels are useful here).</p>
+<p>yaml of replicaset and deployment are almost same.</p>
+<div class="highlight"><pre><span></span><code>apiVersion: apps/v1 # this is mandatory attribute
+kind: Deployment
+metadata:
+  name: my-frontend
+  labels:
+    app: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template: # template can be stored in a separate file also
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: my-ngnix
+          image: nginx:alpine
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              memory: &quot;128Mi&quot; #128 MB
+              cpu: &quot;200m&quot; #200 millicpu (.2 cpu or 20% of the cpu)
+</code></pre></div>
+<p>Here, deployment will look for templates that has matching labels as mentioned in the selector section </p>
+<p>to start the deployment :</p>
+<div class="highlight"><pre><span></span><code>kubectl create -f ~/code/docker-kubernetes/dk/src/frontend.deployment.yaml --save-config
+</code></pre></div>
+<p>To get info about deployment :</p>
+<div class="highlight"><pre><span></span><code>kubectl describe deployment my-frontend
+</code></pre></div>
+<p>To see all the deployments along with their labels :</p>
+<div class="highlight"><pre><span></span><code>kubectl get deployment --show-labels
+</code></pre></div>
+<p>To see deployment with a certain label :</p>
+<div class="highlight"><pre><span></span><code>kubectl get deployment -l app=frontend
+</code></pre></div>
+<p>To scale a running deployment :
+<div class="highlight"><pre><span></span><code>kubectl scale -f ~/code/docker-kubernetes/dk/src/frontend.deployment.yaml --replicas=4
+</code></pre></div></p>
+<p>or if you want to do via yaml then put the 'replica' entry in yaml as given above and then run apply as below:
+<div class="highlight"><pre><span></span><code>kubectl apply -f ~/code/docker-kubernetes/dk/src/frontend.deployment.yaml
+</code></pre></div></p>
+<p>From here on, I have not listed everything in detail. Just commands and what they do. Need to go back and take more detailed notes from video below and onwards :</p>
+<p>https://app.pluralsight.com/course-player?clipId=32f4f873-30d1-4a70-9cf0-510a899d2223</p>
+<h2 id="zero-downtime-deployments">zero downtime deployments :<a class="headerlink" href="#zero-downtime-deployments" title="Permanent link">#</a></h2>
+<p>here there are 4 versions of the same app which we are trying to deploy one after other :</p>
+<p>yaml for all four are standard deployment yaml.</p>
+<p>deployments are done with standard create or apply commands and deployment will take care of rolling deployments(zero down time ) automatically.</p>
+<h2 id="creating-services">creating services :<a class="headerlink" href="#creating-services" title="Permanent link">#</a></h2>
+<p>services are all about networking.</p>
+<h5 id="networking-notes-from-httpskubernetesiodocsconceptsservices-networking">networking notes from (https://kubernetes.io/docs/concepts/services-networking/)<a class="headerlink" href="#networking-notes-from-httpskubernetesiodocsconceptsservices-networking" title="Permanent link">#</a></h5>
+<ul>
+<li>Every Pod gets its own IP address. </li>
+<li>Pods can be treated much like VMs or physical hosts from the perspectives of port allocation, naming, service discovery, load balancing, application configuration, and migration.</li>
+<li>containers within a Pod share their network namespaces - including their IP address and MAC address. This means that containers within a Pod can all reach each other's ports on localhost. This also means that containers within a Pod must coordinate port usage, but this is no different from processes in a VM. This is called the "IP-per-pod" model.</li>
+</ul>
+<p>Kubernetes networking addresses four concerns:</p>
+<ul>
+<li>Containers within a Pod use networking to communicate via loopback.</li>
+<li>Cluster networking provides communication between different Pods.</li>
+<li>The Service resource lets you expose an application running in Pods to be reachable from outside your cluster.</li>
+<li>You can also use Services to publish services only for consumption inside your cluster.</li>
+</ul>
+<h2 id="helm">Helm<a class="headerlink" href="#helm" title="Permanent link">#</a></h2>
+<p>Reference: https://www.youtube.com/watch?v=Zzwq9FmZdsU&amp;t=2s</p>
+<ul>
+<li>helm is three things</li>
+<li>templating enging ( i.e use values and templates to create actual k8s yaml)</li>
+<li>app lifecycle manager (install-uninstall-status-upgrade-rollback)</li>
+<li>Provide packages from central repository like a package manager</li>
+<li>
+<p>helm also keeps history of what got installed with what version of chart. This helps in upgrade and rollback. This is not possible via kubectl</p>
+</li>
+<li>
+<p>Helm has few supporting projects</p>
+</li>
+<li>Helmhub</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
