@@ -1398,3 +1398,22 @@ Resources:
 - https://productschool.com/resources/glossary/go-to-market-gtm
 - GTM from a product marketer's perspective: https://productschool.teachable.com/courses/2406983/lectures/50625699
 - measure launch success using these three Metrics: https://productschool.com/blog/product-marketing/how-to-measure-product-launch-success
+
+
+
+----------------------
+product discovery microcertification
+-----------------------------------------
+
+https://productschool.teachable.com/courses/enrolled/2600192
+
+Product discovery is about identify real user problems, validate solutions, and ensure that your product resonates with its target audience.
+
+#### User research
+
+useful to understand customer's
+
+- behaviour
+- needs
+- motivations
+- pain points
