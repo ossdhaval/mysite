@@ -1,5 +1,7 @@
 site_name: My Docs
 docs_dir: ./source
+repo_url: https://github.com/your-username/your-repo
+edit_uri: edit/main/source/
 markdown_extensions:
 - admonition
 - attr_list
