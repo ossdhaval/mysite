@@ -1,6 +1,6 @@
 site_name: My Docs
 docs_dir: ./source
-repo_url: https://github.com/your-username/your-repo
+repo_url: https://github.com/ossdhaval/mysite
 edit_uri: edit/main/source/
 markdown_extensions:
 - admonition
