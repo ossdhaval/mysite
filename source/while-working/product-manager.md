@@ -1,6 +1,7 @@
 # As A Product Manager
 
 Learning Material:
+
 - udemy course: https://www.udemy.com/course/become-a-product-manager-learn-the-skills-get-a-job/
 - https://productlogic.org/2014/09/13/the-product-triangle-a-visual-vocabulary-for-product-building/
 - https://medium.com/earnest-product-management
@@ -22,7 +23,7 @@ Roadmap examples:
 - VScode roadmap:https://github.com/microsoft/vscode/wiki
 - Azure AKS product public roadmap: https://github.com/orgs/Azure/projects/685
 - Roadmap published as article for a licensed product: https://tuskr.app/article/roadmap
-- 
+  
 ## Notes
 
 ```
@@ -1417,3 +1418,19 @@ useful to understand customer's
 - needs
 - motivations
 - pain points
+
+Two main types of user research: 
+
+- Behavioural
+  - Focuses on what users **do**
+  - Observes actions and interaction with the product
+- Attitudinal
+  - Explores what users **say**
+  - Gathers feedback about products experiences and opinions
+ 
+Two main methods of conducting any user research:
+
+- Quantitative
+  - Offers measurable data to be analysed (surveys, data matrics)
+- Qualitative
+  - Provides insights into user's motivations and experiences (interviews, focus group discussions)
