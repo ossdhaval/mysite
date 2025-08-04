@@ -117,3 +117,23 @@ nav:
 
 theme:
   name: mkdocs
+  features:
+  - toc.autohide - search.suggest - search.highlight
+  - navigation.tracking
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.indexes
+  - content.tabs.link
+  - content.code.copy
+  - content.code.select
+  - content.code.annotate
+  font:
+    code: Roboto Mono
+    text: Roboto
+  highlightjs: true
+  hljs_languages:
+  - yaml
+  - java
+  - bash
+  - python
+  language: en
