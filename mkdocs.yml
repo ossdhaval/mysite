@@ -116,7 +116,7 @@ nav:
     
 
 theme:
-  name: mkdocs
+  name: material
   features:
   - toc.autohide - search.suggest - search.highlight
   - navigation.tracking
