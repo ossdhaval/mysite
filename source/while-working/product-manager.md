@@ -16,6 +16,7 @@ Learning Material:
 - Hello PM curriculam: https://hellopm.co/#curriculum (price: 60k)
 - product roadmapping microcertification: https://productschool.teachable.com/p/productroadmapping
 - product manager certification by microsoft: https://www.coursera.org/professional-certificates/microsoft-ai-product-manager#courses
+- what is product intution: https://www.linkedin.com/posts/saugatasingh_product-intuition-for-product-managers-activity-7358700889873833984-KgIg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADcnXwB2SGQ3YB0J31qjo1zUTB5LqDuqag
 
 Roadmap examples:
 
