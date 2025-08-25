@@ -1435,3 +1435,10 @@ Two main methods of conducting any user research:
   - Offers measurable data to be analysed (surveys, data matrics)
 - Qualitative
   - Provides insights into user's motivations and experiences (interviews, focus group discussions)
+
+
+----------------
+## product datasheets
+----------------------
+
+https://www.pragmaticinstitute.com/resources/articles/product/how-to-write-a-kick-butt-product-datasheet/
