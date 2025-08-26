@@ -1441,4 +1441,7 @@ Two main methods of conducting any user research:
 ## product datasheets
 ----------------------
 
-https://www.pragmaticinstitute.com/resources/articles/product/how-to-write-a-kick-butt-product-datasheet/
+Guidelines: https://www.pragmaticinstitute.com/resources/articles/product/how-to-write-a-kick-butt-product-datasheet/
+
+Ping identity datasheets: https://hub.pingidentity.com/datasheets (better than okta below)
+Okta datasheets: https://www.okta.com/resources/content-library/?field_resource_solutions_target_id=All&type=datasheet
