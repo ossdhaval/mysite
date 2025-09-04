@@ -111,12 +111,14 @@ nav:
   - Need For High Commit Quality In Open Source: while-working/need-for-high-commit-quality-in-open-source.md
   - Open Banking: while-working/open-banking.md
   - Product Manager: while-working/product-manager.md
-  - Product Ux Ui Design: while-working/product-ux-ui-design.md
+  - 
   - Remote Team Organization: while-working/remote-team-organization.md
   - Trello Workflow: while-working/trello-workflow.md
   - Product Management:
-    - Content strategy: while-working/product-mgmt/content-strategy.md
+    - Product Manager: while-working/product-manager.md
+    - Content strategy: while-working/product-mgmt/product-content.md
     - PRD notes: while-working/product-mgmt/prd-notes.md
+    - Product Ux Ui Design: while-working/product-ux-ui-design.md
     
 
 theme:
