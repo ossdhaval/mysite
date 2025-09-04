@@ -114,6 +114,9 @@ nav:
   - Product Ux Ui Design: while-working/product-ux-ui-design.md
   - Remote Team Organization: while-working/remote-team-organization.md
   - Trello Workflow: while-working/trello-workflow.md
+  - Product Management:
+    - Content strategy: while-working/product-mgmt/content-strategy.md
+    - PRD notes: while-working/product-mgmt/prd-notes.md
     
 
 theme:
