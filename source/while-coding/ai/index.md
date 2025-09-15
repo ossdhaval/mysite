@@ -7,6 +7,7 @@
 From this LinkedIn post: https://www.linkedin.com/feed/update/urn:li:activity:7358814135742050304/
 
 - Level 1 – GenAI & RAG Foundations : Learn the basics before going autonomous:
+  
   - Generative AI for Everyone (Andrew Ng)
     ↳ https://lnkd.in/d2XCRaAw
   - LLMs – Level 1 (H2O.ai x Coursera)
@@ -21,6 +22,7 @@ From this LinkedIn post: https://www.linkedin.com/feed/update/urn:li:activity:73
     ↳ https://lnkd.in/ddmbeMy7
     
 - Level 2 – AI Agent Specialization : Time to build systems that can think, decide, and act:
+  
   - AI Agents with RAG + LangChain (IBM)
     ↳ https://lnkd.in/dxgD2jFN
   - LangChain for LLM Apps
