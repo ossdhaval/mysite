@@ -2,6 +2,8 @@
 
 Reference: https://www.coursera.org/learn/generative-ai-for-everyone/home/welcome
 
+downloaded Cource slides at: /home/dhaval/docs/learning/tech/learning material/ai/Generative-ai-for-everyone
+
 
 ## important terms:
 
