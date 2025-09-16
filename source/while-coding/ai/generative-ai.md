@@ -22,4 +22,4 @@ downloaded Cource slides at: /home/dhaval/docs/learning/tech/learning material/a
 
 - What is a token:
   Token doesn't always mean a single `word`. It is how LLM considers a word. For example, common words like `the example` may be considered to be a single token. While words like `programming` might be considered as two tokens (`program`+`ming`). So, on the average `1 token` = `3/4 of a word`. So for 300 words would roughly equal to 400 tokens.
-- LLM charges: LLM models like chatGPT and others charge different rates for input tokens and output tokens. For example, price for input would be 0.0001$/1k tokens, while output is usually costlier like 0.0002$/1k tokens.
+- LLM charges: LLM models like chatGPT and others charge different rates for input tokens and output tokens. For example, price for input would be 0.0001$/1k tokens, while output is usually costlier like 0.002$/1k tokens. With this rate, it takes 0.08$ to create 40k tokens. 40k tokens is enough reading material for one adult for an hour. So, overall, using 3rd party LLMs is cheap.
