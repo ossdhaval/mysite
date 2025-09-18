@@ -26,3 +26,18 @@ downloaded Cource slides at: /home/dhaval/docs/learning/tech/learning material/a
 
 - think of LLM as a reasoning engine in addition to knowing lot of things. This way of thinking will expand the usecases where LLMs can be used. Future uses of LLMs will be leveraging reasoning capabilities more than knowledge bank.
 - My note: So LLM = Reasoning engine + data store(RAG etc)
+
+Pretraining: training models on large data set to make it a general purpose model. This is expensive because it needs lot of data and effort. Only large tech companies do it. Models like chatgpt, deepseek etc
+
+RAG: is about improving the prompt with specific contextual data. This is used when adding a large set of context data to the prompt is not feasible or it is expensive. In this case, RAG will look at the large context and pick relevent context data and give it along with the prompt so that focus is narrowed down.
+
+fine-tuning: is used when you want to the model to generate responses using specific domain specific terms(legal, medical etc) and writing styles (shakespearian, british english etc). In such cases you have to take a generic pretrained model and fine tune it by providing a small set of your data to make it understand how to generate responses with specific terms and styles.
+
+Choosing pretrained model:
+-  1B param - good for sentiment analysis
+-  10B - Good for a chatbot
+-  100B - good for brainstorming
+-  You have to try different models and choose which works for you.
+
+Closed source Vs open-weight models Vs Open source models:
+
