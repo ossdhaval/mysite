@@ -42,3 +42,14 @@ Choosing pretrained model:
 - Closed source Vs open-weight models Vs Open source models:
 
 - LLMs don't just predict the next word to give you the right answer. It has to understand your instructions(prompt) as well. And after understanding the prompt, it has to be trained to give answer in certain way. For example, if you ask for help from chatgpt, it starts the response by saying `sure, here are the steps`, so this part is not predicted from the internet. They have trained LLM to respond in this way. This is called `instruction tuning`. Also, LLMs learn from your rating of good or bad answer. This happens when you hit 👍 or 👎 on the answer you received. This is called RLHF (Reinforcement learning by Human feedback).
+
+- Use of AI/LLM in a usecase or task:
+
+  It can either `augment` or `automate` a task.
+
+  - Augment: help human being do the task better
+  - Automate: Complete the task fully
+
+  Companies should see what each job roles. What do they do. A job is made up of small-small tasks. So, break down a job into small small task. Evaluate which tasks can be automated and which can be augmented. Start with augmentation and move towards automation.
+
+  Also, while looking at a role and evaluating possibility of using AI (augment/automate) for that role, we tend to look at the main task of that role only. But in reality, a person in that role may be doing many other surrounding tasks where AI can automate or augment. For example, when thinking about, can AI do a programmer's job, we tend to think that programmers do only coding. So the question that we start thinking is that `Can AI do coding`. But actually programmer do lot of other things like documentation, meetings, emailing, customer support etc. We should think about applying AI to any of these areas when thinking about AI for programmers.
