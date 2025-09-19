@@ -39,5 +39,6 @@ Choosing pretrained model:
 -  100B - good for brainstorming
 -  You have to try different models and choose which works for you.
 
-Closed source Vs open-weight models Vs Open source models:
+- Closed source Vs open-weight models Vs Open source models:
 
+- LLMs don't just predict the next word to give you the right answer. It has to understand your instructions(prompt) as well. And after understanding the prompt, it has to be trained to give answer in certain way. For example, if you ask for help from chatgpt, it starts the response by saying `sure, here are the steps`, so this part is not predicted from the internet. They have trained LLM to respond in this way. This is called `instruction tuning`. Also, LLMs learn from your rating of good or bad answer. This happens when you hit 👍 or 👎 on the answer you received. This is called RLHF (Reinforcement learning by Human feedback).
