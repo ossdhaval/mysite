@@ -41,6 +41,7 @@ Google technical writting style: https://developers.google.com/tech-writing
 - database explorer: https://azimutt.app/
 - managing contributor license agreement (ICLA/CCLA): [EasyCLA](https://docs.linuxfoundation.org/lfx/easycla) from Linux Foundation
 - enabling localhost with HTTPS using a certificate that is not self-signed: https://anchor.dev/docs/lcl-host/why-lcl
+- Good sites to find good first issues to contribute: [up for grabs](https://up-for-grabs.net/#/), [code triage](https://www.codetriage.com/), [for good first issue](https://forgoodfirstissue.github.com/)
 
 Flow of implementation of licensespring in gluu flix licensing:
 ![image](https://user-images.githubusercontent.com/343411/214495951-385f4b4e-7830-4d2d-b33f-e233baf9ea40.png)
@@ -323,3 +324,17 @@ https://www.redhat.com/en/blog/rhel-10-plans-wayland-and-xorg-server
 - polyrepo to monorepo migration
 - community engagement: Hosting Office hours, meet-ups, community calls/events, PRs, issues and discussions, gitter, twitter, 
 - Documentation and multimedia content creation
+
+## Gaining stars and forks
+
+
+
+- stars and forks can be bought for Rs. 20 per star and Rs. 20 per fork. Here: [stars](https://www.socialplug.io/services/buy-github-stars) [Fork](https://www.socialplug.io/services/buy-github-forks)
+- Create good first issues and help wanted issues
+- Go to colleges and offices for sessions on open source contributions. Here, you'll get bulk of people to star and contribute in one go.
+- Go to local identity and cyber security specific meetups and take sessions around how to contribute to Jans.
+- give interviews to podcasts, spotlight shows where you can show off your open source project. 
+- Start your own live contribution stream where you show people how to contribute to the Janssen project
+
+
+
