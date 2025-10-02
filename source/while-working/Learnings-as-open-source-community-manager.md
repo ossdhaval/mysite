@@ -42,6 +42,7 @@ Google technical writting style: https://developers.google.com/tech-writing
 - managing contributor license agreement (ICLA/CCLA): [EasyCLA](https://docs.linuxfoundation.org/lfx/easycla) from Linux Foundation
 - enabling localhost with HTTPS using a certificate that is not self-signed: https://anchor.dev/docs/lcl-host/why-lcl
 - Good sites to find good first issues to contribute: [up for grabs](https://up-for-grabs.net/#/), [code triage](https://www.codetriage.com/), [for good first issue](https://forgoodfirstissue.github.com/)
+- Github repo analytics: [ossinsight](https://ossinsight.io/analyze/JanssenProject/jans#overview), [starhistory](https://www.star-history.com/#JanssenProject/jans&Date), Linux foundation tools under [LFX]()
 
 Flow of implementation of licensespring in gluu flix licensing:
 ![image](https://user-images.githubusercontent.com/343411/214495951-385f4b4e-7830-4d2d-b33f-e233baf9ea40.png)
