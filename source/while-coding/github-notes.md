@@ -519,3 +519,8 @@ OAuth app means a third party app that uses `login using GitHub` button, and ask
 A github app is more integrated into github. Like octobox.
 
 very insightful Reference: https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/differences-between-github-apps-and-oauth-apps
+
+
+## What counts as a contribution on the profile graph
+
+https://docs.github.com/en/account-and-profile/reference/profile-contributions-reference
