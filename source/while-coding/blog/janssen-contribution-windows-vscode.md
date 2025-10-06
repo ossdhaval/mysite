@@ -20,7 +20,20 @@
    8. go to github.com -> settings -> `ssh and gpg keys` -> add new gpg key with any title and content you copied.
    9. git config --global user.signingkey 82TT34089E33256B
    10. git config --global commit.gpgsign true
+   11. git config --global gpg.program "C:\Program Files (x86)\gnupg\bin\gpg.exe"
 3. Setup VS code
    1. Open settings `ctrl+,`
    2. search for `gpg` and enable commit signing for both (user and workspace)
    3. search for `signoff` and enable the Git: always sign off for both (user and workspace)
+4. restart vs code
+5. clone a repo
+6. make the changes
+7. commit using vs code
+8. vs code will ask for gpg pass-phrase
+9. commit will be singed and also, dco will be added by vs code automatically
+10. push the commit
+
+## useful links
+
+- https://dev.to/devmount/signed-git-commits-in-vs-code-36do
+- https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
