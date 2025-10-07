@@ -1101,3 +1101,18 @@ git pull
 git stash apply
 
 ```
+
+## When and why do you need to checkout a PR
+
+When you want to review a PR by testing it locally on your computer, you usually checkout that PR branch locally and test. But when someone from outside of the org, i.e community, raises a PR, they create a branch on their fork and not on the project repo. In this case, you should checkout the PR and not the contributors branch from forked repo. Because if you checkout branch from forked repo, your changes will not flow to the PR, but they'll go to the contributor's branch from where they have to push them. 
+
+#### How to checkout a PR using git command line
+
+If you want to checkout PR number 1234 locally run the command below. It'll fetch the pr and create a local branch `any-name` on your local.
+
+```
+git fetch origin pull/1234/head:any-name
+```
+```
+git checkout any-name
+```
