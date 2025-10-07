@@ -16,3 +16,9 @@ You can undo this by running `conda init --reverse $SHELL`? [yes|no]
 
 ```
 
+#### How to run python code locally:
+
+- activate the python environment. For example, `conda activate base`
+- run python program: `python3 /tmp/p1-self.py`
+
+  
