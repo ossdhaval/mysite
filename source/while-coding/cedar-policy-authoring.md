@@ -13,6 +13,7 @@ Use Cedar policies to control what each user of your application is permitted to
 ## PARC model
 
 Works on `PARC` model:
+
 - Principal: The user or the actor of the request
 - Action: action to be taken (like CRUD actions)
 - Resource: Subject of the request (like a photo, some data in the app or some feature)
@@ -22,7 +23,7 @@ Works on `PARC` model:
 
 Every policy statement must include an effect and a scope:
 
-- The effect specifies whether this a permit or a forbid policy.
+- The effect specifies whether this is a permit or a forbid policy.
 - The `scope = PAR`, scope specifies the principal[s], the action[s], and the resource[s] to which the effect applies.
 - Optionally, the statement may also include one or more conditions in the form of `when` or `unless` clauses. Conditions help add the context in decision making.
 
@@ -121,7 +122,7 @@ Entities JSON is data about the entities mentioned in the request. In this case,
 
 ```
 
-As you can see above, the Bob's user entity has a parents. Two roles. Both roles are also defined in the same JSON. Since `vacationPhotoJudges` is parent to Bob, the cedar engine interpretes this as bob having the role of `vacationPhotoJudges` and the policy will match the request for bob accessing the photo.
+As you can see above, the Bob's user entity has parents. Two roles. Both roles are also defined in the same JSON. Since `vacationPhotoJudges` is parent to Bob, the cedar engine interpretes this as bob having the role of `vacationPhotoJudges` and the policy will match the request for bob accessing the photo.
 
 
 In short, to broaden the scope:
