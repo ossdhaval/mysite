@@ -396,3 +396,10 @@ Policy templates solve this issue by letting you create policies from a template
 ## References
 
 - https://github.com/cedar-policy
+
+## Random notes
+
+- By default, in the absence of an applicable permit policy, the authorization decision will be DENY.
+- Forbid polices override permit policies. Hence forbid policies can act as guard rails ensuring that certain requests will always be denied regardless of any permit policies.
+- The sequence in which policies are arranged has no impact on the outcome of the evaluation.
+- Role is not a reserved word
