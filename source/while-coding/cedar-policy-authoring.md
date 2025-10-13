@@ -223,7 +223,10 @@ The context and entities parameters of the request are different. The entities p
 
 ### schema
 
-Cedar can validate policies against the schema. Remember, schema is for validation of the policy and not the authz request.
+Cedar uses schema to 
+
+- Validate policies
+- Deserialize entity data coming in the authz request
 
 A schema is a formal declaration of the names and structure of your entity types. You declare the name of each type of principal, resource, and action that your application supports. The definition of those entities can also include a list of the attributes that define an entity of that type, with each attribute specifying a name and a data type. Schema is not a must but it can help you make policy evaluations less error prone. 
 
