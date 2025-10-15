@@ -524,3 +524,7 @@ very insightful Reference: https://docs.github.com/en/apps/oauth-apps/building-o
 ## What counts as a contribution on the profile graph
 
 https://docs.github.com/en/account-and-profile/reference/profile-contributions-reference
+
+## sample complex github query with multiple criteria and logical operator
+
+`is:issue state:open AND (kind-feature OR author:nxyz OR label:enhancement) `
