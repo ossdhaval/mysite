@@ -29,22 +29,14 @@ Course link: https://www.udemy.com/course/data-science-and-machine-learning-with
 
     Now `r-squared` is a method of knowing how well the line is fitting the data. It has a value between 0 to 1.  1 means that line is right in the middle of the observations, meaning that each dot(observation) is at equal distance from the line on the both sides, hence it is the best fitting line that you have, i.e the line has fully minimised the squared differences from observations. 0 mean the line does not, at all, minimise the squared differences and is a worse fit. 
 
-    How r-squared helps: You can create a regression for your data using different techniques (linear, it helps you in choosing the correct regression technique by looking at it's r-squared value.
+    How r-squared helps: You can create a regression for your data using different techniques (eg. linear, logistic etc). R-squared helps you in choosing the correct regression technique. Higher r-squared means that the model has created a line that is correctely showing the trend. But r-squared is only one parameter in choosing the model, there are many more considerations based on what kind of data you have etc. See the table below.
 
 - different regression techniques
-
-  Regression Type                         |  Description                                                                                                             |  Typical Use Case                                                                   
-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------
-Linear Regression                       |  Models a straight-line relationship between one or more independent variables and a continuous dependent variable.      |  Predicting house prices, sales trends, or temperature levels .                     
-Multiple Linear Regression              |  Extension of linear regression using multiple predictors for a single continuous outcome.                               |  Estimating employee salaries from multiple features (experience, education, etc.) .
-Logistic Regression                     |  Used when the dependent variable is categorical (binary or multinomial). Predicts probabilities between 0 and 1.        |  Classifying spam vs. not-spam emails, churn prediction .                           
-Polynomial Regression                   |  Fits a non-linear (curved) relationship between variables using polynomial terms.                                       |  Modeling growth curves or complex biological relationships .                       
-Ridge Regression                        |  A linear regression withL2 regularization, reducing coefficient magnitude to handle multicollinearity and overfitting.  |  High-dimensional datasets with correlated features .                               
-Lasso Regression                        |  UsesL1 regularizationto shrink some coefficients to zero, effectively performing feature selection.                     |  Sparse feature selection in big data problems .                                    
-Elastic Net Regression                  |  Combines Lasso and Ridge penalties (L1 + L2) to balance coefficient shrinkage and variable selection.                   |  Text or genomic data prediction with many features .                               
-Stepwise Regression                     |  Automates variable selection using statistical tests (forward/backward inclusion).                                      |  Identifying significant predictors in large feature spaces .                       
-Support Vector Regression (SVR)         |  Based on support vector machines; fits the regression within a defined margin of error.                                 |  Non-linear relationships and noise-tolerant predictions .                          
-Decision Tree Regression                |  Splits data into branches to predict values based on decision rules.                                                    |  Modeling categorical and non-linear relationships .                                
-Random Forest Regression                |  Ensemble of decision trees averaging results for stability and accuracy.                                                |  Financial forecasting, energy consumption prediction .                             
-Bayesian Regression                     |  Applies Bayes’ theorem to estimate probabilistic distributions of model parameters.                                     |  Medical data and uncertainty quantification .                                      
-Partial Least Squares (PLS) Regression  |  Reduces features into uncorrelated components before regression, handling multicollinearity.                            |  Chemometrics and bioinformatics .                                                  
+| Regression Type | Description | Typical Use Case |
+|-----------------|--------------|------------------|
+| Linear Regression | Models a straight-line relationship between one or more independent variables and a continuous dependent variable. | Predicting house prices, sales trends, or temperature levels. |
+| Multiple Linear Regression | Extension of linear regression using multiple predictors for a single continuous outcome. | Estimating employee salaries from multiple features (experience, education, etc.). |
+| Logistic Regression | Used when the dependent variable is categorical (binary or multinomial). Predicts probabilities between 0 and 1. | Classifying spam vs. not-spam emails, churn prediction. |
+| Polynomial Regression | Fits a non-linear (curved) relationship between variables using polynomial terms. | Modeling growth curves or complex biological relationships. |
+| Ridge Regression | A linear regression with L2 regularization, reducing coefficient magnitude to handle multicollinearity and overfitting. | High-dimensional datasets with correlated features. |
+| Lasso Regression | Uses L1 regularization to shrink some coefficients to zero, effectively performing feature selection. | Sparse feature selection in big data problems
