@@ -32,6 +32,7 @@ Course link: https://www.udemy.com/course/data-science-and-machine-learning-with
     How r-squared helps: You can create a regression for your data using different techniques (eg. linear, logistic etc). R-squared helps you in choosing the correct regression technique. Higher r-squared means that the model has created a line that is correctely showing the trend. But r-squared is only one parameter in choosing the model, there are many more considerations based on what kind of data you have etc. See the table below.
 
 - different regression techniques
+  
 | Regression Type | Description | Typical Use Case |
 |-----------------|--------------|------------------|
 | Linear Regression | Models a straight-line relationship between one or more independent variables and a continuous dependent variable. | Predicting house prices, sales trends, or temperature levels. |
