@@ -20,6 +20,8 @@ Course link: https://www.udemy.com/course/data-science-and-machine-learning-with
 
 - Histogram: A histogram is a graphical representation of the distribution of numerical data, where the data is grouped into continuous intervals called bins. It consists of adjacent rectangular bars where each bar's height corresponds to the frequency (count) of data points within that bin. Unlike bar graphs, histograms have no space between bars because the bins represent continuous data ranges. The width of each bar represents the interval of values, and the area or height of the bars indicates how often data in those intervals occur, helping to visualize how data is spread, concentrated, or if there are any gaps or patterns in the dataset.
 
+#### Regression
+
 - regression: english meaning: a return to a previous or way of behaving.
 - regression analysis: In statistical modeling, regression analysis is a statistical method for estimating the relationship between a dependent variable and one or more independent variables. How does weight of a person change relative to their height. 
 - linear regression: The most common form of regression analysis is linear regression, in which the purpose is to find the line that most closely fits the data according to a specific mathematical criterion. For example, the method of ordinary least squares(OLS) computes the unique line that minimizes the sum of squared differences between the data and that line. This line can then be extended to predict unseen data. Another way to perform linear regression is  `gradient descent`. This method is better for 3 dimensional or multi-dimentional data. 
@@ -33,11 +35,11 @@ Course link: https://www.udemy.com/course/data-science-and-machine-learning-with
 
 - different regression techniques
   
-| Regression Type | Description | Typical Use Case |
-|-----------------|--------------|------------------|
-| Linear Regression | Models a straight-line relationship between one or more independent variables and a continuous dependent variable. | Predicting house prices, sales trends, or temperature levels. |
-| Multiple Linear Regression | Extension of linear regression using multiple predictors for a single continuous outcome. | Estimating employee salaries from multiple features (experience, education, etc.). |
-| Logistic Regression | Used when the dependent variable is categorical (binary or multinomial). Predicts probabilities between 0 and 1. | Classifying spam vs. not-spam emails, churn prediction. |
-| Polynomial Regression | Fits a non-linear (curved) relationship between variables using polynomial terms. | Modeling growth curves or complex biological relationships. |
-| Ridge Regression | A linear regression with L2 regularization, reducing coefficient magnitude to handle multicollinearity and overfitting. | High-dimensional datasets with correlated features. |
-| Lasso Regression | Uses L1 regularization to shrink some coefficients to zero, effectively performing feature selection. | Sparse feature selection in big data problems
+  | Regression Type | Description | Typical Use Case |
+  |-----------------|--------------|------------------|
+  | Linear Regression | Models a straight-line relationship between one or more independent variables and a continuous dependent variable. | Predicting house prices, sales trends, or temperature levels. |
+  | Multiple Linear Regression | Extension of linear regression using multiple predictors for a single continuous outcome. | Estimating employee salaries from multiple features (experience, education, etc.). |
+  | Logistic Regression | Used when the dependent variable is categorical (binary or multinomial). Predicts probabilities between 0 and 1. | Classifying spam vs. not-spam emails, churn prediction. |
+  | Polynomial Regression | Fits a non-linear (curved) relationship between variables using polynomial terms. | Modeling growth curves or complex biological relationships. |
+  | Ridge Regression | A linear regression with L2 regularization, reducing coefficient magnitude to handle multicollinearity and overfitting. | High-dimensional datasets with correlated features. |
+  | Lasso Regression | Uses L1 regularization to shrink some coefficients to zero, effectively performing feature selection. | Sparse feature selection in big data problems
