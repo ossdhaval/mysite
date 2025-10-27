@@ -44,6 +44,6 @@ Course link: https://www.udemy.com/course/data-science-and-machine-learning-with
   | Ridge Regression | A linear regression with L2 regularization, reducing coefficient magnitude to handle multicollinearity and overfitting. | High-dimensional datasets with correlated features. |
   | Lasso Regression | Uses L1 regularization to shrink some coefficients to zero, effectively performing feature selection. | Sparse feature selection in big data problems
 
-- Multiple regression:
+- Multiple linear regression:
   In normal regression, you are trying to predict the value of one dependent variable, based on another single influencing variable. Like predicting height based on age. Here age is the only influencing factor.  In multiple regression, you have multiple influencing variable instead of one. Like predicting car price based on brand, type(passenger or commercial), seating capacity etc.
 - Multivariate regression: Unlike linear and multiple regression, where we are trying to predict the value of one signle dependent variable using one or more variables, in multivariate regression we are trying to predict multiple dependent variables. Like predicting price and time-to-sell of a car based on brand, type(passenger or commercial), seating capacity etc.
