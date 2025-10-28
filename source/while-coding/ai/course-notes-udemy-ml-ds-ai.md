@@ -47,3 +47,18 @@ Course link: https://www.udemy.com/course/data-science-and-machine-learning-with
 - Multiple linear regression:
   In normal regression, you are trying to predict the value of one dependent variable, based on another single influencing variable. Like predicting height based on age. Here age is the only influencing factor.  In multiple regression, you have multiple influencing variable instead of one. Like predicting car price based on brand, type(passenger or commercial), seating capacity etc.
 - Multivariate regression: Unlike linear and multiple regression, where we are trying to predict the value of one signle dependent variable using one or more variables, in multivariate regression we are trying to predict multiple dependent variables. Like predicting price and time-to-sell of a car based on brand, type(passenger or commercial), seating capacity etc.
+
+
+## Supervised and unsupervised learning
+
+- Supervised:
+  We give the categories (classifications) to the algorithm, train it to classify data in certain buckets, and then let it classify the actual data. So basically, the categories are known and given to the algorithm. It just have to learn how to classify data between these categories.
+- Unsupervised:
+  Here, the algorithm has to find out the categories by itself. There is no trainning. So, in this case, the algorithm looks at the patterns in the data and finds the relationships, categories etc and then classifies the data. This can be used to find unknown patterns and relationships in the data. These are also called latent variables.
+
+
+
+
+
+
+
