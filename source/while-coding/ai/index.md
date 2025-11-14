@@ -42,4 +42,6 @@ From this LinkedIn post: https://www.linkedin.com/feed/update/urn:li:activity:73
 
 ### MCP
 
-MCP : [Microsoft : MCP for beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHjYfVUpGl_-ai7D6FRBjV-d)
+- MCP : [Microsoft : MCP for beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHjYfVUpGl_-ai7D6FRBjV-d) and [repo for hands-on](https://github.com/microsoft/mcp-for-beginners/tree/main)
+
+
