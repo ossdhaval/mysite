@@ -44,4 +44,8 @@ From this LinkedIn post: https://www.linkedin.com/feed/update/urn:li:activity:73
 
 - MCP : [Microsoft : MCP for beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHjYfVUpGl_-ai7D6FRBjV-d) and [repo for hands-on](https://github.com/microsoft/mcp-for-beginners/tree/main)
 
+### Agents
+
+- when you do not need agents: https://www.perplexity.ai/search/do-i-need-an-ai-agent-to-integ-RuuKb2rTQSWcHG1yn0MGKA
+
 
