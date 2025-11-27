@@ -1,5 +1,10 @@
 # Model Context Protocol
 
+## Reference:
+
+- Good quick video for creating local agent with MCP (OllamaIndex, Ollama): https://www.youtube.com/watch?v=C64rVY1eN8k
+
+
 ## Notes from [mcp for beginners hands-on repo](https://github.com/microsoft/mcp-for-beginners/tree/main)
 
 - very good to get high-level picture of what MCP is and overall usefulness: https://github.com/microsoft/mcp-for-beginners/blob/main/00-Introduction/README.md
