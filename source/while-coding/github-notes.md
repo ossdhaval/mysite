@@ -485,6 +485,50 @@ Use these queries at: https://docs.github.com/en/graphql/overview/explorer
   ```
   Hi ossdhaval! You've successfully authenticated, but GitHub does not provide shell access.
   ```
+
+### working and autheticating with multiple github accounts
+
+use of ssh agent as above will cause the local `git` client to to use the same key to authenticate with all the remote repositories. So, in this way, you can only authenticate as one user. Meaning you can't push changes as one user in 
+one repository and another user in a different repository.
+
+In the scenario where you have multiple git repositories (bitbucket, github, gitlab) etc with different users. And you have created different ssh keys for different users and configured in different providers. For example:
+
+- userxyz -> my-ssh-key-xyz -> githubuserxyz
+- userabc -> my-ssh-key-abc -> githubuserabc
+- user123 -> my-ssh-key-123 -> bitbucketuser123
+
+Now what you want is when you fire `git push` for a local repository, the git will use only a specific key to authenticate with the remote server so that it can successfully push. For this take these steps:
+
+1. Create and Configure the `~/.ssh/config` file and put the content below in it.
+   
+   ```
+   Host github-xyz
+       HostName github.com
+       User git
+       IdentityFile ~/.ssh/ssh-key-github-ed25519-ossdhaval
+       IdentitiesOnly yes
+
+    Host bitbucket-73
+        HostName bitbucket.org
+        User git
+        IdentityFile ~/.ssh/my-generic-key-ed25519
+        IdentitiesOnly yes
+    
+    Host github-desaioss
+        HostName github.com
+        User git
+        IdentityFile ~/.ssh/my-generic-key-ed25519
+        IdentitiesOnly yes
+    ```
+
+2. Now go to the repo from where you want to push the code. and update the remote URL like this:
+
+   ```
+    git remote set-url origin git@github-ossdhaval:JanssenProject/jans.git
+   ```
+
+   See the part after `git@` in the URL. It is pointing to an ssh configuration and it'll use that specific private key for authentication for that repository.
+  
 ## Resolve merge conflicts reported in a GitHub PR
 
 Sometimes GH PRs can't be merged due to merge conflicts between your branch and the base branch. And GitHub can't even merge it automatically and asks you to merge it manually. 
