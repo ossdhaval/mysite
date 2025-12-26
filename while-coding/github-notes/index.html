@@ -1,0 +1,5352 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../github-actions-notes/">
+      
+      
+        <link rel="next" href="../gitter-notes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Github Notes - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#github-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Github Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ossdhaval/mysite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../API-driven-dev/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  While Coding
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../while-working/Learnings-as-open-source-community-manager/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  While Working
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ossdhaval/mysite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Coding
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    While Coding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API-driven-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api Driven Dev
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CDI-weld-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cdi Weld Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../IAM/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iam
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Iam
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/OAuth2_oidc_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oauth2_Oidc_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/SCIM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/SIOP-DID/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siop Did
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/api-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/cryptography-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cryptography Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/jwt-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jwt Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/zero-trust-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Trust Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/authorization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authorization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LXC-LXD-linux-containers-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lxc Lxd Linux Containers Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SUSE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ai/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ai
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ai/SDLC-tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sdlc Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sdlc Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/SDLC-tools/ai-tools-for-coding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai Tools For Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/course-notes-udemy-ml-ds-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ML DS AI Udemy course notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/prompt-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/rag-agentic-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rag Agentic Ai
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apache_on_ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apache_On_Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws-developer-associate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aws Developer Associate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cedar-policy-authoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cedar Policy Authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../certifications/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certifications
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Certifications
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../certifications/GitHub/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10_2" id="__nav_2_10_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Github
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certifications/GitHub/github-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container-security-cosign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Container Security Cosign
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containerisation-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containerisation Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curl-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curl Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Devops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ff4j-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ff4J Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-commands-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Commands Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-actions-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Actions Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Notes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#github-authenticating-with-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Github authenticating with Git
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Github authenticating with Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloning-a-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloning a repo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-github-commit-signature-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setting up github commit signature verification:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setting up github commit signature verification:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signing-using-ssh-key-preferred" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        signing using SSH key (preferred)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signing-using-gpg-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        signing using GPG key
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issues-vs-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        issues vs PRs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-issues-and-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linking issues and PRs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linking issues and PRs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linking-issues-with-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        linking issues with issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issues-with-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        issues with PRS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prs-with-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRs with PRs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-issue-and-pr-templates-that-apply-to-all-the-repos-in-org" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Issue and PR templates that apply to all the repos in org
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Issue and PR templates that apply to all the repos in org">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR template
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-owners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        code owners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repository defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Labelling :
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        github api:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-github-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        using github rest api
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="using github rest api">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-version-4-graphql-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        using version 4 (graphQL API)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        using rest API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="using rest API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-repository-permission-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        github repository permission levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-change-log-audit-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        github change log (audit log)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch-protections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        branch protections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        useful shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-split-a-big-pr-into-smaller-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to split a big PR into smaller PRs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to split a big PR into smaller PRs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-c1-to-b1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        move c1 to b1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-c1-from-big-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remove c1 from big-branch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ways-to-interact-with-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ways to interact with Github
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficient-and-power-user-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Efficient and power user tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-or-missing-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        questions or missing features:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-for-issues-or-pr-excluding-certain-words" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        search for issues or PR excluding certain words
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emoji-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        emoji list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-shields-that-you-can-use-in-your-readme-or-other-files-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        list of shields that you can use in your readme or other files on github
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-recommendations-around-file-sizes-repo-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Github recommendations around file sizes, repo sizes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-create-an-internal-pull-request-from-a-pr-from-a-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        how to create an internal pull request from a PR from a fork
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr-merge-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR merge commits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference-between-release-vs-tag-in-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Difference between release vs tag in github
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-reference-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub reference material:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guidelines-for-good-pr-and-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guidelines for Good PR and communication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-resolved-comments-are-useful" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        issue resolved comments are useful
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request-reviews-approving-reviews-vs-non-approving-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pull request reviews: approving reviews Vs non-approving reviews
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-graphql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Github graphql queries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Github graphql queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-issues-and-prs-raised-by-you-between-two-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get issues and PRs raised by you between two dates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-ssh-key-for-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        configuring ssh key for GitHub
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="configuring ssh key for GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-and-autheticating-with-multiple-github-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        working and autheticating with multiple github accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolve-merge-conflicts-reported-in-a-github-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolve merge conflicts reported in a GitHub PR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sbom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SBOM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-between-a-github-app-vs-an-oauth-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        difference between a GitHub app Vs an OAuth app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-counts-as-a-contribution-on-the-profile-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What counts as a contribution on the profile graph
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-complex-github-query-with-multiple-criteria-and-logical-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sample complex github query with multiple criteria and logical operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitter-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gitter Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-docker-on-suse-enterprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install Docker On Suse Enterprise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intellijIdea_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intellijidea_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_26" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../janssen/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_26" id="__nav_2_26_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_26">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Janssen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/agama-language-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agama Language Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/jans-cn-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jans Cn Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/janssen-code-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Code Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/janssen-log-analysis-with-test-load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Log Analysis With Test Load
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/janssen-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_27" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../java-language/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java Language
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_27" id="__nav_2_27_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_27">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Java Language
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-language/creating-custom-annotations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Custom Annotations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-language/debugging-java-memory-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging Java Memory Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jetty-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jetty Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keycloak-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keycloak Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-journal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Journal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../makdown-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Makdown Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maven-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maven Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../md-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Md Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mkdocs Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mysql Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notes-monorepo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes Monorepo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgres_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Postgres_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quarkus%20notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quarkus Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rancher-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rancher Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../random-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redis-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redis Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-please-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Please Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sbom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sbom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonar-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sonar Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl-ssh-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ssl Ssh Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools-to-build-command-line-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools To Build Command Line Cli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vmware Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vscode-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vscode Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yaml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-working/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Working
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    While Working
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/Learnings-as-open-source-community-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learnings As Open Source Community Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/need-for-high-commit-quality-in-open-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Need For High Commit Quality In Open Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/open-banking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Banking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-manager.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/remote-team-organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remote Team Organization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/trello-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trello Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Product Management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-manager.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-mgmt/product-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-mgmt/prd-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRD notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-ux-ui-design.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Ux Ui Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-marketing.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product marketing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#github-authenticating-with-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Github authenticating with Git
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Github authenticating with Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloning-a-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloning a repo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-github-commit-signature-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setting up github commit signature verification:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setting up github commit signature verification:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signing-using-ssh-key-preferred" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        signing using SSH key (preferred)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signing-using-gpg-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        signing using GPG key
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issues-vs-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        issues vs PRs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-issues-and-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linking issues and PRs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linking issues and PRs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linking-issues-with-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        linking issues with issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issues-with-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        issues with PRS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prs-with-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRs with PRs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-issue-and-pr-templates-that-apply-to-all-the-repos-in-org" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Issue and PR templates that apply to all the repos in org
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Issue and PR templates that apply to all the repos in org">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR template
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-owners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        code owners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repository defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Labelling :
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        github api:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-github-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        using github rest api
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="using github rest api">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-version-4-graphql-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        using version 4 (graphQL API)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        using rest API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="using rest API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-repository-permission-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        github repository permission levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-change-log-audit-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        github change log (audit log)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch-protections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        branch protections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        useful shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-split-a-big-pr-into-smaller-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to split a big PR into smaller PRs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to split a big PR into smaller PRs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-c1-to-b1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        move c1 to b1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-c1-from-big-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remove c1 from big-branch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ways-to-interact-with-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ways to interact with Github
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficient-and-power-user-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Efficient and power user tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-or-missing-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        questions or missing features:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-for-issues-or-pr-excluding-certain-words" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        search for issues or PR excluding certain words
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emoji-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        emoji list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-shields-that-you-can-use-in-your-readme-or-other-files-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        list of shields that you can use in your readme or other files on github
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-recommendations-around-file-sizes-repo-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Github recommendations around file sizes, repo sizes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-create-an-internal-pull-request-from-a-pr-from-a-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        how to create an internal pull request from a PR from a fork
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr-merge-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR merge commits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference-between-release-vs-tag-in-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Difference between release vs tag in github
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-reference-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub reference material:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guidelines-for-good-pr-and-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guidelines for Good PR and communication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-resolved-comments-are-useful" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        issue resolved comments are useful
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request-reviews-approving-reviews-vs-non-approving-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pull request reviews: approving reviews Vs non-approving reviews
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-graphql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Github graphql queries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Github graphql queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-issues-and-prs-raised-by-you-between-two-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get issues and PRs raised by you between two dates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-ssh-key-for-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        configuring ssh key for GitHub
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="configuring ssh key for GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-and-autheticating-with-multiple-github-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        working and autheticating with multiple github accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolve-merge-conflicts-reported-in-a-github-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolve merge conflicts reported in a GitHub PR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sbom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SBOM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-between-a-github-app-vs-an-oauth-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        difference between a GitHub app Vs an OAuth app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-counts-as-a-contribution-on-the-profile-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What counts as a contribution on the profile graph
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-complex-github-query-with-multiple-criteria-and-logical-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sample complex github query with multiple criteria and logical operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/ossdhaval/mysite/edit/main/source/while-coding/github-notes.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="github-notes">Github notes<a class="headerlink" href="#github-notes" title="Permanent link">#</a></h1>
+<h2 id="github-authenticating-with-git">Github authenticating with Git<a class="headerlink" href="#github-authenticating-with-git" title="Permanent link">#</a></h2>
+<p>Your local git repo may be setup with email and username etc, but these are for local git. These do not help with authenticating with platforms like github or gitlab. Using just a git initialized directory, you will be able to clone remote public repositories from these platforms but you will not be able to perform actions like pushing commits, cloning using SSH etc. </p>
+<h3 id="cloning-a-repo">Cloning a repo<a class="headerlink" href="#cloning-a-repo" title="Permanent link">#</a></h3>
+<p>You can clone repo from github using three ways
+-  HTTPS: No authentication needed for cloning, so this is the easiest way to clone a repo. But when you try to push a commit, it'll ask for github username and password. In the password, you have to provide personal token (not the password). So, prefer this mode when you plan to work with the repo for short time and mostly for read-only purposes.
+-  SSH: Here the authentication with github is required up-front. You have to <a href="#configuring-ssh-key-for-github">setup ssh authentication</a> even to clone the repo. But once done, you can push commits etc. Prefer this mode when you plan to use the repo for longer time, and not just for read-only purposes.
+-  GH CLI</p>
+<p>When working with github, you'll need to setup authentication for GitHub in your local git settings </p>
+<h3 id="setting-up-github-commit-signature-verification">setting up github commit signature verification:<a class="headerlink" href="#setting-up-github-commit-signature-verification" title="Permanent link">#</a></h3>
+<ul>
+<li>First check that your email id is verified:</li>
+<li>go to github-&gt;user settings-&gt;emails-&gt;see if it mentions 'unverified' below your email id</li>
+<li>ref <a href="https://docs.github.com/en/github/getting-started-with-github/signing-up-for-github/verifying-your-email-address">here</a></li>
+</ul>
+<h4 id="signing-using-ssh-key-preferred">signing using SSH key (preferred)<a class="headerlink" href="#signing-using-ssh-key-preferred" title="Permanent link">#</a></h4>
+<ul>
+<li>I am preferring this method as here you can use the same ssh key to authenticate with github as well as to sign the commits. So, you have to manage only one key. And since there is only one key, it is easy to move it to a different machine if you are setting up a new hardware. To move ssh key, you just have to copy the public and private key files from ~/.ssh/ directory to new machine, same directory.</li>
+<li>In this method you can add the same SSH key as signing and authn key in the github settings -&gt; ssh and gpg key section.</li>
+<li>Two setting that you have to change in the local git configuration is as below:
+  <div class="highlight"><pre><span></span><code>
+</code></pre></div></li>
+</ul>
+<h4 id="signing-using-gpg-key">signing using GPG key<a class="headerlink" href="#signing-using-gpg-key" title="Permanent link">#</a></h4>
+<ul>
+<li>Check if you have a GPG key (private-public key pair) already generated for this email id on your machine</li>
+<li><code>gpg --list-secret-keys --keyid-format LONG</code></li>
+<li>if you don't have a key generate it</li>
+<li>while generating the key, it'll ask for inputs, most of it is ok to keep default and email is your github (preferrably private, or public) email id.</li>
+<li><code>gpg --full-generate-key</code></li>
+<li>ref <a href="https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key">here</a></li>
+<li>Now check the key that got generated</li>
+<li><code>gpg --list-secret-keys --keyid-format LONG</code></li>
+<li>output have a line similar to <code>sec   rsa4096/&lt;your key&gt; 2021-06-02 [SC]</code></li>
+<li>Now, set GPG key in your local git client</li>
+<li><code>git config --global user.signingkey &lt;your key&gt;</code></li>
+<li>Now we need to add same key to your github account</li>
+<li>get public key block<ul>
+<li><code>gpg --armor --export &lt;your key&gt;</code></li>
+<li>copy the entire text that got printed on your screen, starting from first '-' to last '-'</li>
+</ul>
+</li>
+<li>now go to github-&gt;profile-&gt;settings-&gt;SSH and GPG keys-&gt;New GPG key. Paste public key block that you copied in step above.</li>
+<li>after this whenever you want to sign a commit add <code>-S</code> flag</li>
+<li><code>git commit -S -m your commit message</code> </li>
+<li>If you want to move gpg key from some other machine to a new hardware setup, then do following</li>
+<li>find the id of the key. List the existing keys on current machine as below and <code>id</code> is the part after <code>rsa4096</code> in <code>sec   rsa4096/[**YOUR KEY ID**] 2024-03-30 [SC]</code> </li>
+<li>export keys from currect machine
+    <div class="highlight"><pre><span></span><code># export public key
+gpg --export -a [your key id] &gt; gpg-pub.asc
+
+# export private key
+gpg --export-secret-keys -a [your key] &gt; gpg-sc.asc
+</code></pre></div></li>
+<li>Move these key files to new machine and import keys using
+    <div class="highlight"><pre><span></span><code>gpg --import gpg-pub.asc
+gpg --import gpg-sc.asc
+</code></pre></div></li>
+<li>ref: https://blog.ridaeh.com/migrate-you-gpg-keys-from-one-machine-to-another-3341e980dfac</li>
+<li>You have to edit this key to add trust and validity<ul>
+<li>add validity using: <code>gpg --lsign-key &lt;key-fingerprint&gt;</code>, you can find the fingerprint using <code>gpg --list-keys --fingerprint</code>, the line below <code>pub rsa..</code> is the finger print.</li>
+<li>add trust using <code>gpg --edit-key &lt;key-id&gt;</code>, this will show your a <code>gpg&gt;</code> prompt. Type <code>trust</code>, select <code>5</code> that is <code>ultimate</code>, type <code>save</code>. It might say that <code>no update needed</code> but still the change has been made.</li>
+</ul>
+</li>
+<li>With this setup, you should be able to use the key for signing and github will show <code>verified</code></li>
+<li>Troubleshooting:</li>
+<li>Many times people face this error while trying to push to github.
+  <code>commits must have valid signatures</code> 
+  this error is saying that you are trying push commits that are unsigned. Many times people confuse it with commits that are already there in github. To solve this you have to find the unsinged commit and sign it. To see all commits with its signing information run <code>git log --show-signature</code>.</li>
+<li>when you run <code>git log --show-signature</code>, you'll see that there are lot of red warnings which are like this.
+      <div class="highlight"><pre><span></span><code>gpg: Signature made Monday 25 October 2021 10:10:36 PM IST
+gpg:                using RSA key 4AEE18F83AFDEB23
+gpg: Can&#39;t check signature: No public key
+Merge: 2880250f3 f5ec22d37
+Author: YuriyZ &lt;yzabrovarniy@gmail.com&gt;
+Date:   Mon Oct 25 19:40:36 2021 +0300
+</code></pre></div>
+      it says <code>signature made</code> but no public key available. This is will be the case with commits signed by other members of your team. Because you don't have their public key stored with you. To do so, run <code>curl https://github.com/ossdhaval.gpg | gpg -import</code> to download key for user <code>ossdhaval</code>.</li>
+</ul>
+<p>Above steps were derived from links given <a href="https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification">here</a></p>
+<h3 id="issues-vs-prs">issues vs PRs<a class="headerlink" href="#issues-vs-prs" title="Permanent link">#</a></h3>
+<p>##### Issues
+  - Used for raising bug or feature requests or tracking large development work
+  - Focus is around requesting, planning and tracking tasks and work</p>
+<p>##### PRs
+  - Used for tracking, discussing code changes 
+  - Focus is on code and not planning or tracking work</p>
+<h3 id="linking-issues-and-prs">Linking issues and PRs<a class="headerlink" href="#linking-issues-and-prs" title="Permanent link">#</a></h3>
+<h5 id="linking-issues-with-issues">linking issues with issues<a class="headerlink" href="#linking-issues-with-issues" title="Permanent link">#</a></h5>
+<ul>
+<li>do it with <code>issue mentions</code> or creating issues from <code>task lists</code></li>
+</ul>
+<h5 id="issues-with-prs">issues with PRS<a class="headerlink" href="#issues-with-prs" title="Permanent link">#</a></h5>
+<ul>
+<li>in issue : do it with <code>linked PR</code> section on the right</li>
+<li>in PR : you can link issue by using key words like <code>closes</code></li>
+<li>In both you can refer to an issue using number afte #</li>
+</ul>
+<h5 id="prs-with-prs">PRs with PRs<a class="headerlink" href="#prs-with-prs" title="Permanent link">#</a></h5>
+<h3 id="creating-issue-and-pr-templates-that-apply-to-all-the-repos-in-org">Creating Issue and PR templates that apply to all the repos in org<a class="headerlink" href="#creating-issue-and-pr-templates-that-apply-to-all-the-repos-in-org" title="Permanent link">#</a></h3>
+<p>If you want certain files to be set as default for all the repos under your org, you can create a <code>.github</code> repo. Github uses files under this repo as default. Reference <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file">here</a></p>
+<h5 id="issue-template">Issue template<a class="headerlink" href="#issue-template" title="Permanent link">#</a></h5>
+<ul>
+<li>creat a new repo <code>.github</code> in org github account</li>
+<li>To create a new template called <code>development-item</code>, create a new file as <code>.github/ISSUE_TEMPLATE/development-item.md</code>. This will create two new folders and one file. </li>
+<li>Put below header in the file and then start writting your contents for template.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>---
+name: Contribution item
+about: Developers should use this when contributing a feature or bug fix
+title: &#39;&#39;
+labels: &#39;&#39;
+assignees: &#39;&#39;
+---
+</code></pre></div>
+<ul>
+<li>create another template in <code>ISSUE_TEMPLATE</code> directory in similar way. For example <code>feature-request.md</code></li>
+<li>You may have to enable templates from <code>settings</code> of <code>.github</code> repo as well. But not sure if this step is required. Ideally, after the first step, whenever you create a new issue, git hub should first show you a screen to select the issue template.</li>
+</ul>
+<h5 id="pr-template">PR template<a class="headerlink" href="#pr-template" title="Permanent link">#</a></h5>
+<ul>
+<li>Create a PR template file named <code>pull_request_template.md</code> under <code>.github</code> repository root folder. </li>
+<li>Not tried: if you have more than one pull request templates, you should put it under <code>PULL_REQUEST_TEMPLATES</code> folder</li>
+</ul>
+<p>reference <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates">here</a>.</p>
+<h3 id="code-owners">code owners<a class="headerlink" href="#code-owners" title="Permanent link">#</a></h3>
+<ul>
+<li>you can define code owners by creating <code>CODEOWNERS</code> file in target branch.</li>
+<li>code owners are specific to branch and hence you can have different code owners per branch</li>
+<li>There are two things that code owners file can help with 
+  1) when you raise a pull request, the code owners as defined in base branch will get review requests
+  2) when you have turned on branch protection for that branch from <code>settings</code> of repo, you can require approval from code owner of that branch for all PRs before merging.</li>
+</ul>
+<h3 id="repository-defaults">Repository defaults<a class="headerlink" href="#repository-defaults" title="Permanent link">#</a></h3>
+<ul>
+<li>you can define following as default for every new repository in your org</li>
+<li>Labels</li>
+<li>default branch name</li>
+<li>this can be done from organization settings -&gt; repository defaults</li>
+</ul>
+<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">#</a></h3>
+<ul>
+<li>have SECURITY.md in .github repository at org level, like <a href="https://github.com/falcosecurity/.github/blob/master/SECURITY.md">this</a></li>
+<li>enable security advisory in github, like <a href="https://github.com/falcosecurity/.github/security">this</a></li>
+<li>Enable Dependabot scanning</li>
+<li>read process around <a href="https://docs.github.com/en/code-security/security-advisories/about-github-security-advisories">security vulnerability reporting</a></li>
+<li><a href="https://docs.github.com/en/code-security/security-advisories/about-coordinated-disclosure-of-security-vulnerabilities">Best practices</a></li>
+</ul>
+<h3 id="labelling">Labelling :<a class="headerlink" href="#labelling" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="https://seantrane.com/posts/logical-colorful-github-labels-18230/#:~:text=Issue%2FPR%20labels%20should%20only,intuitive%20at%2Da%2Dglance.">good artice</a></li>
+<li><a href="https://github.com/kubernetes/community/issues/2032">good discussion about maintaining labels</a></li>
+<li>check this <a href="https://github.com/actions/labeler">labeler</a></li>
+</ul>
+<h3 id="github-api">github api:<a class="headerlink" href="#github-api" title="Permanent link">#</a></h3>
+<p>you can get programatic access to github data using rest api. For example, to get all repositories in JanssenProject org:</p>
+<div class="highlight"><pre><span></span><code>curl  https://api.github.com/orgs/JanssenProject/repos
+</code></pre></div>
+<h3 id="using-github-rest-api">using github rest api<a class="headerlink" href="#using-github-rest-api" title="Permanent link">#</a></h3>
+<p>Till version 3, github had rest apis but from version 4 they have moved to GraphQL. </p>
+<h4 id="using-version-4-graphql-api">using version 4 (graphQL API)<a class="headerlink" href="#using-version-4-graphql-api" title="Permanent link">#</a></h4>
+<ul>
+<li>Reference : https://docs.github.com/en/graphql</li>
+<li>public schema: https://docs.github.com/en/graphql/overview/public-schema</li>
+<li>how to use without explorer: https://docs.github.com/en/graphql/guides/forming-calls-with-graphql</li>
+<li>how to use : https://docs.github.com/en/graphql/guides/using-the-explorer</li>
+<li>explorer url: https://docs.github.com/en/graphql/overview/explorer</li>
+</ul>
+<h4 id="using-rest-api">using rest API<a class="headerlink" href="#using-rest-api" title="Permanent link">#</a></h4>
+<p>all APIs are listed https://docs.github.com/en/rest/reference</p>
+<p>you can access public data without authenticating. For example:</p>
+<div class="highlight"><pre><span></span><code>curl https://api.github.com/users/ossdhaval
+</code></pre></div>
+<p>but to access some information plus to make changes to github data you have to authenticate.</p>
+<h5 id="authentication">authentication<a class="headerlink" href="#authentication" title="Permanent link">#</a></h5>
+<p>Your regular ssh key will not work. You have to get an OAuth key or <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">generate a personal token</a>.</p>
+<p>Then you can fire command using curl</p>
+<div class="highlight"><pre><span></span><code>curl -u ossdhaval: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 -H &quot;Accept: application/vnd.github.zzzax-preview+json&quot; https://api.github.com/repos/ossdhaval/gitcheck/branches/main/protection/required_signatures
+</code></pre></div>
+<h3 id="useful-tools">Useful Tools<a class="headerlink" href="#useful-tools" title="Permanent link">#</a></h3>
+<ul>
+<li>for analysing github data of your org and multiple repos: https://livablesoftware.com/tools-mine-analyze-github-git-software-data/</li>
+<li>Agile project management on github: https://www.zenhub.com/</li>
+</ul>
+<h3 id="github-repository-permission-levels">github repository permission levels<a class="headerlink" href="#github-repository-permission-levels" title="Permanent link">#</a></h3>
+<p>https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/repository-permission-levels-for-an-organization</p>
+<h3 id="github-change-log-audit-log">github change log (audit log)<a class="headerlink" href="#github-change-log-audit-log" title="Permanent link">#</a></h3>
+<p>you can see all the changes that happend to all the entites in your organisation in github using audit logs. You need to be organization <code>owner</code> to
+be able to see this.
+https://docs.github.com/en/organizations/keeping-your-organization-secure/reviewing-the-audit-log-for-your-organization#accessing-the-audit-log</p>
+<h3 id="branch-protections">branch protections<a class="headerlink" href="#branch-protections" title="Permanent link">#</a></h3>
+<ul>
+<li><code>Require status checks to pass before merging</code></li>
+<li>at this time, when you turn on this protection, only statuses that were run in last week will be available for selection in the search box. so if there is an active status check but corresponding workflow did not run during last week then that status check will not be available for selection</li>
+<li>name of the status check is the name of the job within workflow or externally injected status</li>
+<li>only jobs from those workflow will be appear in search selection box which get triggered on [pull-request] event</li>
+</ul>
+<p>a good link for troubleshooting: </p>
+<p>https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/troubleshooting-required-status-checks</p>
+<h3 id="useful-shortcuts">useful shortcuts<a class="headerlink" href="#useful-shortcuts" title="Permanent link">#</a></h3>
+<ul>
+<li><code>e</code>   Open source code file in the Edit file tab</li>
+<li><code>ctrl+s</code> write commit message</li>
+<li><code>.</code> to open Quick IDE at github.dev</li>
+<li><code>ctrl+k</code> to open command palette</li>
+</ul>
+<p><a href="https://docs.github.com/en/get-started/using-github/keyboard-shortcuts#about-keyboard-shortcuts">full list</a></p>
+<h3 id="how-to-split-a-big-pr-into-smaller-prs">How to split a big PR into smaller PRs<a class="headerlink" href="#how-to-split-a-big-pr-into-smaller-prs" title="Permanent link">#</a></h3>
+<ul>
+<li>there is no direct way of doing this as Github only allows one PR per branch. To solve this problem, you have to move changes into separate branch and create a PR from there.</li>
+<li>So if you have a branch <code>big-branch</code> from master with three changes <code>c1</code>, <code>c2</code> and <code>c3</code> and a PR has been created on top of that then you have to follow two step process</li>
+<li>Create new branch from parent of <code>big-branch</code> and call it <code>b1</code>. We want to move change <code>c1</code> to <code>b1</code> </li>
+<li>and then remove <code>c1</code> from <code>big-branch</code></li>
+</ul>
+<h5 id="move-c1-to-b1">move <code>c1</code> to <code>b1</code><a class="headerlink" href="#move-c1-to-b1" title="Permanent link">#</a></h5>
+<ul>
+<li>Create a branch <code>c1</code> from <code>main</code>. <code>main</code> is parent of <code>big-branch</code>.</li>
+<li>switch to <code>b1</code></li>
+<li>Now cherry pick commit/commits related to <code>c1</code></li>
+</ul>
+<h5 id="remove-c1-from-big-branch">remove <code>c1</code> from <code>big-branch</code><a class="headerlink" href="#remove-c1-from-big-branch" title="Permanent link">#</a></h5>
+<ul>
+<li></li>
+</ul>
+<h3 id="ways-to-interact-with-github">Ways to interact with Github<a class="headerlink" href="#ways-to-interact-with-github" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="https://github.com/">UI</a></li>
+<li><a href="https://docs.github.com/en/rest">REST API (V2)</a></li>
+<li><a href="https://docs.github.com/en/graphql">GraphQL API (V3)</a></li>
+<li><a href="https://cli.github.com/">Github CLI</a></li>
+<li><a href="https://docs.github.com/en/rest/overview/libraries">Github libraries</a></li>
+</ul>
+<h3 id="efficient-and-power-user-tips">Efficient and power user tips<a class="headerlink" href="#efficient-and-power-user-tips" title="Permanent link">#</a></h3>
+<ul>
+<li>Give comments quickly with <a href="https://docs.github.com/en/github/writing-on-github/working-with-saved-replies/about-saved-replies">saved responses</a></li>
+</ul>
+<h3 id="questions-or-missing-features">questions or missing features:<a class="headerlink" href="#questions-or-missing-features" title="Permanent link">#</a></h3>
+<ul>
+<li>how to know which all PRs are containing changes for a particular file? At times what happens is that same file is being changed in multiple PRs that leads to merge conflicts later on.</li>
+<li>sometimes it happens that after looking at file content you want to know who changed this piece of text? there should be a way to find commit and PR that changed that part in file</li>
+<li>We need codeowner groups. So that review can be requested from a group and if anyone from that group gives approval, that should be sufficient (configurable).</li>
+</ul>
+<h3 id="search-for-issues-or-pr-excluding-certain-words">search for issues or PR excluding certain words<a class="headerlink" href="#search-for-issues-or-pr-excluding-certain-words" title="Permanent link">#</a></h3>
+<ul>
+<li><code>is:pr is:open NOT chore NOT Snyk</code> will give you all open PRs which doesn't have word <code>chore</code> or <code>Snyk</code></li>
+</ul>
+<h3 id="emoji-list">emoji list<a class="headerlink" href="#emoji-list" title="Permanent link">#</a></h3>
+<p>https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#emoji-cheat-sheet
+just type <code>:</code> followed by a search character in github issues, PRs, comments etc and any .md file and github will show a list of emojis</p>
+<h3 id="list-of-shields-that-you-can-use-in-your-readme-or-other-files-on-github">list of shields that you can use in your readme or other files on github<a class="headerlink" href="#list-of-shields-that-you-can-use-in-your-readme-or-other-files-on-github" title="Permanent link">#</a></h3>
+<p>https://shields.io/</p>
+<h3 id="github-recommendations-around-file-sizes-repo-sizes">Github recommendations around file sizes, repo sizes<a class="headerlink" href="#github-recommendations-around-file-sizes-repo-sizes" title="Permanent link">#</a></h3>
+<p>https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github</p>
+<p>I couldn't find any guidelines online so I took a screenshot and saved it as png to check the size. It came out to be 400kb. So I recommended 1MB max size and png as format.</p>
+<h3 id="how-to-create-an-internal-pull-request-from-a-pr-from-a-fork">how to create an internal pull request from a PR from a fork<a class="headerlink" href="#how-to-create-an-internal-pull-request-from-a-pr-from-a-fork" title="Permanent link">#</a></h3>
+<ul>
+<li>This was required when we had a limitation from sonarcloud integration where sonarcloud analysis will not trigger on a PR coming from a fork</li>
+<li>Basic flow is</li>
+<li><code>xyzuser</code> has forked your repo <code>forkthis</code></li>
+<li><code>xyzuser</code> has pushed code into <code>main</code> branch of his fork.</li>
+<li><code>xyzuser</code> has created PR on <code>main</code> branch of your <code>forkthis</code></li>
+<li>once you have received a PR from a fork, you create another branch from <code>main</code> of <code>forkthis</code>
+    <div class="highlight"><pre><span></span><code>git switch main
+git branch review-external-pr
+git switch review-external-pr
+</code></pre></div></li>
+<li>then you pull the changes from feature branch of the PR (i.e xyzuser/forkedrepo and my-fix branch)
+    <div class="highlight"><pre><span></span><code>git pull git@github.com:xyzuser/forkedrepo.git my-fix
+</code></pre></div></li>
+<li>Now your branch has all the changes from <code>xyzuser</code> and you can create another PR which will be an internal PR based on a branch instead of a fork</li>
+</ul>
+<p>reference: https://gist.github.com/Chaser324/ce0505fbed06b947d962#manually-merging-a-pull-request</p>
+<h3 id="pr-merge-commits">PR merge commits<a class="headerlink" href="#pr-merge-commits" title="Permanent link">#</a></h3>
+<p>When you raise a PR, Github create a new commit behind the scene to see how merged code will look like. So, you can checkout PR in two versions:
+- unmerged version of code, represented by head: <code>refs/pull/&lt;number&gt;/head</code>
+- Code merged with target branch, represented by merge: <code>refs/pull/&lt;number&gt;/merge</code>
+when you are looking at diff in github for a PR, you are looking at diff of how it'll look after merging your branch with base branch.</p>
+<p>Plus, github action <code>checkout</code> action by default checks out merge commit and runs actions on that. So, when actions run, they are running on code from your branch plus code from base branch. See the GH action log below. Second last line is sayting that it has checked out a commit which is merge of two commits, one from current branch and another from base branch:</p>
+<div class="highlight"><pre><span></span><code>Run actions/checkout@v3
+Syncing repository: JanssenProject/jans
+Getting Git version info
+Deleting the contents of &#39;/home/runner/work/jans/jans&#39;
+Initializing the repository
+Disabling automatic garbage collection
+Setting up auth
+Fetching the repository
+Determining the checkout info
+Checking out the ref
+  /usr/bin/git checkout --progress --force refs/remotes/pull/1123/merge
+  Note: switching to &#39;refs/remotes/pull/1123/merge&#39;.
+
+  You are in &#39;detached HEAD&#39; state. You can look around, make experimental
+  changes and commit them, and you can discard any commits you make in this
+  state without impacting any branches by switching back to a branch.
+
+  If you want to create a new branch to retain commits you create, you may
+  do so (now or later) by using -c with the switch command. Example:
+
+    git switch -c &lt;new-branch-name&gt;
+
+  Or undo this operation with:
+
+    git switch -
+
+  Turn off this advice by setting config variable advice.detachedHead to false
+
+  HEAD is now at bf42446c2 Merge 4ed88dd504315988fc8114535068d7db8e57043d into 41b6fa185505d3a6a1b5423a6f6df38337a14168
+/usr/bin/git log -1 --format=&#39;%H&#39;
+&#39;bf42446c2ea150faaabcb4037eb1e625a4b4016d&#39;
+</code></pre></div>
+<h3 id="difference-between-release-vs-tag-in-github">Difference between release vs tag in github<a class="headerlink" href="#difference-between-release-vs-tag-in-github" title="Permanent link">#</a></h3>
+<p>Ref : https://stackoverflow.com/a/18512221/2331225</p>
+<p>In short, tag is a Git concept. It points to a commit and can be enriched by more content like creator etc
+While <code>release</code> is a GH concept built on top of tag. While creating release from a tag, you can add release notes, artifacts etc.</p>
+<p>About backporting changes to old tag/release:
+ref: https://stackoverflow.com/a/21466838/2331225</p>
+<div class="highlight"><pre><span></span><code>You can&#39;t put a new commit into an existing tag without breaking an important Git guideline: Never(*) modify commits that you have published.
+
+Tags in Git aren&#39;t meant to be mutable. Once you push a tag out there, leave it alone.
+
+You can, however, add some changes on top of v1.1 and release something like v1.1.1 or v1.2
+</code></pre></div>
+<h2 id="github-reference-material">GitHub reference material:<a class="headerlink" href="#github-reference-material" title="Permanent link">#</a></h2>
+<ul>
+<li>Mohammad abu's github cheatsheet: https://medium.com/@moabu/the-github-cheat-sheet-df4b3e3b42a8</li>
+</ul>
+<h2 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">#</a></h2>
+<ul>
+<li>Inbox : the number shown besides <code>inbox</code> on left menu is just unread messages (not all the messages). So, when you mark a notification in <code>octobox</code> as <code>read</code> by pressing <code>d</code> (and click synch button), it reduces that number on github as well, but remember that the notification is still in the <code>inbox</code>. You can see all the messages in GH inbox by clicking <code>all</code> button on GH.</li>
+<li>There is no way to mark something <code>done</code> using octobox directly.</li>
+<li>Mute on octobox also mutes a notification on GH</li>
+</ul>
+<h2 id="guidelines-for-good-pr-and-communication">Guidelines for Good PR and communication<a class="headerlink" href="#guidelines-for-good-pr-and-communication" title="Permanent link">#</a></h2>
+<p>https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/</p>
+<p>There two points that are good:</p>
+<ul>
+<li>Be aware of negative bias with online communication. (If content is neutral, we assume the tone is negative.) Can you use positive language as opposed to neutral?</li>
+<li>Use emoji to clarify tone. Compare “sparkles sparkles Looks good +1 sparkles sparkles” to “Looks good.”</li>
+</ul>
+<p>Another good article: https://github.com/alphagov/styleguides/blob/master/pull-requests.md</p>
+<h2 id="issue-resolved-comments-are-useful">issue resolved comments are useful<a class="headerlink" href="#issue-resolved-comments-are-useful" title="Permanent link">#</a></h2>
+<p>See the comment at the end of <a href="https://github.com/dcoapp/app/issues/69">this issue</a>. It is really useful when people know when a fix was available for that particular issue.</p>
+<p><img alt="image" src="https://github.com/ossdhaval/mysite/assets/343411/904f7cec-5364-40e4-9401-89231b642e36" /></p>
+<h2 id="pull-request-reviews-approving-reviews-vs-non-approving-reviews">Pull request reviews: approving reviews Vs non-approving reviews<a class="headerlink" href="#pull-request-reviews-approving-reviews-vs-non-approving-reviews" title="Permanent link">#</a></h2>
+<p>when someone reviews and approves a PR, based on who is providing the approval, the review can be considered <code>approving</code>. See in <a href="">this PR</a> image below, there are three reviewers. PR needs two approving reviewers to be able to merge. Though two out of three reviewers have given the approval, the PR was not ready to merge as one of the reviewer who gave the approval was not an <code>approving reviewer</code>.</p>
+<p><img alt="image" src="https://github.com/ossdhaval/mysite/assets/343411/7ac02b30-90d3-40a2-94d4-033c916fd019" /></p>
+<p>In the image above, you see that one of the review approval is shown as green tick while the other one is grey. Green one is from an approving reviewer, which the other one is from a normal user.</p>
+<p>I still have to find out what makes a reviewer an <code>approving</code> reviewer, but CODEOWNERs attached to that PR are surely the <code>approving</code> reviewers.</p>
+<h2 id="github-graphql-queries">Github graphql queries<a class="headerlink" href="#github-graphql-queries" title="Permanent link">#</a></h2>
+<p>Use these queries at: https://docs.github.com/en/graphql/overview/explorer</p>
+<h3 id="get-issues-and-prs-raised-by-you-between-two-dates">get issues and PRs raised by you between two dates<a class="headerlink" href="#get-issues-and-prs-raised-by-you-between-two-dates" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>{
+  viewer {
+    login
+    contributionsCollection(from:&quot;2024-03-31T00:00:00Z&quot;, to:&quot;2024-04-05T00:00:00Z&quot;) {
+      issueContributions(first: 100) {
+        edges {
+          node {
+            occurredAt
+            issue {
+              id
+              title
+            }
+
+          }
+        }
+      }
+      pullRequestContributions(first:100){
+                 edges{
+                  node{
+                    occurredAt
+                    pullRequest{
+                      title
+                  }
+                }
+             }
+          }
+
+        }
+      }
+    }
+</code></pre></div>
+<h2 id="configuring-ssh-key-for-github">configuring ssh key for GitHub<a class="headerlink" href="#configuring-ssh-key-for-github" title="Permanent link">#</a></h2>
+<ul>
+<li>create a key
+  <div class="highlight"><pre><span></span><code>ssh-keygen -f ssh-key-github-ed25519-ossdhaval -t ed25519 -C &quot;343411+ossdhaval@users.noreply.github.com&quot;
+</code></pre></div></li>
+<li>Open the public key file
+  <div class="highlight"><pre><span></span><code>cat ~/.ssh/ssh-key-github-ed25519-ossdhaval.pub
+</code></pre></div>
+  copy the content of this</li>
+<li>Add public key to GitHub</li>
+<li>go to your github account on web &gt; settings &gt; ssh and gpg keys &gt; add ssh key</li>
+<li>paste the public key content copied above</li>
+<li>On your machine, start the ssh-agent
+  <div class="highlight"><pre><span></span><code>eval `ssh-agent`
+</code></pre></div>
+  This will show a PID.</li>
+<li>add your private key to ssh agent
+  <div class="highlight"><pre><span></span><code>ssh-add ~/.ssh/ssh-key-github-ed25519-ossdhaval
+</code></pre></div></li>
+<li>Then test authentication with github
+  <div class="highlight"><pre><span></span><code>ssh -T git@github.com
+</code></pre></div>
+  This should show a message like below if the authn is successful.
+  <div class="highlight"><pre><span></span><code>Hi ossdhaval! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div></li>
+</ul>
+<h3 id="working-and-autheticating-with-multiple-github-accounts">working and autheticating with multiple github accounts<a class="headerlink" href="#working-and-autheticating-with-multiple-github-accounts" title="Permanent link">#</a></h3>
+<p>use of ssh agent as above will cause the local <code>git</code> client to to use the same key to authenticate with all the remote repositories. So, in this way, you can only authenticate as one user. Meaning you can't push changes as one user in 
+one repository and another user in a different repository.</p>
+<p>In the scenario where you have multiple git repositories (bitbucket, github, gitlab) etc with different users. And you have created different ssh keys for different users and configured in different providers. For example:</p>
+<ul>
+<li>userxyz -&gt; my-ssh-key-xyz -&gt; githubuserxyz</li>
+<li>userabc -&gt; my-ssh-key-abc -&gt; githubuserabc</li>
+<li>user123 -&gt; my-ssh-key-123 -&gt; bitbucketuser123</li>
+</ul>
+<p>Now what you want is when you fire <code>git push</code> for a local repository, the git will use only a specific key to authenticate with the remote server so that it can successfully push. For this take these steps:</p>
+<ol>
+<li>Create and Configure the <code>~/.ssh/config</code> file and put the content below in it.</li>
+</ol>
+<p>```
+   Host github-xyz
+       HostName github.com
+       User git
+       IdentityFile ~/.ssh/ssh-key-github-ed25519-ossdhaval
+       IdentitiesOnly yes</p>
+<div class="codehilite"><pre><span></span><code>Host bitbucket-73
+    HostName bitbucket.org
+    User git
+    IdentityFile ~/.ssh/my-generic-key-ed25519
+    IdentitiesOnly yes
+
+Host github-desaioss
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/my-generic-key-ed25519
+    IdentitiesOnly yes
+```
+</code></pre></div>
+
+<ol>
+<li>Now go to the repo from where you want to push the code. and update the remote URL like this:</li>
+</ol>
+<div class="highlight"><pre><span></span><code> git remote set-url origin git@github-ossdhaval:JanssenProject/jans.git
+</code></pre></div>
+<p>See the part after <code>git@</code> in the URL. It is pointing to an ssh configuration and it'll use that specific private key for authentication for that repository.</p>
+<h2 id="resolve-merge-conflicts-reported-in-a-github-pr">Resolve merge conflicts reported in a GitHub PR<a class="headerlink" href="#resolve-merge-conflicts-reported-in-a-github-pr" title="Permanent link">#</a></h2>
+<p>Sometimes GH PRs can't be merged due to merge conflicts between your branch and the base branch. And GitHub can't even merge it automatically and asks you to merge it manually. </p>
+<p>Follow the steps below:</p>
+<ul>
+<li>First update your base branch, like <code>main</code>
+   <div class="highlight"><pre><span></span><code>git pull origin main
+</code></pre></div></li>
+<li>checkout the PR branch or PR
+  <div class="highlight"><pre><span></span><code># Using github cli
+gh checkout pr &lt;pr-number&gt;
+</code></pre></div>
+  Above will switch your workspace to PR branch</li>
+<li>Now checkout the files in conflict from the base branch.
+  <div class="highlight"><pre><span></span><code>git checkout main -- docs/janssen-server/developer/scripts/interception-scripts-debug.md docs/janssen-server/developer/scripts/link.md docs/janssen-server/developer/scripts/persistence.md
+</code></pre></div>
+  if there are merge conflicts, resolve those and make a new commit to the PR branch. Note that sometimes Git will be able to auto-merge the changes even though GitHub reported that the conflicts can't be merged automatically. This is due to GH is not trying to merge like local git. </li>
+<li>Push the commit to the PR branch</li>
+</ul>
+<h2 id="sbom">SBOM<a class="headerlink" href="#sbom" title="Permanent link">#</a></h2>
+<p>You can get SBOM of any project from <code>insights</code> -&gt; <code>dependency graph</code> -&gt; <code>export SBOM</code></p>
+<h2 id="difference-between-a-github-app-vs-an-oauth-app">difference between a GitHub app Vs an OAuth app<a class="headerlink" href="#difference-between-a-github-app-vs-an-oauth-app" title="Permanent link">#</a></h2>
+<p>OAuth app means a third party app that uses <code>login using GitHub</code> button, and asks for github access permissions in the next steps. Like octostats.
+A github app is more integrated into github. Like octobox.</p>
+<p>very insightful Reference: https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/differences-between-github-apps-and-oauth-apps</p>
+<h2 id="what-counts-as-a-contribution-on-the-profile-graph">What counts as a contribution on the profile graph<a class="headerlink" href="#what-counts-as-a-contribution-on-the-profile-graph" title="Permanent link">#</a></h2>
+<p>https://docs.github.com/en/account-and-profile/reference/profile-contributions-reference</p>
+<h2 id="sample-complex-github-query-with-multiple-criteria-and-logical-operator">sample complex github query with multiple criteria and logical operator<a class="headerlink" href="#sample-complex-github-query-with-multiple-criteria-and-logical-operator" title="Permanent link">#</a></h2>
+<p><code>is:issue state:open AND (kind-feature OR author:nxyz OR label:enhancement)</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.autohide - search.suggest - search.highlight", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

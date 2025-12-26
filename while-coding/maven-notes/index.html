@@ -1,0 +1,4803 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../makdown-notes/">
+      
+      
+        <link rel="next" href="../md-test/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Maven Notes - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#maven-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Maven Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ossdhaval/mysite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../API-driven-dev/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  While Coding
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../while-working/Learnings-as-open-source-community-manager/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  While Working
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ossdhaval/mysite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Coding
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    While Coding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API-driven-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api Driven Dev
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CDI-weld-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cdi Weld Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../IAM/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iam
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Iam
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/OAuth2_oidc_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oauth2_Oidc_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/SCIM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/SIOP-DID/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siop Did
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/api-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/cryptography-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cryptography Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/jwt-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jwt Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/zero-trust-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Trust Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/authorization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authorization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LXC-LXD-linux-containers-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lxc Lxd Linux Containers Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SUSE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ai/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ai
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ai/SDLC-tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sdlc Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sdlc Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/SDLC-tools/ai-tools-for-coding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai Tools For Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/course-notes-udemy-ml-ds-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ML DS AI Udemy course notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/prompt-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/rag-agentic-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rag Agentic Ai
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apache_on_ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apache_On_Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws-developer-associate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aws Developer Associate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cedar-policy-authoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cedar Policy Authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../certifications/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certifications
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Certifications
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../certifications/GitHub/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10_2" id="__nav_2_10_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Github
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certifications/GitHub/github-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container-security-cosign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Container Security Cosign
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containerisation-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containerisation Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curl-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curl Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Devops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ff4j-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ff4J Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-commands-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Commands Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-actions-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Actions Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitter-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gitter Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-docker-on-suse-enterprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install Docker On Suse Enterprise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intellijIdea_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intellijidea_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_26" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../janssen/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_26" id="__nav_2_26_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_26">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Janssen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/agama-language-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agama Language Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/jans-cn-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jans Cn Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/janssen-code-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Code Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/janssen-log-analysis-with-test-load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Log Analysis With Test Load
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/janssen-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_27" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../java-language/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java Language
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_27" id="__nav_2_27_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_27">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Java Language
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-language/creating-custom-annotations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Custom Annotations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-language/debugging-java-memory-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging Java Memory Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jetty-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jetty Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keycloak-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keycloak Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-journal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Journal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../makdown-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Makdown Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maven Notes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maven Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primary-uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary uses :
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primary uses :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-build-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As build tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-project-management-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As project management tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-between-maven-and-ant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        difference between maven and ant :
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="difference between maven and ant :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maven-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maven conventions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven-lifecycle-phases-and-plugin-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maven lifecycle phases and plugin goals :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplest-parent-pom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simplest parent POM :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scopes :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-projects-dependent-on-each-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making projects dependent on each other :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-on-packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note on Packaging :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-on-important-maven-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note on important maven concepts :
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Note on important maven concepts :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Inheritance :
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Aggregation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maven versioning :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven-commandline-options-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maven commandline options / switches
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maven commandline options / switches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multimodule-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimodule projects:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multimodule projects:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-where-your-m2-and-settingsxmls-are-which-are-being-used-by-maven-from-commandline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to find where your .m2 and settings.xmls are which are being used by maven from commandline :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-to-skip-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        command to skip tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-to-run-one-particular-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        command to run one particular test:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-management-vs-plugins-references-so" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugin-management vs plugins (references : SO)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugin-management vs plugins (references : SO)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maven-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maven profiles:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-build-project-with-forcing-all-dependencies-to-be-reloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to build project with forcing all dependencies to be reloaded
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deactivating-certain-modules-using-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deactivating certain modules using profiles:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-could-not-resolve-dependencies-for-project-due-to-blocked-mirror-for-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error: Could not resolve dependencies for project due to Blocked mirror for repositories:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releasing-artifacts-on-maven-central" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Releasing artifacts on maven central:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Releasing artifacts on maven central:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-level-summary-of-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High level summary of steps:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-list-only-the-direct-dependencies-and-exclude-transitive-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        how to list only the direct dependencies and exclude transitive dependencies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="how to list only the direct dependencies and exclude transitive dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-the-submodules-of-a-pom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        list all the submodules of a pom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-ways-to-run-maven-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        useful ways to run maven commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../md-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Md Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mkdocs Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mysql Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notes-monorepo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes Monorepo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgres_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Postgres_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quarkus%20notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quarkus Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rancher-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rancher Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../random-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redis-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redis Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-please-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Please Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sbom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sbom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonar-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sonar Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl-ssh-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ssl Ssh Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools-to-build-command-line-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools To Build Command Line Cli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vmware Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vscode-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vscode Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yaml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-working/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Working
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    While Working
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/Learnings-as-open-source-community-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learnings As Open Source Community Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/need-for-high-commit-quality-in-open-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Need For High Commit Quality In Open Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/open-banking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Banking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-manager.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/remote-team-organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remote Team Organization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/trello-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trello Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Product Management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-manager.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-mgmt/product-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-mgmt/prd-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRD notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-ux-ui-design.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Ux Ui Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-marketing.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product marketing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primary-uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary uses :
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primary uses :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-build-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As build tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-project-management-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As project management tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-between-maven-and-ant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        difference between maven and ant :
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="difference between maven and ant :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maven-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maven conventions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven-lifecycle-phases-and-plugin-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maven lifecycle phases and plugin goals :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplest-parent-pom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simplest parent POM :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scopes :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-projects-dependent-on-each-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making projects dependent on each other :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-on-packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note on Packaging :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-on-important-maven-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note on important maven concepts :
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Note on important maven concepts :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Inheritance :
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Aggregation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maven versioning :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven-commandline-options-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maven commandline options / switches
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maven commandline options / switches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multimodule-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimodule projects:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multimodule projects:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-where-your-m2-and-settingsxmls-are-which-are-being-used-by-maven-from-commandline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to find where your .m2 and settings.xmls are which are being used by maven from commandline :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-to-skip-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        command to skip tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-to-run-one-particular-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        command to run one particular test:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-management-vs-plugins-references-so" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugin-management vs plugins (references : SO)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugin-management vs plugins (references : SO)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maven-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maven profiles:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-build-project-with-forcing-all-dependencies-to-be-reloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to build project with forcing all dependencies to be reloaded
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deactivating-certain-modules-using-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deactivating certain modules using profiles:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-could-not-resolve-dependencies-for-project-due-to-blocked-mirror-for-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error: Could not resolve dependencies for project due to Blocked mirror for repositories:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releasing-artifacts-on-maven-central" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Releasing artifacts on maven central:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Releasing artifacts on maven central:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-level-summary-of-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High level summary of steps:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-list-only-the-direct-dependencies-and-exclude-transitive-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        how to list only the direct dependencies and exclude transitive dependencies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="how to list only the direct dependencies and exclude transitive dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-the-submodules-of-a-pom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        list all the submodules of a pom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-ways-to-run-maven-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        useful ways to run maven commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/ossdhaval/mysite/edit/main/source/while-coding/maven-notes.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="maven-notes">Maven Notes<a class="headerlink" href="#maven-notes" title="Permanent link">#</a></h1>
+<h3 id="primary-uses">Primary uses :<a class="headerlink" href="#primary-uses" title="Permanent link">#</a></h3>
+<h4 id="as-build-tool">As build tool<a class="headerlink" href="#as-build-tool" title="Permanent link">#</a></h4>
+<ul>
+<li>compile</li>
+<li>run tests</li>
+<li>build jars</li>
+<li>build wars and ears</li>
+<li>deploy to server</li>
+</ul>
+<h4 id="as-project-management-tool">As project management tool<a class="headerlink" href="#as-project-management-tool" title="Permanent link">#</a></h4>
+<ul>
+<li>dependency management</li>
+</ul>
+<h3 id="difference-between-maven-and-ant">difference between maven and ant :<a class="headerlink" href="#difference-between-maven-and-ant" title="Permanent link">#</a></h3>
+<p>Ant uses many configurations ( for example specifying in which folder your code is ) while maven use 'convention over configuration' and so reduces configuration. For example, when you run 'mvn compile' it assumes that code is under src/main/java.</p>
+<h4 id="maven-conventions">Maven conventions:<a class="headerlink" href="#maven-conventions" title="Permanent link">#</a></h4>
+<ul>
+<li>
+<p>Java source code is available at {base-dir}/src/main/java</p>
+</li>
+<li>
+<p>Test cases are available at {base-dir}/src/test/java</p>
+</li>
+<li>
+<p>The type of the artifact produced is a JAR file</p>
+</li>
+<li>
+<p>Compiled class files are copied to {base-dir}/target/classes</p>
+</li>
+<li>
+<p>The final artifact is copied to {base-dir}/target</p>
+</li>
+<li>
+<p>http://repo.maven.apache.org/maven2, is used as the repository URL.</p>
+</li>
+</ul>
+<h3 id="maven-lifecycle-phases-and-plugin-goals">Maven lifecycle phases and plugin goals :<a class="headerlink" href="#maven-lifecycle-phases-and-plugin-goals" title="Permanent link">#</a></h3>
+<p>We usually ask maven ( via mvn ) command to run either of two things : a lifecycle phase or a plugin goal.
+eg. 'mvn install' is a asking maven to run install phase. 'mvn archetype:generate' is asking maven to run generate goal within archetype plugin.</p>
+<p>Plugin goals are independent and they can be invoked individually. While lifecycle phases are hierarchical. When you ask maven to do 'mvn install', maven is going to run all lifecycle phases before 'install' which are 'prepare-resource, compile, test, package'.</p>
+<p>Plugin goals are actual code while lifecycle phases are logical. Maven internally calls a goal of a plugin to execute that lifecycle phase. It also has a default mapping of these phases to plugin goals ( compile phase maps to 'compiler:compiler', test maps to 'surefire:test', package maps to 'jar:jar' ). So, when you say 'mvn install', it is going to invoke lifecycle phases ( a.k.a plugin goals ) one after other.</p>
+<p>One tricky thing here : lifecycle phase to plugin goal is not one way binding. Its two way binding where goals also specify what lifecycle phase they attach to. In this case, if you run a goal, maven will invoke all phases ( and associated goals to those phases ) before running actual goal. For example : code of surefire:test plugin mentions that it is a test phase goal. So, whether you run 'mvn test' or 'mvn surefire:test' it'll have same effect. All goals attached to preceding phases will be executed in both cases..</p>
+<p>One more tricky thing : There can be phases that don't have any goal attached. And there can be goals that are not associated with any phase.</p>
+<p>it is not that there is single lifecycle phase hierarchy. There are different hierarchies for different packaging. So, what you specify in <packaging> tag will control what lifecycle phase hierarchy is invoked. So, packaging determines which one of default hierarchies are invoked, hierarchy has phases. Again based on packaging specified, maven may attach different goal to same phase. For example : 'package' phase will be attached to jar:jar if packaging is mentioned as jar. But for 'war' packaging, maven will attach 'package' phase with war:war.
+In all, based on packaging, maven will determine hierarchy and goals attached to phases.</p>
+<p>For further reference :
+http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Built-in_Lifecycle_Bindings</p>
+<h3 id="simplest-parent-pom">Simplest parent POM :<a class="headerlink" href="#simplest-parent-pom" title="Permanent link">#</a></h3>
+<p>take pom of a quickstart project and create a copy of it.
+Give a group ID. This ID will be same across all modules unless they specify thier own.
+Give artifact ID. Doesn't matter much. Give something like 'productparent'.
+Give packaging as 'pom'</p>
+<p>remove all dependencies</p>
+<p>Note :
+when you want to create a simple spring project, use below dependency :</p>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+
+<div class="highlight"><pre><span></span><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+    &lt;version&gt;4.3.10.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre></div>
+<h3 id="scopes">Scopes :<a class="headerlink" href="#scopes" title="Permanent link">#</a></h3>
+<p>There are total six scopes : 
+- compile 
+- test
+- run
+- provided
+- system 
+- and one more.</p>
+<p>'compile' scope is default. </p>
+<p>Also, anything dependency in compile scope is available in test and run as well. So, if you declare a dependency without specifying scope, that jar becomes part of the deployable bundle. So, if there is anything like servlet api etc, it is very imp that you mention explicitely that it is in 'provided' scope, otherwise your deployeble would be very heavy. Similarly, you should mention 'test' scope for junit dependencies.</p>
+<p>a good reference : https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html</p>
+<h3 id="making-projects-dependent-on-each-other">Making projects dependent on each other :<a class="headerlink" href="#making-projects-dependent-on-each-other" title="Permanent link">#</a></h3>
+<p>common utilities projects like 'shared-kernel' etc which are bundled as jar are often dependency for others. To access util projects in other projects, add following to maven of dependent project :</p>
+<p><div class="highlight"><pre><span></span><code>&lt;dependency&gt;
+  &lt;groupId&gt;com.gsg.kernel&lt;/groupId&gt;
+  &lt;artifactId&gt;gsg-shared-kernel&lt;/artifactId&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre></div>
+Don't forget to mention version tag for this.
+Also, since by default scope is compile, this jar will be bundled with your project as dependency all the way to deployment.</p>
+<h3 id="note-on-packaging">Note on Packaging :<a class="headerlink" href="#note-on-packaging" title="Permanent link">#</a></h3>
+<p>“POM” as value to <packaging> like
+<packaging>pom</packaging></p>
+<p>“POM” packaging is mentioned for a pom file where there is no out put in form of a war or ear or jar. It is usually used in a pom file along multiple modules, and these modules will actually have packaging as war etc in their pom files. Basically, used when you want a POM file as top level orchestrator between modules.</p>
+<p>When no packaging is declared, Maven assumes the artifact is the default: jar</p>
+<p>The current core packaging values are: pom, jar, maven-plugin, ejb, war, ear, rar, par</p>
+<h3 id="note-on-important-maven-concepts">Note on important maven concepts :<a class="headerlink" href="#note-on-important-maven-concepts" title="Permanent link">#</a></h3>
+<p>1)      Dependency
+2)      Inheritance
+3)      Aggregation</p>
+<h4 id="2-inheritance">2. Inheritance :<a class="headerlink" href="#2-inheritance" title="Permanent link">#</a></h4>
+<p>Elements in the POM that are merged are the following:
+- dependencies
+- developers and contributors
+- plugin lists (including reports)
+- plugin executions with matching ids
+- plugin configuration
+- resources
+inheritance is when you specify <parent> element in your child pom. Primary use of inheritance is to keep common configuration in a central POM which can be used by multiple projects. Super pom is an example of that. 
+In inheritance, parent is not aware of its children. ie: if parent is built then build for child projects will not be triggered automatically.</p>
+<h4 id="3-aggregation">3. Aggregation<a class="headerlink" href="#3-aggregation" title="Permanent link">#</a></h4>
+<p>aggregation is when you define <module> in top-level POM. Here the purpose is to club together those projects which need to be built together. Here, inheritance of plugins and dependencies ( and other elements ) will not happen but if you build the aggregated POM then the projects mentioned as modules will be triggered for build as well.</p>
+<p>useful reference : https://stackoverflow.com/questions/17482320/maven-module-inheritance-vs-aggregation )</p>
+<p><em>Note</em> : </p>
+<p>when you want to see what all dependencies your app has, you generally open POM file in eclipse and go to 'dependency Hierarchy' tab. But here, you can't see dependencies pulled by parent POM. But this is visible in 'effective POM' tab.
+'Dependency Hierarchy' only shows things defined in current POM as 'dependency'</p>
+<h3 id="maven-versioning">Maven versioning :<a class="headerlink" href="#maven-versioning" title="Permanent link">#</a></h3>
+<p>http://kylelieber.com/2012/06/maven-versioning-strategy/</p>
+<h3 id="maven-commandline-options-switches">Maven commandline options / switches<a class="headerlink" href="#maven-commandline-options-switches" title="Permanent link">#</a></h3>
+<p>Source : https://books.sonatype.com/mvnref-book/reference/running-sect-options.html</p>
+<p>-e, --errors: Produce execution error messages</p>
+<p>-X, --debug: Produce execution debug output</p>
+<p>-q, --quiet: Quiet output - only show errors</p>
+<p>The -q option only prints a message to the output if there is an error or a problem.</p>
+<p>The -X option will print an overwhelming amount of debugging log messages to the output. This option is primarily used by Maven developers and by Maven plugin developers to diagnose problems with Maven code during development. This -X option is also very useful if you are attempting to diagnose a difficult problem with a dependency or a classpath.</p>
+<p>The -e option will come in handy if you are a Maven developer, or if you need to diagnose an error in a Maven plugin. If you are reporting an unexpected problem with Maven or a Maven plugin, you will want to pass both the -X and -e options to your Maven process.</p>
+<p><code>mvn dependency:resolve</code>
+    resolve(or download) dependencies as per pom.xml</p>
+<p>To activate one or more build profiles from the command line, use the following option:
+-P, --activate-profiles <arg>
+Comma-delimited list of profiles to activate</p>
+<p>To define a property use the following option on the command line:</p>
+<p><code>-D</code>, --define <arg>: Defines a system property</p>
+<p><code>-h</code>, --help: Display help information</p>
+<p><code>mvn -h</code></p>
+<p><code>-f</code> to run mvn from a different directory than where the pom file is located</p>
+<p><code>-o</code>  don't download dependencies everytime and just use the local repo(.m2). Very useful when running tests repeatedly during dev.</p>
+<p><code>--log-file &lt;file-name&gt;</code> to write console log to a log file <code>$ mvn --log-file ./mvn.log clean compile</code></p>
+<div class="highlight"><pre><span></span><code>mvn -f jans-auth-server/pom.xml compile
+</code></pre></div>
+<h4 id="multimodule-projects">Multimodule projects:<a class="headerlink" href="#multimodule-projects" title="Permanent link">#</a></h4>
+<h5 id="failures">failures<a class="headerlink" href="#failures" title="Permanent link">#</a></h5>
+<p>The following options control how Maven reacts to a build failure in the middle of a multi-module project build:</p>
+<p><code>-fae</code>, <code>--fail-at-end</code> : 
+Only fail the build afterwards; allow all non-impacted builds to continue</p>
+<p><code>-ff</code>, <code>--fail-fast</code> : Stop at first failure in reactorized builds</p>
+<p><code>-fn</code>, <code>--fail-never</code> : NEVER fail the build, regardless of project result</p>
+<p>The -fn and -fae options are useful options for multi-module builds that are running within a continuous integration tool like Hudson. The -ff option is very useful for developers running interactive builds who want to have rapid feedback during the development cycle.</p>
+<p>if you want to skip certain modules from getting build, then use <code>-pl</code> option.</p>
+<p><code>mvn clean -fae -X -pl \!module1,\!module2 jacoco:prepare-agent test install jacoco:report</code></p>
+<p>Or you can set profile to only build other modules.</p>
+<p>Source : https://books.sonatype.com/mvnref-book/reference/_using_advanced_reactor_options.html</p>
+<h3 id="how-to-find-where-your-m2-and-settingsxmls-are-which-are-being-used-by-maven-from-commandline">How to find where your .m2 and settings.xmls are which are being used by maven from commandline :<a class="headerlink" href="#how-to-find-where-your-m2-and-settingsxmls-are-which-are-being-used-by-maven-from-commandline" title="Permanent link">#</a></h3>
+<p>Remember that settings.xml does not get created by default.
+just fire <code>mvn -X</code> command. This will trigger a build which will probably fail, but it'll also print all the information on console like below :</p>
+<div class="highlight"><pre><span></span><code>dhaval@dhaval-Lenovo-U41-70:~/code/ij-projects/java8/Java 8 certification$ mvn -X
+Apache Maven 3.6.3
+Maven home: /usr/share/maven
+Java version: 11.0.8, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en_IN, platform encoding: UTF-8
+OS name: &quot;linux&quot;, version: &quot;5.4.0-47-generic&quot;, arch: &quot;amd64&quot;, family: &quot;unix&quot;
+.
+.
+.
+[DEBUG] Reading global settings from /usr/share/maven/conf/settings.xml
+[DEBUG] Reading user settings from /home/dhaval/.m2/settings.xml
+[DEBUG] Reading global toolchains from /usr/share/maven/conf/toolchains.xml
+[DEBUG] Reading user toolchains from /home/dhaval/.m2/toolchains.xml
+[DEBUG] Using local repository at /home/dhaval/.m2/repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /home/dhaval/.m2/repository
+</code></pre></div>
+<p>so you'll see all the important info in this.</p>
+<h3 id="command-to-skip-tests">command to skip tests<a class="headerlink" href="#command-to-skip-tests" title="Permanent link">#</a></h3>
+<p>difference between <code>mvn install -DskipTests</code> and <code>mvn install -Dmaven.test.skip=true</code></p>
+<p>First one will compile and create tests jar files but will not run the tests while the second one will not even compile the test classes and will not run it. <a href="https://stackoverflow.com/a/30275449/2331225">Ref</a></p>
+<h3 id="command-to-run-one-particular-test">command to run one particular test:<a class="headerlink" href="#command-to-run-one-particular-test" title="Permanent link">#</a></h3>
+<p>`mvn -Dcfg=test.dd.jans.io -Dtest=AccessTokenAsJwtHttpTest#accessTokenAsJwt -DfailIfNoTests=false -Dcvss-score=9 -Dfindbugs.skip=true -Ddependency.check=false clean test</p>
+<p>Starting with the Maven 2.1 release, there are new Maven command line options which allow you to manipulate the way that Maven will build multimodule projects. These new options are:</p>
+<p>-rf, --resume-from: Resume reactor from specified project</p>
+<p>-pl, --projects: Build specified reactor projects instead of all projects</p>
+<p>-am, --also-make: If project list is specified, also build projects required by the list</p>
+<p>-amd, --also-make-dependents: If project list is specified, also build projects that depend on projects on the list</p>
+<h3 id="plugin-management-vs-plugins-references-so">Plugin-management vs plugins (references : <a href="https://stackoverflow.com/questions/10483180/what-is-pluginmanagement-in-mavens-pom-xml">SO</a>)<a class="headerlink" href="#plugin-management-vs-plugins-references-so" title="Permanent link">#</a></h3>
+<p>In pom.xml, you may see plugin definitions at two places.
+1. Under </p>
+<div class="highlight"><pre><span></span><code>&lt;build&gt;
+    &lt;pluginManagement&gt;
+        &lt;plugins&gt;
+</code></pre></div>
+<ol>
+<li>Under </li>
+</ol>
+<div class="highlight"><pre><span></span><code>&lt;build&gt;
+    &lt;plugins&gt;
+</code></pre></div>
+<p>it is important to understand the difference when <code>&lt;plugins&gt;</code> appear under <code>&lt;pluginManagement&gt;</code>, and when
+same tag appears without <code>&lt;pluginManagement&gt;</code>.</p>
+<p><code>&lt;plugins&gt;</code> mentioned under <code>&lt;pluginManagement&gt;</code> tag, are just definition. They provide a central place
+to define plugin version, plugin configuration etc in an multi-module project where there are 
+multiple pom.xml files in different modules. All of them can not use same plugin configuration as defined
+in <code>&lt;pluginManagement&gt;</code> in parent or super pom. When you define plugin under <code>&lt;pluginManagement&gt;</code>, you 
+are actually not activating it. It is just a common definition.</p>
+<p>To activate plugins, you have to define same plugins in <code>&lt;plugins&gt;</code> tag outside of <code>&lt;pluginManagement&gt;</code>.
+You can do this either in same same pom where <code>&lt;pluginManagement&gt;</code> is defined, or in individual module
+pom files. But now, you don't have to define version or any other configuration for those plugins which 
+are already defined in the <code>&lt;pluginManagement&gt;</code>. Just mention <code>group</code> and <code>artifactId</code> and maven will 
+pickup rest of the details from <code>&lt;pluginManagement&gt;</code>. Remember, when you are mentioning <code>&lt;executions&gt;</code>, 
+you have to do it in <code>&lt;plugins&gt;</code> outside of <code>&lt;pluginManagement&gt;</code></p>
+<p>It is a classic mistake to put plugin information in <code>&lt;pluginManagement&gt;</code> and expect it to start working.
+I made this mistake when integrating JaCoCo in a multimodule project.</p>
+<h4 id="maven-profiles">Maven profiles:<a class="headerlink" href="#maven-profiles" title="Permanent link">#</a></h4>
+<p>reference : https://maven.apache.org/guides/introduction/introduction-to-profiles.html</p>
+<ul>
+<li>Profiles override or add configuration in effective POM at build time</li>
+<li>You can activate profiles automatically by setting certain env variable or by presence of certain file or many other ways.</li>
+<li>From commandline you can use option <code>-p</code> like below:
+<code>mvn groupId:artifactId:goal -P profile-1,profile-2</code></li>
+</ul>
+<p>Profiles specified in the POM can modify the following POM elements:</p>
+<div class="highlight"><pre><span></span><code>&lt;repositories&gt;
+&lt;pluginRepositories&gt;
+&lt;dependencies&gt;
+&lt;plugins&gt;
+&lt;properties&gt; (not actually available in the main POM, but used behind the scenes)
+&lt;modules&gt;
+&lt;reports&gt;
+&lt;reporting&gt;
+&lt;dependencyManagement&gt;
+&lt;distributionManagement&gt;
+</code></pre></div>
+<p>a subset of the <code>&lt;build&gt;</code> element, which consists of:</p>
+<div class="highlight"><pre><span></span><code>&lt;defaultGoal&gt;
+&lt;resources&gt;
+&lt;testResources&gt;
+&lt;directory&gt;
+&lt;finalName&gt;
+&lt;filters&gt;
+&lt;pluginManagement&gt;
+&lt;plugins&gt;
+</code></pre></div>
+<h3 id="how-to-build-project-with-forcing-all-dependencies-to-be-reloaded">How to build project with forcing all dependencies to be reloaded<a class="headerlink" href="#how-to-build-project-with-forcing-all-dependencies-to-be-reloaded" title="Permanent link">#</a></h3>
+<p>There are two commands.
+  1) Using <code>-U</code> option ( eg. <code>mvn -U clean install' ). This will force all the snapshot dependencies to be reloaded from respective maven repos.
+  2) Using</code>dependency:purge-local-repository<code>option (eg.</code>mvn dependency:purge-local-repository compile install` ). This is similar to deleting .m2 and reloading everything including release dependencies
+more details <a href="https://maven.apache.org/plugins/maven-dependency-plugin/index.html">here</a></p>
+<h3 id="troubleshooting">Troubleshooting:<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h3>
+<h4 id="deactivating-certain-modules-using-profiles">deactivating certain modules using profiles:<a class="headerlink" href="#deactivating-certain-modules-using-profiles" title="Permanent link">#</a></h4>
+<p>Ideally, as per above, if you put <code>&lt;modules&gt;</code> tag in a profile and mention list of <code>&lt;module&gt;</code> under it, then this should override the modules listed under <code>&lt;project&gt;</code> in same pom. But this doesn't happen. Why I don't know. I faced it and also see <a href="https://stackoverflow.com/questions/13381179/using-profiles-to-control-which-maven-modules-are-built">here</a>. <code>Actual maven behaviour seems to be that that one profile can override modules on if they are defined in another profile.</code> So the solution is that you remove modules from POM's <code>&lt;project&gt;</code> and create a profile that loads by default that lists superset of modules, then you also should have another profile that lists subset of modules that you want to run. Now, when you run <code>mvn</code> by mentioning name of profile with subset, the default profile will not load. Hence only subset mentioned in your profile will be taken into account.</p>
+<p>Another maven behaviour which is documented but not very much known is that default profile mentioned in POM xml using <code>&lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</code> will only be activated if there are no other profiles getting activated at the time of build. So, it is either the default profile or other profiles that get active. Most multimodule projects run with multiple profiles active at a time, hence default profiles are not very useful in multimodule projects. And due to this behaviour, the above solution of deactivating cetain modules using profiles also not usable. Plus, it seems this is <a href="https://blog.soebes.de/blog/2013/11/09/why-is-it-bad-to-activate-slash-deactive-modules-by-profiles-in-maven/">not recommended too</a></p>
+<p>Finally, I have to deactivate modules using reactor commandline argument <code>-pl</code> like below:</p>
+<p><code>mvn clean -fae -X -pl \!module1,\!module2 jacoco:prepare-agent test install jacoco:report</code></p>
+<h4 id="error-could-not-resolve-dependencies-for-project-due-to-blocked-mirror-for-repositories">Error: <code>Could not resolve dependencies for project</code> due to <code>Blocked mirror for repositories</code>:<a class="headerlink" href="#error-could-not-resolve-dependencies-for-project-due-to-blocked-mirror-for-repositories" title="Permanent link">#</a></h4>
+<div class="codehilite"><pre><span></span><code>I got this when I was trying to run maven build using github actions.
+</code></pre></div>
+
+<h2 id="releasing-artifacts-on-maven-central">Releasing artifacts on maven central:<a class="headerlink" href="#releasing-artifacts-on-maven-central" title="Permanent link">#</a></h2>
+<p>Reference: 
+- https://itnext.io/publishing-artifact-to-maven-central-b160634e5268
+- for dealing with gpg keys: https://central.sonatype.org/publish/requirements/gpg/
+- Nice article to understand why we can't change artifact (apart from snapshot) once it is released on maven central 
+  https://central.sonatype.org/faq/can-i-change-a-component/
+- related GitHub <a href="https://github.com/JanssenProject/jans/issues/316">issue</a> for janssen</p>
+<p>Notes:</p>
+<ul>
+<li>follow steps in <a href="https://itnext.io/publishing-artifact-to-maven-central-b160634e5268">this</a> link</li>
+<li>Few important notes<ul>
+<li>Steps to prove your domain will be new</li>
+<li>in real life scenario, you'll have to change entries in settings.xml of jenkins. Or may be find out other way of providing same information. Like giving details to a maven plugin in pom.xml of the project which reads particular details from environment variables.</li>
+</ul>
+</li>
+</ul>
+<h3 id="high-level-summary-of-steps">High level summary of steps:<a class="headerlink" href="#high-level-summary-of-steps" title="Permanent link">#</a></h3>
+<ul>
+<li>pom.xml: change group id to <code>io.github.ossdhaval</code></li>
+<li>Sonatype jira:</li>
+<li>open an account on <code>https://issues.sonatype.org/</code>. Log in name and password that you create here will be used to authenticate while uploading artifacts</li>
+<li>then open an new issue similar to <a href="https://issues.sonatype.org/browse/OSSRH-74390">this</a></li>
+<li>here, as an org, you need to prove that <code>io.github.ossdhaval</code> is owned by you. For this, they asked to create a temporary repo. For org like janssen, may be same will apply. Or may be some other way. <code>Need to check</code>.</li>
+<li>~/.m2/settings.xml:</li>
+<li>
+<p>```
+<settings xmlns="http://maven.apache.org/settings/1.0.0">
+    <servers>
+        <server>
+            <id>ossrh</id>
+            <!-- Your sonatype username -->
+            <username>dhavaltdesai</username>
+            <!-- Your sonatype password -->
+            <password>open$5Sonatype</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>ossrh</id>
+            <properties>
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.passphrase>tomy</gpg.passphrase>
+            </properties>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>ossrh</activeProfile>
+    </activeProfiles>
+</settings>
+<div class="highlight"><pre><span></span><code> - Here, when doing this from Jenkins, we need to find out how to pass passphrase and login creds using environment variables. There are some pointers in [this](https://itnext.io/publishing-artifact-to-maven-central-b160634e5268) article.
+
+- pom.xml
+  make these changes:
+    ```
+    --- a/pom.xml
++++ b/pom.xml
+@@ -4,7 +4,7 @@
+   xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+-  &lt;groupId&gt;com.gsg.kernel&lt;/groupId&gt;
++  &lt;groupId&gt;io.github.ossdhaval&lt;/groupId&gt;
+   &lt;artifactId&gt;gsg-shared-kernel&lt;/artifactId&gt;
+   &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+   &lt;packaging&gt;jar&lt;/packaging&gt;
+@@ -40,11 +40,11 @@
+   &lt;distributionManagement&gt;
+     &lt;snapshotRepository&gt;
+       &lt;id&gt;ossrh&lt;/id&gt;
+-      &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots&lt;/url&gt;
++      &lt;url&gt;https://s01.oss.sonatype.org/content/repositories/snapshots&lt;/url&gt;
+     &lt;/snapshotRepository&gt;
+     &lt;repository&gt;
+       &lt;id&gt;ossrh&lt;/id&gt;
+-      &lt;url&gt;https://oss.sonatype.org/service/local/staging/deploy/maven2/&lt;/url&gt;
++      &lt;url&gt;https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/&lt;/url&gt;
+     &lt;/repository&gt;
+   &lt;/distributionManagement&gt;
+
+
+@@ -110,4 +110,70 @@
+       &lt;/plugins&gt;
+     &lt;/pluginManagement&gt;
+   &lt;/build&gt;
++
++  &lt;profiles&gt;
++    &lt;profile&gt;
++      &lt;id&gt;release&lt;/id&gt;
++      &lt;build&gt;
++        &lt;plugins&gt;
++          &lt;plugin&gt;
++            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
++            &lt;artifactId&gt;maven-javadoc-plugin&lt;/artifactId&gt;
++            &lt;version&gt;3.0.0&lt;/version&gt;
++            &lt;executions&gt;
++              &lt;execution&gt;
++                &lt;id&gt;attach-javadocs&lt;/id&gt;
++                &lt;goals&gt;
++                  &lt;goal&gt;jar&lt;/goal&gt;
++                &lt;/goals&gt;
++              &lt;/execution&gt;
++            &lt;/executions&gt;
++          &lt;/plugin&gt;
++          &lt;plugin&gt;
++            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
++            &lt;artifactId&gt;maven-source-plugin&lt;/artifactId&gt;
++            &lt;version&gt;3.0.1&lt;/version&gt;
+    +            &lt;executions&gt;
++              &lt;execution&gt;
++                &lt;id&gt;attach-sources&lt;/id&gt;
++                &lt;goals&gt;
++                  &lt;goal&gt;jar&lt;/goal&gt;
++                &lt;/goals&gt;
++              &lt;/execution&gt;
++            &lt;/executions&gt;
++          &lt;/plugin&gt;
++          &lt;plugin&gt;
++            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
++            &lt;artifactId&gt;maven-gpg-plugin&lt;/artifactId&gt;
++            &lt;version&gt;1.6&lt;/version&gt;
++            &lt;executions&gt;
++              &lt;execution&gt;
++                &lt;id&gt;sign-artifacts&lt;/id&gt;
++                &lt;phase&gt;verify&lt;/phase&gt;
++                &lt;goals&gt;
++                  &lt;goal&gt;sign&lt;/goal&gt;
++                &lt;/goals&gt;
++                &lt;configuration&gt;
++                  &lt;keyname&gt;0x2D78228A&lt;/keyname&gt;
++                  &lt;passphraseServerId&gt;0x2D78228A&lt;/passphraseServerId&gt;
++                &lt;/configuration&gt;
++              &lt;/execution&gt;
++            &lt;/executions&gt;
++  &lt;/plugin&gt;
++          &lt;plugin&gt;
++            &lt;groupId&gt;org.sonatype.plugins&lt;/groupId&gt;
++            &lt;artifactId&gt;nexus-staging-maven-plugin&lt;/artifactId&gt;
++            &lt;version&gt;1.6.8&lt;/version&gt;
++            &lt;extensions&gt;true&lt;/extensions&gt;
++            &lt;configuration&gt;
++              &lt;serverId&gt;ossrh&lt;/serverId&gt;
++              &lt;nexusUrl&gt;https://s01.oss.sonatype.org/&lt;/nexusUrl&gt;
++              &lt;autoReleaseAfterClose&gt;true&lt;/autoReleaseAfterClose&gt;
++            &lt;/configuration&gt;
++          &lt;/plugin&gt;
++        &lt;/plugins&gt;
++      &lt;/build&gt;
++    &lt;/profile&gt;
++  &lt;/profiles&gt;
+</code></pre></div></p>
+</li>
+<li>
+<p>Once this is done, run these three commands as explained in <code>release</code> section of <a href="https://itnext.io/publishing-artifact-to-maven-central-b160634e5268">this</a></p>
+</li>
+</ul>
+<h2 id="how-to-list-only-the-direct-dependencies-and-exclude-transitive-dependencies">how to list only the direct dependencies and exclude transitive dependencies<a class="headerlink" href="#how-to-list-only-the-direct-dependencies-and-exclude-transitive-dependencies" title="Permanent link">#</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="err">```</span>
+<span class="n">mvn</span><span class="w"> </span><span class="nl">dependency</span><span class="p">:</span><span class="n">list</span><span class="w"> </span><span class="o">-</span><span class="n">DexcludeTransitive</span><span class="o">=</span><span class="k">true</span>
+<span class="err">```</span>
+
+<span class="k">For</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">[</span><span class="n">here</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">maven</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span><span class="n">maven</span><span class="o">-</span><span class="n">dependency</span><span class="o">-</span><span class="n">plugin</span><span class="o">/</span><span class="n">list</span><span class="o">-</span><span class="n">mojo</span><span class="p">.</span><span class="n">html#dependency</span><span class="o">-</span><span class="n">list</span><span class="p">)</span>
+
+<span class="n">similarly</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">dependencies</span><span class="w"> </span><span class="n">excluding</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">compile</span><span class="w"> </span><span class="k">scope</span>
+
+<span class="err">```</span>
+<span class="n">mvn</span><span class="w"> </span><span class="nl">dependency</span><span class="p">:</span><span class="n">list</span><span class="w"> </span><span class="o">-</span><span class="n">DexcludeTransitive</span><span class="o">=</span><span class="k">true</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="o">-</span><span class="n">DexcludeScope</span><span class="o">=</span><span class="n">compile</span>
+<span class="err">```</span>
+
+<span class="n">finding</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">dependencies</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">multimodule</span><span class="w"> </span><span class="n">maven</span><span class="w"> </span><span class="n">project</span>
+
+<span class="err">```</span>
+<span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="n">pom</span><span class="p">.</span><span class="nc">xml</span><span class="w"> </span><span class="o">-</span><span class="k">exec</span><span class="w"> </span><span class="n">mvn</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="err">{}</span><span class="w"> </span><span class="nl">dependency</span><span class="p">:</span><span class="n">list</span><span class="w"> </span><span class="o">-</span><span class="n">DexcludeTransitive</span><span class="o">=</span><span class="k">true</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="o">-</span><span class="n">DexcludeScope</span><span class="o">=</span><span class="n">compile</span><span class="w"> </span><span class="err">\</span><span class="p">;</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">~/</span><span class="n">temp</span><span class="o">/</span><span class="n">test</span><span class="o">-</span><span class="n">deps</span><span class="p">.</span><span class="n">txt</span>
+<span class="err">```</span>
+</code></pre></div>
+
+<h3 id="list-all-the-submodules-of-a-pom">list all the submodules of a pom<a class="headerlink" href="#list-all-the-submodules-of-a-pom" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>mvn help:evaluate -Dexpression=project.modules -q -DforceStdout | tail -n +2 | head -n -1 | sed &#39;s/\s*&lt;.*&gt;\(.*\)&lt;.*&gt;/\1/&#39;
+</code></pre></div>
+<h3 id="useful-ways-to-run-maven-commands">useful ways to run maven commands<a class="headerlink" href="#useful-ways-to-run-maven-commands" title="Permanent link">#</a></h3>
+<p><div class="highlight"><pre><span></span><code>mvn test | egrep &#39;Running|Tests|TEST&#39;
+</code></pre></div>
+above is useful in seeing progress as each test gets executed.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.autohide - search.suggest - search.highlight", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,4933 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../while-coding/python-notes/">
+      
+      
+        <link rel="next" href="../">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Learnings As Open Source Community Manager - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#as-community-manager" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Learnings As Open Source Community Manager
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ossdhaval/mysite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../while-coding/API-driven-dev/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  While Coding
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  While Working
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ossdhaval/mysite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-coding/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Coding
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    While Coding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/API-driven-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api Driven Dev
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/CDI-weld-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cdi Weld Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-coding/IAM/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iam
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Iam
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/IAM/OAuth2_oidc_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oauth2_Oidc_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/IAM/SCIM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/IAM/SIOP-DID/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siop Did
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/IAM/api-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/IAM/cryptography-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cryptography Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/IAM/jwt-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jwt Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/IAM/zero-trust-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Trust Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/IAM/authorization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authorization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/LXC-LXD-linux-containers-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lxc Lxd Linux Containers Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/SUSE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-coding/ai/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ai
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-coding/ai/SDLC-tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sdlc Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sdlc Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/ai/SDLC-tools/ai-tools-for-coding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai Tools For Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/ai/machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/ai/course-notes-udemy-ml-ds-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ML DS AI Udemy course notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/ai/prompt-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/ai/rag-agentic-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rag Agentic Ai
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/ai/mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/apache_on_ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apache_On_Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/aws-developer-associate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aws Developer Associate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/cedar-policy-authoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cedar Policy Authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-coding/certifications/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certifications
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Certifications
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-coding/certifications/GitHub/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10_2" id="__nav_2_10_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Github
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/certifications/GitHub/github-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/container-security-cosign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Container Security Cosign
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/containerisation-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containerisation Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/curl-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curl Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Devops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/digital-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/docker-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/ff4j-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ff4J Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/git-commands-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Commands Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/github-actions-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Actions Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/github-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/gitter-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gitter Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/install-docker-on-suse-enterprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install Docker On Suse Enterprise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/intellijIdea_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intellijidea_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_26" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-coding/janssen/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_26" id="__nav_2_26_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_26">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Janssen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/janssen/agama-language-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agama Language Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/janssen/jans-cn-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jans Cn Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/janssen/janssen-code-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Code Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/janssen/janssen-log-analysis-with-test-load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Log Analysis With Test Load
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/janssen/janssen-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_27" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-coding/java-language/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java Language
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_27" id="__nav_2_27_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_27">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Java Language
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/java-language/creating-custom-annotations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Custom Annotations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/java-language/debugging-java-memory-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging Java Memory Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/jetty-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jetty Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/keycloak-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keycloak Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/kubernetes-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/learning-journal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Journal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/makdown-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Makdown Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/maven-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maven Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/md-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Md Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/mkdocs-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mkdocs Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/mysql-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mysql Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/notes-monorepo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes Monorepo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/postgres_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Postgres_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/quarkus%20notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quarkus Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/rancher-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rancher Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/random-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/redis-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redis Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/release-please-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Please Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/sbom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sbom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/sonar-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sonar Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/ssl-ssh-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ssl Ssh Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/tools-to-build-command-line-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools To Build Command Line Cli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/vmware-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vmware Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/vscode-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vscode Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/web-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yaml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-coding/python-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Working
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    While Working
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learnings As Open Source Community Manager
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learnings As Open Source Community Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About documentation :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference material
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference material">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#books" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        books
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good articles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live examples:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#articles-and-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Articles and sites:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-house-holding-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regular house holding checks :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experience
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rolling-out-branch-protections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rolling out branch protections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rolling out branch protections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preconditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        preconditions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-roll-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to roll out:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems-faced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        problems faced
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-github-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful github automation:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-parameters-for-oss-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance parameters for OSS project:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-triage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        issue triage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tech-writing-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tech writing notes:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tech writing notes:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#good-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-meetings-and-calendar-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setup meetings and calendar app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-organize-teams-in-an-open-source-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        how to organize teams in an open source project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="how to organize teams in an open source project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-diagrams-and-flowcharts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        create diagrams and flowcharts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approaches-to-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        approaches to documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storing-images-in-your-gh-repo-for-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        storing images in your GH repo for documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branding-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        branding guidelines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-plans-and-other-project-management-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        test plans and other project management documents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oss-projects-writting-test-cases-for-manual-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OSS projects, writting test cases for manual tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosting-source-code-documentation-like-javadocs-using-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosting source code documentation (like Javadocs) using mkdocs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-markdown-linting-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        running markdown linting tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-source-projects-and-secure-supply-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open source projects and secure supply chain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-for-providing-on-demand-k8s-instances-to-devs-and-testers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tool for providing on-demand k8s instances to devs and testers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-handle-discussions-on-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to handle discussions on issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-handle-discussions-on-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to handle discussions on issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-revert-certain-decisions-which-were-not-received-well-by-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        how to revert certain decisions which were not received well by community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-communicate-big-and-complex-roadmap-change-and-engineering-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to communicate big and complex roadmap change and engineering choices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-when-adding-a-new-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        checklist when adding a new module
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-the-role-of-opensource-releasecommunity-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        in the role of opensource release/community manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaining-stars-and-forks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaining stars and forks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-clacontributor-license-agreement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up CLA(contributor license agreement)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up CLA(contributor license agreement)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        difference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../need-for-high-commit-quality-in-open-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Need For High Commit Quality In Open Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-banking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Banking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-manager.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remote-team-organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remote Team Organization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trello-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trello Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Product Management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-manager.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-mgmt/product-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-mgmt/prd-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRD notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-ux-ui-design.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Ux Ui Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-marketing.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product marketing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About documentation :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference material
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference material">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#books" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        books
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good articles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live examples:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#articles-and-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Articles and sites:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-house-holding-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regular house holding checks :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experience
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rolling-out-branch-protections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rolling out branch protections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rolling out branch protections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preconditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        preconditions:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-roll-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to roll out:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems-faced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        problems faced
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-github-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful github automation:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-parameters-for-oss-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance parameters for OSS project:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-triage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        issue triage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tech-writing-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tech writing notes:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tech writing notes:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#good-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-meetings-and-calendar-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setup meetings and calendar app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-organize-teams-in-an-open-source-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        how to organize teams in an open source project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="how to organize teams in an open source project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-diagrams-and-flowcharts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        create diagrams and flowcharts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approaches-to-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        approaches to documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storing-images-in-your-gh-repo-for-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        storing images in your GH repo for documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branding-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        branding guidelines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-plans-and-other-project-management-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        test plans and other project management documents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oss-projects-writting-test-cases-for-manual-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OSS projects, writting test cases for manual tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosting-source-code-documentation-like-javadocs-using-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosting source code documentation (like Javadocs) using mkdocs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-markdown-linting-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        running markdown linting tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-source-projects-and-secure-supply-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open source projects and secure supply chain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-for-providing-on-demand-k8s-instances-to-devs-and-testers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tool for providing on-demand k8s instances to devs and testers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-handle-discussions-on-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to handle discussions on issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-handle-discussions-on-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to handle discussions on issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-revert-certain-decisions-which-were-not-received-well-by-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        how to revert certain decisions which were not received well by community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-communicate-big-and-complex-roadmap-change-and-engineering-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to communicate big and complex roadmap change and engineering choices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-when-adding-a-new-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        checklist when adding a new module
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-the-role-of-opensource-releasecommunity-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        in the role of opensource release/community manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaining-stars-and-forks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaining stars and forks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-clacontributor-license-agreement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up CLA(contributor license agreement)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up CLA(contributor license agreement)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        difference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/ossdhaval/mysite/edit/main/source/while-working/Learnings-as-open-source-community-manager.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="as-community-manager">As community manager<a class="headerlink" href="#as-community-manager" title="Permanent link">#</a></h1>
+<p>My learnings"</p>
+<h3 id="about-documentation">About documentation :<a class="headerlink" href="#about-documentation" title="Permanent link">#</a></h3>
+<p>There could be three kinds of documentation:
+1) Introduction and marketing material
+2) Installation guides
+3) Configuration guides ( like how to use various configuration option, enable disable features, setup basic usecases )
+4) Technical documentation (this is technical documentation of code, modules and architecture)
+5) developer documentation (How to setup workspace, run tests, remote debug,Contribution process, guidelines etc)
+6) dashboard for github data and saved queries: https://github.com/dlvhdr/gh-dash</p>
+<p>All of above documentation can also be assisted with video tutorials, FAQs etc</p>
+<p>Google technical writting style: https://developers.google.com/tech-writing</p>
+<h3 id="reference-material">Reference material<a class="headerlink" href="#reference-material" title="Permanent link">#</a></h3>
+<h4 id="books">books<a class="headerlink" href="#books" title="Permanent link">#</a></h4>
+<ul>
+<li>https://www.amazon.com/Art-Community-Building-New-Participation-ebook-dp-B008224FMC/dp/B008224FMC/ref=mt_other?_encoding=UTF8&amp;me=&amp;qid= </li>
+</ul>
+<h4 id="videos">videos<a class="headerlink" href="#videos" title="Permanent link">#</a></h4>
+<ul>
+<li>https://www.youtube.com/watch?v=nGKSnMdBFsk https://www.youtube.com/watch?v=Js0gW8pAnh4</li>
+<li>quick and informative : https://www.youtube.com/watch?v=b1pyh2XCyrg</li>
+</ul>
+<h4 id="good-articles">Good articles<a class="headerlink" href="#good-articles" title="Permanent link">#</a></h4>
+<ul>
+<li>good list of tooling with details : https://www.infoq.com/presentations/monzo-tools-deploy/?itm_source=infoq&amp;itm_medium=videos_homepage&amp;itm_campaign=videos_row1</li>
+</ul>
+<h4 id="good-tools">Good tools<a class="headerlink" href="#good-tools" title="Permanent link">#</a></h4>
+<ul>
+<li>Developer portals : https://backstage.io/</li>
+<li>cloud software licensing: https://licensespring.com/</li>
+<li>use <a href="https://www.stepsecurity.io/">stepsecurity</a> to improve security of github actions workflow and to help conform to OpenSSF standards</li>
+<li>scan open source project dependencies and risks: https://scanoss.com/</li>
+<li>is an opensource library good and credible and secure: https://stacklok.com/</li>
+<li>database explorer: https://azimutt.app/</li>
+<li>managing contributor license agreement (ICLA/CCLA): <a href="https://docs.linuxfoundation.org/lfx/easycla">EasyCLA</a> from Linux Foundation</li>
+<li>enabling localhost with HTTPS using a certificate that is not self-signed: https://anchor.dev/docs/lcl-host/why-lcl</li>
+<li>Good sites to find good first issues to contribute: <a href="https://up-for-grabs.net/#/">up for grabs</a>, <a href="https://www.codetriage.com/">code triage</a>, <a href="https://forgoodfirstissue.github.com/">for good first issue</a></li>
+<li>Github repo analytics: <a href="https://ossinsight.io/analyze/JanssenProject/jans#overview">ossinsight</a>, <a href="https://www.star-history.com/#JanssenProject/jans&amp;Date">starhistory</a>, Linux foundation tools under <a href="">LFX</a></li>
+</ul>
+<p>Flow of implementation of licensespring in gluu flix licensing:
+<img alt="image" src="https://user-images.githubusercontent.com/343411/214495951-385f4b4e-7830-4d2d-b33f-e233baf9ea40.png" /></p>
+<h4 id="live-examples">Live examples:<a class="headerlink" href="#live-examples" title="Permanent link">#</a></h4>
+<p>On community chat platform (gitter/slack) :
+as understood from what 'Pop' user is doing on Falco slack channel.
+- welcome new users
+- setup community calls ( ones a week ). and send reminders.
+- setup and conduct surveys
+- respond to tech queries if possible.
+- encourage people to appreciate others like this :
+https://kubernetes.slack.com/archives/CMWH3EH32/p1617024285139200</p>
+<p>Large open-source projects that are actively managed and can be looked at as reference:
+<a href="https://github.com/spring-projects">spring</a>
+<a href="https://github.com/kubernetes/kubernetes">kubernetes</a>
+<a href="https://github.com/angular/angular">Angular</a>
+<a href="https://github.com/falcosecurity/falco">falco</a></p>
+<h4 id="articles-and-sites">Articles and sites:<a class="headerlink" href="#articles-and-sites" title="Permanent link">#</a></h4>
+<ul>
+<li>https://opensource.guide/best-practices/</li>
+<li>https://18f.github.io/open-source-program/pages/maintainer_guidelines/</li>
+<li>guidelines for labels : https://seantrane.com/posts/logical-colorful-github-labels-18230/</li>
+<li>good github workflow for contributors: https://www.kubernetes.dev/docs/guide/github-workflow/</li>
+<li>github's own roadmap managed via project board: https://github.com/github/roadmap/projects/1</li>
+<li>About open source license trends and which are most used: https://innovationgraph.github.com/global-metrics/licenses</li>
+<li>analytics and trend reports on github data. Very useful to understand trends. https://innovationgraph.github.com/</li>
+<li>good guidelines around what are the rights and responsibilities of moderators of a repo: https://squidfunk.github.io/mkdocs-material/contributing/#rights-and-responsibilities</li>
+<li>good checklist for community for using comments, issues and discussions: https://squidfunk.github.io/mkdocs-material/contributing/#checklist</li>
+<li>Real life (VSCode) Good OSS project management documentation: https://github.com/microsoft/vscode/wiki</li>
+</ul>
+<h3 id="regular-house-holding-checks">Regular house holding checks :<a class="headerlink" href="#regular-house-holding-checks" title="Permanent link">#</a></h3>
+<ul>
+<li>stale branches across repos</li>
+<li>(for sometime)Track PR merges and see if they had met quality criteria and let code owner and developer know</li>
+<li>issue triage</li>
+<li>are all the automation successfully running? For example, github actions can fail silently. You have to periodically check their logs to ensure that there are no errors. For instance, one of my github action script was referring to a module in the build command. Later this module was removed from the project and github action script started failing, but nobody knew until a person spotted it. Note: I found out that I was not paying attention to my emails. Github sends email with subject similar to <code>[JanssenProject/jans-auth-server] Run failed: Code quality check - feature-flags-using-ff4j (276ae10)</code> in case there is a failure in the action run .</li>
+<li>check automated non-dependabot PRs to be merged on Non-CN repos</li>
+<li>check github notifications </li>
+<li>PR backlog across all repos and aging PRs</li>
+<li>backlog should not cross certain number of open PR threshold and aging of PRs shouldn't be more than certain days.</li>
+</ul>
+<h3 id="experience">Experience<a class="headerlink" href="#experience" title="Permanent link">#</a></h3>
+<h4 id="rolling-out-branch-protections">Rolling out branch protections<a class="headerlink" href="#rolling-out-branch-protections" title="Permanent link">#</a></h4>
+<p>I recently rolled out branch protections on all the Jans repos. Here I am noting how did we do it, what were the issues and hiccups faced.</p>
+<h5 id="preconditions">preconditions:<a class="headerlink" href="#preconditions" title="Permanent link">#</a></h5>
+<ul>
+<li>CODEOWNERs should be in place</li>
+<li>though it is not a requirement from github, having two or more code owner for each repo will let people know who is going to shephard that repo. Who is going to be the go to person for that repo. When you turn on protections like <code>Require PR review before merge</code> then people would want to know who should they reach out to for review. If your code owner is set then github automatically suggests codeowner as reviewer. Ideally though, reviewer can be anyone from the team who is well aware of the code. Codeowner is usually a person who is responsible for that repo and generally the senior most developer but he/she can't be a reviewer everywhere. </li>
+</ul>
+<h5 id="how-to-roll-out">How to roll out:<a class="headerlink" href="#how-to-roll-out" title="Permanent link">#</a></h5>
+<ul>
+<li>we rolled out below mentioned protections</li>
+<li>for master</li>
+<li>
+<p>for all other</p>
+</li>
+<li>
+<p>how we should have done it:</p>
+</li>
+<li>signed commits and deletion of protected branches first.</li>
+<li>enabling and mendating a check where github action builds code in the PR</li>
+<li>Requiring PRs to be reviewed and approved before merge</li>
+</ul>
+<h5 id="problems-faced">problems faced<a class="headerlink" href="#problems-faced" title="Permanent link">#</a></h5>
+<ul>
+<li>Branches that were created before we enabled protections had unsigned commits.</li>
+<li>Some of the master builds were broken since before we enabled protections (jans-orm had failed testcases, jans-client-api code was not up-to-date with corresponding changes in the jans-auth-client)</li>
+<li>problem with code owner not able to merge without approval from someone else ( may be another code owner)</li>
+</ul>
+<h3 id="useful-github-automation">Useful github automation:<a class="headerlink" href="#useful-github-automation" title="Permanent link">#</a></h3>
+<ul>
+<li>If you have PRs that get auto generated by bots and then it is a routine task to just merge those PRs then, to automate that routine task, enabling auto merge for repositories and PRs will help. First you'll have to <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-auto-merge-for-pull-requests-in-your-repository">enable auto merge for repo</a> and then configure bot to raise PRs with <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request">automerge enabled</a>.</li>
+<li>use https://www.coderabbit.ai/ for AI based code reviews</li>
+</ul>
+<h3 id="performance-parameters-for-oss-project">Performance parameters for OSS project:<a class="headerlink" href="#performance-parameters-for-oss-project" title="Permanent link">#</a></h3>
+<p>These are metrics and parameters developed by Linux foundation:
+- <a href="https://bestpractices.coreinfrastructure.org/en">CII best practice badge</a>: To ensure that project is following OSS best practices. For health and stregth of engineering process in an OSS project.
+- <a href="https://chaoss.community/">CHAOSS</a> project: to define how healthy your community is. They also have tools that will give you analytics on top of your OSS repo data.
+- Good OSS tool for Github repo analytics: https://devstats.cncf.io/. Kubernetes is using this tool. Kubernetes dashboard: https://k8s.devstats.cncf.io/d/12/dashboards?orgId=1&amp;refresh=15m
+- open decision framework: https://opensource.com/open-organization/resources/open-decision-framework</p>
+<h3 id="issue-triage">issue triage<a class="headerlink" href="#issue-triage" title="Permanent link">#</a></h3>
+<p>good article: https://medium.com/@clarkbw/github-issue-triage-and-transparency-be35acd8e85d</p>
+<p>issue triaging needs correct set of labels in place: Look at this for reference. https://github.com/falcosecurity/falco/labels?page=1&amp;sort=name-asc</p>
+<p>Triage process as Kubernates: https://www.kubernetes.dev/docs/guide/issue-triage/</p>
+<p>How to run bug triage:
+- triage PRs first, then Issues
+- For every issue/PR we want to decide on what is the next action and who is going to take that action. Like status is <code>require-more-analysis</code> assign <code>owner</code> also who will do that analysis </p>
+<p>Labels:</p>
+<ul>
+<li>
+<p>Triage:</p>
+<ul>
+<li>needs-triage</li>
+<li>needs-information    </li>
+<li>triaged(used to flag that PR/Issue has been discussed and it is ready to enter active development), triaged/duplicate, triaged/will-not-fix </li>
+<li>kind/bug, enhancement, feature, support</li>
+<li>size/xs, s, m, l, xl, xxl</li>
+<li>value/high, medium, low</li>
+<li>area/<modules like jans-fido2>, release-notes, documentation</li>
+<li>good first issue</li>
+</ul>
+</li>
+<li>
+<p>Tracking:</p>
+<ul>
+<li>status/backlog,WIP,test,completed</li>
+<li>priority/high, medium, low</li>
+<li>help wanted</li>
+</ul>
+</li>
+<li>
+<p>github milestones are usually used to represent sprints    </p>
+</li>
+</ul>
+<h2 id="tech-writing-notes">Tech writing notes:<a class="headerlink" href="#tech-writing-notes" title="Permanent link">#</a></h2>
+<p>(From: https://developers.google.com/tech-writing)</p>
+<ul>
+<li>Prefer full term over acronym. Benefit of short forms and acronyms is they reduce length of text, but make understanding difficult as user has to translate everytime. So use acronyms when you know a lengthy term is going to be used many times in text. This rule doesn't apply to popular acronyn like HTML.</li>
+<li>If you are referring to a term which reader may not be aware of then give a link to explaination of that term or define yourself.</li>
+<li>Prefer to use noun itself instead of pronoun(it, them, they, this, that etc)  as pronoun may lead to confusion. Use it only if it is situated very close to the noun in the sentence.</li>
+<li>The vast majority of sentences in technical writing should be in active voice. Good sentences in technical documentation identify who is doing what to whom.</li>
+<li>Prefer active voice to passive voice<ul>
+<li>Use the active voice most of the time. Use the passive voice sparingly. Active voice provides the following advantages:</li>
+<li>Most readers mentally convert passive voice to active voice. Why subject your readers to extra processing time? By sticking to active voice, readers can skip the preprocessor stage and go straight to compilation.</li>
+<li>Passive voice obfuscates your ideas, turning sentences on their head. Passive voice reports action indirectly.</li>
+<li>Some passive voice sentences omit an actor altogether, which forces the reader to guess the actor's identity.</li>
+<li>Active voice is generally shorter than passive voice.</li>
+</ul>
+</li>
+<li>remember: Be bold—be active.</li>
+<li>Write clear sentences</li>
+<li>Choose strong verbs</li>
+</ul>
+<h3 id="good-reference">Good reference<a class="headerlink" href="#good-reference" title="Permanent link">#</a></h3>
+<ul>
+<li>How to avoid he/she confusion: https://medium.com/technical-writing-is-easy/how-to-make-your-documentation-gender-neutral-5592c9591b65</li>
+</ul>
+<h2 id="setup-meetings-and-calendar-app">setup meetings and calendar app<a class="headerlink" href="#setup-meetings-and-calendar-app" title="Permanent link">#</a></h2>
+<ul>
+<li>problem is that everyone uses a different calendar. Google, outlook, iOS etc. </li>
+<li>in Janssen google calendar is generally acceptable to all. So I have created a separate calendar for Janssen in my google account and create event in that
+   calendar. then I share link of that <code>event</code> on Rocket chat. Problem with this approach is that when you reschedule, everyone's calendar doesn't get updated automatically. I have to send the link again and people have to save the event again. Same for cancellation, You have to verbally cancel the meeting over chat but invites would stay in everyone's calendar.</li>
+<li>Then I started to check how other major open source project do this and I found </li>
+<li>Linux foundation : https://events.linuxfoundation.org/lfx-mentorship-showcase/program/schedule/</li>
+<li>Kubernetes: https://www.kubernetes.dev/resources/calendar/</li>
+<li>most of them give google calendar and may be few others. But there is no unified way of doing this. They also have <a href="https://www.kubernetes.dev/events/community-meeting/">this</a> kind of instructions for user to </li>
+<li>then I read about <code>iCal</code> a.k.a <code>.ics</code> format. This is a neutral format which also allows people to respond to the meetings. May be this is the best way to use do this task.</li>
+</ul>
+<h2 id="how-to-organize-teams-in-an-open-source-project">how to organize teams in an open source project<a class="headerlink" href="#how-to-organize-teams-in-an-open-source-project" title="Permanent link">#</a></h2>
+<p>https://docs.github.com/en/organizations</p>
+<ul>
+<li>github by default has one distinction: org member and contributor</li>
+</ul>
+<h3 id="create-diagrams-and-flowcharts">create diagrams and flowcharts<a class="headerlink" href="#create-diagrams-and-flowcharts" title="Permanent link">#</a></h3>
+<p>https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams</p>
+<h3 id="approaches-to-documentation">approaches to documentation<a class="headerlink" href="#approaches-to-documentation" title="Permanent link">#</a></h3>
+<p>There are two places where documentation of a project can live.
+- Wiki
+- in repo like <code>docs</code></p>
+<p>Preferred one is in the repo and not wiki. As there are many advantages:
+- it is versioned
+- you can integrate it with automation (e.g. trigger a GH action when someone commits in <code>docs</code> repo)
+- Can become part of release notes
+- Developers can submit relevant documentation changes along with code changes in the same PR. Reviewer can see complete set of changes and review it.</p>
+<p>Wiki can be used to hold temporary documentation. For example, documenting a workaround for a problem that is going to be fixed very soon. It is kind of notepad for project. </p>
+<h3 id="storing-images-in-your-gh-repo-for-documentation">storing images in your GH repo for documentation<a class="headerlink" href="#storing-images-in-your-gh-repo-for-documentation" title="Permanent link">#</a></h3>
+<ul>
+<li>There has to be guidelines around storing images in GH repo to support documentation, because images can be huge in size and can increse size of your repo dramatically. You should also specify image types allowed.</li>
+<li>There are two ways of storing images:</li>
+<li>along with the consuming items. for example, images consumed by <code>docs</code> can be stored within that directory/repo</li>
+<li>In case of polyrepo, have a separate repo at org level or in case of monorepo, store images in the same repo but in a separate top level folder, for example <code>media-assets</code>. </li>
+</ul>
+<p>Second approach is better because we will need to keep the size of assets in check. And there is no systematic check for that. So, if the media assets are spread across the repo, it is hard to see what is the total size of media assets. If the all the media assets (images, gifs, mp4 videos etc) are in one place then it is easy to watch the size as well as do the clean up.
+  Also, we can have GH actions triggered whenever anything is checked into this separate folder/repo. This action can check the size and type of asset being uploaded. It can fail and stop the merge if the asset is not conforming with recommendations.</p>
+<h3 id="branding-guidelines">branding guidelines<a class="headerlink" href="#branding-guidelines" title="Permanent link">#</a></h3>
+<p>have something like : https://github.com/falcosecurity/falco/tree/master/brand</p>
+<h3 id="test-plans-and-other-project-management-documents">test plans and other project management documents<a class="headerlink" href="#test-plans-and-other-project-management-documents" title="Permanent link">#</a></h3>
+<p>Question is: what is the approach that OSS project take towards storing project management documents (like test-plan document, or may be an mpp)? I think, most of the time they try to convert documents like test plan in to markdown and maintain it in github. If it has to be in word/pdf of any other format, I think project use google drive etc. But need to find out more.</p>
+<h3 id="oss-projects-writting-test-cases-for-manual-tests">OSS projects, writting test cases for manual tests<a class="headerlink" href="#oss-projects-writting-test-cases-for-manual-tests" title="Permanent link">#</a></h3>
+<p>How to do this when using github? I think Jira (Atlassian) lets you create testcases like issues, but in Github there is nothing similar. So we have to document all the test cases in files and store somewhere.</p>
+<h3 id="hosting-source-code-documentation-like-javadocs-using-mkdocs">Hosting source code documentation (like Javadocs) using mkdocs<a class="headerlink" href="#hosting-source-code-documentation-like-javadocs-using-mkdocs" title="Permanent link">#</a></h3>
+<p>https://mkdocstrings.github.io/</p>
+<p>Right now, only handlers for python are available</p>
+<p>https://mkdocstrings.github.io/handlers/overview/</p>
+<h3 id="running-markdown-linting-tool">running markdown linting tool<a class="headerlink" href="#running-markdown-linting-tool" title="Permanent link">#</a></h3>
+<p>To install
+<div class="highlight"><pre><span></span><code>gem install mdl
+</code></pre></div></p>
+<p>To run
+<div class="highlight"><pre><span></span><code>mdl ~/IdeaProjects/Janssen/jans/docs/
+</code></pre></div></p>
+<p>To run with some rule definitions
+<div class="highlight"><pre><span></span><code>mdl ~/IdeaProjects/Janssen/jans/docs/ -s ~/IdeaProjects/Janssen/jans/automation/markdown/.mdl_style.rb
+</code></pre></div></p>
+<h3 id="api-design">API design<a class="headerlink" href="#api-design" title="Permanent link">#</a></h3>
+<ul>
+<li>API design should happen by creating skeleton code structure first and then generating swagger spec out of it using annotations. See the section on <code>code first</code> approach on <a href="https://swagger.io/resources/articles/documenting-apis-with-swagger/">swagger site</a></li>
+<li>Also, <a href="https://stoplight.io/">stoplight.io</a> is a good tool</li>
+</ul>
+<h3 id="open-source-projects-and-secure-supply-chain">Open source projects and secure supply chain<a class="headerlink" href="#open-source-projects-and-secure-supply-chain" title="Permanent link">#</a></h3>
+<ul>
+<li>Reference: https://github.com/microsoft/oss-ssc-framework/blob/main/specification/framework.md</li>
+</ul>
+<h3 id="tool-for-providing-on-demand-k8s-instances-to-devs-and-testers">tool for providing on-demand k8s instances to devs and testers<a class="headerlink" href="#tool-for-providing-on-demand-k8s-instances-to-devs-and-testers" title="Permanent link">#</a></h3>
+<p>for the https://github.com/Federation/easycloud/ lovers coming next week you will be also able to create a hassle free k8s clusters on aws with a simple management ui added on top of it. The ui is rancher UI btw. Here is what to expect:</p>
+<p>a full blown k8s cluster
+Rancher ui which will allow you to easily toggle and view the k8s cluster, install gluu or jans simply with a click of a button and easily view logs and open a terminal without knowing any k8s terminology , sytnax or anything.
+The rancher ui will have a dns record assigned and posted for you with the password to login in the PR
+You will also be given another dns url to use for gluu or jans deployment as your hostname
+Coming next would be adding https://karpenter.sh/ for autoscalling then the last step will finally be enabling the load tests so that we can view any setup and enjoy it without making a hassle about it 🍿</p>
+<h2 id="how-to-handle-discussions-on-issues">How to handle discussions on issues<a class="headerlink" href="#how-to-handle-discussions-on-issues" title="Permanent link">#</a></h2>
+<p>Here are some examples where the community manager, or dev has supported an issue/troubleshooting in a nice way:</p>
+<p>https://github.com/canonical/lxd/issues/7910</p>
+<h2 id="communication">Communication<a class="headerlink" href="#communication" title="Permanent link">#</a></h2>
+<h3 id="how-to-handle-discussions-on-issues_1">How to handle discussions on issues<a class="headerlink" href="#how-to-handle-discussions-on-issues_1" title="Permanent link">#</a></h3>
+<p>Here are some examples where the community manager, or dev has supported an issue/troubleshooting in a nice way:</p>
+<p>https://github.com/canonical/lxd/issues/7910</p>
+<h3 id="how-to-revert-certain-decisions-which-were-not-received-well-by-community">how to revert certain decisions which were not received well by community<a class="headerlink" href="#how-to-revert-certain-decisions-which-were-not-received-well-by-community" title="Permanent link">#</a></h3>
+<p>https://www.keycloak.org/2023/10/reactivating-discourse.html</p>
+<h3 id="how-to-communicate-big-and-complex-roadmap-change-and-engineering-choices">How to communicate big and complex roadmap change and engineering choices<a class="headerlink" href="#how-to-communicate-big-and-complex-roadmap-change-and-engineering-choices" title="Permanent link">#</a></h3>
+<p>https://www.redhat.com/en/blog/rhel-10-plans-wayland-and-xorg-server</p>
+<h2 id="checklist-when-adding-a-new-module">checklist when adding a new module<a class="headerlink" href="#checklist-when-adding-a-new-module" title="Permanent link">#</a></h2>
+<ul>
+<li>decide on technical name, formal name and if required an informal name</li>
+<li>jenkins build</li>
+<li>gh actions</li>
+<li>tools integration (like sonar)</li>
+<li>GH <code>component</code> label creation</li>
+<li>GH team creation</li>
+<li>GH codeowner updates</li>
+<li>where to put documentation on the documention site navigation</li>
+<li>Updates to readme files where all the modules are listed</li>
+</ul>
+<h2 id="in-the-role-of-opensource-releasecommunity-manager">in the role of opensource release/community manager<a class="headerlink" href="#in-the-role-of-opensource-releasecommunity-manager" title="Permanent link">#</a></h2>
+<ul>
+<li>release management (backlog grooming, sprint planning, tracking) (tools: github projects, issues, PRs)</li>
+<li>Process : PR flow, automatic checks, contribution guidelines</li>
+<li>Open source project initiation: Starting from README, PR-issue templates, issue triage, codeowners, security best practises(Open Source Security Foundation (OpenSSF) Best Practices badge), </li>
+<li>polyrepo to monorepo migration</li>
+<li>community engagement: Hosting Office hours, meet-ups, community calls/events, PRs, issues and discussions, gitter, twitter, </li>
+<li>Documentation and multimedia content creation</li>
+</ul>
+<h2 id="gaining-stars-and-forks">Gaining stars and forks<a class="headerlink" href="#gaining-stars-and-forks" title="Permanent link">#</a></h2>
+<ul>
+<li>stars and forks can be bought for Rs. 20 per star and Rs. 20 per fork. Here: <a href="https://www.socialplug.io/services/buy-github-stars">stars</a> <a href="https://www.socialplug.io/services/buy-github-forks">Fork</a></li>
+<li>Create good first issues and help wanted issues</li>
+<li>Go to colleges and offices for sessions on open source contributions. Here, you'll get bulk of people to star and contribute in one go.</li>
+<li>Go to local identity and cyber security specific meetups and take sessions around how to contribute to Jans.</li>
+<li>give interviews to podcasts, spotlight shows where you can show off your open source project. </li>
+<li>Start your own live contribution stream where you show people how to contribute to the Janssen project</li>
+</ul>
+<h2 id="setting-up-clacontributor-license-agreement">Setting up CLA(contributor license agreement)<a class="headerlink" href="#setting-up-clacontributor-license-agreement" title="Permanent link">#</a></h2>
+<h3 id="difference">difference<a class="headerlink" href="#difference" title="Permanent link">#</a></h3>
+<p>Some projects use CLA and some use DCO. First understand the difference between C</p>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h3>
+<p>Here is the text of Meta's CLA. You have to sign this if you want to contribute to <a href="https://legacy.reactjs.org/docs/how-to-contribute.html#contributor-license-agreement-cla">React</a> for example.</p>
+<p>Here is the form that you have to fill:</p>
+<p><img width="1339" height="905" alt="image" src="https://github.com/user-attachments/assets/25315329-2036-4c04-bf7b-18e8db719172" /></p>
+<p>Here is the complete CLA text.</p>
+<div class="highlight"><pre><span></span><code>Meta Platforms, Inc. Individual Contributor License Agreement (&quot;Agreement&quot;), v2.0
+
+You accept and agree to the following terms and conditions for Your present and future Contributions submitted to Meta Platforms, Inc. (&quot;Meta&quot;). Except for the license granted herein to Meta and recipients of software distributed by Meta, You reserve all right, title, and interest in and to Your Contributions.
+
+1. Definitions.
+
+&quot;You&quot; (or &quot;Your&quot;) shall mean the copyright owner or legal entity authorized by the copyright owner that is making this Agreement with Meta. For legal entities, the entity making a Contribution and all other entities that control, are controlled by, or are under common control with that entity are considered to be a single Contributor. For the purposes of this definition, &quot;control&quot; means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.
+
+&quot;Contribution&quot; shall mean any original work of authorship, including any modifications or additions to an existing work, that is intentionally submitted by You to Meta for inclusion in, or documentation of, any of the products owned or managed by Meta (the &quot;Work&quot;). For the purposes of this definition, &quot;submitted&quot; means any form of electronic, verbal, or written communication sent to Meta or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, Meta for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by You as &quot;Not a Contribution.&quot;
+
+2. Grant of Copyright License. Subject to the terms and conditions of this Agreement, You hereby grant to Meta and to recipients of software distributed by Meta a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Your Contributions and such derivative works.
+
+3. Grant of Patent License. Subject to the terms and conditions of this Agreement, You hereby grant to Meta and to recipients of software distributed by Meta a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by You that are necessarily infringed by Your Contribution(s) alone or by combination of Your Contribution(s) with the Work to which such Contribution(s) was submitted. If any entity institutes patent litigation against You or any other entity (including a cross-claim or counterclaim in a lawsuit) alleging that your Contribution, or the Work to which you have contributed, constitutes direct or contributory patent infringement, then any patent licenses granted to that entity under this Agreement for that Contribution or Work shall terminate as of the date such litigation is filed.
+
+4. You represent that you are legally entitled to grant the above license. If your employer(s) has rights to intellectual property that you create that includes your Contributions, you represent that you have received permission to make Contributions on behalf of that employer, that your employer has waived such rights for your Contributions to Meta, or that your employer has executed a separate Corporate CLA with Meta.
+
+5. You represent that each of Your Contributions is Your original creation (see section 7 for submissions on behalf of others). You represent that Your Contribution submissions include complete details of any third-party license or other restriction (including, but not limited to, related patents and trademarks) of which you are personally aware and which are associated with any part of Your Contributions.
+
+6. You are not expected to provide support for Your Contributions, except to the extent You desire to provide support. You may provide support for free, for a fee, or not at all. Unless required by applicable law or agreed to in writing, You provide Your Contributions on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON- INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+7. Should You wish to submit work that is not Your original creation, You may submit it to Meta separately from any Contribution, identifying the complete details of its source and of any license or other restriction (including, but not limited to, related patents, trademarks, and license agreements) of which you are personally aware, and conspicuously marking the work as &quot;Submitted on behalf of a third-party: [named here]&quot;.
+
+8. You agree to notify Meta of any facts or circumstances of which you become aware that would make these representations inaccurate in any respect.
+</code></pre></div>
+<p>Once you fill the form above and authenticate using github, CLA is immediately active and you can start contributing.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.autohide - search.suggest - search.highlight", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

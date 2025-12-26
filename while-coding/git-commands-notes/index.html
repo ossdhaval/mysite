@@ -1,0 +1,4537 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ff4j-notes/">
+      
+      
+        <link rel="next" href="../github-actions-notes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Git Commands Notes - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git Commands Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ossdhaval/mysite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../API-driven-dev/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  While Coding
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../while-working/Learnings-as-open-source-community-manager/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  While Working
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ossdhaval/mysite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Coding
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    While Coding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API-driven-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api Driven Dev
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CDI-weld-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cdi Weld Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../IAM/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iam
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Iam
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/OAuth2_oidc_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oauth2_Oidc_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/SCIM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/SIOP-DID/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siop Did
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/api-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/cryptography-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cryptography Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/jwt-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jwt Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/zero-trust-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Trust Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IAM/authorization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authorization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LXC-LXD-linux-containers-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lxc Lxd Linux Containers Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SUSE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ai/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ai
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ai/SDLC-tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sdlc Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sdlc Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/SDLC-tools/ai-tools-for-coding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai Tools For Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/course-notes-udemy-ml-ds-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ML DS AI Udemy course notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/prompt-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/rag-agentic-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rag Agentic Ai
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apache_on_ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apache_On_Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws-developer-associate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aws Developer Associate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cedar-policy-authoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cedar Policy Authoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../certifications/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certifications
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Certifications
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../certifications/GitHub/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10_2" id="__nav_2_10_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Github
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certifications/GitHub/github-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container-security-cosign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Container Security Cosign
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containerisation-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containerisation Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curl-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curl Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Devops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ff4j-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ff4J Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Commands Notes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Commands Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apply-a-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apply a patch
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-actions-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Actions Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitter-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gitter Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-docker-on-suse-enterprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install Docker On Suse Enterprise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intellijIdea_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intellijidea_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_26" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../janssen/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_26" id="__nav_2_26_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_26">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Janssen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/agama-language-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agama Language Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/jans-cn-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jans Cn Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/janssen-code-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Code Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/janssen-log-analysis-with-test-load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Log Analysis With Test Load
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janssen/janssen-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Janssen Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_27" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../java-language/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java Language
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_27" id="__nav_2_27_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_27">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Java Language
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-language/creating-custom-annotations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Custom Annotations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-language/debugging-java-memory-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging Java Memory Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jetty-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jetty Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keycloak-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keycloak Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-journal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Journal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../makdown-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Makdown Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maven-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maven Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../md-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Md Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mkdocs Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mysql Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notes-monorepo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes Monorepo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgres_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Postgres_Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quarkus%20notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quarkus Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rancher-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rancher Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../random-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redis-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redis Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-please-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Please Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sbom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sbom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonar-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sonar Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl-ssh-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ssl Ssh Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools-to-build-command-line-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools To Build Command Line Cli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vmware Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vscode-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vscode Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yaml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../while-working/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Working
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    While Working
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/Learnings-as-open-source-community-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learnings As Open Source Community Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/need-for-high-commit-quality-in-open-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Need For High Commit Quality In Open Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/open-banking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Banking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-manager.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/remote-team-organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remote Team Organization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/trello-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trello Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Product Management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-manager.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-mgmt/product-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-mgmt/prd-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRD notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-ux-ui-design.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Ux Ui Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../while-working/product-marketing.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product marketing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apply-a-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apply a patch
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/ossdhaval/mysite/edit/main/source/while-coding/git-commands-notes.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="git-commands">Git commands<a class="headerlink" href="#git-commands" title="Permanent link">#</a></h1>
+<p><em>Git initial setup</em> :</p>
+<p><code>git config --global user.name "First-name last-name"</code></p>
+<p><code>git config --global user.email myemail@github.com</code></p>
+<p><code>git config --list</code></p>
+<p><em>Git command for finding details of which remote repo you are currently working with</em> :</p>
+<p><code>git remote -v</code>
+or
+<code>git remote show origin</code></p>
+<p><em>Adding a remote</em> :</p>
+<p><code>git remote add origin https://github.com/ossdhaval/angular-getting-started.git</code></p>
+<p><em>Command to change the url pointed by 'origin'</em> :</p>
+<p><code>git remote set-url origin https://github.com/ossdhaval/gsg-giftrecommender-service.git</code></p>
+<p>Command to rename remote repo</p>
+<div class="highlight"><pre><span></span><code>git remote rename origin jans-home
+</code></pre></div>
+<p>Command to get help on any git command :</p>
+<div class="highlight"><pre><span></span><code>git help pull
+</code></pre></div>
+<p>or to see usage of a git command :</p>
+<div class="highlight"><pre><span></span><code>git add -h
+</code></pre></div>
+<p>clone existing repo :</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/libgit2/libgit2
+</code></pre></div>
+<p>Deleting files from your workspace that are commited or pushed :
+<div class="highlight"><pre><span></span><code>git rm &lt;filename&gt;
+</code></pre></div></p>
+<p>Deleting directory ( and files inside them ) from your workspace that are commited or pushed :
+git rm <dirname> -r</p>
+<p>Note : difference between removing files directly from file system Vs 'git rm' :
+If you remove file directly, it becomes an untracked change in 'git status' which then you
+have to do a 'git add'. While 'git rm' will do these two steps in one go. You'll see that 
+after 'git rm' the deletions are already staged for next commit.</p>
+<p>Moving files and directories :
+git considers a movement as renaming. So, if you move a file using simple 'mv' command
+then it becomes a untracked changed that you have to add to the staging area. If you do 
+it using 'git mv' then it'll move the file and stage it as well for next commit.</p>
+<p>to move a file from sub-directory to current dir :
+git mv gsg-event-service/pom.xml .</p>
+<p>To move a directory ( and all file in it ) from a subdirectory to current dir :
+git mv  gsg-event-service/src .</p>
+<p>To avoid entering username and password everytime when you do git push :
+git remote set-url origin https://ossdhaval:open\$5github@github.com/ossdhaval/gsg-shared-kernel.git
+note that the '\' before $ is because $ is considered as special character and hence needed an escape character.</p>
+<p>get current commit history of your local active branch ( HEAD points to local active branch )
+<code>git log HEAD</code>
+Note : HEAD is case-sensitive. Also, this will show all the commits coming from the target branch too</p>
+<p>To see commit history of current branch after it was created from the target branch</p>
+<div class="highlight"><pre><span></span><code>git log main..
+</code></pre></div>
+<p>This will only show commits made to the current branch after it was created from main</p>
+<p>get current commit history of your remote branch ( origin usually points to branch that is your current remote  )
+<code>git log origin</code></p>
+<p>to see what code actually changed use 'patch' option. 
+<code>git log --patch</code></p>
+<p>to limit commits use option
+<code>git log -8</code></p>
+<p>to get list of files changed per commit in a branch
+ <code>git log --name-only --oneline</code></p>
+<p>To get list of contributions grouped by author</p>
+<p><code>git shortlog</code></p>
+<p>To check what all changes a particular file has gone through(even deleted files)</p>
+<div class="highlight"><pre><span></span><code>git log -- */cli-agama.md
+</code></pre></div>
+<p>To get list of commits that are not in main branch but are made to your current branch with details of files that are changed:</p>
+<div class="highlight"><pre><span></span><code>git log main.. --stat
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="go">commit bbc024e023aa0f41e83519eb10a9818d8a72cb17 (HEAD -&gt; docs-remove-spanner, origin/docs-remove-spanner)</span>
+<span class="go">Author: ossdhaval &lt;343411+ossdhaval@users.noreply.github.com&gt;</span>
+<span class="go">Date:   Wed Nov 6 12:06:31 2024 +0530</span>
+
+<span class="go">    fix(docs): remove spanner</span>
+
+<span class="go">    Signed-off-by: ossdhaval &lt;343411+ossdhaval@users.noreply.github.com&gt;</span>
+
+<span class="go"> jans-pycloudlib/docs/api/persistence/spanner.md | 3 ---</span>
+<span class="go"> jans-pycloudlib/mkdocs.yml                      | 1 -</span>
+<span class="go"> 2 files changed, 4 deletions(-)</span>
+
+<span class="go">commit df4b64c255103bd920163252fe2afa3437b4e16a</span>
+<span class="go">Author: ossdhaval &lt;343411+ossdhaval@users.noreply.github.com&gt;</span>
+<span class="go">Date:   Wed Nov 6 10:41:16 2024 +0530</span>
+
+<span class="go">    fix(docs): remove spanner</span>
+
+<span class="go">    Signed-off-by: ossdhaval &lt;343411+ossdhaval@users.noreply.github.com&gt;</span>
+
+<span class="go"> docs/janssen-server/reference/database/spanner-config.md | 186 ------------------------------------------------------------------------</span>
+<span class="go"> docs/janssen-server/reference/database/spanner-ops.md    |  18 -------</span>
+<span class="go"> docs/janssen-server/reference/database/spanner-schema.md |  18 -------</span>
+<span class="go"> mkdocs.yml                                               |   4 --</span>
+<span class="go"> 4 files changed, 226 deletions(-)</span>
+</code></pre></div>
+<p>To see status of all files with short representation of status :
+<div class="highlight"><pre><span></span><code>git status --short
+</code></pre></div></p>
+<p>To add all untracked and modified tracked files and folders recursively in git staging area ( ready for next commit )
+git add -A
+( 'git add' will just do it for files in current directory and not recursively )</p>
+<p>To remove a file after adding it to tracked changes using 'git add'
+git reset <file_name></p>
+<p>Branch information :</p>
+<p>Remember: HEAD is a pointer to a branch, and a branch is a pointer to a commit.
+ So when you say <code>git commit</code>, git first looks at where the HEAD is pointing, and then it'll move that branch pointer to point to new commit. </p>
+<p>There are two useful command to understand current branches and their status more :
+git log --oneline --decorate --all
+and 
+git remote show origin</p>
+<p>First command shows which all branches you have in local, at which commit they are pointing to, and which one is your current working directory branch ( pointed to by HEAD ). </p>
+<p><code>dhaval@thinkpad:~/IdeaProjects/Janssen/home$ git log --oneline --decorate --all</code>
+<div class="highlight"><pre><span></span><code>a81b684 (origin/main, origin/HEAD) Update Gemfile
+1c345e4 Merge branch &#39;main&#39; of https://github.com/ossdhaval/mysite
+37009fd Update Gemfile
+37210da (HEAD -&gt; gh-pages) Update _config.yml to fix the description
+9839c2a Update _config.yml
+ec2ca67 Set theme jekyll-theme-cayman
+647f71c (origin/gh-pages) Update index.md
+75894c8 Update index.md
+b25aef9 Update RELEASE_NOTES.md
+51bed95 Update index.md
+931132e Create RELEASE_NOTES.md
+</code></pre></div></p>
+<p>Second command tells you about remote repository. And what is current state with respect to local branches.</p>
+<p><code>:~/IdeaProjects/Janssen/home$ git remote show origin</code>
+ ```
+* remote origin
+  Fetch URL: https://ossdhaval:open$5github@github.com/ossdhaval/mysite.git
+  Push  URL: https://ossdhaval:open$5github@github.com/ossdhaval/mysite.git
+  HEAD branch: main
+  Remote branches:
+    gh-pages                            tracked
+    main                                tracked
+    refs/remotes/origin/viagluu-patch-1 stale (use 'git remote prune' to remove)
+  Local branch configured for 'git pull':
+    main merges with remote main
+  Local refs configured for 'git push':
+    gh-pages pushes to gh-pages (local out of date)
+    main     pushes to main     (local out of date)
+dhaval@thinkpad:~/IdeaProjects/Janssen/home$ 
+<div class="highlight"><pre><span></span><code>Branch (i.e tracking branch) :
+
+Most of the local branches that get created during clone are tracking branches. Which means they are tracking a remote branch. You can see which local tracking branch is tracking which remote branch, you can do it with 
+</code></pre></div>
+git branch -vv 
+<div class="highlight"><pre><span></span><code>### local branches, remote tracked branches, branches on remote server
+
+ In git, code can reside on your local machine or some remote server. Both local machine and remote can have branches that other one don&#39;t know about. Branch that is in local machine is called &#39;local branch&#39;, branch that is in remote server is called &#39;remote branch&#39;. Git also maintains remote-tracking branches on your local machines for every remote that you have. This is essentially download of all the branches and code that was on remote server when you connected with it last time using `fetch` (or `pull`).
+
+Now, you can link-up your local branch to a remote tracking branch for ease of use. If you do, git automatically knows which remote branch a local branch pushes to or fetches from. If you want to see which of your local branches are linked to which remote-tracking branches, you can use
+
+ ```
+ git branch -vv
+ ```
+
+if you want to see complete list of branches on the remote (i.e github) for this repo:
+</code></pre></div>
+git branch -r
+<div class="highlight"><pre><span></span><code> #### About local branches
+
+ ##### first option of using untracked local branch
+
+ - you can create a simple local branch that doesn&#39;t link to any remote tracker using `git branch &lt;name&gt;`
+   - Remember that changes in the current branch that you haven&#39;t committed yet will also be part of new branch
+ - Start using this branch by switching to it: `git switch &lt;name&gt;`
+ - Remember, even if your local branch is not tracking a remote tracking branch, you can still use it to work with any remote branch. It is just that you have to mention which remote and which branch of that remote should be used for that operation everytime. I recommend this manual approach as it makes it clear where your code is going and coming.
+ - To make local branch track a remote branch: `git branch -u &lt;remote&gt;/&lt;branch&gt; &lt;local-branch&gt;`
+
+ ##### second option of using tracked local branch
+
+ benefit of this approach is that you know later 
+
+ - `git checkout -b &lt;new-branch-name&gt;`
+ - `git push --set-upstream origin &lt;new-branch-name&gt;`
+ - Now if you do `git branch -vv` you&#39;ll see that local branch is tracking the remote branch. 
+ - run `git fetch -p`. After this remote branch is deleted (after merge) you&#39;ll see that `git branch -vv` mentions `gone` against the remote branch. This was you know that local branch is no longer useful and delete it. In the first option above, it is hard to find out whether a local branch has been delivered and not longer usefu. So it is hard to delete it for cleanup.
+
+
+
+### create branch localy and push it to github
+
+`git checkout -b &#39;feature-1&#39;` - Create and switch to new branch
+</code></pre></div>
+ git branch --set-upstream-to origin/feature-1
+ git push 
+<div class="highlight"><pre><span></span><code>Above sets remote tracking branch for current branch
+
+ or you can do 
+</code></pre></div>
+ git push origin feature-1:feature-1
+<div class="highlight"><pre><span></span><code> above will create a new branch on remote &#39;origin&#39; and push changes of local branch to that branch
+</code></pre></div></p>
+<p>dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ git checkout -b 'feature-1'
+Switched to a new branch 'feature-1'
+dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ git status
+On branch feature-1
+nothing to commit, working tree clean
+dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ git push origin
+fatal: The current branch feature-1 has no upstream branch.
+To push the current branch and set the remote as upstream, use</p>
+<div class="codehilite"><pre><span></span><code>git push --set-upstream origin feature-1
+</code></pre></div>
+
+<p>dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ git push --set-upstream origin feature-1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'feature-1' on GitHub by visiting:
+remote:      https://github.com/ossdhaval/git-action-check/pull/new/feature-1
+remote: 
+To https://github.com/ossdhaval/git-action-check.git
+ * [new branch]      feature-1 -&gt; feature-1
+Branch 'feature-1' set up to track remote branch 'feature-1' from 'origin'.
+dhaval@thinkpad:~/IdeaProjects/ossdhaval/github-action-check$ </p>
+<p><div class="highlight"><pre><span></span><code>`git push origin main` what this command actually is this `git origin master:master`. Which means take my *master* branch and push it to *origin*&#39;s master branch. Using this you can also push changes in your master branch to some other branch on remote.
+
+
+#### How to know which branches can be deleted?
+
+
+
+1. Look at `git branch -vv`
+
+ Above will list all the branches with it&#39;s remote tracking branches. If you see the `gone` mentioned along side of the remote branch, that it may be a case were the branch was merged using a PR and then workflow has deleted the remote branch on GH. Local Branches where remote branches are `gone` can be deleted.
+
+2. To further confirm whether the most lastest commit on the local branch have been added to main, you can search the main branch using command below for the commit message of the last commit on the local branch.
+
+ `git log main --grep=&quot;fix: add missing README files`
+
+
+#### How to completely remove local branch and remote-tracking branch and start fresh from remote branch:
+
+In case you have messy code in your local branch that you have committed but not pushed to remote. You want to get rid of this code and start afresh from remote branch. For this you have to 
+
+ 1. Delete local branch: `git branch -D file-sync-22-master-1623760119`. Check using `git branch -vv`
+ 2. Delete local remote-tracking branch: `git branch -dr origin/file-sync-22-master-1623760119`. Check using `git remote show &lt;remote-name&gt;`
+ 3. Get remote branch in local tracker branch again: `git pull`. Check using `git remote show &lt;remote-name&gt;`
+ 4. Create new local branch from newly created local remote-tracking branch: `git checkout -b file-sync-22-master-1623760119 origin/file-sync-22-master-1623760119`. Check using `git branch -vv`.
+
+ `ref:` https://stackoverflow.com/a/23961231/2331225
+
+
+## Ignoring files
+
+There are three ways to which files should git ignore:
+
+- using `.gitignore` file in your repo : best way to share with other developers who use the same repo
+- using `$LOCAL_REPO_DIR/info/exclude`: use this when you want to ignore files and don&#39;t want to commit to the repo. But this `exclude` file is repository-specific
+- using `core.excludesFile` global ignore files: best way to ignore ide-specific or user-specific files in the local workspace **that need to be applied to all the local git repositories**
+  - create a text file anywhere and list the files which you want to ignore. For example, if you want to ignore `.vscode` directory, put the content below in the file.
+    ```
+    .vscode
+    ```
+  - run the command below to make a settings entry in your global git config file which is usually at your home directory `~/.gitconfig`
+    ```
+    git config --global core.excludesFile &#39;~/code/personal-configs/git-global-ignore-settings&#39;
+    ```
+  - after this `.vscode` directory will be ignored everywhere in all your repositories on this machine
+
+### About git ignore:
+
+- git ignore doesn&#39;t have a command. It is only controlled by patterns mentioned in the files.
+- There are two files that you can edit. Below is except from [here](https://git-scm.com/docs/gitignore)
+  ```
+  Which file to place a pattern in depends on how the pattern is meant to be used.
+
+  Patterns which should be version-controlled and distributed to other repositories
+  via clone (i.e., files that all developers will want to ignore) should go into a .gitignore file.
+  Meaning, these are files created by your project itself and should be ignored by every developer
+  who is using this codebase.
+
+  Patterns which are specific to a particular repository but which do not need to be shared with other
+  related repositories (e.g., IDE specific files like `.vscode` etc) should go into the $GIT_DIR/info/exclude file.
+  ```
+
+Avoiding to use .gitignore for your custom file :
+
+In a large project, everyone shares the same gitignore file which is commited and maintained in repository just like any other common code file. I you want to add few custom ignores to this file, it&#39;ll affect everyone. To avoid this, use below :
+
+https://medium.com/@dave_lunny/exclude-files-from-git-without-committing-changes-to-gitignore-986fa712e78d
+
+
+My co-worker pointed me to the .git/info/exclude file which, much like a .gitignore file, allows you to ignore files from being staged. This keeps things nice and clean, and the best part is that you don’t commit anything in the .git/ directory, so it’s like your own personal .gitignore that no one else can see or touch!
+
+gitignore general guidlines :
+
+Setting up a .gitignore file for your new repository before you get going is generally a good idea so you don’t accidentally commit files that you really don’t want in your Git repository
+
+In the simple case, a repository might have a single .gitignore file in its root directory, which applies recursively to the entire repository. However, it is also possible to have additional .gitignore files in subdirectories. The rules in these nested .gitignore files apply only to the files under the directory where they are located.
+
+GitHub maintains a fairly comprehensive list of good .gitignore file examples for dozens of projects and languages at https://github.com/github/gitignore if you want a starting point for your project.
+
+some useful patterns :
+
+### ignore all .a files
+*.a
+
+### but do track lib.a, even though you&#39;re ignoring .a files above
+!lib.a
+
+### only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+### ignore all files in any directory named build
+build/
+
+### ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+### ignore all .pdf files in the doc/ directory and any of its subdirectories
+doc/**/*.pdf
+
+How to see what changes have you made to files and are not staged or staged but are not commited :
+
+git diff
+
+To see what you’ve changed but not yet staged, type git diff with no other arguments
+
+If you want to see what you’ve staged that will go into your next commit, you can use git diff --staged. This command compares your staged changes to your last commit
+
+
+
+To push your changes to remote repo :
+git push remote-name branch-name
+example: git push origin master
+this will ask for github username and password. 
+
+Guidlines for git commit messages from PRO-git:
+
+The last thing to keep in mind is the commit message. Getting in the habit of creating quality
+commit messages makes using and collaborating with Git a lot easier. As a general rule, your
+129messages should start with a single line that’s no more than about 50 characters and that describes
+the changeset concisely, followed by a blank line, followed by a more detailed explanation. The Git
+project requires that the more detailed explanation include your motivation for the change and
+contrast its implementation with previous behavior — this is a good guideline to follow. Write your
+commit message in the imperative: &quot;Fix bug&quot; and not &quot;Fixed bug&quot; or &quot;Fixes bug.&quot;
+
+More guidelines for commit messages:
+ https://robertcooper.me/post/git-commit-messages
+
+### How to troubleshoot : &#39;Your branch and &#39;origin/master&#39; have diverged&#39; problem.
+
+this is because the your branch has commits that are not built on top of commits currently available in same branch on origin(remote).  i.e : master branch in your local repo vs master branch in remote repo.
+
+head(master)    : commit1, commit2, commit3, commit5
+
+origin(master)  : commit1, commit2, commit3, commit4
+
+It may be because while you were working on code changes for commit5 in your local repo and committed to local repo, the remote branch moved on due to somebody else pushed changes in it. 
+At this point, if you do a &#39;git status&#39;, you get above message.
+
+dhaval@dhaval-Lenovo-U41-70:~/code/eclipse-workspace/gsg-event-service$ git status
+On branch master
+Your branch and &#39;origin/master&#39; have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use &quot;git pull&quot; to merge the remote branch into yours)
+
+Now there are two solutions when you have to synch up two branches: rebase or merge.
+
+In this case, we want to synch up with same branch on remote server. 
+
+ Since merge creates a non-linear history, rebase is preferred by many. 
+rebase essentially brings in commit5 from remote into your local repo and then puts back commit4 on top of that. 
+
+To use this option :
+</code></pre></div>
+git pull --rebase
+<div class="highlight"><pre><span></span><code> See the https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches/2452610
+
+
+
+### synching your local feature branch with main (or some other branch)
+
+ Here you have two options like in above case: rebase or merge
+
+ In above case we were getting latest commits from remote of same branch, but in here, we want to get latest commits from main branch and make our branch latest.
+
+ - If your feature branch is public (i.e pushed to github) then use merge as merge doesn&#39;t change SHA of existing commits but creates a new merge commit (to avoid this, many people use rebase as below)
+</code></pre></div>
+ git switch main
+ git pull
+ git switch feature
+ git merge main
+<div class="highlight"><pre><span></span><code> - if your feature branch is still only on your local then use rebase as rebase creates a linear history by getting commits from main to your branch (keeping the SHA same) and then recreating your commits on top of those (SHA changes for your commits). It is said `rebase feature onto main`
+
+ ```
+ git switch main
+ git pull
+ git switch feature
+ git rebase main
+ ```
+
+ **REMEMBER: But rebase alters old commits and create new ones** so if the branch has been made public then **rebase should not be used**.
+
+ - reference: https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing
+ - [Golden rule of rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
+
+How to remove files from &#39;Changes not staged for commit&#39; category of git status :
+</code></pre></div>
+git checkout <file>
+<div class="highlight"><pre><span></span><code>git checkout essentially overwrites your local modified file by latest copy from local branch.
+
+
+how do you know if you have committed changes in your local branch but not pushed to remote :
+Run git status.  Message would say that &#39;your local is ahead of remote by x number of commits&#39;
+
+Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
+
+This means you have one commit that you have not pushed. 
+
+To see what is going to get committed in next push :
+</code></pre></div>
+git log --stat
+<div class="highlight"><pre><span></span><code>This will give you history of commits. From this history, you can see one commit that are marked with (head-&gt;master), and then few commits down the line, you&#39;ll see a commit marked with (origin/master, origin/HEAD). 
+In the next push, your commit marked with (head-&gt;master) and all the commits till and not including (origin/master, origin/HEAD) will be pushed. 
+
+
+Different file states in git :
+
+
+- Unstaged : untracked files + modified tracked files
+    ```
+    git add
+    ```
+- Staged : files that are ready to go in next commit
+    ```
+    git commit
+    ```
+
+- Committed files to local branch
+    ```
+    git log --stat
+    ```
+
+- Pushed to remote repo
+    ```
+    git log --stat
+    ```
+
+Git file moving through various states :
+
+- when you create a new file, it is untracked :
+
+
+now make this a tracked file :
+
+
+
+
+
+
+
+Now to change it back to untracked :
+
+
+
+
+
+
+
+To untrack everything which is there in staging area :
+</code></pre></div>
+git reset
+<div class="highlight"><pre><span></span><code>How to remove files from &#39;Changes not staged for commit&#39; category of git status :
+</code></pre></div>
+git restore <file>
+or
+git checkout <file>
+<div class="highlight"><pre><span></span><code>git checkout essentially overwrites your local modified file by latest copy from local branch.
+
+
+add to the staging area :
+
+modified of the already updated file, just for the completeness of the example :
+
+to move back to previous state :
+
+Now commit these files to local git branch :
+
+see your commit in local branch log :
+
+Now roll back commit which still in local brach and not pushed to shared repo :
+</code></pre></div>
+git reset --soft HEAD~
+<div class="highlight"><pre><span></span><code>( --mixed will undo the commit + it&#39;ll unstage the changes from staging area,  but will leave changes in the working copy as is.
+--hard will undo the commit, unstage the changes and update the working copy with what is in the local branch)
+
+Now push commit to remote repo 
+
+
+
+First commit them back in :
+
+
+
+
+
+
+see Git log to confirm what is going to get pushed :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now push to remote :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+check the git log of remote repo to see that the commit has been made :
+
+
+
+
+
+
+
+Now undo commit from remote repo :
+(ref: https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6)
+
+first check if you are on the right branch by running git status. Then
+</code></pre></div>
+git revert a81b684513aa2d3faa2cced70460797cc8397528
+<div class="highlight"><pre><span></span><code>this will not rewrite the history unlike reset above
+
+This can also be done using reset (not recommended as rewrites history) :
+</code></pre></div>
+git reset a81b684513aa2d3faa2cced70460797cc8397528 --hard
+<div class="highlight"><pre><span></span><code>(here commit number is the commit which you want to point to going foward. i.e all the commits after
+this one will be removed from github, also from insights&gt;network )
+
+and then run :
+</code></pre></div>
+git push origin main -f
+<div class="highlight"><pre><span></span><code>storing your changes in a separate branch :
+
+Suppose you are working on branch B1. You have made changes to certain files. You now think that these changes are not required for now and you want to store these changes as a separate branch and come back to B1 and start working on that. For example : I was working on a project where first I tried to integrate with RDBMS using JPA. All these changes were pushed to B1. Then I started to make changes on my local to integrate with DynamoDB instead of RDBMS. But that didn&#39;t go well. So, Now I wanted to go back to last commited changes on B1 without loosing my DynamoDB changes. So I decided that I&#39;ll create a new branch and store DynamoDB changes on a that branch. And then again switch back to B1 and continue working on RDBMS. Below is the sequence of commands that helped.
+</code></pre></div>
+git branch NoSQL
+git checkout NoSQL
+<div class="highlight"><pre><span></span><code>now you&#39;ll see that master, NoSQL and origin/master are on the same commit using &#39;git log&#39;
+
+commit 009ed95a6d83e5b899b5c864a8b84bf72cbb4740 (HEAD -&gt; NoSQL, origin/master, master)
+</code></pre></div>
+git status</p>
+<p>git add .</p>
+<p>git commit -m 'Initial attempt at sing DynamoDB'</p>
+<p>git push origin NoSQL</p>
+<p>git checkout master
+<div class="highlight"><pre><span></span><code>In case you have made direct changes in your code from github ( or someone else has committed changes in the branch ) and you want to make your local branch updated with those changes then :
+git checkout
+Your branch is behind &#39;origin/dhaval-development&#39; by 40 commits, and can be fast-forwarded.
+  (use &quot;git pull&quot; to update your local branch)
+git pull
+Username for &#39;https://github.com&#39;: ossdhaval
+Password for &#39;https://ossdhaval@github.com&#39;: 
+Updating 17e6c35..579473e
+Fast-forward
+ Jenkinsfile  | 24 ++++++++++++++++++++++++
+ package.json |  9 +++------
+ 2 files changed, 27 insertions(+), 6 deletions(-)
+ create mode 100644 Jenkinsfile
+
+
+`git fetch &lt;remote&gt;` brings all data about that remote to your local machine, including references of new branches that are created on remote server by others.
+
+`git fetch &lt;remote&gt; &lt;branch&gt;` brings data from remote only about a particular branch.
+
+### Using git fetch and merge instead of pull:
+
+While the `git fetch &lt;remote&gt;` command will fetch all the changes on the server that you don’t have yet, it will
+not modify your working directory at all. It will simply get the data for you and let you merge it
+yourself. However, there is a command called git pull which is essentially a git fetch immediately
+followed by a git merge in most cases.
+
+Generally it’s better to simply use the fetch and merge commands explicitly as the magic of git pull
+can often be confusing.
+
+Secondly, Suppose there is a branch called `serverfix` on remote server that you don&#39;t have.
+It’s also important to note that when you do a fetch that brings down new remote-tracking branches, you don’t automatically have local, editable copies of them. In other words, in this case, you don’t have a new serverfix branch — you have only an origin/serverfix pointer that you can’t modify.
+
+To merge this work into your current working branch, you can run git merge origin/serverfix. If you want your own serverfix branch that you can work on, you can base it off your remote-tracking branch:
+</code></pre></div>
+$ git checkout -b serverfix origin/serverfix
+Branch serverfix set up to track remote branch serverfix from origin.
+Switched to a new branch 'serverfix'
+<div class="highlight"><pre><span></span><code>This gives you a local branch that you can work on that starts where origin/serverfix is.
+
+
+
+#### Workflow for Contributing to an opensource project :
+
+create a fork
+
+clone that fork in your local machine
+
+then make sure you have this setup so that your fork is updated: 
+https://gist.github.com/CristinaSolana/1885435 or
+https://stefanbauer.me/articles/how-to-keep-your-git-fork-up-to-date
+
+#### To view files in some other branch without switching from your branch
+
+Syntax:
+</code></pre></div>
+git show branch-name:relative-path-of-file
+<div class="highlight"><pre><span></span><code>Example:
+</code></pre></div>
+git show pull-request-decoration:.github/workflows/build-with-coverage.yml</p>
+<div class="highlight"><pre><span></span><code>#### To store credentials for 18 hours:
+</code></pre></div>
+<p>git config --global credential.helper "cache --timeout 64800"</p>
+<p><div class="highlight"><pre><span></span><code>#### add description to your commit using command line.
+
+ When you fire `git commit` without a `-m`, git will open an editor within terminal. You can put your commit title and description in there. 
+ - `git commit` ( or you can continue to use other flags as well like `git commit -S -a` )
+ - opens an editor
+ - put your commit title after first few commented lines.
+ - leave a line blank and then put your description
+ - `ctrl+o`
+ - enter
+ - `ctrl+x
+
+#### resolving git merge conflicts:
+
+If you are trying to pull some changes and merge conflicts happen then you have two choices:
+ 1) use commandline to merge using `git merge -t vimdiff`. This will open vimdiff on the terminal and show merge conflicts that you have merge. But this is little
+ difficult as it is difficult to navigate commandline.
+ 2) use Intellij&#39;s merge conflict tool. To use it:
+  - Press `shift+shift` and then search for &#39;conflict&#39;. You should see a tool in `git` category.
+  - open this tool and then using it you should be easily able to merge. It shows three files.
+    - Left: is your local changes
+    - Right: is incoming changes
+    - Center: is will be the final outcome. This is what you have to edit.
+  - Once completed, click apply to apply the changes. 
+  - now if you go and fire `git status` then you&#39;ll see that your local copy has been modified. You can commit that.
+
+ ### cherry picking:
+
+A cherry-pick in Git is like a rebase for a single commit. It takes the patch that was introduced in a commit
+and tries to reapply it on the branch you’re currently on. This is useful if you have a number of
+commits on a topic branch and you want to integrate only one of them, or if you only have one
+commit on a topic branch and you’d prefer to cherry-pick it rather than run rebase.
+
+remember that when cherry picking, you don&#39;t have to mention the source-branch. Just mention the commit sha.
+
+By default cherry pick will bring in the changes from source commit and commit them to your branch. See the command below. (you can use -n option if you don&#39;t want to commit the incoming changes. Then it&#39;ll just stage those changes, which you can edit and manually merge. This is very useful)
+</code></pre></div>
+ $ git cherry-pick -S e43a6
+Finished one cherry-pick.
+[master]: created a0a41a9: "More friendly message when locking the index fails."
+3 files changed, 17 insertions(+), 3 deletions(-)
+<div class="highlight"><pre><span></span><code> Or cherry pick a range of commits. Notice the `^` character at the end of first commit. This is to indicate to git to include that commit as well in cherry pick:
+
+ ```
+ git cherry-pick -S dc99f87656a952f3548c320c6459278876f9f7b7^..6967cfc4751c87579c563ba9cbb3721116b72be0
+ ```
+
+ if your cherry pick gets a merge conflict, it&#39;ll show message as below
+</code></pre></div>
+Auto-merging CONTRIBUTING.md
+CONFLICT (content): Merge conflict in CONTRIBUTING.md
+error: could not apply 2e158b7... docs: update triage section details
+hint: after resolving the conflicts, mark the corrected paths
+hint: with 'git add <paths>' or 'git rm <paths>'
+hint: and commit the result with 'git commit'
+<div class="highlight"><pre><span></span><code>You can edit conflicted file and resolve the conflict, run `git add` to add that file and then `git commit` to commit that file. But, cherry pick would stop when it finds a conflict and doesn&#39;t pick rest of the commits in the range. So, you have to again start cherry pick from where it left. But first you have to stop the previous cherry pick by `git cherry-pick --quit` and then git another cherry pick command with remaining commits as range.
+
+ Now you can remove your topic branch and drop the commits you didn’t want to pull in.
+
+ &gt; Note: when you cherry-pick a commit, git essentially generates a new commit. And if the original commit had a signature (using -S), then new commit **will not** have that signature. If you want to add signature to new commit as well, use `-S` with cherry-pick as well.
+
+  ```
+ git cherry-pick -S 2493781^..c5e9df3
+ ```
+
+
+
+ ### What to do when you have unsigned commits in your PR
+
+
+
+### Reset a branch to be same as remote branch
+
+ ```
+ git reset --hard origin/&lt;branch-name&gt;
+ ```
+
+### using sparse checkout to just check out one directory from monorepo
+</code></pre></div>
+4581  02/02/22 11:24:08 mkdir jans-evelen
+4582  02/02/22 11:24:15 cd jans-evelen/
+4583  02/02/22 11:24:20 git init
+4584  02/02/22 11:24:37 git sparse-checkout init --cone
+4585  02/02/22 11:25:05 git sparse-checkout set jans-eleven
+4586  02/02/22 11:25:25 git remote add origin git@github.com:JanssenProject/jans.git
+4587  02/02/22 11:26:08 git pull origin main
+<div class="highlight"><pre><span></span><code>### (not recommended) how to sign commits that you have already pushed to Github
+
+#### Recommended
+
+ - One way which is not recommended is to amend the commits and force push. But this will rewrite the history. So, not suggestable.
+ - Second approach is to create a new branch, cherry-pick all commits of the old branch to new branch and sign them in the process
+ - create a new PR for merging and close old PR without merging
+ - Above steps in more details
+ - go to intellij and switch to `main`
+ - git pull
+ - git branch new-branch
+ - git switch new-branch
+ - git cherry-pick -S 2493781^..c5e9df3 (here the first commit sha is taken from first commit of the old PR and the second sha is last commit)
+ - push this branch and create a new PR
+ - close old PR
+
+#### Not recommended (uses force push) 
+
+ Reference: https://stackoverflow.com/questions/13043357/git-sign-off-previous-commits
+
+ Remember that commit number will change when you do this. So, you&#39;ll have to force push to github.
+
+ `git rebase --signoff -S HEAD~3` : this will add PGP sign and `signed-off by` message to last three commits
+
+ `git rebase --signoff -S &lt;SHA&gt;` : this is for one particular commit 
+
+ after this do `git push --force-with-lease` to push out changes. But one thing that I noticed is that in the PR I could still see previous unsigned commits. I expected those commits to be overwritten.
+
+
+ ### why to avoid force push 
+ https://blog.developer.atlassian.com/force-with-lease/
+
+### git revert
+
+### git clean 
+
+remove all the untracked files from repo
+</code></pre></div>
+git clean -f
+<div class="highlight"><pre><span></span><code>remove all untracked, ignored files plus directories. 
+</code></pre></div>
+git clean -dxf
+<div class="highlight"><pre><span></span><code>### rewriting a commit message
+
+ Commit message is part of commit itself, so when you change the message, the commit sha changes. It is like you are creating new commit and replacing old one. 
+
+ - if commit has not been pushed: `git commit --amend`
+ - If commit has been pushed to remote(GH): Since old commit has already been pushed, you&#39;ll have to force push new commit which is a bad practise. So, in this case, you better create a new branch and new PR with good commit. Close the old PR without merging.
+ Reference: https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message
+
+ ### check commit signatures 
+
+ ```
+ git log --show-signature
+ ```
+
+ ### How to create commit without any code change (empty commit)
+
+ ```
+ git commit --allow-empty -S -m &#39;docs: no changes required&#39;
+ ```
+
+ ### Stash
+
+ To stash whatever you have now (tracked + untracked)
+
+ ```
+ git stash push -u -m &#39;my stash message&#39;
+ ```
+
+ To get the last stash reapplied (`--index` will stage the files again which were previously staged)
+
+ ```
+ git stash apply --index
+ ```
+
+ List all awailable stashes:
+
+ ```
+ git stash list
+ ```
+
+ See contents of a particular stash:
+
+ ```
+ git stash show stash@{0}
+ ```
+
+ Delete or drop a stash
+
+ ```
+ git stash drop stash@{0}
+ ```
+
+ Apply stash by name
+
+ ```
+ git stash apply stash^{/my_stash_name}
+ ```
+
+ ### apply signature to commit automatically
+
+ Use below command as one-time setting 
+
+ ```
+ git config --global commit.gpgsign true
+ ```
+
+ Due to this
+ - all commits will be signed automatically, like what `git commit -S` command does manually. You can ignore `-S` now
+ - if you cherry-pick a commit, all commits are newly created. In this case, commits will be auto signed
+ - if you `rebase` any thing, all commits are newly created. In this case, commits will be auto signed
+
+### mentioning someone else as author in a commit
+
+ ```
+ git commit --author=&quot;temp-ossdhaval&quot; -S -m &#39;message&#39;
+ ```
+
+ ### difference between GPG sign a commit (-S) vs adding Sign-off (-s)
+
+ - GPG signing is done by adding -S to commit command. Using this GH can verifies only the intended dev is making the commit.
+ - `sign off by` is added by `-s`. It is up to the organisation how to interprete the sign off given by the developer.
+ - in intellij you can configure signing of every commit with gpg using alt+ctrl+s -&gt; search git -&gt; click configure GPG -&gt; check mark on `sign all commits`
+ - sign-off can be done by clicking `commit options` on the commit tool window that can open using `ctrl+0`
+
+ ### Detached head state
+
+ - HEAD is a file in git that points to the current branch normally
+ - sometimes HEAD can also contain a SHA value of a commit. This is `detached HEAD` state. This happens when you checkout a particular commit, a tag, a PR, or a remote branch without fetching it first. 
+
+ ### Branch vs Tag
+
+ - Branch is a reference to a commit and that reference changes when next commit is made
+ - Tag is also a reference to a commit and it will **not** move if new commits are made
+
+ ### How to know if there are any conflicts between two branches
+
+ - Before raising a PR for your feature branch, if you want to know if PR will get merge conflict with base branch(let&#39;s say main) or not, then do this locally on your system:
+</code></pre></div>
+ # make sure you are on feature branch
+ git switch feature-branch</p>
+<p># create temp branch from your feature branch
+ git checkout -b temp-feature-branch</p>
+<p># merge main
+ git merge main</p>
+<p># this will give you output as below. It'll exactly tell you if there are conflicts and which files
+ Auto-merging docs/admin/auth-server/crypto/key-generation.md
+ CONFLICT (content): Merge conflict in docs/admin/auth-server/crypto/key-generation.md
+ Automatic merge failed; fix conflicts and then commit the result.</p>
+<p># abort the merge
+ git merge --abort</p>
+<p># Now since our purpose is served, Delete the temp branch 
+ git switch feature-branch
+ git branch -D temp-feature-branch</p>
+<p><div class="highlight"><pre><span></span><code> # Working with patch
+
+ Git doesn&#39;t have a `git patch` command. What it has is `git format-patch` command. 
+
+ ## Create a patch
+
+ Of uncommitted changes
+</code></pre></div>
+git diff &gt; my_patch.diff
+<div class="highlight"><pre><span></span><code>Generate a Patch for Staged Changes
+</code></pre></div>
+git diff --cached &gt; my_patch.diff
+<div class="highlight"><pre><span></span><code> Generate a Patch for the Last Commit
+ ```
+git format-patch -1
+</code></pre></div></p>
+<h2 id="apply-a-patch">Apply a patch<a class="headerlink" href="#apply-a-patch" title="Permanent link">#</a></h2>
+<p>apply a patch file
+<div class="highlight"><pre><span></span><code>git apply my_patch.diff
+</code></pre></div></p>
+<h1 id="copy-a-file-from-a-different-branch-to-your-current-branch">copy a file from a different branch to your current branch<a class="headerlink" href="#copy-a-file-from-a-different-branch-to-your-current-branch" title="Permanent link">#</a></h1>
+<p><div class="highlight"><pre><span></span><code>git checkout &lt;other-branch-name&gt; file-path
+</code></pre></div>
+file will be added to the same location in your branch as the other branch.</p>
+<h1 id="add-all-files-except-one">add all files except one<a class="headerlink" href="#add-all-files-except-one" title="Permanent link">#</a></h1>
+<div class="highlight"><pre><span></span><code>git add . :^mkdocs.yml
+</code></pre></div>
+<h3 id="getting-new-changes-without-loosing-local-changes">getting new changes without loosing local changes<a class="headerlink" href="#getting-new-changes-without-loosing-local-changes" title="Permanent link">#</a></h3>
+<p>scenario:</p>
+<p>You have made some local changes in the file but have not committed yet. Then you get to know that someone has pushed changes to the same branch in the same file but in a different section of the file. Now you want to get those new changes and put your changes in the new file. If you simply <code>git pull</code> then it'll fail with error as below:</p>
+<div class="highlight"><pre><span></span><code>error: Your local changes to the following files would be overwritten by merge:
+        docs/janssen-server/developer/agama/quick-start-using-agama-lab.md
+Please commit your changes or stash them before you merge.
+Aborting
+</code></pre></div>
+<p>Solution:</p>
+<div class="highlight"><pre><span></span><code># create a stash, this will clear your branch of any uncommitted changes and 
+git stash
+
+# now pull. It should be successful
+git pull
+
+# apply the stash. If the changes are not overlapping, meaning they are not on the same line numbers then the apply will be successful
+git stash apply
+</code></pre></div>
+<h2 id="when-and-why-do-you-need-to-checkout-a-pr">When and why do you need to checkout a PR<a class="headerlink" href="#when-and-why-do-you-need-to-checkout-a-pr" title="Permanent link">#</a></h2>
+<p>When you want to review a PR by testing it locally on your computer, you usually checkout that PR branch locally and test. But when someone from outside of the org, i.e community, raises a PR, they create a branch on their fork and not on the project repo. In this case, you should checkout the PR and not the contributors branch from forked repo. Because if you checkout branch from forked repo, your changes will not flow to the PR, but they'll go to the contributor's branch from where they have to push them. </p>
+<h4 id="how-to-checkout-a-pr-using-git-command-line">How to checkout a PR using git command line<a class="headerlink" href="#how-to-checkout-a-pr-using-git-command-line" title="Permanent link">#</a></h4>
+<p>If you want to checkout PR number 1234 locally run the command below. It'll fetch the pr and create a local branch <code>any-name</code> on your local.</p>
+<p><div class="highlight"><pre><span></span><code>git fetch origin pull/1234/head:any-name
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git checkout any-name
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.autohide - search.suggest - search.highlight", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
