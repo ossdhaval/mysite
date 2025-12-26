@@ -403,3 +403,8 @@ Policy templates solve this issue by letting you create policies from a template
 - Forbid polices override permit policies. Hence forbid policies can act as guard rails ensuring that certain requests will always be denied regardless of any permit policies.
 - The sequence in which policies are arranged has no impact on the outcome of the evaluation.
 - Role is not a reserved word
+
+## open questions:
+
+- need to clearly understand: context, entities, schema
+- What is the input to the policy engine? i.e How to pass PARC to the engine so that it can evaluate the applicable policies.
