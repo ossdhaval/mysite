@@ -25,4 +25,44 @@ The langchain-mcp-adapters library bridges this gap by:
 - Unwrapping results — it converts MCP's content block arrays back into plain strings/values the agent's message history understands.
 - Managing the MCP session lifecycle — connecting to the MCP server (via stdio/SSE), handling the initialize handshake, and keeping the session alive across tool calls.
 
-- <img width="388" height="628" alt="image" src="https://github.com/user-attachments/assets/438b4964-f5db-4005-b992-e8568f6058c1" />
+<img width="846" height="783" alt="image" src="https://github.com/user-attachments/assets/2dfe5e35-2a36-42df-9120-997196058159" />
+
+1. At startup, agent requests tools. Request goes to langchain adapter which talk to MCP client following MCP protocol.
+2. MCP client responds with MCP tool objects which the adapter converts into langchain standard `BaseTool` objects and gives it to langgraph agent.
+3. When agent receives the prompt string, the LangGraph packages your prompt into a standard langchain `HumanMessage` object. LangGraph binds `BaseTool` objects and `HumanMessage` object to the langchain framework.
+4. langchain framework converts these objects into JSON schema as required by the LLM configured. This gives the developer flexibility to replace one LLM with another without any code change because langchain converts suitably.
+ ```
+  {
+  "model": "claude-3-5-sonnet",
+  "messages": [{ "role": "user", "content": "Look at my context7 files..." }],
+  "tools": [
+    {
+      "name": "context7__read_repository_structure",
+      "description": "Scans the project repository directory layout.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "description": "The root path to scan" }
+        },
+        "required": ["path"]
+      }
+    }
+  ]
+}
+```
+5. LLM analyses the prompt, and checks its own knowledge and the list of available tools. If it needs to, it'll request to call a tool. This response again is different from each LLM.
+```
+{
+  "content": [],
+  "tool_calls": [
+    {
+      "name": "context7__read_repository_structure",
+      "args": { "path": "./src" },
+      "id": "call_llm_99"
+    }
+  ]
+}
+```
+6. This response is converted by the langchain framework into a langchain standard tool call and given to langgraph agent.
+7. The agent initiates the tool call via langchain MCP adapter. Adapter converts the langchain specific tool object into a python arguments and gives them to MCP client.
+8. MCP client takes these args and turns them into JSON RPC call and sends it over to STDIO or HTTP according to the local or remote server configuration.
