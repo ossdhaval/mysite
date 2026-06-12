@@ -65,4 +65,46 @@ The langchain-mcp-adapters library bridges this gap by:
 ```
 6. This response is converted by the langchain framework into a langchain standard tool call and given to langgraph agent.
 7. The agent initiates the tool call via langchain MCP adapter. Adapter converts the langchain specific tool object into a python arguments and gives them to MCP client.
-8. MCP client takes these args and turns them into JSON RPC call and sends it over to STDIO or HTTP according to the local or remote server configuration.
+```
+# Raw Python data passed downward
+tool_name = "read_repository_structure"
+arguments = {"path": "./src"}
+```
+9. MCP client takes these args and turns them into JSON RPC call and sends it over to STDIO or HTTP according to the local or remote server configuration.
+```
+{
+  "jsonrpc": "2.0",
+  "method": "tools/call",
+  "params": {
+    "name": "read_repository_structure",
+    "arguments": { "path": "./src" }
+  },
+  "id": "mcp-req-101"
+}
+```
+10. Remote server processes the request and responds using JSON RPC. 
+```
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Found build files: pom.xml (Spring Boot Starter dependencies detected)"
+      }
+    ]
+  },
+  "id": "mcp-req-101"
+}
+```
+11. The MCP client takes this JSON RPC response and converts it into Python object and gives it to adapter
+```
+ToolMessage(
+    content="Found build files: pom.xml (Spring Boot Starter dependencies detected)",
+    tool_call_id="call_llm_99"
+)
+```
+12. Adapter takes the object and converts into langchain objects and gives to the langgraph agent.
+13. agent sends the tool response back to the LLM (via langchain framework)
+14. LLM takes the tool response and creates a response for the original prompt and send it back to the agent(via  langchain framework)
+15. Agent sends the response back to the user
