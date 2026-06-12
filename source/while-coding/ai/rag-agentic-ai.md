@@ -25,7 +25,8 @@ The langchain-mcp-adapters library bridges this gap by:
 - Unwrapping results — it converts MCP's content block arrays back into plain strings/values the agent's message history understands.
 - Managing the MCP session lifecycle — connecting to the MCP server (via stdio/SSE), handling the initialize handshake, and keeping the session alive across tool calls.
 
-<img width="846" height="783" alt="image" src="https://github.com/user-attachments/assets/2dfe5e35-2a36-42df-9120-997196058159" />
+<img width="829" height="744" alt="image" src="https://github.com/user-attachments/assets/9ffdf14f-7ff5-4524-856d-f0dc3f60dc78" />
+
 
 1. At startup, agent requests tools. Request goes to langchain adapter which talk to MCP client following MCP protocol.
 2. MCP client responds with MCP tool objects which the adapter converts into langchain standard `BaseTool` objects and gives it to langgraph agent.
