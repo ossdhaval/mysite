@@ -105,6 +105,20 @@ ToolMessage(
     tool_call_id="call_llm_99"
 )
 ```
+
+## why fastmcp is called a framework and not just a library that implements MCP protocol
+
+- In a simple library, you call its functions when you need them. In FastMCP, the framework calls your code. You use built-in Python decorators like @mcp.tool(), @mcp.resource(), and @mcp.prompt() to register your functions. 
+
+- Once decorated, FastMCP takes control of the execution lifecycle, managing how and when those functions are exposed and executed by a Large Language Model (LLM).
+
+- FastMCP doesn't just provide a singular utility; it provides a comprehensive toolkit to take an application from prototype to production
+
+ - Built-in test clients for local debugging
+ - Native enterprise authentication modules (Google, GitHub, Azure)
+ - Mechanisms to render interactive user interfaces (UIs) directly inside LLM chat conversations
+
+
 12. Adapter takes the object and converts into langchain objects and gives to the langgraph agent.
 13. agent sends the tool response back to the LLM (via langchain framework)
 14. LLM takes the tool response and creates a response for the original prompt and send it back to the agent(via  langchain framework)
