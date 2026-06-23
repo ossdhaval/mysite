@@ -123,3 +123,27 @@ ToolMessage(
 13. agent sends the tool response back to the LLM (via langchain framework)
 14. LLM takes the tool response and creates a response for the original prompt and send it back to the agent(via  langchain framework)
 15. Agent sends the response back to the user
+
+
+
+## Notes about authorization for MCP server for jans-config-api 
+
+
+- tools can be exposed based on authorization
+- prompts can be exposed based on authorization
+- mcp protocol has a context object which has the details about underlying MCP session
+  ```
+  What Is Context?
+  The Context object provides a clean interface to access MCP features within your functions, including:
+  - Logging: Send debug, info, warning, and error messages back to the client
+  - Progress Reporting: Update the client on the progress of long-running operations
+  - Resource Access: List and read data from resources registered with the server
+  - Prompt Access: List and retrieve prompts registered with the server
+  - LLM Sampling: Request the client’s LLM to generate text based on provided messages
+  - User Elicitation: Request structured input from users during tool execution
+  - Session State: Store data that persists across requests within an MCP session
+  - Session Visibility: Control which components are visible to the current session
+  - Request Information: Access metadata about the current request
+  - Server Access: When needed, access the underlying FastMCP server instance
+  ```
+- MCP server can use LLM sampling to Request the client’s LLM to generate text based on provided messages
