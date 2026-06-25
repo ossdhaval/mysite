@@ -124,7 +124,11 @@ ToolMessage(
 14. LLM takes the tool response and creates a response for the original prompt and send it back to the agent(via  langchain framework)
 15. Agent sends the response back to the user
 
+## MCP host 
 
+- creates and manages clients
+- aggregates tools, prompts etc across available clients
+- agents talk to hosts. When agent/llm calls a tool, the host will 
 
 ## Notes about authorization for MCP server for jans-config-api 
 
