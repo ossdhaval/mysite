@@ -217,3 +217,8 @@ Client: receives result object
    ↓
 Client: displays result.contents[0].text
 ```
+
+## stdio vs streamable HTTP
+
+- streamable HTTP superseeds SSE
+- in stdio, client itself create a server instance. So, one client, one server. While in streamable HTTP, server is independent and multiple clients can connect to same server.
