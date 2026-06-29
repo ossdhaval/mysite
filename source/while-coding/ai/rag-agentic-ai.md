@@ -128,7 +128,27 @@ ToolMessage(
 
 - creates and manages clients
 - aggregates tools, prompts etc across available clients
-- agents talk to hosts. When agent/llm calls a tool, the host will 
+- agents talk to hosts. When agent/llm calls a tool, the host will
+
+## How using fastMCP easier than building MCP server using MCP protocol directly
+
+FastMCP simplifies MCP server creation significantly:
+
+- Traditional MCP Server:
+
+  - Define tool schemas manually with JSON
+  - Implement list_tools(), call_tool() handlers
+  - Handle resource URIs and content types
+  - Set up STDIO transport manually
+
+- FastMCP Server:
+
+  - Use @mcp.tool() decorator - schema generated automatically
+  - Use @mcp.resource() decorator with URI templates
+  - Use @mcp.prompt() decorator for templates
+  - Call mcp.run() - transport handled automatically
+
+FastMCP uses Python type hints to generate tool schemas, making your code cleaner and reducing boilerplate.
 
 ## Notes about authorization for MCP server for jans-config-api 
 
