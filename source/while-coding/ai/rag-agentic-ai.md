@@ -171,3 +171,49 @@ FastMCP uses Python type hints to generate tool schemas, making your code cleane
   - Server Access: When needed, access the underlying FastMCP server instance
   ```
 - MCP server can use LLM sampling to Request the client’s LLM to generate text based on provided messages
+
+## client-server flow
+
+### client connection flow
+
+```
+1. Launch client with server script path
+   ↓
+2. Create StdioServerParameters
+   ↓
+3. Launch server as subprocess via stdio_client
+   ↓
+4. Create ClientSession with read/write streams
+   ↓
+5. Call session.initialize() (MCP handshake)
+   ↓
+6. Ready for operations
+```
+
+### Resource reading flow
+
+```
+User: types "read"
+   ↓
+User: enters "file://resources/README.md"
+   ↓
+Client: calls session.read_resource(uri)
+   ↓
+[JSON-RPC request sent via stdin]
+   ↓
+Server: receives request with URI "file://resources/README.md"
+   ↓
+Server: matches URI to template pattern "file://resources/{filename}"
+   ↓
+Server: extracts parameter: filename = "README.md"
+   ↓
+Server: calls read_resource_file("README.md")
+   ↓
+Server: function reads file and returns content
+   ↓
+[JSON-RPC response sent via stdout]
+   ↓
+Client: receives result object
+   ↓
+Client: displays result.contents[0].text
+```
