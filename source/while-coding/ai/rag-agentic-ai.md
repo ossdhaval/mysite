@@ -171,6 +171,9 @@ FastMCP uses Python type hints to generate tool schemas, making your code cleane
   - Server Access: When needed, access the underlying FastMCP server instance
   ```
 - MCP server can use LLM sampling to Request the client’s LLM to generate text based on provided messages
+- See the [permissions](#permissions). Here, cedarling can play a role in defining policies that allow, deny, ask
+- See the [elicitation](#elicitation). here cedarling can play a role in applying a policy to an event based on the context
+
 
 ## client-server flow
 
@@ -232,3 +235,21 @@ Also, for this to happen, client should have advertised that it provides samplin
 Here is an example of sampling request from server to a client:
 
 <img width="907" height="410" alt="image" src="https://github.com/user-attachments/assets/ec26fc99-3032-4f33-8855-27849e64e9ae" />
+
+
+## permissions
+
+- On the client side
+ - In the MCP protocol, `permissions` work on the client side and not on the server side.
+ - permissions are stored in the `permissions.json`
+ - policies are of 3 types. Allow, deny and ask.
+ - If policy is deny or ask, then the server doesn't even come into the picture
+ - if ask, then if the user allows, then only the mcp client sends request to the server
+
+## elicitation
+
+- elicitation starts from server
+- server sends a json structured elicitation request to the client
+- elicitation usecases: multi-step workflows, destructive operations that require confirmations+reason, missing parameters in earlier requests, compliance documentaion requiring justification, security acknowledgements and risk awareness
+ - <img width="1861" height="952" alt="image" src="https://github.com/user-attachments/assets/1bb9c9b8-6c52-4c87-b366-aa344cf188c2" />
+- Server can classify different requests (tool calls, resource access etc) in following categories. And based on categories, it can send different kinds of elicitation requests
