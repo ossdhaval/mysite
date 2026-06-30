@@ -257,6 +257,6 @@ Here is an example of sampling request from server to a client:
 - elicitation usecases: multi-step workflows, destructive operations that require confirmations+reason, missing parameters in earlier requests, compliance documentaion requiring justification, security acknowledgements and risk awareness
  - <img width="1861" height="952" alt="image" src="https://github.com/user-attachments/assets/1bb9c9b8-6c52-4c87-b366-aa344cf188c2" />
 - Server can classify different requests (tool calls, resource access etc) in following categories. And based on categories, it can send different kinds of elicitation requests
-- audit logging is critical
+- audit logging is critical. So, client does logging of every policy decision. May be server should do the same as well.
  - <img width="1848" height="949" alt="image" src="https://github.com/user-attachments/assets/f341708f-001f-458d-a208-dafc0e0f5e35" />
 
