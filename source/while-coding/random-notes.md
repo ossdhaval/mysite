@@ -126,3 +126,10 @@ facing `Unable to correct problems, you have held broken packages` error when `s
 sudo apt install aptitude
 sudo aptitude install npm
 ```
+
+
+## DDD Tool to capture ubiquitous language management
+
+https://github.com/dev-cycles/contextive
+
+it is an IDE plugin/extension. 
