@@ -44,6 +44,16 @@ From this LinkedIn post: https://www.linkedin.com/feed/update/urn:li:activity:73
 
 - MCP : [Microsoft : MCP for beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHjYfVUpGl_-ai7D6FRBjV-d) and [repo for hands-on](https://github.com/microsoft/mcp-for-beginners/tree/main)
 
+### ai agent vs NHI
+
+Traditional softwre or NHI is deterministic: we know what each software/NHI will do. All the logical paths are known, and so all the possible actions. 
+
+ai-agent is undeterministic: we don't know what each agent will do. Because agent's brain is LLM, which is undeterministic. It may ask agent to do anything. And agent may perform that actions. So, it is not deterministic.
+
+
+
+
+
 ### Agents
 
 - when you do not need agents: https://www.perplexity.ai/search/do-i-need-an-ai-agent-to-integ-RuuKb2rTQSWcHG1yn0MGKA
