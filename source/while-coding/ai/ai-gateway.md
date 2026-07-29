@@ -20,3 +20,9 @@ https://www.youtube.com/watch?v=A1xIBCE0mcA
 - Abstraction
     Build LLM provider agnostic apps and agents by using generic APIs exposed by agent gateway.
   
+
+## Gateways
+
+- [Agentgateway](https://agentgateway.dev/) part of Agentic AI foundation
+- [Microsoft MCP gateway](https://github.com/microsoft/mcp-gateway)
+- [obot](https://obot.ai/)
