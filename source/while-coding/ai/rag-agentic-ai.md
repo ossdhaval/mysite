@@ -32,79 +32,90 @@ The langchain-mcp-adapters library bridges this gap by:
 2. MCP client responds with MCP tool objects which the adapter converts into langchain standard `BaseTool` objects and gives it to langgraph agent.
 3. When agent receives the prompt string, the LangGraph packages your prompt into a standard langchain `HumanMessage` object. LangGraph binds `BaseTool` objects and `HumanMessage` object to the langchain framework.
 4. langchain framework converts these objects into JSON schema as required by the LLM configured. This gives the developer flexibility to replace one LLM with another without any code change because langchain converts suitably.
- ```
+     
+  ```
   {
-  "model": "claude-3-5-sonnet",
-  "messages": [{ "role": "user", "content": "Look at my context7 files..." }],
-  "tools": [
-    {
-      "name": "context7__read_repository_structure",
-      "description": "Scans the project repository directory layout.",
-      "input_schema": {
-        "type": "object",
-        "properties": {
-          "path": { "type": "string", "description": "The root path to scan" }
-        },
-        "required": ["path"]
-      }
-    }
-  ]
-}
-```
-5. LLM analyses the prompt, and checks its own knowledge and the list of available tools. If it needs to, it'll request to call a tool. This response again is different from each LLM.
-```
-{
-  "content": [],
-  "tool_calls": [
-    {
-      "name": "context7__read_repository_structure",
-      "args": { "path": "./src" },
-      "id": "call_llm_99"
-    }
-  ]
-}
-```
-6. This response is converted by the langchain framework into a langchain standard tool call and given to langgraph agent.
-7. The agent initiates the tool call via langchain MCP adapter. Adapter converts the langchain specific tool object into a python arguments and gives them to MCP client.
-```
-# Raw Python data passed downward
-tool_name = "read_repository_structure"
-arguments = {"path": "./src"}
-```
-9. MCP client takes these args and turns them into JSON RPC call and sends it over to STDIO or HTTP according to the local or remote server configuration.
-```
-{
-  "jsonrpc": "2.0",
-  "method": "tools/call",
-  "params": {
-    "name": "read_repository_structure",
-    "arguments": { "path": "./src" }
-  },
-  "id": "mcp-req-101"
-}
-```
-10. Remote server processes the request and responds using JSON RPC. 
-```
-{
-  "jsonrpc": "2.0",
-  "result": {
-    "content": [
+    "model": "claude-3-5-sonnet",
+    "messages": [{ "role": "user", "content": "Look at my context7 files..." }],
+    "tools": [
       {
-        "type": "text",
-        "text": "Found build files: pom.xml (Spring Boot Starter dependencies detected)"
+        "name": "context7__read_repository_structure",
+        "description": "Scans the project repository directory layout.",
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "path": { "type": "string", "description": "The root path to scan" }
+          },
+          "required": ["path"]
+        }
       }
     ]
-  },
-  "id": "mcp-req-101"
-}
-```
+  }
+  ```
+
+5. LLM analyses the prompt, and checks its own knowledge and the list of available tools. If it needs to, it'll request to call a tool. This response again is different from each LLM.
+   
+  ```
+  {
+    "content": [],
+    "tool_calls": [
+      {
+        "name": "context7__read_repository_structure",
+        "args": { "path": "./src" },
+        "id": "call_llm_99"
+      }
+    ]
+  }
+  ```
+
+6. This response is converted by the langchain framework into a langchain standard tool call and given to langgraph agent.
+7. The agent initiates the tool call via langchain MCP adapter. Adapter converts the langchain specific tool object into a python arguments and gives them to MCP client.
+   
+   ```
+   # Raw Python data passed downward
+   tool_name = "read_repository_structure"
+   arguments = {"path": "./src"}
+   ```
+   
+9. MCP client takes these args and turns them into JSON RPC call and sends it over to STDIO or HTTP according to the local or remote server configuration.
+    
+   ```
+   {
+     "jsonrpc": "2.0",
+     "method": "tools/call",
+     "params": {
+       "name": "read_repository_structure",
+       "arguments": { "path": "./src" }
+     },
+     "id": "mcp-req-101"
+   }
+   ```
+   
+10. Remote server processes the request and responds using JSON RPC.
+    
+   ```
+   {
+     "jsonrpc": "2.0",
+     "result": {
+       "content": [
+         {
+           "type": "text",
+           "text": "Found build files: pom.xml (Spring Boot Starter dependencies detected)"
+         }
+       ]
+     },
+     "id": "mcp-req-101"
+   }
+   ```
+
 11. The MCP client takes this JSON RPC response and converts it into Python object and gives it to adapter
-```
-ToolMessage(
-    content="Found build files: pom.xml (Spring Boot Starter dependencies detected)",
-    tool_call_id="call_llm_99"
-)
-```
+    
+  ```
+  ToolMessage(
+      content="Found build files: pom.xml (Spring Boot Starter dependencies detected)",
+      tool_call_id="call_llm_99"
+  )
+  ```
 
 ## why fastmcp is called a framework and not just a library that implements MCP protocol
 
