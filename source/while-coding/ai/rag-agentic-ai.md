@@ -136,14 +136,11 @@ The langchain-mcp-adapters library bridges this gap by:
 FastMCP simplifies MCP server creation significantly:
 
 - Traditional MCP Server:
-
   - Define tool schemas manually with JSON
   - Implement list_tools(), call_tool() handlers
   - Handle resource URIs and content types
   - Set up STDIO transport manually
-
 - FastMCP Server:
-
   - Use @mcp.tool() decorator - schema generated automatically
   - Use @mcp.resource() decorator with URI templates
   - Use @mcp.prompt() decorator for templates
@@ -157,20 +154,17 @@ FastMCP uses Python type hints to generate tool schemas, making your code cleane
 - tools can be exposed based on authorization
 - prompts can be exposed based on authorization
 - mcp protocol has a context object which has the details about underlying MCP session
-  ```
-  What Is Context?
-  The Context object provides a clean interface to access MCP features within your functions, including:
-  - Logging: Send debug, info, warning, and error messages back to the client
-  - Progress Reporting: Update the client on the progress of long-running operations
-  - Resource Access: List and read data from resources registered with the server
-  - Prompt Access: List and retrieve prompts registered with the server
-  - LLM Sampling: Request the client’s LLM to generate text based on provided messages
-  - User Elicitation: Request structured input from users during tool execution
-  - Session State: Store data that persists across requests within an MCP session
-  - Session Visibility: Control which components are visible to the current session
-  - Request Information: Access metadata about the current request
-  - Server Access: When needed, access the underlying FastMCP server instance
-  ```
+  - the Context object:  The Context object provides a clean interface to access MCP features within your functions, including:
+       - Logging: Send debug, info, warning, and error messages back to the client
+       - Progress Reporting: Update the client on the progress of long-running operations
+       - Resource Access: List and read data from resources registered with the server
+       - Prompt Access: List and retrieve prompts registered with the server
+       - LLM Sampling: Request the client’s LLM to generate text based on provided messages
+       - User Elicitation: Request structured input from users during tool execution
+       - Session State: Store data that persists across requests within an MCP session
+       - Session Visibility: Control which components are visible to the current session
+       - Request Information: Access metadata about the current request
+       - Server Access: When needed, access the underlying FastMCP server instance
 - MCP server can use LLM sampling to Request the client’s LLM to generate text based on provided messages
 - See the [permissions](#permissions). Here, cedarling can play a role in defining policies that allow, deny, ask
 - See the [elicitation](#elicitation). here cedarling can play a role in applying a policy to an event based on the context and trigger appropriate elicitation
