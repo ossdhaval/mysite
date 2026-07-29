@@ -53,7 +53,6 @@ The langchain-mcp-adapters library bridges this gap by:
   }
   ```
 5. LLM analyses the prompt, and checks its own knowledge and the list of available tools. If it needs to, it'll request to call a tool. This response again is different from each LLM.
-
   ```
   {
     "content": [],
@@ -66,7 +65,6 @@ The langchain-mcp-adapters library bridges this gap by:
     ]
   }
   ```
-
 6. This response is converted by the langchain framework into a langchain standard tool call and given to langgraph agent.
 7. The agent initiates the tool call via langchain MCP adapter. Adapter converts the langchain specific tool object into a python arguments and gives them to MCP client.
    ```
