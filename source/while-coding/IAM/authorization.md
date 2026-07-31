@@ -85,3 +85,110 @@ The third component is behavioral analysis. Human and non-human identities estab
 - identity based Vs capability based systems
   - Identity based: For example, an online registration for an event where you have registered by giving just your name. Now when you reach the event, the person at the entry checks if your name is on the list of registered users and then asks you to show an govt. id proof.
   - Capability based: For example, an online registration for an event where you have registered and you got a QR code. Like booking a movie ticket. You just have to show this QR code at the entrance to get into the event. No identity needed at the event. This QR is capability. If someone else has the QR, then they have the capability and they can go to the event.
+ 
+## Capability-Based vs. Identity-Based Access Control
+
+### 1. Overview & Core Characteristics
+
+```
+[ Identity-Based (ACL/RBAC) ]           [ Capability-Based (Tokens/Handles) ]
+  "Who are you?"                           "Do you hold a valid key?"
+  • Checks caller identity                 • Checks token/key possession
+  • Ambient authority (fixed roles)        • Explicit authority (scoped handles)
+
+```
+
+* **Identity-Based Security (ACLs / RBAC / ABAC):**
+* **Core Premise:** Access decisions depend on **who** is making the request (User ID, Role, Department).
+* **Mechanism:** The system verifies the identity of the caller and looks up their permissions in a central database or Access Control List (ACL).
+* **Authority Model:** Features **ambient authority**—a service or user carries broad, persistent permissions whenever they interact with resources.
+
+
+* **Capability-Based Security (Tokens / Handles):**
+* **Core Premise:** Access decisions depend on **what key/token** the caller holds, regardless of their identity.
+* **Mechanism:** The system checks an unforgeable, cryptographically signed reference or bearer token (e.g., shareable Google Doc links, file descriptors, OAuth tokens).
+* **Authority Model:** Features **explicit authority**—permissions are attached directly to the token presented for that specific action.
+
+
+
+---
+
+### 2. Comparative Matrix
+
+| Feature / Dimension | Identity-Based Systems | Capability-Based Systems |
+| --- | --- | --- |
+| **Primary Check** | Caller's Identity ($Who$) | Token/Ticket Possession ($Key$) |
+| **Authority** | **Ambient** (Persistent system roles) | **Explicit** (Scoped per request/task) |
+| **Granularity** | Coarse to fine (risks role explosion) | Highly fine-grained & dynamic |
+| **Confused Deputy Risk** | High (vulnerable to privilege misuse) | Very Low (immune by structure) |
+| **Revocation** | **Easy** (Disable user centrally) | **Hard** (Tokens persist until expiration) |
+| **Auditability** | **Easy** (Inspect who has access) | **Hard** (Tokens can pass offline) |
+
+---
+
+### 3. Pros and Cons
+
+#### Identity-Based Systems
+
+* **Pros:**
+* **Centralized Governance:** Simple to revoke access globally by disabling an employee's single account.
+* **Clear Auditability:** Easy to list all users who currently have access to a specific resource.
+* **Standard Infrastructure:** Supported natively by almost all enterprise Identity Providers (Okta, Entra ID).
+
+
+* **Cons:**
+* **Role Explosion:** Dynamic policies require creating thousands of hyper-specific roles.
+* **Vulnerable to Confused Deputy:** High-privilege services can easily be tricked into abusing their ambient authority.
+
+
+
+#### Capability-Based Systems
+
+* **Pros:**
+* **Default Least Privilege:** Tokens can be issued with narrow scopes and short time limits (e.g., read-only for 5 minutes).
+* **Decentralized Delegation:** Services can downscope and forward capability tokens locally without hitting a central auth server.
+* **Prevents Ambient Authority Abuse:** Eliminates implicit, broad service permissions.
+
+
+* **Cons:**
+* **The Bearer Token Problem:** Anyone who steals or intercepts the token gains its permissions until it expires.
+* **Difficult Revocation:** Hard to cancel individual tokens across distributed microservices before they expire without complex blacklists.
+
+
+
+---
+
+### 4. The Confused Deputy Scenario
+
+The **Confused Deputy Problem** occurs when an attacker tricks a highly privileged intermediary (e.g., an AI agent or microservice) into performing an unauthorized action on their behalf.
+
+```
+--- IDENTITY-BASED (Vulnerable) ---
+Attacker (Low Privilege) ──(Prompt Injection)──> AI Agent (High Ambient Privilege)
+                                                     │
+                                                     ▼
+                                            Database Executes
+                                   ("Agent has ADMIN role -> APPROVED")
+
+
+--- CAPABILITY-BASED (Protected) ---
+Attacker (Low Privilege) ──(Prompt Injection)──> AI Agent
+                                                     │
+                                                     ▼ Must forward Token
+                                            Database Blocks
+                                   ("Token attached lacks DELETE scope -> DENIED")
+
+```
+
+* **Why Identity Systems Fail Here:** The downstream resource checks the **intermediary agent's identity**. Because the agent has broad system privileges, the malicious request executes.
+* **Why Capability Systems Succeed Here:** The downstream resource checks the **token presented**. Because the attacker could only pass a low-privilege capability token, the agent lacks the key to execute the malicious action.
+
+---
+
+### 5. Architectural Solution: Hybrid Approach
+
+Modern enterprise architectures (such as Zero Trust and Agentic Frameworks) combine both models to get the benefits of identity governance alongside capability delegation:
+
+1. **Identity at the Boundary:** Users authenticate via **Identity-Based Systems** (SSO / OAuth) at the system edge.
+2. **Capabilities at the Core:** The auth server issues a short-lived, scoped **Capability Token** (via OAuth 2.0 Token Exchange / RFC 8693) that captures both the **Original User Identity** (Subject) and the **Intermediary Agent** (Actor).
+3. **Dual Verification:** Downstream APIs verify **both** that the original user has permission *and* that the capability token explicitly allows that specific tool call or operation.
