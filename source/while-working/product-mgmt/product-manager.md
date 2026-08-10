@@ -1,6 +1,13 @@
 # As A Product Manager
 
-Learning Material:
+## Learning Material:
+
+### Top product certifications:
+
+- https://www.productmarketingalliance.com/ - has good short courses on many topics around sales and marketing the products.
+- https://www.pragmaticinstitute.com/
+
+### other learning material
 
 - udemy course: https://www.udemy.com/course/become-a-product-manager-learn-the-skills-get-a-job/
 - https://productlogic.org/2014/09/13/the-product-triangle-a-visual-vocabulary-for-product-building/
