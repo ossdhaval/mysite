@@ -9,6 +9,7 @@
 
 ### other learning material
 
+- Good short course on product sales: https://www.coursera.org/search?query=sales+and+marketing&xdpModal=course%7EnOWnNbmQEe-Edgr_0TyPhw
 - udemy course: https://www.udemy.com/course/become-a-product-manager-learn-the-skills-get-a-job/
 - https://productlogic.org/2014/09/13/the-product-triangle-a-visual-vocabulary-for-product-building/
 - https://medium.com/earnest-product-management
