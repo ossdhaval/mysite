@@ -47,7 +47,8 @@ nav:
     - Machine Learning: while-coding/ai/machine-learning.md
     - ML DS AI Udemy course notes: while-coding/ai/course-notes-udemy-ml-ds-ai.md
     - Prompt Engineering: while-coding/ai/prompt-engineering.md
-    - Rag Agentic Ai: while-coding/ai/rag-agentic-ai.md
+    - ibm mcp course: while-coding/ai/build-ai-agents-using-mcp.md
+    - ibm fundamentals of building ai agents : while-coding/ai/course-notes-fundamentals-of-building-ai-agents.md
     - MCP: while-coding/ai/mcp.md
     - AI Gateways: while-coding/ai/ai-gateway.md
   - Apache_On_Ubuntu: while-coding/apache_on_ubuntu.md
