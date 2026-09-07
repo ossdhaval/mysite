@@ -8,7 +8,9 @@ Course link: https://www.coursera.org/learn/fundamentals-of-building-ai-agents
 
 - non-ai systems
   - Pre-AI era software is example of this. They have fixed control logic paths, written in form of code. They don't use LLMs or any other AI component.
-- AI systems or compound AI systems
+- Monolithic AI(LLM) systems
+  - System uses LLM which is trained on internet data. No other data source. System sends prompt and LLM responds with the data available from the internet
+-  Compound AI systems
   - These systems use LLMs and RAGs to add dynamic nature to the non-AI systems. Here, control logic is still fixed but the system leverages LLMs and RAGs to improve the output. For example, `how many paid vacation days I am left with?`. This query is fed into LLM to generate a query for RAG(a set of docs or a db), LLM gives the query and it is fed to RAG, RAG output is taken and fed to LLM, LLM gives back a sentence `XYZ you have 10 vacation days remaining`.
   - In this flow, the execution flow is still fixed that LLM always goes to a HR RAG to find answers. It is statically programed. And a single iteration. LLM on its own can't decide what should be the course of action.
   - These are more intelligent but the control flow is still static.
