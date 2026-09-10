@@ -74,3 +74,18 @@ There are some situations when agents are not a good solution. Avoid agents for:
 - Zero-error systems, including medical or security decisions
 - Heavily regulated industries need deterministic outcomes
 
+### Guidelines for managing risk when deploying agents
+
+When starting to use agents, begin with these best practices:
+
+- Start with read-only access to tools and systems
+- Add human approvals for critical steps
+- Use staged deployments with monitoring
+- Enable comprehensive logging
+
+### Implementing agents responsibly
+When implementing agents, consider a phased deployment plan that consists of the following steps:
+
+- Validate the Proof of Concept: Try low-risk, reversible tasks
+- Implement a Pilot Program: Test the agent using moderate-risk tasks under supervision
+- Production Scaling: Expand use of the agent only after demonstrating its safety and performance
