@@ -89,3 +89,13 @@ When implementing agents, consider a phased deployment plan that consists of the
 - Validate the Proof of Concept: Try low-risk, reversible tasks
 - Implement a Pilot Program: Test the agent using moderate-risk tasks under supervision
 - Production Scaling: Expand use of the agent only after demonstrating its safety and performance
+
+## Tools, Agents, and Function Calling in LangChain
+
+### Tool calling
+
+Contrary to the term, in tool calling, LLMs do not execute tools or functions directly. Instead, they generate a structured representation indicating which tool to use and with what parameters.
+
+### Agents
+
+An agent is a high-level orchestration system rather than a single function (like tool); it encapsulates the LLM itself along with supporting components like tools, memory, and an execution framework.
