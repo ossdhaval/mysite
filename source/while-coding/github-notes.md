@@ -64,6 +64,7 @@ When working with github, you'll need to setup authentication for GitHub in your
     - add trust using `gpg --edit-key <key-id>`, this will show your a `gpg>` prompt. Type `trust`, select `5` that is `ultimate`, type `save`. It might say that `no update needed` but still the change has been made.
   - With this setup, you should be able to use the key for signing and github will show `verified`
 - Troubleshooting:
+  
   - Many times people face this error while trying to push to github.
   `commits must have valid signatures` 
   this error is saying that you are trying push commits that are unsigned. Many times people confuse it with commits that are already there in github. To solve this you have to find the unsinged commit and sign it. To see all commits with its signing information run `git log --show-signature`.
@@ -78,7 +79,7 @@ When working with github, you'll need to setup authentication for GitHub in your
 
       ```
       it says `signature made` but no public key available. This is will be the case with commits signed by other members of your team. Because you don't have their public key stored with you. To do so, run `curl https://github.com/ossdhaval.gpg | gpg -import` to download key for user `ossdhaval`.
-      
+  - On windows machine, gpg agent may not start. To start it manually, run this command from powershell: `& "C:\Program Files (x86)\GnuPG\bin\gpg-connect-agent.exe" /bye`
       
 
 Above steps were derived from links given [here](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
