@@ -1,6 +1,16 @@
 # AI
 
+Ordered as recent first.
+
 ## Learning playbook
+
+## Identity governance (AI included)
+
+https://www.coursera.org/specializations/saviynt-identity-security-for-ai-age-isaa-specialization
+
+## Agentic architecture
+
+https://www.ibm.com/think/ai-agents#605511093
 
 ### RAG and AI agents
 
