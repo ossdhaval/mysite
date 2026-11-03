@@ -37,6 +37,7 @@ nav:
     - Jwt Notes: while-coding/IAM/jwt-notes.md
     - Zero Trust Framework: while-coding/IAM/zero-trust-framework.md
     - Authorization: while-coding/IAM/authorization.md
+    - SPIFFE: while-coding/IAM/spiffe.md
   - Lxc Lxd Linux Containers Notes: while-coding/LXC-LXD-linux-containers-notes.md
   - Suse: while-coding/SUSE.md
   - Ai:
