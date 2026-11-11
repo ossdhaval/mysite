@@ -44,6 +44,8 @@ nav:
     - Sdlc Tools:
       - Ai Tools For Coding: while-coding/ai/SDLC-tools/ai-tools-for-coding.md
       - Index: while-coding/ai/SDLC-tools/index.md
+    - GovOps:
+      - Gemara: while-coding/ai/govops/gemara.md
     - Index: while-coding/ai/index.md
     - Machine Learning: while-coding/ai/machine-learning.md
     - ML DS AI Udemy course notes: while-coding/ai/course-notes-udemy-ml-ds-ai.md
