@@ -1,6 +1,24 @@
-# Gemara
+# Automated compliance
+
+The sequence:
+
+compliance standards (SOC2, GDPR, etc)
+      |
+      v
+OSCAL (catalog, assessment plan, results): common formats to represent compliance rules, and results
+      |
+      V
+Gemara (policy, threat, capabilities): Adds more details to OSCAL so that engineering teams and processes can evaluate compliance problems in realtime
+      
+
 
 - Policy, Evaluation, Enforcement, and Audit
+
+
+## Example of how OSCAL and Gemara are related
+
+OSCAL converts compliance rules (in documents
+
 
 ## why we need Gemara
 
