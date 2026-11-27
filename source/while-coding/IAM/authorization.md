@@ -1,4 +1,11 @@
-RFC that is basis of authz: https://datatracker.ietf.org/doc/html/rfc2904
+
+# Authorization
+
+Authorization is the process of determining if a specific user request to do something is allowed by the defined set of policies.
+
+## Good references
+
+- RFC that is basis of authz: https://datatracker.ietf.org/doc/html/rfc2904
 
 ## RBAC Vs ABAC
 
