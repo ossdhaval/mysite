@@ -5,7 +5,10 @@ RFC that is basis of authz: https://datatracker.ietf.org/doc/html/rfc2904
 - How is `role` different from an attribute of a person/system(principal)?
   - Role is usually defined and mapped to the principal in the IDP (or any authorization system), while attributes usually come from the database
   - For example, a person may have a role of `teacher`, but which class the teacher currently teach will be stored in the school database.
-  - So, if you want to write a policy that only allows access to the student's grades only to the teacher of student's class, then you have to write a policy that is RBAC and ABAC both. 
+  - So, if you want to write a policy that only allows access to the student's grades only to the teacher of student's class, then you have to write a policy that is RBAC and ABAC both.
+- Roles are only assigned to principals, not resource that the principal is trying to access
+  - a teacher is only allowed to update the attendance of a class if teacher is the class teacher of that class
+  - Here, in the school database, each class will have an assigned class teacher. A class entity will never have a role.
 
 ## Data level entitlements:
 
